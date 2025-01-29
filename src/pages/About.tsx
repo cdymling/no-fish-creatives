@@ -1,10 +1,10 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Index = () => {
+const About = () => {
   return (
-    <div className="min-h-screen">
-      <section className="px-6 py-20 md:py-32">
+    <div className="min-h-screen px-6 py-20">
+      <section className="mb-20">
         <h1 className="text-4xl md:text-6xl font-bold max-w-3xl mb-8 text-balance">
           Get access to seasoned creatives – without all the fishy layers of an ad agency.
         </h1>
@@ -15,7 +15,7 @@ const Index = () => {
         </p>
       </section>
 
-      <section className="px-6 py-20 bg-accent">
+      <section className="mb-20">
         <h2 className="text-2xl md:text-3xl font-bold mb-8">How you can use us:</h2>
         <div className="space-y-6 max-w-2xl">
           <p className="text-lg flex items-start gap-4">
@@ -33,7 +33,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="px-6 py-20">
+      <section>
         <Link 
           to="/contact"
           className="inline-block text-2xl md:text-3xl font-bold hover:text-primary transition-colors"
@@ -46,4 +46,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default About;
