@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
@@ -12,6 +13,7 @@ const App = () => (
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/work" element={<Work />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
