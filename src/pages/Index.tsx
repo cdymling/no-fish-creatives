@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail, Phone } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -72,6 +72,25 @@ const Index = () => {
         <p className="text-lg italic">
           References available upon request.
         </p>
+      </section>
+
+      <section className="px-6 py-12 text-white">
+        <div className="space-y-4">
+          <a 
+            href="mailto:christoffer@nofish.se" 
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <Mail size={20} />
+            christoffer@nofish.se
+          </a>
+          <a 
+            href="tel:+46704920008" 
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <Phone size={20} />
+            +46 70 492 00 08
+          </a>
+        </div>
       </section>
     </div>
   );

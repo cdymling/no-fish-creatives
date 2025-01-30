@@ -7,14 +7,6 @@ const Navigation = () => {
         <Link to="/" className="text-xl font-bold">
           no fish creatives
         </Link>
-        <div className="text-sm">
-          <a href="mailto:christoffer@nofish.se" className="mr-4 hover:text-primary transition-colors">
-            christoffer@nofish.se
-          </a>
-          <a href="tel:+46704920008" className="hover:text-primary transition-colors">
-            +46 70 492 00 08
-          </a>
-        </div>
       </div>
     </nav>
   );
