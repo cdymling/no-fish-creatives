@@ -30,27 +30,27 @@ const Index = () => {
         </p>
       </section>
 
-      <section className="px-6 py-20 bg-accent/95">
-        <h2 className="text-xl md:text-2xl font-bold mb-8">Who we're for:</h2>
-        <p className="text-lg max-w-2xl mb-12">
+      <section className="px-6 py-20 wave-bg">
+        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">Who we're for:</h2>
+        <p className="text-lg max-w-2xl mb-12 text-white">
           Marketers who believe in creative communications and are open to a different agency setup.
         </p>
 
-        <h2 className="text-xl md:text-2xl font-bold mb-8">How you can use us:</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
         <div className="space-y-6 max-w-2xl">
-          <p className="text-lg flex items-start gap-4">
+          <p className="text-lg flex items-start gap-4 text-white">
             <ArrowRight className="mt-1 flex-shrink-0" />
             <span>As a creative partner for your in-house agency or marketing department.</span>
           </p>
-          <p className="text-lg flex items-start gap-4">
+          <p className="text-lg flex items-start gap-4 text-white">
             <ArrowRight className="mt-1 flex-shrink-0" />
             <span>As a creative team developing a concept, campaign, or just a single ad.</span>
           </p>
-          <p className="text-lg flex items-start gap-4">
+          <p className="text-lg flex items-start gap-4 text-white">
             <ArrowRight className="mt-1 flex-shrink-0" />
             <span>As a creative lead, taking the above from inception to final production.</span>
           </p>
-          <p className="text-lg flex items-start gap-4">
+          <p className="text-lg flex items-start gap-4 text-white">
             <ArrowRight className="mt-1 flex-shrink-0" />
             <span>If the task demands it, we're connected with experts in strategy, design, and production.</span>
           </p>
