@@ -15,8 +15,8 @@ const Index = () => {
           <source src="/background-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* Overlay to ensure text readability - opacity set to 99 */}
-        <div className="absolute inset-0 bg-background/99" />
+        {/* Overlay to ensure text readability - opacity reduced to 95 */}
+        <div className="absolute inset-0 bg-background/95" />
       </div>
 
       {/* Content */}
