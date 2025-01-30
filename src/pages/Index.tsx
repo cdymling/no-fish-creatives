@@ -2,7 +2,24 @@ import { ArrowRight } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Background Video */}
+      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute min-w-full min-h-full object-cover"
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-background/95" />
+      </div>
+
+      {/* Content */}
       <section className="px-6 py-20 md:py-32">
         <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-8 text-balance">
           Access to seasoned creatives, without the fishy layers of an agency.
@@ -13,7 +30,7 @@ const Index = () => {
         </p>
       </section>
 
-      <section className="px-6 py-20 bg-accent">
+      <section className="px-6 py-20 bg-accent/95">
         <h2 className="text-xl md:text-2xl font-bold mb-8">Who we're for:</h2>
         <p className="text-lg max-w-2xl mb-12">
           Marketers who believe in creative communications and are open to a different agency setup.
