@@ -65,8 +65,8 @@ const Index = () => {
         <p className="text-lg md:text-xl max-w-2xl mb-12 text-balance">
           We've developed omni-channel concepts and campaigns for both Swedish and international brands.
         </p>
-        <h3 className="text-xl md:text-2xl font-bold mb-8">Current clients include:</h3>
-        <p className="text-lg max-w-2xl mb-12">
+        <h3 className="text-xl md:text-2xl font-bold mb-2">Current clients include:</h3>
+        <p className="text-lg max-w-2xl mb-2">
           Momondo, Compricer and Happy Golfer.
         </p>
         <p className="text-lg italic">
