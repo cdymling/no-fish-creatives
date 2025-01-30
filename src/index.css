@@ -48,7 +48,7 @@
 
 @layer utilities {
   .wave-bg {
-    background: linear-gradient(60deg, rgba(255, 119, 0, 0.85) 0%, rgba(255, 71, 0, 0.85) 100%);
+    background: linear-gradient(60deg, rgba(255, 145, 0, 0.85) 0%, rgba(255, 98, 0, 0.85) 100%);
     background-size: 400% 400%;
     animation: wave 10s ease infinite;
   }
