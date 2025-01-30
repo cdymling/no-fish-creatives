@@ -59,18 +59,14 @@ const Index = () => {
 
       <section className="px-6 py-20 text-white">
         <h2 className="text-3xl md:text-4xl font-bold max-w-3xl mb-8 text-balance">
-          We're multi-awarded creatives with backgrounds at some of Sweden's top agencies.
+          Our work:
         </h2>
         <div className="wave-bg h-1 w-24 mb-8" />
         <p className="text-lg md:text-xl max-w-2xl mb-12 text-balance">
-          We've developed omni-channel concepts and campaigns for both Swedish and international brands.
+          Hold tight while we get this show on the road and get some cases to show for it. In the meantime, know that we're AI-positive, multi-awarded creatives with backgrounds at some of Sweden's top agencies, developing omni-channel concepts and campaigns for both Swedish and international brands.
         </p>
-        <h3 className="text-xl md:text-2xl font-bold mb-2">Current clients include:</h3>
         <p className="text-lg max-w-2xl mb-2">
-          Momondo, Compricer and Happy Golfer.
-        </p>
-        <p className="text-lg italic">
-          References available upon request.
+          Current clients include Momondo, Compricer, and Happy Golfer. References available upon request.
         </p>
       </section>
 
