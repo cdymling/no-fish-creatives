@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -39,16 +38,6 @@ const Index = () => {
             <span>If the task demands it, we're connected with experts in strategy, design, and production.</span>
           </p>
         </div>
-      </section>
-
-      <section className="px-6 py-20">
-        <Link 
-          to="/contact"
-          className="inline-block text-2xl md:text-3xl font-bold hover:text-primary transition-colors"
-        >
-          Let's Talk
-          <div className="wave-bg h-1 w-full mt-2" />
-        </Link>
       </section>
     </div>
   );

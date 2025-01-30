@@ -3,7 +3,7 @@ import Navigation from './Navigation';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-y-auto">
       <Navigation />
       <main className="pt-20">
         {children}
