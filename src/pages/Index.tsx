@@ -20,7 +20,7 @@ const Index = () => {
       </div>
 
       {/* Content */}
-      <section className="px-6 py-20 md:py-32">
+      <section className="px-6 py-20 md:py-32 text-white">
         <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-8 text-balance">
           Access to seasoned creatives, without the fishy layers of an agency.
         </h1>
@@ -57,7 +57,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="px-6 py-20">
+      <section className="px-6 py-20 text-white">
         <h2 className="text-3xl md:text-4xl font-bold max-w-3xl mb-8 text-balance">
           We're multi-awarded creatives with backgrounds at some of Sweden's top agencies.
         </h2>
