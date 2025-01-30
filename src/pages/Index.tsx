@@ -30,7 +30,7 @@ const Index = () => {
         </p>
       </section>
 
-      <section className="px-6 py-20 wave-bg">
+      <section className="px-6 py-20 wave-bg bg-opacity-80">
         <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">Who we're for:</h2>
         <p className="text-lg max-w-2xl mb-12 text-white">
           Marketers who believe in creative communications and are open to a different agency setup.
