@@ -22,7 +22,7 @@ const Index = () => {
       {/* Content */}
       <section className="px-6 py-20 md:py-32 text-white">
         <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-8 text-balance">
-          Access to seasoned creatives, without the fishy layers of an agency.
+          Seasoned creatives free from the fishy layers of an agency.
         </h1>
         <div className="wave-bg h-1 w-24 mb-8" />
         <p className="text-lg md:text-xl max-w-2xl mb-12 text-balance">
