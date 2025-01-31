@@ -20,13 +20,13 @@ const Intro = () => {
       </div>
 
       <section className="px-6 py-20 md:py-32">
-        <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-8 text-white text-balance">
+        <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-4 text-white text-balance">
           Seasoned creatives. Free from the fishy layers of an agency.
         </h1>
-        <div className="wave-bg h-1 w-24 mb-8" />
         <p className="text-lg md:text-xl max-w-2xl text-white text-balance">
           We only sell creativity. Nothing more, nothing less. You pay for what you need and get advice without hidden agendas.
         </p>
+        <div className="wave-bg h-1 w-24 mt-8" />
       </section>
     </div>
   );
