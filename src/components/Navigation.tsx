@@ -8,7 +8,7 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 0);
+      setIsScrolled(scrollPosition > 20); // Ändrat till ett lägre värde för tidigare trigger
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -26,9 +26,9 @@ const Navigation = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[100] px-6 py-4 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-[100] px-6 py-4 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-sm border-b border-border/50' : ''}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <div className={`overflow-hidden transition-all duration-500 ${isScrolled ? 'h-8' : 'h-0'}`}>
+        <div className={`transition-all duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
           <span className="font-clash font-bold text-xl text-foreground block">
             no fish creatives
           </span>
