@@ -36,9 +36,11 @@ const Home = () => {
       </div>
 
       <div className="flex items-center justify-center min-h-screen">
-        <h1 className="text-4xl md:text-6xl font-bold text-white">
-          no fish creatives
-        </h1>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <h1 className="text-4xl md:text-6xl font-bold text-white">
+            no fish creatives
+          </h1>
+        </div>
       </div>
     </div>
   );
