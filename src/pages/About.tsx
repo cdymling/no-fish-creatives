@@ -29,16 +29,16 @@ const About = () => {
         <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">How you can use us:</h2>
         <div className="space-y-3 max-w-2xl">
           <p className="text-lg text-white">
-            As a creative partner for your in-house agency or marketing department.
+            → As a creative partner for your in-house agency or marketing department.
           </p>
           <p className="text-lg text-white">
-            As a creative team developing a concept, campaign, or just a single ad.
+            → As a creative team developing a concept, campaign, or just a single ad.
           </p>
           <p className="text-lg text-white">
-            As a creative lead, taking the above from inception to final production.
+            → As a creative lead, taking the above from inception to final production.
           </p>
           <p className="text-lg text-white">
-            If the task demands it, we're connected with experts in strategy, design, and production.
+            → If the task demands it, we're connected with experts in strategy, design, and production.
           </p>
         </div>
       </section>
