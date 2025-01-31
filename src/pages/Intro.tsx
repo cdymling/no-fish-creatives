@@ -1,13 +1,13 @@
 const Intro = () => {
   return (
     <div className="min-h-screen relative">
-      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+      <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute min-w-full min-h-full object-cover"
+          className="absolute min-w-full min-h-full object-cover md:object-center object-[70%_center]"
         >
           <source src="/intro-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
