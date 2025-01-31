@@ -1,0 +1,27 @@
+const Home = () => {
+  return (
+    <div className="min-h-screen relative">
+      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute min-w-full min-h-full object-cover"
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-background/99" />
+      </div>
+
+      <div className="flex items-center justify-center min-h-screen">
+        <h1 className="text-4xl md:text-6xl font-bold text-white">
+          no fish creatives
+        </h1>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

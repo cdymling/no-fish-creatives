@@ -1,46 +1,41 @@
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
 const About = () => {
   return (
-    <div className="min-h-screen px-6 py-20">
-      <section className="mb-20">
-        <h1 className="text-4xl md:text-6xl font-bold max-w-3xl mb-8 text-balance">
-          Get access to seasoned creatives – without all the fishy layers of an ad agency.
-        </h1>
-        <div className="wave-bg h-1 w-24 mb-8" />
-        <p className="text-lg md:text-xl max-w-2xl mb-12 text-balance">
-          We only sell creativity. But if the task demands it, we're connected with experts in strategy, 
-          design, and production. This way, you'll only pay for what you need – and get more unbiased advice.
-        </p>
-      </section>
+    <div className="min-h-screen relative">
+      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute min-w-full min-h-full object-cover"
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-background/99" />
+      </div>
 
-      <section className="mb-20">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">How you can use us:</h2>
+      <section className="px-6 py-20">
+        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">Who we're for:</h2>
+        <p className="text-lg max-w-2xl mb-12 text-white">
+          Marketer seeking a collaborative, fast-paced, AI-embracing, and cost-effective creative consultancy.
+        </p>
+
+        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
         <div className="space-y-6 max-w-2xl">
-          <p className="text-lg flex items-start gap-4">
-            <ArrowRight className="mt-1 flex-shrink-0" />
-            <span>As a creative partner for your in-house agency or marketing department.</span>
+          <p className="text-lg text-white">
+            As a creative partner for your in-house agency or marketing department.
           </p>
-          <p className="text-lg flex items-start gap-4">
-            <ArrowRight className="mt-1 flex-shrink-0" />
-            <span>As a creative team developing a concept, campaign, or just a single ad.</span>
+          <p className="text-lg text-white">
+            As a creative team developing a concept, campaign, or just a single ad.
           </p>
-          <p className="text-lg flex items-start gap-4">
-            <ArrowRight className="mt-1 flex-shrink-0" />
-            <span>As a creative lead, taking the above from inception to final production.</span>
+          <p className="text-lg text-white">
+            As a creative lead, taking the above from inception to final production.
+          </p>
+          <p className="text-lg text-white">
+            If the task demands it, we're connected with experts in strategy, design, and production.
           </p>
         </div>
-      </section>
-
-      <section>
-        <Link 
-          to="/contact"
-          className="inline-block text-2xl md:text-3xl font-bold hover:text-primary transition-colors"
-        >
-          Let's Talk
-          <div className="wave-bg h-1 w-full mt-2" />
-        </Link>
       </section>
     </div>
   );

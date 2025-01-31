@@ -1,23 +1,30 @@
 const Work = () => {
   return (
-    <div className="min-h-screen">
-      <section className="px-6 py-20 md:py-32">
-        <h1 className="text-4xl md:text-6xl font-bold max-w-3xl mb-8 text-balance">
-          We're multi-awarded creatives with backgrounds at some of Sweden's top agencies.
+    <div className="min-h-screen relative">
+      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute min-w-full min-h-full object-cover"
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-background/99" />
+      </div>
+
+      <section className="px-6 py-20">
+        <h1 className="text-3xl md:text-4xl font-bold max-w-3xl mb-8 text-white text-balance">
+          Our work:
         </h1>
         <div className="wave-bg h-1 w-24 mb-8" />
-        <p className="text-lg md:text-xl max-w-2xl mb-12 text-balance">
-          We've developed omni-channel concepts and campaigns for both Swedish and international brands.
+        <p className="text-lg md:text-xl max-w-2xl mb-12 text-white text-balance">
+          Hold tight while we get this show on the road and get some cases to show for it. In the meantime, know that we're AI-positive, multi-awarded creatives with backgrounds at some of Sweden's top agencies, developing omni-channel concepts and campaigns for both Swedish and international brands.
         </p>
-      </section>
-
-      <section className="px-6 py-20 bg-accent">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Current clients include:</h2>
-        <p className="text-lg max-w-2xl mb-12">
-          Momondo, Compricer and Happy Golfer.
-        </p>
-        <p className="text-lg italic">
-          References available upon request.
+        <p className="text-lg max-w-2xl text-white">
+          Current clients include Momondo, Compricer, and Happy Golfer. References available upon request.
         </p>
       </section>
     </div>

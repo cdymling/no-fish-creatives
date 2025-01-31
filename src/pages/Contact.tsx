@@ -2,24 +2,39 @@ import { Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <div className="min-h-screen px-6 py-20">
-      <h1 className="text-4xl md:text-6xl font-bold mb-12">Let's talk.</h1>
-      <div className="space-y-6">
-        <a 
-          href="mailto:christoffer@nofish.se" 
-          className="flex items-center gap-4 text-lg md:text-xl hover:text-primary transition-colors"
+    <div className="min-h-screen relative">
+      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute min-w-full min-h-full object-cover"
         >
-          <Mail size={24} />
-          christoffer@nofish.se
-        </a>
-        <a 
-          href="tel:+1234567890" 
-          className="flex items-center gap-4 text-lg md:text-xl hover:text-primary transition-colors"
-        >
-          <Phone size={24} />
-          +1 (234) 567-890
-        </a>
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-background/99" />
       </div>
+
+      <section className="px-6 py-20">
+        <div className="space-y-4">
+          <a 
+            href="mailto:christoffer@nofish.se" 
+            className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+          >
+            <Mail size={20} />
+            christoffer@nofish.se
+          </a>
+          <a 
+            href="tel:+46704920008" 
+            className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+          >
+            <Phone size={20} />
+            +46 70 492 00 08
+          </a>
+        </div>
+      </section>
     </div>
   );
 };
