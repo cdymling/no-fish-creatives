@@ -20,6 +20,10 @@ const Home = () => {
           no fish creatives
         </h1>
       </div>
+
+      <div className="fixed top-6 left-6">
+        <span className="font-clash text-white">no fish creatives</span>
+      </div>
     </div>
   );
 };
