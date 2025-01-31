@@ -8,10 +8,13 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
+      setIsScrolled(scrollPosition > 0); // Changed from 50 to 0 to make it more responsive
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -26,9 +29,11 @@ const Navigation = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm' : ''}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <span className={`font-clash font-bold text-xl text-white transition-all duration-500 transform ${isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-          no fish creatives
-        </span>
+        <div className={`overflow-hidden transition-all duration-500 ${isScrolled ? 'h-8' : 'h-0'}`}>
+          <span className="font-clash font-bold text-xl text-white block">
+            no fish creatives
+          </span>
+        </div>
         
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
