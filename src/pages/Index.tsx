@@ -38,7 +38,7 @@ const Index = () => {
 
         <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
         <div className="space-y-6 max-w-2xl">
-          <p className="text-lg text-white">
+          <p className="text-lg text-white font-space">
             - As a creative partner for your in-house agency or marketing department.
           </p>
           <p className="text-lg text-white">
