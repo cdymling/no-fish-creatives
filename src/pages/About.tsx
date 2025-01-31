@@ -19,14 +19,14 @@ const About = () => {
         <span className="font-clash text-white">no fish creatives</span>
       </div>
 
-      <section className="px-6 py-20">
-        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">Who we're for:</h2>
-        <p className="text-lg max-w-2xl mb-12 text-white">
+      <section className="px-6 py-16">
+        <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">Who we're for:</h2>
+        <p className="text-lg max-w-2xl mb-8 text-white">
           Marketer seeking a collaborative, fast-paced, AI-embracing, and cost-effective creative consultancy.
         </p>
 
-        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
-        <div className="space-y-6 max-w-2xl">
+        <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">How you can use us:</h2>
+        <div className="space-y-3 max-w-2xl">
           <p className="text-lg text-white">
             As a creative partner for your in-house agency or marketing department.
           </p>
