@@ -21,7 +21,7 @@ const Index = () => {
 
       {/* Content */}
       <section className="px-6 py-20 md:py-32 text-white">
-        <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-8 text-balance font-clash">
+        <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-8 text-balance">
           Seasoned creatives. Free from the fishy layers of an agency.
         </h1>
         <div className="wave-bg h-1 w-24 mb-8" />
