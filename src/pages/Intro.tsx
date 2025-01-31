@@ -7,7 +7,7 @@ const Intro = () => {
           loop
           muted
           playsInline
-          className="absolute min-w-full min-h-full object-cover scale-125 object-[center_25%]"
+          className="absolute min-w-full min-h-full object-cover scale-125 object-[center_75%]"
         >
           <source src="/intro-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
