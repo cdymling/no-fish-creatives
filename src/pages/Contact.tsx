@@ -17,7 +17,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-background/99" />
       </div>
 
-      <div className="absolute top-6 right-6">
+      <div className="fixed top-6 left-6">
         <span className="font-clash text-white">no fish creatives</span>
       </div>
 
