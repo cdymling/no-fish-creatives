@@ -8,7 +8,7 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 20); // Ändrat till ett lägre värde för tidigare trigger
+      setIsScrolled(scrollPosition > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -26,25 +26,38 @@ const Navigation = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[100] px-6 py-4 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-sm border-b border-border/50' : ''}`}>
-      <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <div className={`transition-all duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
-          <span className="font-clash font-bold text-xl text-foreground block">
+    <header className="fixed top-0 left-0 right-0 z-[999]">
+      {/* Semi-transparent background that only appears when scrolled */}
+      <div 
+        className={`absolute inset-0 transition-opacity duration-300 ${
+          isScrolled ? 'opacity-100' : 'opacity-0'
+        } bg-background/80 backdrop-blur-sm border-b border-border/50`}
+      />
+      
+      {/* Navigation content */}
+      <div className="relative z-10 px-6 py-4">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
+          <h1 
+            className={`font-clash font-bold text-xl transition-transform duration-300 ${
+              isScrolled ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
+            }`}
+          >
             no fish creatives
-          </span>
+          </h1>
+          
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-foreground p-2 hover:text-primary transition-colors"
+            aria-label="Toggle menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
         </div>
-        
-        <button 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-foreground p-2 hover:text-primary transition-colors"
-          aria-label="Toggle menu"
-        >
-          <Menu className="w-6 h-6" />
-        </button>
       </div>
       
+      {/* Menu dropdown */}
       {isMenuOpen && (
-        <div className="absolute right-6 top-16 w-48 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg p-4">
+        <div className="absolute right-6 top-16 w-48 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg p-4 z-20">
           <div className="flex flex-col space-y-4">
             <button 
               onClick={() => scrollToSection('home')}
