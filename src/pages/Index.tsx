@@ -33,7 +33,7 @@ const Index = () => {
       <section className="px-6 py-20 wave-bg">
         <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">Who we're for:</h2>
         <p className="text-lg max-w-2xl mb-12 text-white">
-          Marketer seeking a collaborative, fast-paced, AI-embracing, and cost-effective creative consultancy.
+          Marketer seeking a collaborative, fast-paced, ai-positive, and cost-effective creative consultancy.
         </p>
 
         <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
