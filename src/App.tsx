@@ -5,12 +5,13 @@ import Intro from "./pages/Intro";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
+import Index from "./pages/Index";
 
 const App = () => (
   <BrowserRouter>
     <Layout>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Index />} />
         <Route path="/intro" element={<Intro />} />
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
