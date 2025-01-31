@@ -17,7 +17,7 @@ const Home = () => {
 
       {/* Logo centered */}
       <div className="flex items-center justify-center h-screen">
-        <span className="font-clash text-white text-2xl">no fish creatives</span>
+        <span className="font-clash text-white text-3xl">no fish creatives</span>
       </div>
     </div>
   );
