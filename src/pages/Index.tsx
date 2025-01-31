@@ -41,13 +41,13 @@ const Index = () => {
           <p className="text-lg text-white font-space">
             - As a creative partner for your in-house agency or marketing department.
           </p>
-          <p className="text-lg text-white">
+          <p className="text-lg text-white font-space">
             - As a creative team developing a concept, campaign, or just a single ad.
           </p>
-          <p className="text-lg text-white">
+          <p className="text-lg text-white font-space">
             - As a creative lead, taking the above from inception to final production.
           </p>
-          <p className="text-lg text-white">
+          <p className="text-lg text-white font-space">
             - If the task demands it, we're connected with experts in strategy, design, and production.
           </p>
         </div>
