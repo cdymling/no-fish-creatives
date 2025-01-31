@@ -36,15 +36,7 @@ const Navigation = () => {
       
       {/* Navigation content */}
       <div className="relative z-10 px-6 py-4">
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <h1 
-            className={`font-clash font-bold text-xl transition-transform duration-300 ${
-              isScrolled ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
-            }`}
-          >
-            no fish creatives
-          </h1>
-          
+        <div className="flex justify-end items-center max-w-7xl mx-auto">
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-foreground p-2 hover:text-primary transition-colors"
