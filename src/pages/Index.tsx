@@ -38,21 +38,17 @@ const Index = () => {
 
         <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
         <div className="space-y-6 max-w-2xl">
-          <p className="text-lg flex items-start gap-4 text-white">
-            <ArrowRight className="mt-1 flex-shrink-0" />
-            <span>As a creative partner for your in-house agency or marketing department.</span>
+          <p className="text-lg text-white">
+            -> As a creative partner for your in-house agency or marketing department.
           </p>
-          <p className="text-lg flex items-start gap-4 text-white">
-            <ArrowRight className="mt-1 flex-shrink-0" />
-            <span>As a creative team developing a concept, campaign, or just a single ad.</span>
+          <p className="text-lg text-white">
+            -> As a creative team developing a concept, campaign, or just a single ad.
           </p>
-          <p className="text-lg flex items-start gap-4 text-white">
-            <ArrowRight className="mt-1 flex-shrink-0" />
-            <span>As a creative lead, taking the above from inception to final production.</span>
+          <p className="text-lg text-white">
+            -> As a creative lead, taking the above from inception to final production.
           </p>
-          <p className="text-lg flex items-start gap-4 text-white">
-            <ArrowRight className="mt-1 flex-shrink-0" />
-            <span>If the task demands it, we're connected with experts in strategy, design, and production.</span>
+          <p className="text-lg text-white">
+            -> If the task demands it, we're connected with experts in strategy, design, and production.
           </p>
         </div>
       </section>
