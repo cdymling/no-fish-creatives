@@ -1,11 +1,9 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Menu } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,20 +15,23 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Stäng menyn när sidan ändras
-  useEffect(() => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsMenuOpen(false);
-  }, [location]);
-
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className={`fixed top-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
-      <div className="flex justify-between items-center">
+    <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm' : ''}`}>
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
+        <span className={`font-clash font-bold text-xl text-white transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
+          no fish creatives
+        </span>
+        
         <button 
-          onClick={handleMenuClick}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white p-2 hover:text-primary transition-colors"
           aria-label="Toggle menu"
         >
@@ -39,47 +40,42 @@ const Navigation = () => {
       </div>
       
       {isMenuOpen && (
-        <div className="absolute right-0 top-16 w-48 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg p-4">
+        <div className="absolute right-6 top-16 w-48 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg p-4">
           <div className="flex flex-col space-y-4">
-            <Link 
-              to="/" 
-              className="text-white hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="text-white hover:text-primary transition-colors text-left"
             >
               Home
-            </Link>
-            <Link 
-              to="/intro" 
-              className="text-white hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => scrollToSection('intro')}
+              className="text-white hover:text-primary transition-colors text-left"
             >
               Intro
-            </Link>
-            <Link 
-              to="/about" 
-              className="text-white hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-white hover:text-primary transition-colors text-left"
             >
               About
-            </Link>
-            <Link 
-              to="/work" 
-              className="text-white hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => scrollToSection('work')}
+              className="text-white hover:text-primary transition-colors text-left"
             >
               Work
-            </Link>
-            <Link 
-              to="/contact" 
-              className="text-white hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="text-white hover:text-primary transition-colors text-left"
             >
               Contact
-            </Link>
+            </button>
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 };
 

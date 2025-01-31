@@ -1,24 +1,30 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Intro from "./pages/Intro";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
-import Index from "./pages/Index";
 
 const App = () => (
-  <BrowserRouter>
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/intro" element={<Intro />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Layout>
-  </BrowserRouter>
+  <Layout>
+    <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
+      <section id="home" className="snap-start h-screen w-full">
+        <Home />
+      </section>
+      <section id="intro" className="snap-start h-screen w-full">
+        <Intro />
+      </section>
+      <section id="about" className="snap-start h-screen w-full">
+        <About />
+      </section>
+      <section id="work" className="snap-start h-screen w-full">
+        <Work />
+      </section>
+      <section id="contact" className="snap-start h-screen w-full">
+        <Contact />
+      </section>
+    </div>
+  </Layout>
 );
 
 export default App;
