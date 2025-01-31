@@ -26,7 +26,7 @@ const Navigation = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm' : ''}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <span className={`font-clash font-bold text-xl text-white transition-opacity duration-300`}>
+        <span className={`font-clash font-bold text-xl text-white transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
           no fish creatives
         </span>
         
