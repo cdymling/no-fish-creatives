@@ -1,16 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4">
+    <nav className={`fixed top-0 right-0 z-50 px-6 py-4 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
       <div className="flex justify-between items-center text-white">
-        <Link to="/" className="text-xl font-bold">
-          no fish creatives
-        </Link>
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white p-2 hover:text-primary transition-colors"
