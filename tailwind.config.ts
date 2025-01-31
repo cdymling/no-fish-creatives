@@ -19,6 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				clash: ['Clash Grotesk', 'sans-serif'],
 				space: ['Space Grotesk', 'sans-serif'],
 			},
 			colors: {
