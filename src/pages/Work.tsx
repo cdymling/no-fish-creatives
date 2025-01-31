@@ -15,6 +15,10 @@ const Work = () => {
         <div className="absolute inset-0 bg-background/99" />
       </div>
 
+      <div className="absolute top-6 right-6">
+        <span className="font-clash text-white">no fish creatives</span>
+      </div>
+
       <section className="px-6 py-20">
         <h1 className="text-3xl md:text-4xl font-bold max-w-3xl mb-8 text-white text-balance">
           Our work:

@@ -15,6 +15,10 @@ const About = () => {
         <div className="absolute inset-0 bg-background/99" />
       </div>
 
+      <div className="absolute top-6 right-6">
+        <span className="font-clash text-white">no fish creatives</span>
+      </div>
+
       <section className="px-6 py-20">
         <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">Who we're for:</h2>
         <p className="text-lg max-w-2xl mb-12 text-white">
