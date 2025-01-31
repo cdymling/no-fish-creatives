@@ -36,7 +36,7 @@ const Home = () => {
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center -translate-y-[15%]">
-        <h1 className="text-5xl md:text-7xl font-bold text-white font-space">
+        <h1 className="text-5xl md:text-7xl font-bold text-white font-space wave-bg bg-clip-text text-transparent">
           no fish creatives
         </h1>
       </div>
