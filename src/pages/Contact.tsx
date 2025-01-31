@@ -9,7 +9,7 @@ const Contact = () => {
           loop
           muted
           playsInline
-          className="absolute min-w-full min-h-full object-cover scale-[1.5] md:scale-100 md:object-center object-[70%_center]"
+          className="absolute min-w-full min-h-full object-cover scale-[0.5] md:scale-100 md:object-center object-[70%_center]"
         >
           <source src="/contact-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
