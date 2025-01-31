@@ -21,7 +21,7 @@ const Index = () => {
 
       {/* Content */}
       <section className="px-6 py-20 md:py-32 text-white">
-        <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-8 text-balance">
+        <h1 className="text-3xl md:text-4xl font-bold max-w-3xl mb-8 text-balance font-clash">
           Seasoned creatives. Free from the fishy layers of an agency.
         </h1>
         <div className="wave-bg h-1 w-24 mb-8" />
@@ -31,12 +31,12 @@ const Index = () => {
       </section>
 
       <section className="px-6 py-20 wave-bg">
-        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">Who we're for:</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white font-clash">Who we're for:</h2>
         <p className="text-lg max-w-2xl mb-12 text-white">
           Marketer seeking a collaborative, fast-paced, AI-embracing, and cost-effective creative consultancy.
         </p>
 
-        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white font-clash">How you can use us:</h2>
         <div className="space-y-6 max-w-2xl">
           <p className="text-lg flex items-start gap-4 text-white">
             <ArrowRight className="mt-1 flex-shrink-0" />
@@ -58,7 +58,7 @@ const Index = () => {
       </section>
 
       <section className="px-6 py-20 text-white">
-        <h2 className="text-3xl md:text-4xl font-bold max-w-3xl mb-8 text-balance">
+        <h2 className="text-3xl md:text-4xl font-bold max-w-3xl mb-8 text-balance font-clash">
           Our work:
         </h2>
         <div className="wave-bg h-1 w-24 mb-8" />
