@@ -31,12 +31,12 @@ const Home = () => {
 
       <div className={`fixed top-0 left-0 w-full z-50 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
         <div className="p-6">
-          <span className="text-xl font-bold text-white font-space">no fish creatives</span>
+          <span className="text-xl font-bold text-white">no fish creatives</span>
         </div>
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center -translate-y-[15%]">
-        <h1 className="text-5xl md:text-7xl font-bold text-white font-space wave-bg bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-7xl font-bold text-white">
           no fish creatives
         </h1>
       </div>

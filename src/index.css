@@ -47,24 +47,6 @@
 }
 
 @layer utilities {
-  .wave-bg {
-    background: linear-gradient(60deg, rgba(255, 145, 0, 0.85) 0%, rgba(255, 98, 0, 0.85) 100%);
-    background-size: 400% 400%;
-    animation: wave 10s ease infinite;
-  }
-
-  @keyframes wave {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
   .text-balance {
     text-wrap: balance;
   }
