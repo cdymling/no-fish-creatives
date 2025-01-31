@@ -39,16 +39,16 @@ const Index = () => {
         <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
         <div className="space-y-6 max-w-2xl">
           <p className="text-lg text-white font-space">
-            - As a creative partner for your in-house agency or marketing department.
+            - Partner with us to enhance your in-house agency or marketing team's creative capabilities.
           </p>
           <p className="text-lg text-white font-space">
-            - As a creative team developing a concept, campaign, or just a single ad.
+            - Collaborate with our creative team to develop innovative concepts, campaigns, or individual advertisements.
           </p>
           <p className="text-lg text-white font-space">
-            - As a creative lead, taking the above from inception to final production.
+            - Let us guide your projects from initial concept through to final production as your creative lead.
           </p>
           <p className="text-lg text-white font-space">
-            - If the task demands it, we're connected with experts in strategy, design, and production.
+            - Access our network of specialized experts in strategy, design, and production when your project requires it.
           </p>
         </div>
       </section>
