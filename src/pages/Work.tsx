@@ -20,7 +20,7 @@ const Work = () => {
       </div>
 
       <section className="px-6 pt-40 pb-20">
-        <h1 className="text-3xl md:text-4xl font-bold max-w-3xl mb-4 text-white text-balance">
+        <h1 className="text-xl md:text-2xl font-bold max-w-3xl mb-4 text-white text-balance">
           Our work:
         </h1>
         <div className="wave-bg h-1 w-24 mb-4" />
