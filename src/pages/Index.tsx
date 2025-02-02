@@ -37,7 +37,7 @@ const Index = () => {
           <br />and cost-effective creative consultancy.
         </p>
 
-        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How you can use us:</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-8 text-white">How we can help:</h2>
         <div className="space-y-6 max-w-2xl">
           <p className="text-lg md:text-xl text-white font-space">
             - Partner with us to enhance your in-house agency or marketing team's creative capabilities.
