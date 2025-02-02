@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -12,7 +12,7 @@ const Index = () => {
           playsInline
           className="absolute min-w-full min-h-full object-cover md:object-center object-[70%_center]"
         >
-          <source src="/home-background.mp4" type="video/mp4" />
+          <source src="home-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Overlay to ensure text readability */}
