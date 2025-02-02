@@ -1,3 +1,5 @@
+import { Mail, Phone } from 'lucide-react';
+
 const Contact = () => {
   return (
     <div className="min-h-screen relative">
