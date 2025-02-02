@@ -26,7 +26,7 @@ const About = () => {
             Marketer seeking a collaborative, fast-paced, AI-positive, and cost-effective creative consultancy.
           </p>
 
-          <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">How you can use us:</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">How we can help:</h2>
           <div className="space-y-1.5 max-w-2xl">
             <p className="text-lg text-white">
               → As a creative partner for your in-house agency or marketing department.
