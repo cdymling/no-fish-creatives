@@ -19,20 +19,18 @@ const Work = () => {
         <span className="font-clash text-white">no fish creatives</span>
       </div>
 
-      <div className="relative h-screen">
-        <section className="px-6 pt-40 pb-20">
-          <h1 className="text-xl md:text-2xl font-bold max-w-3xl mb-4 text-white text-balance">
-            Our work:
-          </h1>
-          <div className="wave-bg h-1 w-24 mb-4" />
-          <p className="text-lg md:text-xl max-w-2xl mb-6 text-white text-balance">
-            Hold tight while we get this show on the road and get some cases to show for it. In the meantime, know that we're AI-positive, multi-awarded creatives with backgrounds at some of Sweden's top agencies, developing omni-channel concepts and campaigns for both Swedish and international brands.
-          </p>
-          <p className="text-lg max-w-2xl text-white">
-            Current clients include Momondo, Compricer, and Happy Golfer. References available upon request.
-          </p>
-        </section>
-      </div>
+      <section className="px-6 pt-40 pb-20">
+        <h1 className="text-xl md:text-2xl font-bold max-w-3xl mb-4 text-white text-balance">
+          Our work:
+        </h1>
+        <div className="wave-bg h-1 w-24 mb-4" />
+        <p className="text-lg md:text-xl max-w-2xl mb-6 text-white text-balance">
+          Hold tight while we get this show on the road and get some cases to show for it. In the meantime, know that we're AI-positive, multi-awarded creatives with backgrounds at some of Sweden's top agencies, developing omni-channel concepts and campaigns for both Swedish and international brands.
+        </p>
+        <p className="text-lg max-w-2xl text-white">
+          Current clients include Momondo, Compricer, and Happy Golfer. References available upon request.
+        </p>
+      </section>
     </div>
   );
 };
