@@ -8,19 +8,19 @@ import Contact from "./pages/Contact";
 const App = () => (
   <Layout>
     <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
-      <section id="home" className="snap-start h-screen overflow-y-scroll">
+      <section id="home" className="snap-start h-screen w-full">
         <Home />
       </section>
-      <section id="intro" className="snap-start h-screen overflow-y-scroll">
+      <section id="intro" className="snap-start h-screen w-full">
         <Intro />
       </section>
-      <section id="about" className="snap-start h-screen overflow-y-scroll">
+      <section id="about" className="snap-start h-screen w-full">
         <About />
       </section>
-      <section id="work" className="snap-start h-screen overflow-y-scroll">
+      <section id="work" className="snap-start h-screen w-full">
         <Work />
       </section>
-      <section id="contact" className="snap-start h-screen overflow-y-scroll">
+      <section id="contact" className="snap-start h-screen w-full">
         <Contact />
       </section>
     </div>
