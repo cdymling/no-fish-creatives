@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="min-h-screen relative">
-      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+      <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden">
         <video
           autoPlay
           loop
