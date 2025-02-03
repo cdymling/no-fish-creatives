@@ -1,7 +1,7 @@
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import Intro from "./pages/Intro";
 import About from "./pages/About";
-import Services from "./pages/Services";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 
@@ -11,11 +11,11 @@ const App = () => (
       <section id="home" className="snap-start h-screen w-full">
         <Home />
       </section>
+      <section id="intro" className="snap-start h-screen w-full">
+        <Intro />
+      </section>
       <section id="about" className="snap-start h-screen w-full">
         <About />
-      </section>
-      <section id="services" className="snap-start h-screen w-full">
-        <Services />
       </section>
       <section id="work" className="snap-start h-screen w-full">
         <Work />
