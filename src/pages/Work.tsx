@@ -25,7 +25,7 @@ const Work = () => {
         </h1>
         <div className="wave-bg h-1 w-24 mb-4" />
         <p className="text-lg md:text-xl max-w-2xl mb-6 text-white text-balance">
-          Hold tight while we get this show on the road and get some cases to show for it. In the meantime, know that we're AI-positive, multi-awarded creatives with backgrounds at some of Sweden's top agencies, developing omni-channel concepts and campaigns for both Swedish and international brands.
+          Hold tight while we get this show on the road and get some cases to show for it. In the meantime, know that we're multi-awarded creatives with backgrounds at some of Sweden's top agencies, developing omni-channel concepts and campaigns for both Swedish and international brands.
         </p>
         <p className="text-lg max-w-2xl text-white">
           Current clients include Momondo, Compricer, and Happy Golfer. References available upon request.
