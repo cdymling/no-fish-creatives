@@ -1,7 +1,8 @@
 const Intro = () => {
   return (
     <div className="min-h-screen relative">
-      <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden">
+      {/* Background Video */}
+      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
         <video
           autoPlay
           loop
@@ -15,11 +16,13 @@ const Intro = () => {
         <div className="absolute inset-0 bg-background/99" />
       </div>
 
+      {/* Logo */}
       <div className="fixed top-6 left-6">
         <span className="font-clash text-white">no fish creatives</span>
       </div>
 
-      <section className="px-6 absolute bottom-12 md:bottom-16">
+      {/* Main Content */}
+      <div className="fixed bottom-12 md:bottom-16 px-6">
         <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-4 text-white text-balance">
           Seasoned creatives. Free from the fishy layers of an agency.
         </h1>
@@ -27,7 +30,7 @@ const Intro = () => {
           We only sell creativity. Nothing more, nothing less. You pay for what you need and get advice without hidden agendas.
         </p>
         <div className="wave-bg h-1 w-24 mt-8" />
-      </section>
+      </div>
     </div>
   );
 };
