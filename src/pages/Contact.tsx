@@ -1,4 +1,4 @@
-import { Mail, Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -24,18 +24,11 @@ const Contact = () => {
       <section className="px-6 py-20">
         <div className="space-y-4">
           <a 
-            href="mailto:christoffer@nofish.se" 
+            href="mailto:hello@nofish.se" 
             className="flex items-center gap-2 text-white hover:text-primary transition-colors"
           >
             <Mail size={20} />
-            christoffer@nofish.se
-          </a>
-          <a 
-            href="tel:+46704920008" 
-            className="flex items-center gap-2 text-white hover:text-primary transition-colors"
-          >
-            <Phone size={20} />
-            +46 70 492 00 08
+            hello@nofish.se
           </a>
         </div>
       </section>
