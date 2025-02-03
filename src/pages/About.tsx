@@ -15,10 +15,6 @@ const About = () => {
         <div className="absolute inset-0 bg-background/99" />
       </div>
 
-      <div className="fixed top-6 left-6">
-        <span className="font-clash text-white">no fish creatives</span>
-      </div>
-
       <section className="px-6 min-h-screen flex items-center">
         <div className="py-16">
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">Who we're for:</h2>

@@ -15,10 +15,6 @@ const Intro = () => {
         <div className="absolute inset-0 bg-background/99" />
       </div>
 
-      <div className="fixed top-6 left-6">
-        <span className="font-clash text-white">no fish creatives</span>
-      </div>
-
       <section className="px-6 absolute bottom-12 md:bottom-16">
         <h1 className="text-3xl md:text-5xl font-bold max-w-3xl mb-4 text-white text-balance">
           Seasoned creatives. Free from the fishy layers of an agency.
