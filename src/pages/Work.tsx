@@ -16,7 +16,7 @@ const Work = () => {
         <div className="absolute inset-0 bg-background/99" />
       </div>
 
-      <section className="px-6 py-20">
+      <section className="px-6 pt-[30vh] py-20">
         <h1 className="text-3xl md:text-4xl font-bold max-w-3xl mb-4 text-white text-balance">
           Our work:
         </h1>
