@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <div className="min-h-screen relative">
@@ -37,7 +36,7 @@ const About = () => {
               → Developing a concept, campaign, or just a single ad.
             </p>
             <p className="text-lg text-white">
-              → Creatively leading from inception to final production.
+              → Leading the creative process from idea to execution.
             </p>
             <p className="text-lg text-white">
               → If the task demands it, we're connected with experts in strategy, design, and production.
