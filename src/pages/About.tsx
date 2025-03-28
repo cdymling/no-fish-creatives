@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const About = () => {
@@ -28,7 +29,7 @@ const About = () => {
 
           <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground mt-6">Why choose us:</h2>
           <p className="text-base max-w-2xl mb-6 text-foreground">
-            With a small, AI-positive and experienced team, you can accomplish more than you might think, faster, simpler, and more cost-effectively.
+            You don't need a big agency to do big things. With a small, AI-positive and experienced team, you can accomplish more than you might think, faster, simpler, and more cost-effectively.
           </p>
         </div>
       </section>
