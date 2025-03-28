@@ -1,18 +1,9 @@
+
 const About = () => {
   return (
     <div className="min-h-screen relative">
       <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute min-w-full min-h-full object-cover md:object-center object-[55%_center]"
-        >
-          <source src="/about-background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-background/99" />
+        <div className="absolute inset-0 bg-background" />
       </div>
 
       <section className="px-6 min-h-screen flex items-center">
