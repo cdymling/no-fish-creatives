@@ -8,7 +8,7 @@ const Work = () => {
         <div className="py-16">
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground">Our work:</h2>
           <p className="text-lg max-w-2xl mb-8 text-foreground">
-            Hold tight while we get this show on the road and get some cases to show for it.
+            Seasoned creatives. Free from the fishy layers of an agency.
           </p>
           <p className="text-lg max-w-2xl mb-8 text-foreground">
             In the meantime, know that we're multi-awarded creatives with backgrounds at some of Sweden's top agencies, developing omni-channel concepts and campaigns for both Swedish and international brands.
