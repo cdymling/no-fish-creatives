@@ -1,3 +1,6 @@
+
+import React from 'react';
+
 const Home = () => {
   return (
     <div className="min-h-screen relative">
@@ -15,9 +18,12 @@ const Home = () => {
         </video>
       </div>
 
-      {/* Logo centered */}
-      <div className="flex items-center justify-center h-screen">
-        <span className="font-clash text-white text-4xl font-bold">no fish creatives</span>
+      {/* Logo and Tagline centered */}
+      <div className="flex flex-col items-center justify-center h-screen text-center">
+        <span className="font-clash text-white text-4xl font-bold mb-4">no fish creatives</span>
+        <p className="font-space text-white text-xl max-w-md text-balance">
+          Seasoned creatives. Freed from the fishy layers of an agency.
+        </p>
       </div>
     </div>
   );
