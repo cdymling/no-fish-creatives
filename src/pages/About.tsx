@@ -19,7 +19,7 @@ const About = () => {
           <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground">How we help:</h2>
           <div className="space-y-1 max-w-2xl">
             <p className="text-base text-foreground">
-              → Acting as a flexible creative partner for you and your existing team.
+              → Acting as a flexible creative partner for marketing departments and in-house agencies.
             </p>
             <p className="text-base text-foreground">
               → Developing concepts, campaigns, or just a single ad.
