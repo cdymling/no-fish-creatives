@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
 
@@ -56,12 +57,6 @@ const Navigation = () => {
               className="text-foreground hover:text-primary transition-colors text-left"
             >
               Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('intro')}
-              className="text-foreground hover:text-primary transition-colors text-left"
-            >
-              Intro
             </button>
             <button 
               onClick={() => scrollToSection('about')}
