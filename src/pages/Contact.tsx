@@ -12,7 +12,7 @@ const Contact = () => {
           playsInline
           className="absolute min-w-full min-h-full object-cover md:object-center object-[70%_center]"
         >
-          <source src="/about-background.mp4" type="video/mp4" />
+          <source src="/contact-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-background/99" />
