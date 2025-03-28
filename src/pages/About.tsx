@@ -6,17 +6,17 @@ const About = () => {
     <div className="min-h-screen relative bg-[#FEC6A1]">
       <section className="px-6 min-h-screen flex items-center">
         <div className="py-8">
-          <h2 className="text-lg md:text-xl font-bold mb-3 text-foreground">What we sell:</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground">What we sell:</h2>
           <p className="text-base max-w-2xl mb-6 text-foreground">
             The senior-level creativity you'd find at an agency, without paying for all the extras that come with it.
           </p>
 
-          <h2 className="text-lg md:text-xl font-bold mb-3 text-foreground">Who we're for:</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground">Who we're for:</h2>
           <p className="text-base max-w-2xl mb-6 text-foreground">
             Marketing departments and in-house agencies looking for senior creative expertise, an AI-positive approach, and who don't want the traditional (and costly) agency setup.
           </p>
 
-          <h2 className="text-lg md:text-xl font-bold mb-3 text-foreground">How we help:</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground">How we help:</h2>
           <div className="space-y-1 max-w-2xl">
             <p className="text-base text-foreground">
               → Acting as a flexible creative partner for you and your existing team.
@@ -32,7 +32,7 @@ const About = () => {
             </p>
           </div>
 
-          <h2 className="text-lg md:text-xl font-bold mb-3 text-foreground mt-6">Why choose us:</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground mt-6">Why choose us:</h2>
           <p className="text-base max-w-2xl mb-6 text-foreground">
             You don't need a big agency to do big things. With a small, experienced team, you can accomplish more than you might think, faster, simpler, and more cost-effectively.
           </p>
