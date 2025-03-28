@@ -8,29 +8,34 @@ const About = () => {
         <div className="py-16">
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground">What we sell:</h2>
           <p className="text-lg max-w-2xl mb-8 text-foreground">
-            Only creativity. Nothing more, nothing less. Pay for what you need and get advice without hidden agendas.
+            The senior-level creativity you'd find at an agency, without paying for all the extras that come with it.
           </p>
 
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground">Who we're for:</h2>
           <p className="text-lg max-w-2xl mb-8 text-foreground">
-            Marketers seeking a collaborative, ambitious, AI-positive, and cost-effective creative consultancy.
+            Marketing departments and in-house agencies looking for senior creative expertise, an AI-positive approach, and who don't want the traditional (and costly) agency setup.
           </p>
 
-          <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground">How we can help:</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground">How we help:</h2>
           <div className="space-y-1.5 max-w-2xl">
             <p className="text-lg text-foreground">
-              → Being a creative partner for an in-house agency or marketing department.
+              → Acting as a flexible creative partner for you and your existing team.
             </p>
             <p className="text-lg text-foreground">
-              → Developing a concept, campaign, or just a single ad.
+              → Developing concepts, campaigns, or just a single ad.
             </p>
             <p className="text-lg text-foreground">
-              → Leading the creative process from idea to execution.
+              → Leading creatively from initial idea to final delivery.
             </p>
             <p className="text-lg text-foreground">
-              → If the task demands it, we're connected with experts in strategy, design, and production.
+              → Connecting you with trusted specialists in strategy, design, or production when the project needs it.
             </p>
           </div>
+
+          <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground mt-8">Why choose us:</h2>
+          <p className="text-lg max-w-2xl mb-8 text-foreground">
+            You don't need a big agency to do big things. With a small, experienced team, you can accomplish more than you might think, faster, simpler, and more cost-effectively.
+          </p>
         </div>
       </section>
     </div>
