@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const About = () => {
@@ -33,10 +32,7 @@ const About = () => {
               → Leading creatively from initial idea to final delivery.
             </p>
             <p className="text-base text-foreground">
-              → Producing in-house, using AI where it makes sense.
-            </p>
-            <p className="text-base text-foreground">
-              → Taking on directing and editing for select film projects.
+              → Adapting production to fit your needs, using AI or taking on directing and editing when it helps.
             </p>
             <p className="text-base text-foreground">
               → Connecting you with trusted specialists in strategy, design or production when needed.
