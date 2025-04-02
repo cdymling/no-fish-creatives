@@ -6,19 +6,22 @@ const About = () => {
     <div className="min-h-screen relative bg-[#FEC6A1]">
       <section className="px-6 min-h-screen flex items-center">
         <div className="py-8 max-w-3xl">
-          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy high level creative advertising. Here's how:</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy creative advertising. Here's how:</h2>
           
           <ol className="list-decimal pl-5 space-y-3 mb-6">
             <li className="text-base text-foreground">
-              We stripped the team down to the essentials. You work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers (and costs) that usually come with one.
+              By letting you work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers of people, processes and up-selling that usually comes with.
             </li>
             <li className="text-base text-foreground">
-              We've streamlined the production. In many cases, we handle it ourselves, using AI or take on directing and editing, where it makes sense.
+              By being smart about production. When it make sense, we handle it ourselves, using AI or take on tasks as directing and editing.
+            </li>
+            <li className="text-base text-foreground">
+              By collaborating with a trusted network of specialists in strategy, design and production when your task demands it. That way you only pay for what you need, when you need it.
             </li>
           </ol>
 
           <p className="text-base -mt-2 mb-4 text-foreground">
-            This means you don't need a big agency to do big things. With a small, AI-positive, senior team, you can get more done than you'd think. Faster, smoother, and for less.
+            This means you don't need a big agency to do big things. With a small, AI-positive, senior team, you can get more done than you'd think. Faster, smoother and for less.
           </p>
         </div>
       </section>
