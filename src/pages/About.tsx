@@ -6,12 +6,12 @@ const About = () => {
     <div className="min-h-screen relative bg-[#FEC6A1]">
       <section className="px-6 min-h-screen flex items-center">
         <div className="py-8 max-w-3xl">
-          <h2 className="text-lg md:text-xl font-bold mb-3 text-foreground">What we sell</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">What we sell</h2>
           <p className="text-base mb-6 text-foreground">
             We make it easier to buy high level creative advertising.
           </p>
 
-          <h2 className="text-lg md:text-xl font-bold mb-3 text-foreground">Here's how:</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">Here's how:</h2>
           <ol className="list-decimal pl-5 space-y-3 mb-6">
             <li className="text-base text-foreground">
               We stripped the team down to the essentials. You work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers (and costs) that usually come with one.
@@ -25,7 +25,7 @@ const About = () => {
             This means you don't need a big agency to do big things. With a small, AI-positive, senior team, you can get more done than you'd think. Faster, smoother, and for less.
           </p>
 
-          <h2 className="text-lg md:text-xl font-bold mb-3 text-foreground">How we help</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">How we help</h2>
           <div className="space-y-2 max-w-2xl">
             <p className="text-base text-foreground">
               → Acting as a flexible creative partner to marketing departments and in-house agencies.
