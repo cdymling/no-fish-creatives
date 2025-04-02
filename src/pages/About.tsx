@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const About = () => {
@@ -7,7 +8,6 @@ const About = () => {
         <div className="py-8 max-w-3xl">
           <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy high level creative advertising.</h2>
           
-          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">Here's how:</h2>
           <ol className="list-decimal pl-5 space-y-3 mb-6">
             <li className="text-base text-foreground">
               We stripped the team down to the essentials. You work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers (and costs) that usually come with one.
