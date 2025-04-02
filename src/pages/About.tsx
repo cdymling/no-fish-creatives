@@ -20,7 +20,7 @@ const About = () => {
             This means you don't need a big agency to do big things. With a small, AI-positive, senior team, you can get more done than you'd think. Faster, smoother, and for less.
           </p>
 
-          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">How we help:</h2>
+          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">How we might be of service:</h2>
           <div className="space-y-2 max-w-2xl">
             <p className="text-base text-foreground">
               → Acting as a flexible creative partner to marketing departments and in-house agencies.
