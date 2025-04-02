@@ -20,7 +20,7 @@ const Home = () => {
 
       {/* Logo and Tagline centered */}
       <div className="flex flex-col items-center justify-center h-screen text-center">
-        <span className="font-clash text-white text-4xl font-bold mb-4">no fish</span>
+        <span className="font-clash text-white text-5xl font-bold mb-4">no fish</span>
         <p className="font-space text-white text-xl max-w-md text-balance">
           Creative advertising. Freed from the fishy layers of an agency.
         </p>
