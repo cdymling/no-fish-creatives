@@ -3,7 +3,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="min-h-screen relative bg-[#33C3F0]">
+    <div className="min-h-screen relative bg-[#FEC6A1]">
       <section className="px-6 min-h-screen flex items-center">
         <div className="py-8 max-w-3xl">
           <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy high level creative advertising. Here's how:</h2>
