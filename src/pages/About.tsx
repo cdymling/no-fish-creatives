@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const About = () => {
@@ -27,7 +26,7 @@ const About = () => {
               → Acting as a flexible creative partner to marketing departments and in-house agencies.
             </p>
             <p className="text-base text-foreground">
-              → Developing concepts, campaigns or just a single ad.
+              → Developing concepts, campaigns or just a single ad, and producing them when possible.
             </p>
             <p className="text-base text-foreground">
               → Leading creatively from initial idea to final delivery.
