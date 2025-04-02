@@ -19,7 +19,7 @@ const Services = () => {
               → Leading creatively from initial idea to final delivery.
             </p>
             <p className="text-base text-foreground">
-              → Connecting you with trusted specialists in strategy, design or production when needed.
+              → In a way you might have thought of that we haven't?
             </p>
           </div>
         </div>
