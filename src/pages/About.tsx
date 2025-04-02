@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const About = () => {
@@ -21,7 +20,7 @@ const About = () => {
             </li>
           </ol>
 
-          <p className="text-base mb-6 text-foreground">
+          <p className="text-base mb-4 text-foreground">
             This means you don't need a big agency to do big things. With a small, AI-positive, senior team, you can get more done than you'd think. Faster, smoother, and for less.
           </p>
 
