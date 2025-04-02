@@ -3,7 +3,7 @@ import React from 'react';
 
 const Work = () => {
   return (
-    <div className="min-h-screen relative bg-[#33C3F0]">
+    <div className="min-h-screen relative bg-[#FEC6A1]">
       <section className="px-6 min-h-screen flex items-center">
         <div className="py-8">
           <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground">Our work:</h2>
