@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const About = () => {
@@ -30,9 +31,6 @@ const About = () => {
             </p>
             <p className="text-base text-foreground">
               → Leading creatively from initial idea to final delivery.
-            </p>
-            <p className="text-base text-foreground">
-              → Adapting production to fit your needs, using AI or taking on directing and editing when it helps.
             </p>
             <p className="text-base text-foreground">
               → Connecting you with trusted specialists in strategy, design or production when needed.
