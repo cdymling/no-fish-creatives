@@ -13,7 +13,7 @@ const About = () => {
               By letting you work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers of people, processes and up-selling that usually comes with.
             </li>
             <li className="text-base text-foreground">
-              By being smart about production. When it make sense, we handle it ourselves, using AI or take on tasks as directing and editing.
+              By being smart about production. When it makes sense, we handle it ourselves, using AI or taking on tasks like directing and editing.
             </li>
             <li className="text-base text-foreground">
               By collaborating with a trusted network of specialists in strategy, design and production when your task demands it. That way you only pay for what you need, when you need it.
