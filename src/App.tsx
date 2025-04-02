@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 
 const App = () => (
   <Layout>
@@ -13,6 +14,9 @@ const App = () => (
       </section>
       <section id="about" className="snap-start h-screen w-full">
         <About />
+      </section>
+      <section id="services" className="snap-start h-screen w-full">
+        <Services />
       </section>
       <section id="work" className="snap-start h-screen w-full">
         <Work />
