@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -177,7 +178,7 @@ const ProtectedVideos = () => {
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-start pt-[10vh]'}`}>
         <div className="py-8 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl max-w-[70%] mx-auto">
               <h2 className="text-lg md:text-xl font-bold mb-4 text-foreground">Client Access</h2>
               <p className="mb-4 text-foreground">This content is password protected. Please enter the password to view.</p>
               
@@ -232,7 +233,7 @@ const ProtectedVideos = () => {
                 ) : (
                   <div className="flex flex-col space-y-20">
                     {videos.length > 0 && (
-                      <div className="max-w-[600px]">
+                      <div className="max-w-[420px]">
                         <h3 className="text-base font-medium mb-2 text-foreground">{videos[0].title}</h3>
                         <div className="overflow-hidden">
                           <AspectRatio ratio={9/16}>
@@ -252,7 +253,7 @@ const ProtectedVideos = () => {
                     )}
 
                     {videos.length > 1 && (
-                      <div className="max-w-[600px]">
+                      <div className="max-w-[420px]">
                         <h3 className="text-base font-medium mb-2 text-foreground">{videos[1].title}</h3>
                         <div className="overflow-hidden">
                           <AspectRatio ratio={9/16}>
