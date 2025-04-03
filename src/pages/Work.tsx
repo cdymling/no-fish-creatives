@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -22,7 +23,7 @@ const Work = () => {
           </p>
           
           <p className="text-base max-w-2xl mb-6 text-foreground">
-            Curious about what's possible with AI? Have a look at some demos we've developed for clients here:
+            Curious about what's possible with AI? Email hello@nofish.se to get access to some demos.
           </p>
           
           <div className="mt-4">
