@@ -10,8 +10,8 @@ import { useToast } from "@/components/ui/use-toast";
 const CORRECT_PASSWORD = 'nofish2024';
 
 // GitHub repository information - replace with your own repository details
-const GITHUB_OWNER = 'yourGitHubUsername';
-const GITHUB_REPO = 'yourRepoName';
+const GITHUB_OWNER = 'cdymling';
+const GITHUB_REPO = 'no-fish-creatives';
 const GITHUB_BRANCH = 'main';
 const VIDEOS_PATH = 'videos';  // Folder in your GitHub repo where videos are stored
 
