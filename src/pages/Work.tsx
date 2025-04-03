@@ -28,11 +28,11 @@ const Work = () => {
           
           <div className="mt-8">
             <Button 
-              variant="outline" 
-              className="border-foreground text-foreground hover:bg-foreground hover:text-[#FEC6A1]"
+              variant="ghost" 
+              className="text-foreground/60 hover:text-foreground/80 border-foreground/20 hover:border-foreground/40"
               onClick={handleNavigateToProtectedVideos}
             >
-              Client Access
+              AI Demos
             </Button>
           </div>
         </div>
