@@ -11,7 +11,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className={`min-h-screen ${isProtectedVideosPage ? 'bg-[#FEC6A1]' : ''}`}>
       <Navigation />
-      <main className={`${isProtectedVideosPage || isStandalonePage ? 'h-full' : ''}`}>
+      <main className={`${isProtectedVideosPage || isStandalonePage ? 'h-full overflow-auto' : ''}`}>
         {children}
       </main>
     </div>
