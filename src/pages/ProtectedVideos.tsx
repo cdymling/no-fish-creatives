@@ -174,7 +174,8 @@ const ProtectedVideos = () => {
   };
 
   return (
-    <div className="min-h-screen relative bg-[#FEC6A1]">
+    <div className="min-h-screen relative bg-[#FEC6A1] overflow-hidden">
+      {/* Remove any potential white bar by removing extra positioning and overflow handling */}
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-start pt-[10vh]'}`}>
         <div className="py-8 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
@@ -283,4 +284,3 @@ const ProtectedVideos = () => {
 };
 
 export default ProtectedVideos;
-
