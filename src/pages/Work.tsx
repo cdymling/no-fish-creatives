@@ -28,8 +28,7 @@ const Work = () => {
           
           <div className="mt-8">
             <Button 
-              variant="ghost" 
-              className="text-foreground/60 hover:text-foreground/80 border-foreground/20 hover:border-foreground/40"
+              className="bg-white/10 backdrop-blur-sm text-foreground hover:bg-white/20 transition-colors"
               onClick={handleNavigateToProtectedVideos}
             >
               AI Demos
