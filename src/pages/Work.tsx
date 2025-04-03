@@ -19,10 +19,11 @@ const Work = () => {
         <div className="py-8">
           <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground">Our work:</h2>
           <p className="text-base max-w-2xl mb-6 text-foreground">
-            Hold tight while we and our current clients get ready to show what we've been working on.
+            We and our current clients are soon ready to show what we've been working on. In the meantime, know that the work we'll be doing is backed by years of experience as award-winning creatives, developing ideas and campaigns for some of Sweden's biggest brands across all kinds of channels, formats and industries.
           </p>
+          
           <p className="text-base max-w-2xl mb-6 text-foreground">
-            In the meantime, know that the work we'll be doing is backed by years of experience as award-winning creatives, developing ideas and campaigns for some of Sweden's biggest brands across all kinds of channels, formats and industries.
+            Curious about what's possible with AI? Have a look at some demos we've developed for clients here:
           </p>
           
           <div className="mt-8">
