@@ -5,7 +5,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const CORRECT_PASSWORD = 'nofish2024';
 
@@ -175,7 +174,7 @@ const ProtectedVideos = () => {
   return (
     <div className="min-h-screen relative bg-[#33C3F0]">
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
-        <div className="py-4 w-full max-w-5xl mx-auto">
+        <div className="py-8 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <h2 className="text-lg md:text-xl font-bold mb-4 text-foreground">Client Access</h2>
@@ -216,12 +215,12 @@ const ProtectedVideos = () => {
             </div>
           ) : (
             <div>
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
               </div>
               
               {isLoading ? (
-                <div className="flex justify-center my-4">
+                <div className="flex justify-center my-8">
                   <div className="text-foreground">Loading videos from GitHub...</div>
                 </div>
               ) : videos.length === 0 ? (
@@ -229,22 +228,20 @@ const ProtectedVideos = () => {
                   <p className="text-foreground">No videos found in the repository.</p>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
                   {videos.map(video => (
-                    <div key={video.id} className="bg-white/10 backdrop-blur-sm p-2 rounded-xl">
-                      <h3 className="text-sm font-medium text-foreground truncate">{video.title}</h3>
-                      <div className="relative rounded-lg overflow-hidden my-1">
-                        <AspectRatio ratio={9/16} className="max-h-[50vh]">
-                          <video 
-                            controls 
-                            className="w-full h-full object-cover"
-                          >
-                            <source src={video.url} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </AspectRatio>
+                    <div key={video.id} className="bg-white/10 backdrop-blur-sm p-3 rounded-xl">
+                      <h3 className="text-base font-medium mb-1 text-foreground">{video.title}</h3>
+                      <div className="aspect-[9/16] rounded-lg overflow-hidden">
+                        <video 
+                          controls 
+                          className="w-full h-full object-cover"
+                        >
+                          <source src={video.url} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
                       </div>
-                      <p className="text-xs text-foreground/80 line-clamp-1">
+                      <p className="mt-1 text-sm text-foreground/80">
                         {video.description}
                       </p>
                     </div>
