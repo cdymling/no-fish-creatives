@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -216,7 +217,7 @@ const ProtectedVideos = () => {
           ) : (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-lg md:text-xl font-bold text-foreground">Client Videos</h2>
+                <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
               </div>
               
               {isLoading ? (
@@ -257,3 +258,4 @@ const ProtectedVideos = () => {
 };
 
 export default ProtectedVideos;
+
