@@ -19,14 +19,16 @@ const Index = () => {
   // Handle video loaded event
   const handleVideoLoaded = () => {
     setVideoLoaded(true);
-    // Add a small delay before fading in content
-    setTimeout(() => {
-      setPageVisible(true);
-    }, 100);
+    // Fade in content immediately when video is loaded
+    setPageVisible(true);
   };
   
   return (
-    <div className={`min-h-screen relative transition-opacity duration-700 ease-in-out ${pageVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div 
+      className={`min-h-screen relative transition-opacity duration-[2000ms] ease-in-out ${
+        pageVisible ? 'opacity-100' : 'opacity-0'
+      }`}
+    >
       {/* Background Video */}
       <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
         <video
@@ -35,7 +37,9 @@ const Index = () => {
           muted
           playsInline
           onLoadedData={handleVideoLoaded}
-          className="absolute min-w-full min-h-full object-cover md:object-center object-[70%_center]"
+          className={`absolute min-w-full min-h-full object-cover md:object-center object-[70%_center] transition-opacity duration-[2000ms] ease-in-out ${
+            pageVisible ? 'opacity-100' : 'opacity-0'
+          }`}
         >
           <source src="home-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
