@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -147,14 +146,8 @@ const ProtectedVideos = () => {
   }, [videos]);
 
   const handleGoBack = () => {
-    // First remove auth token
     localStorage.removeItem('nofish_auth');
-    
-    // Navigate to home page
     navigate('/', { replace: true });
-    
-    // Use a longer timeout to ensure the navigation completes
-    // and the snap sections are properly initialized
     setTimeout(() => {
       const workSection = document.getElementById('work');
       if (workSection) {
