@@ -23,6 +23,15 @@ const ProtectedVideos = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsBackgroundLoaded(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   const defaultVideos = [
     {
@@ -150,8 +159,10 @@ const ProtectedVideos = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FEC6A1] overflow-hidden relative isolate">
-      <div className="absolute inset-0 -z-10 bg-[#FEC6A1]"></div>
+    <div className={`min-h-screen overflow-hidden relative isolate transition-all duration-500 ease-in-out ${
+      isBackgroundLoaded ? 'bg-[#FEC6A1]' : 'bg-background'
+    }`}>
+      <div className="absolute inset-0 -z-10 bg-[#FEC6A1] opacity-0 transition-opacity duration-500 ease-in-out"></div>
       
       <div className="absolute top-4 left-4">
         <Button 

@@ -14,12 +14,21 @@ const Work = () => {
   const { toast } = useToast();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
   
   useEffect(() => {
+    // Preload background color transition
+    const timer = setTimeout(() => {
+      setIsBackgroundLoaded(true);
+    }, 100);
+    
+    // Check authentication
     const auth = localStorage.getItem('nofish_auth');
     if (auth === 'true') {
       navigate('/protected-videos');
     }
+    
+    return () => clearTimeout(timer);
   }, [navigate]);
   
   const handlePasswordSubmit = (e: React.FormEvent) => {
@@ -34,7 +43,11 @@ const Work = () => {
   };
   
   return (
-    <div className="min-h-screen relative bg-[#FEC6A1]">
+    <div 
+      className={`min-h-screen relative transition-all duration-500 ease-in-out ${
+        isBackgroundLoaded ? 'bg-[#FEC6A1]' : 'bg-background'
+      }`}
+    >
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
         <div className="py-8">
           <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground">Our work:</h2>
