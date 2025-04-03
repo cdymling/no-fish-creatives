@@ -16,13 +16,48 @@ const ProtectedVideos = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState('');
 
+  // Default videos
+  const defaultVideos = [
+    {
+      id: 1,
+      title: 'Campaign Video 1',
+      description: 'Description of the first campaign video.',
+      url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+    },
+    {
+      id: 2,
+      title: 'Campaign Video 2',
+      description: 'Description of the second campaign video.',
+      url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+    }
+  ];
+
+  const [videos, setVideos] = useState(defaultVideos);
+
   // Check if they're already authenticated
   useEffect(() => {
     const auth = localStorage.getItem('nofish_auth');
     if (auth === 'true') {
       setIsAuthenticated(true);
     }
+    
+    // Try to load videos from localStorage
+    const savedVideos = localStorage.getItem('nofish_videos');
+    if (savedVideos) {
+      try {
+        setVideos(JSON.parse(savedVideos));
+      } catch (e) {
+        console.error('Error loading saved videos', e);
+      }
+    }
   }, []);
+
+  // Save videos to localStorage when they change
+  useEffect(() => {
+    if (videos !== defaultVideos) {
+      localStorage.setItem('nofish_videos', JSON.stringify(videos));
+    }
+  }, [videos]);
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,7 +79,7 @@ const ProtectedVideos = () => {
   return (
     <div className="min-h-screen relative bg-[#33C3F0]">
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
-        <div className="py-8 w-full max-w-3xl mx-auto">
+        <div className="py-8 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <h2 className="text-lg md:text-xl font-bold mb-4 text-foreground">Client Access</h2>
@@ -97,25 +132,23 @@ const ProtectedVideos = () => {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                  <h3 className="text-base font-medium mb-2 text-foreground">Campaign Video 1</h3>
-                  <div className="aspect-video bg-black/20 rounded-lg flex items-center justify-center">
-                    <p className="text-foreground/70">Video 1 placeholder - Add your video here</p>
+                {videos.map(video => (
+                  <div key={video.id} className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                    <h3 className="text-base font-medium mb-2 text-foreground">{video.title}</h3>
+                    <div className="aspect-video rounded-lg overflow-hidden">
+                      <video 
+                        controls 
+                        className="w-full h-full object-cover"
+                      >
+                        <source src={video.url} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <p className="mt-2 text-sm text-foreground/80">
+                      {video.description}
+                    </p>
                   </div>
-                  <p className="mt-2 text-sm text-foreground/80">
-                    Description of the first campaign video.
-                  </p>
-                </div>
-                
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                  <h3 className="text-base font-medium mb-2 text-foreground">Campaign Video 2</h3>
-                  <div className="aspect-video bg-black/20 rounded-lg flex items-center justify-center">
-                    <p className="text-foreground/70">Video 2 placeholder - Add your video here</p>
-                  </div>
-                  <p className="mt-2 text-sm text-foreground/80">
-                    Description of the second campaign video.
-                  </p>
-                </div>
+                ))}
               </div>
             </div>
           )}
