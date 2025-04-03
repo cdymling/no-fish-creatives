@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast";
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { ArrowLeft } from 'lucide-react';
 
 const CORRECT_PASSWORD = 'nofish2024';
 
@@ -172,10 +173,26 @@ const ProtectedVideos = () => {
     }
   };
 
+  const handleGoBack = () => {
+    navigate('/work');
+  };
+
   return (
     <div className="min-h-screen bg-[#FEC6A1] overflow-hidden relative isolate">
       <div className="absolute inset-0 -z-10 bg-[#FEC6A1]"></div>
       
+      <div className="absolute top-4 left-4">
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          onClick={handleGoBack}
+          className="text-foreground hover:bg-foreground/10 p-2"
+        >
+          <ArrowLeft className="w-5 h-5 mr-2" /> 
+          <span className="text-sm">Back</span>
+        </Button>
+      </div>
+
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[5vh]' : 'items-start pt-[5vh]'}`}>
         <div className="py-4 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
