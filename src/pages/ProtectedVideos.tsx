@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -174,7 +173,7 @@ const ProtectedVideos = () => {
   };
 
   return (
-    <div className="min-h-screen relative bg-[#F97316]">
+    <div className="min-h-screen relative bg-[#FEC6A1]">
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-start pt-[10vh]'}`}>
         <div className="py-8 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
