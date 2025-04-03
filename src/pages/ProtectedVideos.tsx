@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { ArrowLeft } from 'lucide-react';
 
@@ -202,7 +201,6 @@ const ProtectedVideos = () => {
               
               <form onSubmit={handlePasswordSubmit} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="password">Password</Label>
                   <Input 
                     id="password"
                     type="password" 
