@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,5 +50,13 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .wave-bg {
+    background: linear-gradient(175deg, #FF8243 0%, #FFBB5C 100%);
+  }
+  
+  .duration-2000 {
+    transition-duration: 2000ms;
   }
 }
