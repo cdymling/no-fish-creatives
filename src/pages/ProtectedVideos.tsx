@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -5,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast";
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const CORRECT_PASSWORD = 'nofish2024';
 
@@ -172,8 +174,8 @@ const ProtectedVideos = () => {
   };
 
   return (
-    <div className="min-h-screen relative bg-[#33C3F0]">
-      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
+    <div className="min-h-screen relative bg-[#F97316]">
+      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-start pt-[10vh]'}`}>
         <div className="py-8 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
@@ -197,7 +199,7 @@ const ProtectedVideos = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-foreground text-[#33C3F0] hover:bg-foreground/80"
+                  className="w-full bg-foreground text-[#F97316] hover:bg-foreground/80"
                 >
                   Submit
                 </Button>
@@ -214,40 +216,64 @@ const ProtectedVideos = () => {
               </div>
             </div>
           ) : (
-            <div>
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
-              </div>
-              
-              {isLoading ? (
-                <div className="flex justify-center my-8">
-                  <div className="text-foreground">Loading videos from GitHub...</div>
+            <div className="flex flex-col space-y-16">
+              <div>
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
                 </div>
-              ) : videos.length === 0 ? (
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-                  <p className="text-foreground">No videos found in the repository.</p>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                  {videos.map(video => (
-                    <div key={video.id} className="bg-white/10 backdrop-blur-sm p-3 rounded-xl">
-                      <h3 className="text-base font-medium mb-1 text-foreground">{video.title}</h3>
-                      <div className="aspect-[9/16] rounded-lg overflow-hidden">
-                        <video 
-                          controls 
-                          className="w-full h-full object-cover"
-                        >
-                          <source src={video.url} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
+                
+                {isLoading ? (
+                  <div className="flex justify-center my-8">
+                    <div className="text-foreground">Loading videos from GitHub...</div>
+                  </div>
+                ) : videos.length === 0 ? (
+                  <div className="backdrop-blur-sm p-6 rounded-xl">
+                    <p className="text-foreground">No videos found in the repository.</p>
+                  </div>
+                ) : (
+                  <div className="flex flex-col space-y-20">
+                    {videos.length > 0 && (
+                      <div className="max-w-[600px]">
+                        <h3 className="text-base font-medium mb-2 text-foreground">{videos[0].title}</h3>
+                        <div className="overflow-hidden">
+                          <AspectRatio ratio={9/16}>
+                            <video 
+                              controls 
+                              className="w-full h-full object-cover"
+                            >
+                              <source src={videos[0].url} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </AspectRatio>
+                        </div>
+                        <p className="mt-2 text-sm text-foreground/80">
+                          {videos[0].description}
+                        </p>
                       </div>
-                      <p className="mt-1 text-sm text-foreground/80">
-                        {video.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              )}
+                    )}
+
+                    {videos.length > 1 && (
+                      <div className="max-w-[600px]">
+                        <h3 className="text-base font-medium mb-2 text-foreground">{videos[1].title}</h3>
+                        <div className="overflow-hidden">
+                          <AspectRatio ratio={9/16}>
+                            <video 
+                              controls 
+                              className="w-full h-full object-cover"
+                            >
+                              <source src={videos[1].url} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </AspectRatio>
+                        </div>
+                        <p className="mt-2 text-sm text-foreground/80">
+                          {videos[1].description}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>
