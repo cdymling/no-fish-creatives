@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useToast } from "@/hooks/use-toast";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 const CORRECT_PASSWORD = 'nofish2024';
 
@@ -16,7 +15,6 @@ const Work = () => {
   const { toast } = useToast();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const isStandalonePage = location.pathname === '/work';
   
   useEffect(() => {
     const auth = localStorage.getItem('nofish_auth');
@@ -36,8 +34,8 @@ const Work = () => {
     }
   };
   
-  const content = (
-    <div className="min-h-screen relative bg-[#FEC6A1]">
+  return (
+    <div className="min-h-screen relative bg-[#FEC6A1] overflow-auto">
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
         <div className="py-8">
           <h2 className="text-lg md:text-xl font-bold mb-1 text-foreground">Our work:</h2>
@@ -73,18 +71,7 @@ const Work = () => {
       </section>
     </div>
   );
-  
-  // For standalone page, wrap in ScrollArea to ensure scrolling works
-  if (isStandalonePage) {
-    return (
-      <ScrollArea className="h-screen w-full">
-        {content}
-      </ScrollArea>
-    );
-  }
-  
-  // For snap section on home page, return without ScrollArea
-  return content;
 };
 
 export default Work;
+
