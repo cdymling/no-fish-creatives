@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/hooks/use-toast";
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { ArrowLeft } from 'lucide-react';
-
-const CORRECT_PASSWORD = 'nofish2024';
 
 const GITHUB_OWNER = 'cdymling';
 const GITHUB_REPO = 'no-fish-creatives';
@@ -25,9 +22,6 @@ const ProtectedVideos = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [password, setPassword] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const defaultVideos = [
@@ -123,54 +117,33 @@ const ProtectedVideos = () => {
   };
 
   useEffect(() => {
-    const handleBeforeUnload = () => {
-      localStorage.removeItem('nofish_auth');
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    const auth = localStorage.getItem('nofish_auth');
+    if (auth !== 'true') {
+      navigate('/work');
+      return;
+    }
+    
+    const savedVideos = localStorage.getItem('nofish_videos');
+    if (savedVideos) {
+      try {
+        setVideos(JSON.parse(savedVideos));
+      } catch (e) {
+        console.error('Error loading saved videos', e);
+      }
+    }
+    
+    fetchVideosFromGitHub();
     
     return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
       localStorage.removeItem('nofish_auth');
     };
-  }, []);
-
-  useEffect(() => {
-    const auth = localStorage.getItem('nofish_auth');
-    if (auth === 'true') {
-      setIsAuthenticated(true);
-      
-      const savedVideos = localStorage.getItem('nofish_videos');
-      if (savedVideos) {
-        try {
-          setVideos(JSON.parse(savedVideos));
-        } catch (e) {
-          console.error('Error loading saved videos', e);
-        }
-      }
-      
-      fetchVideosFromGitHub();
-    }
-  }, []);
+  }, [navigate]);
 
   useEffect(() => {
     if (videos !== defaultVideos) {
       localStorage.setItem('nofish_videos', JSON.stringify(videos));
     }
   }, [videos]);
-
-  const handlePasswordSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (password === CORRECT_PASSWORD) {
-      setIsAuthenticated(true);
-      localStorage.setItem('nofish_auth', 'true');
-      setError('');
-      
-      fetchVideosFromGitHub();
-    } else {
-      setError('Incorrect password. Please try again.');
-    }
-  };
 
   const handleGoBack = () => {
     navigate('/work');
@@ -194,94 +167,65 @@ const ProtectedVideos = () => {
 
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[5vh]' : 'items-start pt-[5vh]'}`}>
         <div className="py-4 w-full max-w-5xl mx-auto">
-          {!isAuthenticated ? (
-            <div className="p-6 max-w-[60%]">
-              <h2 className="text-lg md:text-xl font-bold mb-4 text-foreground">AI-powered Demos</h2>
-              <p className="mb-4 text-foreground">This content is password protected. Email hello@nofish.se to get access.</p>
-              
-              <form onSubmit={handlePasswordSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Input 
-                    id="password"
-                    type="password" 
-                    value={password} 
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Enter password"
-                    className="bg-white/20 text-foreground placeholder:text-foreground/50"
-                  />
-                </div>
-                
-                {error && <p className="text-red-400">{error}</p>}
-                
-                <Button 
-                  type="submit" 
-                  className="bg-white/10 backdrop-blur-sm text-foreground hover:bg-white/20 transition-colors"
-                >
-                  Submit
-                </Button>
-              </form>
-            </div>
-          ) : (
-            <div className="flex flex-col space-y-8">
-              <div>
-                <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
-                </div>
-                
-                {isLoading ? (
-                  <div className="flex justify-center my-8">
-                    <div className="text-foreground">Loading videos from GitHub...</div>
-                  </div>
-                ) : videos.length === 0 ? (
-                  <div className="backdrop-blur-sm p-6 rounded-xl">
-                    <p className="text-foreground">No videos found in the repository.</p>
-                  </div>
-                ) : (
-                  <div className="flex flex-col space-y-12">
-                    {videos.length > 0 && (
-                      <div className="max-w-[290px] ml-0">
-                        <h3 className="text-base font-medium mb-2 text-foreground">{videos[0].title}</h3>
-                        <div className="overflow-hidden">
-                          <AspectRatio ratio={9/16}>
-                            <video 
-                              controls 
-                              className="w-full h-full object-cover"
-                            >
-                              <source src={videos[0].url} type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
-                          </AspectRatio>
-                        </div>
-                        <p className="mt-2 text-sm text-foreground/80">
-                          {videos[0].description}
-                        </p>
-                      </div>
-                    )}
-
-                    {videos.length > 1 && (
-                      <div className="max-w-[290px] ml-0">
-                        <h3 className="text-base font-medium mb-2 text-foreground">{videos[1].title}</h3>
-                        <div className="overflow-hidden">
-                          <AspectRatio ratio={9/16}>
-                            <video 
-                              controls 
-                              className="w-full h-full object-cover"
-                            >
-                              <source src={videos[1].url} type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
-                          </AspectRatio>
-                        </div>
-                        <p className="mt-2 text-sm text-foreground/80">
-                          {videos[1].description}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                )}
+          <div className="flex flex-col space-y-8">
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
               </div>
+              
+              {isLoading ? (
+                <div className="flex justify-center my-8">
+                  <div className="text-foreground">Loading videos from GitHub...</div>
+                </div>
+              ) : videos.length === 0 ? (
+                <div className="backdrop-blur-sm p-6 rounded-xl">
+                  <p className="text-foreground">No videos found in the repository.</p>
+                </div>
+              ) : (
+                <div className="flex flex-col space-y-12">
+                  {videos.length > 0 && (
+                    <div className="max-w-[290px] ml-0">
+                      <h3 className="text-base font-medium mb-2 text-foreground">{videos[0].title}</h3>
+                      <div className="overflow-hidden">
+                        <AspectRatio ratio={9/16}>
+                          <video 
+                            controls 
+                            className="w-full h-full object-cover"
+                          >
+                            <source src={videos[0].url} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </AspectRatio>
+                      </div>
+                      <p className="mt-2 text-sm text-foreground/80">
+                        {videos[0].description}
+                      </p>
+                    </div>
+                  )}
+
+                  {videos.length > 1 && (
+                    <div className="max-w-[290px] ml-0">
+                      <h3 className="text-base font-medium mb-2 text-foreground">{videos[1].title}</h3>
+                      <div className="overflow-hidden">
+                        <AspectRatio ratio={9/16}>
+                          <video 
+                            controls 
+                            className="w-full h-full object-cover"
+                          >
+                            <source src={videos[1].url} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </AspectRatio>
+                      </div>
+                      <p className="mt-2 text-sm text-foreground/80">
+                        {videos[1].description}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </section>
     </div>

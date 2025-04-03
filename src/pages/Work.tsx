@@ -1,16 +1,36 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { useNavigate } from 'react-router-dom';
+import { useToast } from "@/hooks/use-toast";
+
+const CORRECT_PASSWORD = 'nofish2024';
 
 const Work = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   
-  const handleNavigateToProtectedVideos = () => {
-    console.log('Navigating to /protected-videos');
-    navigate('/protected-videos');
+  useEffect(() => {
+    const auth = localStorage.getItem('nofish_auth');
+    if (auth === 'true') {
+      navigate('/protected-videos');
+    }
+  }, [navigate]);
+  
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === CORRECT_PASSWORD) {
+      localStorage.setItem('nofish_auth', 'true');
+      setError('');
+      navigate('/protected-videos');
+    } else {
+      setError('Incorrect password. Please try again.');
+    }
   };
   
   return (
@@ -26,14 +46,26 @@ const Work = () => {
             Curious about what's possible with AI? Email hello@nofish.se to get access to some demos.
           </p>
           
-          <div className="mt-4">
+          <form onSubmit={handlePasswordSubmit} className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 max-w-md">
+            <div className="flex-1">
+              <Input 
+                type="password" 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter password"
+                className="bg-white/20 text-foreground placeholder:text-foreground/50"
+              />
+            </div>
+            
             <Button 
+              type="submit" 
               className="bg-white/10 backdrop-blur-sm text-foreground hover:bg-white/20 transition-colors"
-              onClick={handleNavigateToProtectedVideos}
             >
-              AI Demos
+              Submit
             </Button>
-          </div>
+          </form>
+          
+          {error && <p className="text-red-400 mt-2">{error}</p>}
         </div>
       </section>
     </div>
