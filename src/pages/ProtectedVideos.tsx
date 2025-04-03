@@ -122,6 +122,19 @@ const ProtectedVideos = () => {
   };
 
   useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.removeItem('nofish_auth');
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      localStorage.removeItem('nofish_auth');
+    };
+  }, []);
+
+  useEffect(() => {
     const auth = localStorage.getItem('nofish_auth');
     if (auth === 'true') {
       setIsAuthenticated(true);
@@ -156,16 +169,6 @@ const ProtectedVideos = () => {
     } else {
       setError('Incorrect password. Please try again.');
     }
-  };
-
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    localStorage.removeItem('nofish_auth');
-    navigate('/work');
-  };
-
-  const handleRefresh = () => {
-    fetchVideosFromGitHub();
   };
 
   return (
@@ -214,23 +217,6 @@ const ProtectedVideos = () => {
             <div>
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-lg md:text-xl font-bold text-foreground">Client Videos</h2>
-                <div className="flex gap-2">
-                  <Button 
-                    variant="outline" 
-                    onClick={handleRefresh}
-                    disabled={isLoading}
-                    className="border-foreground text-foreground hover:bg-foreground hover:text-[#33C3F0]"
-                  >
-                    {isLoading ? "Loading..." : "Refresh Videos"}
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    onClick={handleLogout}
-                    className="border-foreground text-foreground hover:bg-foreground hover:text-[#33C3F0]"
-                  >
-                    Logout
-                  </Button>
-                </div>
               </div>
               
               {isLoading ? (
