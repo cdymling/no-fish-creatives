@@ -1,10 +1,15 @@
 
 import { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  
+  // Check if we're on the protected videos page
+  const isProtectedVideosPage = location.pathname === '/protected-videos';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +30,11 @@ const Navigation = () => {
     }
     setIsMenuOpen(false);
   };
+
+  // Don't render navigation on the protected videos page
+  if (isProtectedVideosPage) {
+    return null;
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[999]">

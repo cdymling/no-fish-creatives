@@ -173,9 +173,12 @@ const ProtectedVideos = () => {
     }
   };
 
+  // Create custom styling to fix the white bar issue
   return (
-    <div className="min-h-screen relative bg-[#FEC6A1] overflow-hidden">
-      {/* Remove any potential white bar by removing extra positioning and overflow handling */}
+    <div className="min-h-screen bg-[#FEC6A1] overflow-hidden relative isolate">
+      {/* Add a hidden element to suppress any overflow or whitespace issues */}
+      <div className="absolute inset-0 -z-10 bg-[#FEC6A1]"></div>
+      
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-start pt-[10vh]'}`}>
         <div className="py-8 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
@@ -234,7 +237,7 @@ const ProtectedVideos = () => {
                 ) : (
                   <div className="flex flex-col space-y-20">
                     {videos.length > 0 && (
-                      <div className="max-w-[360px]">
+                      <div className="max-w-[290px] mx-auto">
                         <h3 className="text-base font-medium mb-2 text-foreground">{videos[0].title}</h3>
                         <div className="overflow-hidden">
                           <AspectRatio ratio={9/16}>
@@ -254,7 +257,7 @@ const ProtectedVideos = () => {
                     )}
 
                     {videos.length > 1 && (
-                      <div className="max-w-[360px]">
+                      <div className="max-w-[290px] mx-auto">
                         <h3 className="text-base font-medium mb-2 text-foreground">{videos[1].title}</h3>
                         <div className="overflow-hidden">
                           <AspectRatio ratio={9/16}>
