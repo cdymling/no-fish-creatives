@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -26,7 +25,7 @@ const Work = () => {
             Curious about what's possible with AI? Have a look at some demos we've developed for clients here:
           </p>
           
-          <div className="mt-8">
+          <div className="mt-4">
             <Button 
               className="bg-white/10 backdrop-blur-sm text-foreground hover:bg-white/20 transition-colors"
               onClick={handleNavigateToProtectedVideos}
