@@ -196,9 +196,9 @@ const ProtectedVideos = () => {
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[5vh]' : 'items-start pt-[5vh]'}`}>
         <div className="py-4 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl max-w-[60%] mx-auto">
-              <h2 className="text-lg md:text-xl font-bold mb-4 text-foreground">Client Access</h2>
-              <p className="mb-4 text-foreground">This content is password protected. Please enter the password to view.</p>
+            <div className="p-6 max-w-[60%]">
+              <h2 className="text-lg md:text-xl font-bold mb-4 text-foreground">AI-powered Demos</h2>
+              <p className="mb-4 text-foreground">This content is password protected. Email hello@nofish.se to get access.</p>
               
               <form onSubmit={handlePasswordSubmit} className="space-y-4">
                 <div className="space-y-2">
@@ -217,21 +217,11 @@ const ProtectedVideos = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-foreground text-[#F97316] hover:bg-foreground/80"
+                  className="bg-white/10 backdrop-blur-sm text-foreground hover:bg-white/20 transition-colors"
                 >
                   Submit
                 </Button>
               </form>
-              
-              <div className="mt-4">
-                <Button 
-                  variant="ghost" 
-                  className="text-foreground hover:text-foreground/80"
-                  onClick={() => navigate('/work')}
-                >
-                  Back to Work
-                </Button>
-              </div>
             </div>
           ) : (
             <div className="flex flex-col space-y-8">
