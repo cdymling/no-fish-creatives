@@ -1,15 +1,17 @@
 
 import { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   
   // Check if we're on the protected videos page
   const isProtectedVideosPage = location.pathname === '/protected-videos';
+  const isStandalonePage = location.pathname === '/work';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,9 +26,20 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (isStandalonePage) {
+      navigate('/');
+      // Wait for navigation to complete before trying to scroll
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };

@@ -32,7 +32,7 @@ const App = () => {
           </div>
         } />
         <Route path="/protected-videos" element={<ProtectedVideos />} />
-        <Route path="/work" element={<div className="min-h-screen"><Work /></div>} />
+        <Route path="/work" element={<Work />} />
       </Routes>
     </Layout>
   );
