@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -216,7 +215,7 @@ const ProtectedVideos = () => {
             </div>
           ) : (
             <div>
-              <div className="flex justify-between items-center mb-6">
+              <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
               </div>
               
@@ -229,10 +228,10 @@ const ProtectedVideos = () => {
                   <p className="text-foreground">No videos found in the repository.</p>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
                   {videos.map(video => (
-                    <div key={video.id} className="bg-white/10 backdrop-blur-sm p-4 rounded-xl scale-[0.7]">
-                      <h3 className="text-base font-medium mb-2 text-foreground">{video.title}</h3>
+                    <div key={video.id} className="bg-white/10 backdrop-blur-sm p-3 rounded-xl">
+                      <h3 className="text-base font-medium mb-1 text-foreground">{video.title}</h3>
                       <div className="aspect-[9/16] rounded-lg overflow-hidden">
                         <video 
                           controls 
@@ -242,7 +241,7 @@ const ProtectedVideos = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      <p className="mt-2 text-sm text-foreground/80">
+                      <p className="mt-1 text-sm text-foreground/80">
                         {video.description}
                       </p>
                     </div>
@@ -258,4 +257,3 @@ const ProtectedVideos = () => {
 };
 
 export default ProtectedVideos;
-
