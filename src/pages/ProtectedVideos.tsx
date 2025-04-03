@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -146,7 +147,16 @@ const ProtectedVideos = () => {
   }, [videos]);
 
   const handleGoBack = () => {
-    navigate('/work');
+    // Navigate to the home page and scroll to the work section
+    navigate('/');
+    
+    // Use setTimeout to ensure navigation completes before trying to scroll
+    setTimeout(() => {
+      const workSection = document.getElementById('work');
+      if (workSection) {
+        workSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
