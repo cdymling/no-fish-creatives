@@ -147,16 +147,20 @@ const ProtectedVideos = () => {
   }, [videos]);
 
   const handleGoBack = () => {
-    // Navigate to the home page and scroll to the work section
-    navigate('/');
+    // First remove auth token
+    localStorage.removeItem('nofish_auth');
     
-    // Use setTimeout to ensure navigation completes before trying to scroll
+    // Navigate to home page
+    navigate('/', { replace: true });
+    
+    // Use a longer timeout to ensure the navigation completes
+    // and the snap sections are properly initialized
     setTimeout(() => {
       const workSection = document.getElementById('work');
       if (workSection) {
         workSection.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 100);
+    }, 300);
   };
 
   return (
