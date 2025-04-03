@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +7,11 @@ import { useNavigate } from 'react-router-dom';
 const Work = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
+  
+  const handleNavigateToProtectedVideos = () => {
+    console.log('Navigating to /protected-videos');
+    navigate('/protected-videos');
+  };
   
   return (
     <div className="min-h-screen relative bg-[#FEC6A1]">
@@ -24,7 +29,7 @@ const Work = () => {
             <Button 
               variant="outline" 
               className="border-foreground text-foreground hover:bg-foreground hover:text-[#FEC6A1]"
-              onClick={() => navigate('/protected-videos')}
+              onClick={handleNavigateToProtectedVideos}
             >
               Client Access
             </Button>
