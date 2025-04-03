@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import ProtectedVideos from "./pages/ProtectedVideos";
 
 const App = () => (
   <Layout>
@@ -23,6 +24,9 @@ const App = () => (
       </section>
       <section id="contact" className="snap-start h-screen w-full">
         <Contact />
+      </section>
+      <section id="protected-videos" className="snap-start h-screen w-full">
+        <ProtectedVideos />
       </section>
     </div>
   </Layout>

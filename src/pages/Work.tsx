@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Work = () => {
   const isMobile = useIsMobile();
+  const navigate = useNavigate();
   
   return (
     <div className="min-h-screen relative bg-[#FEC6A1]">
@@ -16,6 +19,16 @@ const Work = () => {
           <p className="text-base max-w-2xl mb-6 text-foreground">
             In the meantime, know that the work we'll be doing is backed by years of experience as award-winning creatives, developing ideas and campaigns for some of Sweden's biggest brands across all kinds of channels, formats and industries.
           </p>
+          
+          <div className="mt-8">
+            <Button 
+              variant="outline" 
+              className="border-foreground text-foreground hover:bg-foreground hover:text-[#FEC6A1]"
+              onClick={() => navigate('/protected-videos')}
+            >
+              Client Access
+            </Button>
+          </div>
         </div>
       </section>
     </div>
