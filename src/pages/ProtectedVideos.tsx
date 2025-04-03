@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -173,14 +172,12 @@ const ProtectedVideos = () => {
     }
   };
 
-  // Create custom styling to fix the white bar issue
   return (
     <div className="min-h-screen bg-[#FEC6A1] overflow-hidden relative isolate">
-      {/* Add a hidden element to suppress any overflow or whitespace issues */}
       <div className="absolute inset-0 -z-10 bg-[#FEC6A1]"></div>
       
-      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-start pt-[10vh]'}`}>
-        <div className="py-8 w-full max-w-5xl mx-auto">
+      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[5vh]' : 'items-start pt-[5vh]'}`}>
+        <div className="py-4 w-full max-w-5xl mx-auto">
           {!isAuthenticated ? (
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl max-w-[60%] mx-auto">
               <h2 className="text-lg md:text-xl font-bold mb-4 text-foreground">Client Access</h2>
@@ -220,7 +217,7 @@ const ProtectedVideos = () => {
               </div>
             </div>
           ) : (
-            <div className="flex flex-col space-y-16">
+            <div className="flex flex-col space-y-8">
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
@@ -235,9 +232,9 @@ const ProtectedVideos = () => {
                     <p className="text-foreground">No videos found in the repository.</p>
                   </div>
                 ) : (
-                  <div className="flex flex-col space-y-20">
+                  <div className="flex flex-col space-y-12">
                     {videos.length > 0 && (
-                      <div className="max-w-[290px] mx-auto">
+                      <div className="max-w-[290px] ml-0">
                         <h3 className="text-base font-medium mb-2 text-foreground">{videos[0].title}</h3>
                         <div className="overflow-hidden">
                           <AspectRatio ratio={9/16}>
@@ -257,7 +254,7 @@ const ProtectedVideos = () => {
                     )}
 
                     {videos.length > 1 && (
-                      <div className="max-w-[290px] mx-auto">
+                      <div className="max-w-[290px] ml-0">
                         <h3 className="text-base font-medium mb-2 text-foreground">{videos[1].title}</h3>
                         <div className="overflow-hidden">
                           <AspectRatio ratio={9/16}>
