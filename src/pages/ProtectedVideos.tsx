@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -148,13 +147,7 @@ const ProtectedVideos = () => {
 
   const handleGoBack = () => {
     localStorage.removeItem('nofish_auth');
-    
-    // Navigate to home page with a state to prevent loading
-    navigate('/', { 
-      replace: true, 
-      state: { fromProtectedVideos: true } 
-    });
-    
+    navigate('/', { replace: true });
     setTimeout(() => {
       const workSection = document.getElementById('work');
       if (workSection) {
