@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -7,14 +6,12 @@ import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast";
 
-// The password is hardcoded here - in a real app you'd want to use a more secure approach
 const CORRECT_PASSWORD = 'nofish2024';
 
-// GitHub repository information - replace with your own repository details
 const GITHUB_OWNER = 'cdymling';
 const GITHUB_REPO = 'no-fish-creatives';
 const GITHUB_BRANCH = 'main';
-const VIDEOS_PATH = 'videos';  // Folder in your GitHub repo where videos are stored
+const VIDEOS_PATH = 'videos';
 
 interface Video {
   id: number;
@@ -32,7 +29,6 @@ const ProtectedVideos = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  // Default videos as fallback
   const defaultVideos = [
     {
       id: 1,
@@ -50,11 +46,9 @@ const ProtectedVideos = () => {
 
   const [videos, setVideos] = useState<Video[]>(defaultVideos);
 
-  // Fetch videos from GitHub repository
   const fetchVideosFromGitHub = async () => {
     setIsLoading(true);
     try {
-      // First, fetch the contents of the videos directory
       const response = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${VIDEOS_PATH}?ref=${GITHUB_BRANCH}`);
       
       if (!response.ok) {
@@ -63,18 +57,14 @@ const ProtectedVideos = () => {
       
       const contents = await response.json();
       
-      // Look for a videos.json file that contains metadata about videos
       const videoMetadataFile = contents.find((file: any) => file.name === 'videos.json');
       
       if (videoMetadataFile) {
-        // Fetch the videos.json file content
         const metadataResponse = await fetch(videoMetadataFile.download_url);
         if (metadataResponse.ok) {
           const videosData = await metadataResponse.json();
           
-          // Map GitHub URLs to the video objects
           const videosWithUrls = videosData.map((video: any) => {
-            // Find the matching video file in the contents
             const videoFile = contents.find((file: any) => 
               file.name === video.filename
             );
@@ -93,7 +83,6 @@ const ProtectedVideos = () => {
           });
         }
       } else {
-        // Fallback: Create video objects from the raw video files
         const videoFiles = contents.filter((file: any) => 
           file.name.endsWith('.mp4') || file.name.endsWith('.webm') || file.name.endsWith('.mov')
         );
@@ -101,7 +90,7 @@ const ProtectedVideos = () => {
         if (videoFiles.length > 0) {
           const newVideos = videoFiles.map((file: any, index: number) => ({
             id: index + 1,
-            title: file.name.replace(/\.[^/.]+$/, ''), // Remove file extension
+            title: file.name.replace(/\.[^/.]+$/, ''),
             description: `Video loaded from GitHub: ${file.name}`,
             url: file.download_url
           }));
@@ -113,7 +102,6 @@ const ProtectedVideos = () => {
             description: `Found ${newVideos.length} videos on GitHub`,
           });
         } else {
-          // If no videos found, show a message but keep using default or stored videos
           toast({
             title: "No videos found",
             description: "Could not find any videos in the GitHub repository",
@@ -133,13 +121,11 @@ const ProtectedVideos = () => {
     }
   };
 
-  // Check if they're already authenticated and load videos
   useEffect(() => {
     const auth = localStorage.getItem('nofish_auth');
     if (auth === 'true') {
       setIsAuthenticated(true);
       
-      // Try to load videos from localStorage first
       const savedVideos = localStorage.getItem('nofish_videos');
       if (savedVideos) {
         try {
@@ -149,19 +135,16 @@ const ProtectedVideos = () => {
         }
       }
       
-      // Then try to fetch fresh videos from GitHub
       fetchVideosFromGitHub();
     }
   }, []);
 
-  // Save videos to localStorage when they change
   useEffect(() => {
     if (videos !== defaultVideos) {
       localStorage.setItem('nofish_videos', JSON.stringify(videos));
     }
   }, [videos]);
 
-  // Handle password submission
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === CORRECT_PASSWORD) {
@@ -169,7 +152,6 @@ const ProtectedVideos = () => {
       localStorage.setItem('nofish_auth', 'true');
       setError('');
       
-      // Fetch videos from GitHub after successful authentication
       fetchVideosFromGitHub();
     } else {
       setError('Incorrect password. Please try again.');
@@ -262,7 +244,7 @@ const ProtectedVideos = () => {
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {videos.map(video => (
-                    <div key={video.id} className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                    <div key={video.id} className="bg-white/10 backdrop-blur-sm p-4 rounded-xl scale-[0.7]">
                       <h3 className="text-base font-medium mb-2 text-foreground">{video.title}</h3>
                       <div className="aspect-[9/16] rounded-lg overflow-hidden">
                         <video 
