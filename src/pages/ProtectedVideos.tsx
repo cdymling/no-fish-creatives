@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -263,7 +264,7 @@ const ProtectedVideos = () => {
                   {videos.map(video => (
                     <div key={video.id} className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
                       <h3 className="text-base font-medium mb-2 text-foreground">{video.title}</h3>
-                      <div className="aspect-video rounded-lg overflow-hidden">
+                      <div className="aspect-[9/16] rounded-lg overflow-hidden">
                         <video 
                           controls 
                           className="w-full h-full object-cover"
