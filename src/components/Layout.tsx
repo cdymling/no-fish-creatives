@@ -9,13 +9,22 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const [isTransitioning, setIsTransitioning] = useState(true);
   
   useEffect(() => {
+    // Set initial black background
+    document.body.style.backgroundColor = 'black';
+    
     // Apply a small delay before removing transition state
     setIsTransitioning(true);
     const timer = setTimeout(() => {
       setIsTransitioning(false);
     }, 100);
     
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      // Only reset background color if explicitly navigating away
+      if (document.body.style.backgroundColor === 'black') {
+        document.body.style.backgroundColor = '';
+      }
+    };
   }, [location.pathname]);
   
   return (

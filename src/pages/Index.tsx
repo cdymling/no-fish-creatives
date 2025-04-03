@@ -1,8 +1,32 @@
+
 import { Mail, Phone } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Index = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [pageVisible, setPageVisible] = useState(false);
+  
+  useEffect(() => {
+    // Initially, the page is black and content is hidden
+    document.body.style.backgroundColor = 'black';
+    
+    // When the component unmounts, reset body color
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
+  
+  // Handle video loaded event
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+    // Add a small delay before fading in content
+    setTimeout(() => {
+      setPageVisible(true);
+    }, 100);
+  };
+  
   return (
-    <div className="min-h-screen relative">
+    <div className={`min-h-screen relative transition-opacity duration-700 ease-in-out ${pageVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Background Video */}
       <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
         <video
@@ -10,6 +34,7 @@ const Index = () => {
           loop
           muted
           playsInline
+          onLoadedData={handleVideoLoaded}
           className="absolute min-w-full min-h-full object-cover md:object-center object-[70%_center]"
         >
           <source src="home-background.mp4" type="video/mp4" />

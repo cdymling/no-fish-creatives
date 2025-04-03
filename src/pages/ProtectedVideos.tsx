@@ -23,14 +23,19 @@ const ProtectedVideos = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
-  const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+  const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsBackgroundLoaded(true);
-    }, 100);
+    document.body.style.backgroundColor = 'black';
     
-    return () => clearTimeout(timer);
+    const timer = setTimeout(() => {
+      setContentVisible(true);
+    }, 300);
+    
+    return () => {
+      document.body.style.backgroundColor = '';
+      clearTimeout(timer);
+    };
   }, []);
 
   const defaultVideos = [
@@ -159,11 +164,9 @@ const ProtectedVideos = () => {
   };
 
   return (
-    <div className={`min-h-screen overflow-hidden relative isolate transition-all duration-500 ease-in-out ${
-      isBackgroundLoaded ? 'bg-[#FEC6A1]' : 'bg-background'
+    <div className={`min-h-screen overflow-hidden relative isolate bg-[#FEC6A1] transition-opacity duration-700 ease-in-out ${
+      contentVisible ? 'opacity-100' : 'opacity-0'
     }`}>
-      <div className="absolute inset-0 -z-10 bg-[#FEC6A1] opacity-0 transition-opacity duration-500 ease-in-out"></div>
-      
       <div className="absolute top-4 left-4">
         <Button 
           variant="ghost" 

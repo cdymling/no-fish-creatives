@@ -14,13 +14,11 @@ const Work = () => {
   const { toast } = useToast();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+  const [contentVisible, setContentVisible] = useState(false);
   
   useEffect(() => {
-    // Preload background color transition
-    const timer = setTimeout(() => {
-      setIsBackgroundLoaded(true);
-    }, 100);
+    // Set initial black background
+    document.body.style.backgroundColor = 'black';
     
     // Check authentication
     const auth = localStorage.getItem('nofish_auth');
@@ -28,7 +26,16 @@ const Work = () => {
       navigate('/protected-videos');
     }
     
-    return () => clearTimeout(timer);
+    // Show content after a delay to simulate loading
+    const timer = setTimeout(() => {
+      setContentVisible(true);
+    }, 300);
+    
+    // When component unmounts, reset body color
+    return () => {
+      document.body.style.backgroundColor = '';
+      clearTimeout(timer);
+    };
   }, [navigate]);
   
   const handlePasswordSubmit = (e: React.FormEvent) => {
@@ -44,8 +51,8 @@ const Work = () => {
   
   return (
     <div 
-      className={`min-h-screen relative transition-all duration-500 ease-in-out ${
-        isBackgroundLoaded ? 'bg-[#FEC6A1]' : 'bg-background'
+      className={`min-h-screen relative bg-[#FEC6A1] transition-opacity duration-700 ease-in-out ${
+        contentVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
