@@ -9,9 +9,9 @@ const About = () => {
     <div className="min-h-screen relative bg-[#FEC6A1]">
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[5vh]' : 'items-center'}`}>
         <div className="py-8 max-w-3xl">
-          <h2 className="text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy creative advertising. Here's how:</h2>
+          <h2 className="font-clash text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy creative advertising. Here's how:</h2>
           
-          <ol className="list-decimal pl-5 space-y-3 mb-6">
+          <ol className="font-space list-decimal pl-5 space-y-3 mb-6">
             <li className="text-base text-foreground">
               By letting you work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers of people, processes and up-selling that usually comes with.
             </li>
@@ -23,7 +23,7 @@ const About = () => {
             </li>
           </ol>
 
-          <p className="text-base -mt-2 mb-4 text-foreground">
+          <p className="font-space text-base -mt-2 mb-4 text-foreground">
             This means you don't need a big agency to do big things. With a small, AI-positive, senior team, you can get more done than you'd think. Faster, smoother and for less.
           </p>
         </div>
