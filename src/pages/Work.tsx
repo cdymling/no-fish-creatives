@@ -35,7 +35,7 @@ const Work = () => {
   
   return (
     <div className="min-h-screen relative bg-[#FEC6A1]">
-      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
+      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-center justify-center' : 'items-center'}`}>
         <div className="py-8">
           <h2 className="font-clash text-lg md:text-xl font-bold mb-1 text-foreground">Our work:</h2>
           <p className="font-space text-base max-w-2xl mb-6 text-foreground">
