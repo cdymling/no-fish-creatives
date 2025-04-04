@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -168,7 +169,7 @@ const ProtectedVideos = () => {
           className="text-foreground hover:bg-foreground/10 p-2"
         >
           <ArrowLeft className="w-5 h-5 mr-2" /> 
-          <span className="text-sm">Back</span>
+          <span className="text-sm font-space">Back</span>
         </Button>
       </div>
 
@@ -177,22 +178,22 @@ const ProtectedVideos = () => {
           <div className="flex flex-col space-y-8">
             <div>
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg md:text-xl font-bold text-foreground">AI-powered Demos</h2>
+                <h2 className="text-lg md:text-xl font-bold text-foreground font-clash">AI-powered Demos</h2>
               </div>
               
               {isLoading ? (
                 <div className="flex justify-center my-8">
-                  <div className="text-foreground">Loading videos from GitHub...</div>
+                  <div className="text-foreground font-space">Loading videos from GitHub...</div>
                 </div>
               ) : videos.length === 0 ? (
                 <div className="backdrop-blur-sm p-6 rounded-xl">
-                  <p className="text-foreground">No videos found in the repository.</p>
+                  <p className="text-foreground font-space">No videos found in the repository.</p>
                 </div>
               ) : (
                 <div className="flex flex-col space-y-12">
                   {videos.length > 0 && (
                     <div className="max-w-[290px] ml-0">
-                      <h3 className="text-base font-medium mb-2 text-foreground">{videos[0].title}</h3>
+                      <h3 className="text-base font-medium mb-2 text-foreground font-clash">{videos[0].title}</h3>
                       <div className="overflow-hidden">
                         <AspectRatio ratio={9/16}>
                           <video 
@@ -204,7 +205,7 @@ const ProtectedVideos = () => {
                           </video>
                         </AspectRatio>
                       </div>
-                      <p className="mt-2 text-sm text-foreground/80">
+                      <p className="mt-2 text-sm text-foreground/80 font-space">
                         {videos[0].description}
                       </p>
                     </div>
@@ -212,7 +213,7 @@ const ProtectedVideos = () => {
 
                   {videos.length > 1 && (
                     <div className="max-w-[290px] ml-0">
-                      <h3 className="text-base font-medium mb-2 text-foreground">{videos[1].title}</h3>
+                      <h3 className="text-base font-medium mb-2 text-foreground font-clash">{videos[1].title}</h3>
                       <div className="overflow-hidden">
                         <AspectRatio ratio={9/16}>
                           <video 
@@ -224,7 +225,7 @@ const ProtectedVideos = () => {
                           </video>
                         </AspectRatio>
                       </div>
-                      <p className="mt-2 text-sm text-foreground/80">
+                      <p className="mt-2 text-sm text-foreground/80 font-space">
                         {videos[1].description}
                       </p>
                     </div>
