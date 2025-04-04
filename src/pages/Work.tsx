@@ -35,8 +35,8 @@ const Work = () => {
   
   return (
     <div className="min-h-screen relative bg-[#FEC6A1]">
-      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh] justify-center text-center' : 'items-center'}`}>
-        <div className="py-8 max-w-3xl">
+      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
+        <div className="py-8">
           <h2 className="font-clash text-lg md:text-xl font-bold mb-1 text-foreground">Our work:</h2>
           <p className="font-space text-base max-w-2xl mb-6 text-foreground">
             We and our current clients are soon ready to show what we've been working on. In the meantime, know that the work we'll be doing is backed by years of experience as award-winning creatives, developing ideas and campaigns for some of Sweden's biggest brands across all kinds of channels, formats and industries.
@@ -46,11 +46,8 @@ const Work = () => {
             Curious about what's possible with AI? Email hello@nofish.se to get access to some demos.
           </p>
           
-          <form 
-            onSubmit={handlePasswordSubmit} 
-            className={`flex flex-col space-y-2 max-w-md ${isMobile ? 'items-center' : ''}`}
-          >
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full max-w-md">
+          <form onSubmit={handlePasswordSubmit} className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 max-w-md">
+            <div className="flex-1">
               <Input 
                 type="password" 
                 value={password} 
@@ -58,17 +55,17 @@ const Work = () => {
                 placeholder="Enter password"
                 className="bg-white/20 text-foreground placeholder:text-foreground/50"
               />
-              
-              <Button 
-                type="submit" 
-                className="bg-white/10 backdrop-blur-sm text-foreground hover:bg-white/20 transition-colors"
-              >
-                Submit
-              </Button>
             </div>
             
-            {error && <p className="font-space text-red-400 mt-2">{error}</p>}
+            <Button 
+              type="submit" 
+              className="bg-white/10 backdrop-blur-sm text-foreground hover:bg-white/20 transition-colors"
+            >
+              Submit
+            </Button>
           </form>
+          
+          {error && <p className="font-space text-red-400 mt-2">{error}</p>}
         </div>
       </section>
     </div>

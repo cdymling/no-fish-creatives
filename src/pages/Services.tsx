@@ -7,7 +7,7 @@ const Services = () => {
   
   return (
     <div className="min-h-screen relative bg-[#33C3F0]">
-      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh] justify-center text-center' : 'items-center'}`}>
+      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[10vh]' : 'items-center'}`}>
         <div className="py-8 max-w-3xl">
           <h2 className="font-clash text-lg md:text-xl font-bold mb-2 text-foreground">How we might be of service:</h2>
           
