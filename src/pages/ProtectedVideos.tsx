@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -173,9 +174,8 @@ const ProtectedVideos = () => {
       <section className="px-6 pt-16 min-h-screen">
         <div className="max-w-6xl mx-auto">
           <h1 className="font-clash text-white text-[3rem] md:text-[5rem] lg:text-[7rem] font-bold leading-[1.1] text-left mb-8">
-            <span className="block">Here's what</span>
-            <span className="block">we've been</span>
-            <span className="block">working <span className="text-[#5CE1E6]">on.</span></span>
+            <span className="block">AI</span>
+            <span className="block">demos</span>
           </h1>
 
           <div className="flex flex-col space-y-12 mt-12">
