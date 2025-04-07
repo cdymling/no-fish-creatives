@@ -35,19 +35,19 @@ const MainPage = () => (
         <div className="space-y-12 max-w-5xl">
           <div>
             <p className="font-clash text-white text-xl md:text-3xl leading-tight">
-              <span className="text-[#5CE1E6] font-bold">#1</span> We let you work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers of people, processes and up-selling that usually come with it.
+              <span className="text-[#5CE1E6] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
             </p>
           </div>
           
           <div>
             <p className="font-clash text-white text-xl md:text-3xl leading-tight">
-              <span className="text-[#5CE1E6] font-bold">#2</span> We're smart about production. When it makes sense, we handle it ourselves, using AI or taking on tasks like directing and editing.
+              <span className="text-[#5CE1E6] font-bold">#2</span> We're smart about production. When it makes sense, we do it ourselves, using AI or taking on tasks like directing and editing.
             </p>
           </div>
           
           <div>
             <p className="font-clash text-white text-xl md:text-3xl leading-tight">
-              <span className="text-[#5CE1E6] font-bold">#3</span> We collaborate with a network of specialists in strategy, design and production when your task demands it. That way, we minimize overlapping roles and processes and make sure you only pay for what you need, when you need it.
+              <span className="text-[#5CE1E6] font-bold">#3</span> We team up with specialists in strategy, design, and production only when needed, avoiding overlapping roles and making sure you only pay for what you need, when you need it.
             </p>
           </div>
         </div>
