@@ -32,7 +32,7 @@ const MainPage = () => (
           Here's why:
         </h2>
         
-        <div className="space-y-12 max-w-5xl">
+        <div className="space-y-6 md:space-y-12 max-w-5xl">
           <div>
             <p className="font-clash text-white text-xl md:text-3xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
