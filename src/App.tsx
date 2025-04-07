@@ -116,14 +116,14 @@ const MainPage = () => {
       <section id="about-content" className="snap-start h-screen w-full bg-black">
         {isMobile ? (
           <div className="h-screen w-full flex flex-col bg-black">
-            {/* Fixed header - now left-aligned and positioned higher */}
-            <div className="px-6 pt-8 pb-4 bg-black z-10">
-              <h2 className="font-clash text-white text-4xl font-bold text-left">
+            {/* Fixed header */}
+            <div className="px-6 py-8 bg-black z-10 border-b border-gray-800">
+              <h2 className="font-clash text-white text-4xl font-bold">
                 Here's why:
               </h2>
             </div>
             
-            {/* Scrollable reasons - adjusted to take more vertical space */}
+            {/* Scrollable reasons */}
             <div 
               ref={aboutReasonContainerRef}
               className="flex-1 overflow-y-auto snap-y snap-mandatory"
