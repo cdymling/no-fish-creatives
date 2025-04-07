@@ -20,7 +20,7 @@ const Services = () => {
 
       {/* Second Section with service bullets */}
       <section className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start snap-start">
-        <div className="space-y-12 max-w-5xl">
+        <div className="space-y-8 max-w-5xl">
           <div>
             <p className="font-space text-white text-2xl md:text-3xl leading-tight">
               → Acting as a flexible creative partner to marketing departments and in-house agencies.
@@ -51,4 +51,3 @@ const Services = () => {
 };
 
 export default Services;
-
