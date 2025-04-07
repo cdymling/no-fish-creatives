@@ -10,8 +10,8 @@ const About = () => {
     <div className="min-h-screen relative bg-black">
       {/* First Section */}
       <section className="min-h-screen flex items-center px-6 py-12">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="font-clash text-white text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+        <div className="w-full">
+          <h1 className="font-clash text-white text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold leading-[0.9] text-left">
             <span className="block">You don't</span>
             <span className="block">need a big</span>
             <span className="block">agency <span className="text-[#5CE1E6]">to do</span></span>
