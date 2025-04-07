@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -36,7 +35,7 @@ const Work = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* First section with just the heading */}
-      <section className="h-screen w-full flex flex-col justify-center px-6 snap-start">
+      <section className="h-screen w-full flex flex-col justify-start pt-12 px-6 snap-start">
         <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
             <span className="block">Hold tight</span>
