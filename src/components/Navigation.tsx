@@ -90,6 +90,12 @@ const Navigation = () => {
               About
             </button>
             <button 
+              onClick={() => scrollToSection('about-video')}
+              className="text-foreground hover:text-primary transition-colors text-left"
+            >
+              About Video
+            </button>
+            <button 
               onClick={() => scrollToSection('services-title')}
               className="text-foreground hover:text-primary transition-colors text-left"
             >

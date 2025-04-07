@@ -55,6 +55,20 @@ const MainPage = () => (
         </div>
       </div>
     </section>
+    <section id="about-video" className="snap-start h-screen w-full bg-black">
+      <div className="h-screen w-full relative overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/about-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
     
     {/* Services sections */}
     <section id="services-title" className="snap-start h-screen w-full bg-black">
