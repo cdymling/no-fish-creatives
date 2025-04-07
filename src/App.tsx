@@ -20,7 +20,7 @@ const MainPage = () => (
     <section id="about-title" className="snap-start h-screen w-full bg-black relative z-10">
       <div className="h-screen w-full flex items-start justify-start px-6 py-6">
         <div className="w-full">
-          <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
+          <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
             <span className="block">You don't</span>
             <span className="block">need a big</span>
             <span className="block">agency <span className="text-[#5CE1E6]">to do</span></span>
@@ -75,7 +75,7 @@ const MainPage = () => (
     <section id="services-title" className="snap-start h-screen w-full bg-black">
       <div className="h-screen w-full flex items-start justify-start px-6 py-6">
         <div className="w-full">
-          <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
+          <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
             <span className="block">How we</span>
             <span className="block">might be <span className="text-[#5CE1E6]">of</span></span>
             <span className="block text-[#5CE1E6]">service:</span>
@@ -131,7 +131,7 @@ const MainPage = () => (
     <section id="work-title" className="snap-start h-screen w-full bg-black">
       <div className="h-screen w-full flex flex-col justify-start pt-12 px-6">
         <div className="w-full">
-          <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
+          <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
             <span className="block">Hold tight</span>
             <span className="block">while we get</span>
             <span className="block">this show <span className="text-[#5CE1E6]">on</span></span>
