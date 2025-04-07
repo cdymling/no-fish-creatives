@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
-import { ScrollArea } from '../components/ui/scroll-area';
 
 const About = () => {
   const isMobile = useIsMobile();
@@ -9,9 +8,9 @@ const About = () => {
   return (
     <div className="min-h-screen relative bg-black">
       {/* First Section */}
-      <section className="min-h-screen flex items-center px-6 py-12">
+      <section className="min-h-screen flex items-start justify-start px-6 py-6">
         <div className="w-full">
-          <h1 className="font-clash text-white text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold leading-[0.9] text-left">
+          <h1 className="font-clash text-white text-[4rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-bold leading-[0.8] text-left">
             <span className="block">You don't</span>
             <span className="block">need a big</span>
             <span className="block">agency <span className="text-[#5CE1E6]">to do</span></span>
