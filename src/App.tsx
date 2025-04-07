@@ -13,6 +13,42 @@ const MainPage = () => {
   const isMobile = useIsMobile();
   const [activeReason, setActiveReason] = useState(0);
   const aboutReasonContainerRef = useRef<HTMLDivElement>(null);
+  const previousSectionRef = useRef<string | null>(null);
+  const currentSectionRef = useRef<string | null>(null);
+
+  // Track section changes for proper scrolling behavior
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const sectionId = entry.target.id;
+        previousSectionRef.current = currentSectionRef.current;
+        currentSectionRef.current = sectionId;
+        
+        // Reset to first reason when entering about-content from the title section
+        if (sectionId === "about-content" && previousSectionRef.current === "about-title" && isMobile) {
+          if (aboutReasonContainerRef.current) {
+            aboutReasonContainerRef.current.scrollTop = 0;
+            setActiveReason(0);
+          }
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (!isMobile) return;
+    
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5
+    });
+    
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(section => observer.observe(section));
+    
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, [isMobile]);
 
   useEffect(() => {
     if (!isMobile || !aboutReasonContainerRef.current) return;
