@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -149,12 +148,6 @@ const ProtectedVideos = () => {
   const handleGoBack = () => {
     localStorage.removeItem('nofish_auth');
     navigate('/', { replace: true });
-    setTimeout(() => {
-      const workSection = document.getElementById('work');
-      if (workSection) {
-        workSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 300);
   };
 
   return (

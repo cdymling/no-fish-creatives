@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -26,7 +27,8 @@ const Work = () => {
     if (password === CORRECT_PASSWORD) {
       localStorage.setItem('nofish_auth', 'true');
       setError('');
-      navigate('/protected-videos');
+      // Fix: Use navigate with replace to avoid history issues
+      navigate('/protected-videos', { replace: true });
     } else {
       setError('Incorrect password. Please try again.');
     }
