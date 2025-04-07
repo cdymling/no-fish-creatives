@@ -6,7 +6,6 @@ import Work from "./pages/Work";
 import Services from "./pages/Services";
 import ProtectedVideos from "./pages/ProtectedVideos";
 
-// Huvudsidan med alla sektioner i scrollsequens
 const MainPage = () => (
   <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
     {/* Home section */}
@@ -35,19 +34,19 @@ const MainPage = () => (
         
         <div className="space-y-12 max-w-5xl">
           <div>
-            <p className="font-clash text-white text-2xl md:text-3xl leading-tight">
+            <p className="font-clash text-white text-xl md:text-3xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#1</span> We let you work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers of people, processes and up-selling that usually come with it.
             </p>
           </div>
           
           <div>
-            <p className="font-clash text-white text-2xl md:text-3xl leading-tight">
+            <p className="font-clash text-white text-xl md:text-3xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#2</span> We're smart about production. When it makes sense, we handle it ourselves, using AI or taking on tasks like directing and editing.
             </p>
           </div>
           
           <div>
-            <p className="font-clash text-white text-2xl md:text-3xl leading-tight">
+            <p className="font-clash text-white text-xl md:text-3xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#3</span> We collaborate with a network of specialists in strategy, design and production when your task demands it. That way, we minimize overlapping roles and processes and make sure you only pay for what you need, when you need it.
             </p>
           </div>
