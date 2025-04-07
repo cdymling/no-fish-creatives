@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -47,13 +48,13 @@ const Work = () => {
       </section>
 
       {/* Second section with the text and password form */}
-      <section className="h-screen w-full flex flex-col justify-center px-6 snap-start">
+      <section className="h-screen w-full flex flex-col justify-start pt-12 px-6 snap-start">
         <div className="max-w-3xl">
-          <p className="font-space text-white text-xl md:text-2xl leading-tight mb-8">
+          <p className="font-space text-white text-xl md:text-2xl leading-tight mb-8 text-left">
             We and our current clients are soon ready to show what we've been working on. In the meantime, know that the work we'll be doing is backed by years of experience as award-winning creatives, developing ideas and campaigns for some of Sweden's biggest brands across all kinds of channels, formats and industries.
           </p>
           
-          <p className="font-space text-white text-xl md:text-2xl leading-tight mb-10">
+          <p className="font-space text-white text-xl md:text-2xl leading-tight mb-10 text-left">
             Curious about us or what's possible with AI? Email us at hello@nofish.se.
           </p>
           
