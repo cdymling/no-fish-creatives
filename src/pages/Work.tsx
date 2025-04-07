@@ -18,7 +18,7 @@ const Work = () => {
   useEffect(() => {
     const auth = localStorage.getItem('nofish_auth');
     if (auth === 'true') {
-      navigate('/protected-videos');
+      navigate('/protected-videos', { replace: true });
     }
   }, [navigate]);
   
@@ -27,10 +27,21 @@ const Work = () => {
     if (password === CORRECT_PASSWORD) {
       localStorage.setItem('nofish_auth', 'true');
       setError('');
-      // Fix: Use navigate with replace to avoid history issues
-      navigate('/protected-videos', { replace: true });
+      toast({
+        title: "Access granted",
+        description: "Redirecting to protected videos...",
+      });
+      // Navigate with replace: true to prevent back-button issues
+      setTimeout(() => {
+        navigate('/protected-videos', { replace: true });
+      }, 300); // Small delay to ensure localStorage is set before navigation
     } else {
       setError('Incorrect password. Please try again.');
+      toast({
+        title: "Access denied",
+        description: "Incorrect password",
+        variant: "destructive"
+      });
     }
   };
   

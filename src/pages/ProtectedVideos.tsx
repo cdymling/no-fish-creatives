@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -23,6 +24,7 @@ const ProtectedVideos = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const defaultVideos = [
     {
@@ -40,6 +42,31 @@ const ProtectedVideos = () => {
   ];
 
   const [videos, setVideos] = useState<Video[]>(defaultVideos);
+
+  // Check authentication as soon as component mounts
+  useEffect(() => {
+    const auth = localStorage.getItem('nofish_auth');
+    if (auth !== 'true') {
+      // If not authenticated, redirect to work page
+      navigate('/work', { replace: true });
+      return;
+    }
+    
+    setIsAuthenticated(true);
+    
+    // Load saved videos from localStorage if available
+    const savedVideos = localStorage.getItem('nofish_videos');
+    if (savedVideos) {
+      try {
+        setVideos(JSON.parse(savedVideos));
+      } catch (e) {
+        console.error('Error loading saved videos', e);
+      }
+    }
+    
+    // Fetch videos from GitHub
+    fetchVideosFromGitHub();
+  }, [navigate]);
 
   const fetchVideosFromGitHub = async () => {
     setIsLoading(true);
@@ -117,29 +144,6 @@ const ProtectedVideos = () => {
   };
 
   useEffect(() => {
-    const auth = localStorage.getItem('nofish_auth');
-    if (auth !== 'true') {
-      navigate('/work');
-      return;
-    }
-    
-    const savedVideos = localStorage.getItem('nofish_videos');
-    if (savedVideos) {
-      try {
-        setVideos(JSON.parse(savedVideos));
-      } catch (e) {
-        console.error('Error loading saved videos', e);
-      }
-    }
-    
-    fetchVideosFromGitHub();
-    
-    return () => {
-      localStorage.removeItem('nofish_auth');
-    };
-  }, [navigate]);
-
-  useEffect(() => {
     if (videos !== defaultVideos) {
       localStorage.setItem('nofish_videos', JSON.stringify(videos));
     }
@@ -149,6 +153,11 @@ const ProtectedVideos = () => {
     localStorage.removeItem('nofish_auth');
     navigate('/', { replace: true });
   };
+
+  // Don't render anything until authentication is verified
+  if (!isAuthenticated) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-black overflow-hidden relative isolate">
