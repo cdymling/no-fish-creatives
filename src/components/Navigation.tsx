@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -18,6 +19,20 @@ const Navigation = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 20);
+      
+      // Find which section is currently in view
+      const sections = ['home', 'about-title', 'about-video', 'services-title', 'services-video', 'work-title', 'work-video'];
+      
+      for (const id of sections) {
+        const element = document.getElementById(id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(id);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -56,7 +71,6 @@ const Navigation = () => {
 
   // Hide navigation on protected videos page
   if (isProtectedVideosPage) {
-    // Return empty fragment instead of the back button
     return <></>;
   }
 
@@ -96,43 +110,43 @@ const Navigation = () => {
           <div className="flex flex-col space-y-4">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className={`transition-colors text-left ${activeSection === 'home' ? 'text-primary' : 'text-foreground hover:text-primary'}`}
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('about-title')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className={`transition-colors text-left ${activeSection === 'about-title' ? 'text-primary' : 'text-foreground hover:text-primary'}`}
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('about-video')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className={`transition-colors text-left ${activeSection === 'about-video' ? 'text-primary' : 'text-foreground hover:text-primary'}`}
             >
               About Video
             </button>
             <button 
               onClick={() => scrollToSection('services-title')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className={`transition-colors text-left ${activeSection === 'services-title' ? 'text-primary' : 'text-foreground hover:text-primary'}`}
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('services-video')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className={`transition-colors text-left ${activeSection === 'services-video' ? 'text-primary' : 'text-foreground hover:text-primary'}`}
             >
               Services Video
             </button>
             <button 
               onClick={() => scrollToSection('work-title')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className={`transition-colors text-left ${activeSection === 'work-title' ? 'text-primary' : 'text-foreground hover:text-primary'}`}
             >
               Work
             </button>
             <button 
               onClick={() => scrollToSection('work-video')}
-              className="text-foreground hover:text-primary transition-colors text-left"
+              className={`transition-colors text-left ${activeSection === 'work-video' ? 'text-[#3B82F6] hover:text-[#60a5fa]' : 'text-foreground hover:text-primary'}`}
             >
               Work Video
             </button>
