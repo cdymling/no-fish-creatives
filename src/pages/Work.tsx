@@ -25,16 +25,20 @@ const Work = () => {
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === CORRECT_PASSWORD) {
+      // Set auth in localStorage first
       localStorage.setItem('nofish_auth', 'true');
       setError('');
+      
       toast({
         title: "Access granted",
         description: "Redirecting to protected videos...",
       });
-      // Navigate with replace: true to prevent back-button issues
+      
+      // Add a small delay to ensure localStorage is properly set
       setTimeout(() => {
-        navigate('/protected-videos', { replace: true });
-      }, 300); // Small delay to ensure localStorage is set before navigation
+        // Use window.location.href for a hard navigation to avoid React Router issues
+        window.location.href = '/protected-videos';
+      }, 500);
     } else {
       setError('Incorrect password. Please try again.');
       toast({

@@ -45,20 +45,27 @@ const ProtectedVideos = () => {
 
   // Check authentication as soon as component mounts
   useEffect(() => {
+    // Access token directly from localStorage
     const auth = localStorage.getItem('nofish_auth');
+    
+    console.log("Authentication status:", auth);
+    
     if (auth !== 'true') {
-      // If not authenticated, redirect to work page
+      console.log("Not authenticated, redirecting to /work");
       navigate('/work', { replace: true });
       return;
     }
     
+    console.log("Authentication confirmed, loading videos");
     setIsAuthenticated(true);
     
     // Load saved videos from localStorage if available
     const savedVideos = localStorage.getItem('nofish_videos');
     if (savedVideos) {
       try {
-        setVideos(JSON.parse(savedVideos));
+        const parsedVideos = JSON.parse(savedVideos);
+        console.log("Loaded saved videos:", parsedVideos);
+        setVideos(parsedVideos);
       } catch (e) {
         console.error('Error loading saved videos', e);
       }
