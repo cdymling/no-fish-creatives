@@ -1,10 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { useIsMobile } from '../hooks/use-mobile';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const isMobile = useIsMobile();
 
   useEffect(() => {
     const videoElement = document.getElementById('home-background-video') as HTMLVideoElement;
@@ -45,11 +43,7 @@ const Home = () => {
           loop
           muted
           playsInline
-          className={`absolute min-w-full min-h-full object-cover transition-opacity duration-2000 ${
-            isLoading ? 'opacity-0' : 'opacity-100'
-          } ${
-            isMobile ? 'object-[90%_center]' : 'md:object-center'
-          }`}
+          className={`absolute min-w-full min-h-full object-cover md:object-center object-[70%_center] transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         >
           <source src="/home-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -58,8 +52,8 @@ const Home = () => {
 
       {/* Logo and Tagline centered */}
       <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <span className="font-clash text-white text-[7.5rem] font-bold leading-none">no fish</span>
-        <p className="font-space text-white text-xl max-w-md text-balance -mt-4">
+        <span className="font-clash text-white text-[5.25rem] font-bold leading-none">no fish</span>
+        <p className="font-space text-white text-base max-w-md text-balance mt-3">
           Creative advertising. Freed from the fishy layers of an agency.
         </p>
       </div>
