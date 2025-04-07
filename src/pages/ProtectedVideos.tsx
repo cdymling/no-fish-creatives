@@ -136,7 +136,7 @@ const ProtectedVideos = () => {
     fetchVideosFromGitHub();
     
     return () => {
-      localStorage.removeItem('nofish_auth');
+      // Don't remove auth on unmount - only on explicit navigation
     };
   }, [navigate]);
 
@@ -147,12 +147,17 @@ const ProtectedVideos = () => {
   }, [videos]);
 
   const handleGoBack = () => {
-    localStorage.removeItem('nofish_auth');
+    // First navigate to the home page
     navigate('/', { replace: true });
+    
+    // After navigation completes, scroll to the work section
     setTimeout(() => {
-      const workSection = document.getElementById('work');
+      const workSection = document.getElementById('work-title');
       if (workSection) {
         workSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback in case the element isn't found
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
       }
     }, 300);
   };
@@ -164,7 +169,7 @@ const ProtectedVideos = () => {
           variant="ghost" 
           size="sm" 
           onClick={handleGoBack}
-          className="text-white hover:bg-white/10 p-2"
+          className="text-gray-400 hover:bg-white/10 p-2"
         >
           <ArrowLeft className="w-5 h-5 mr-2" /> 
           <span className="text-sm font-space">Back</span>

@@ -45,23 +45,10 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  // Hide navigation on protected videos page
   if (isProtectedVideosPage) {
-    return (
-      <header className="fixed top-0 left-0 right-0 z-[999]">
-        <div className="relative z-10 px-6 py-4">
-          <div className="flex justify-between items-center max-w-7xl mx-auto">
-            <button 
-              onClick={() => navigate('/work')}
-              className="text-black p-2 hover:text-gray-700 transition-colors flex items-center"
-              aria-label="Back"
-            >
-              <ArrowLeft className="w-6 h-6 mr-2" />
-              Back
-            </button>
-          </div>
-        </div>
-      </header>
-    );
+    // Return empty fragment instead of the back button
+    return <></>;
   }
 
   return (
