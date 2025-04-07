@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -22,8 +23,15 @@ const ProtectedVideos = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  // Check authentication immediately
+  const auth = localStorage.getItem('nofish_auth');
+  if (auth !== 'true') {
+    // If not authenticated, don't render anything and redirect
+    window.location.href = '/work';
+    return null;
+  }
 
   const defaultVideos = [
     {
@@ -42,18 +50,8 @@ const ProtectedVideos = () => {
 
   const [videos, setVideos] = useState<Video[]>(defaultVideos);
 
-  // Check authentication once when component mounts
+  // Load videos from localStorage or fetch them
   useEffect(() => {
-    // Simple authentication check - just check the localStorage directly
-    const auth = localStorage.getItem('nofish_auth');
-    
-    if (auth !== 'true') {
-      navigate('/work', { replace: true });
-      return;
-    }
-    
-    setIsAuthenticated(true);
-    
     // Load saved videos from localStorage if available
     const savedVideos = localStorage.getItem('nofish_videos');
     if (savedVideos) {
@@ -66,7 +64,7 @@ const ProtectedVideos = () => {
     
     // Fetch videos from GitHub
     fetchVideosFromGitHub();
-  }, [navigate]);
+  }, []);
 
   const fetchVideosFromGitHub = async () => {
     setIsLoading(true);
@@ -143,21 +141,10 @@ const ProtectedVideos = () => {
     }
   };
 
-  useEffect(() => {
-    if (videos !== defaultVideos) {
-      localStorage.setItem('nofish_videos', JSON.stringify(videos));
-    }
-  }, [videos]);
-
   const handleGoBack = () => {
     localStorage.removeItem('nofish_auth');
-    navigate('/', { replace: true });
+    window.location.href = '/';
   };
-
-  // Don't render anything until authentication is verified
-  if (!isAuthenticated) {
-    return null;
-  }
 
   return (
     <div className="min-h-screen bg-black overflow-hidden relative isolate">

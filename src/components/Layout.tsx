@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const isProtectedVideosPage = location.pathname === '/protected-videos';
   
   return (
-    <div className={`min-h-screen ${isProtectedVideosPage ? 'bg-[#FEC6A1]' : ''}`}>
+    <div className={`min-h-screen ${isProtectedVideosPage ? 'bg-black' : ''}`}>
       <Navigation />
       <main className={isProtectedVideosPage ? 'h-full' : ''}>
         {children}

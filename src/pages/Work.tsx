@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -14,16 +15,11 @@ const Work = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   
-  useEffect(() => {
-    const auth = localStorage.getItem('nofish_auth');
-    if (auth === 'true') {
-      navigate('/protected-videos', { replace: true });
-    }
-  }, [navigate]);
-  
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (password === CORRECT_PASSWORD) {
+      // Set auth in localStorage
       localStorage.setItem('nofish_auth', 'true');
       setError('');
       
@@ -32,7 +28,8 @@ const Work = () => {
         description: "Redirecting to protected videos...",
       });
       
-      navigate('/protected-videos', { replace: true });
+      // Force a full page navigation instead of using React Router
+      window.location.href = '/protected-videos';
     } else {
       setError('Incorrect password. Please try again.');
       toast({
