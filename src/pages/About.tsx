@@ -19,7 +19,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Second Section - Updated to match the image */}
+      {/* Second Section - Combined in a single view */}
       <section className="min-h-screen bg-black px-6 py-12 flex flex-col justify-start">
         <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-12">
           Here's why:
@@ -27,26 +27,26 @@ const About = () => {
         
         <div className="space-y-16 max-w-5xl">
           <div>
-            <p className="font-clash text-white text-3xl md:text-4xl leading-tight">
+            <p className="font-clash text-white text-2xl md:text-3xl lg:text-4xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#1</span> We let you work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers of people, processes and up-selling that usually come with it.
             </p>
           </div>
           
           <div>
-            <p className="font-clash text-white text-3xl md:text-4xl leading-tight">
+            <p className="font-clash text-white text-2xl md:text-3xl lg:text-4xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#2</span> We're smart about production. When it makes sense, we handle it ourselves, using AI or taking on tasks like directing and editing.
             </p>
           </div>
           
           <div>
-            <p className="font-clash text-white text-3xl md:text-4xl leading-tight">
+            <p className="font-clash text-white text-2xl md:text-3xl lg:text-4xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#3</span> We collaborate with a network of specialists in strategy, design and production when your task demands it. That way, we minimize overlapping roles and processes and make sure you only pay for what you need, when you need it.
             </p>
           </div>
         </div>
       </section>
       
-      {/* Third Section - Original About content (kept as a third section) */}
+      {/* Third Section - Original About content */}
       <section className={`px-6 min-h-screen flex ${isMobile ? 'items-center justify-center' : 'items-center'} bg-[#FEC6A1]`}>
         <div className="py-8 max-w-3xl">
           <h2 className="font-clash text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy creative advertising. Here's how:</h2>
