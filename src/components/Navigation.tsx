@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, ArrowLeft } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -9,7 +8,6 @@ const Navigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
   
-  // Check if we're on the protected videos page
   const isProtectedVideosPage = location.pathname === '/protected-videos';
 
   useEffect(() => {
@@ -25,10 +23,8 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    // Navigate to homepage first if not already there
     if (location.pathname !== '/') {
       navigate('/');
-      // Use setTimeout to allow navigation to complete before trying to scroll
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
@@ -36,7 +32,6 @@ const Navigation = () => {
         }
       }, 100);
     } else {
-      // If already on homepage, just scroll
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -45,22 +40,18 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
-  // Hide navigation on protected videos page
   if (isProtectedVideosPage) {
-    // Return empty fragment instead of the back button
     return <></>;
   }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[999]">
-      {/* Semi-transparent background that only appears when scrolled */}
       <div 
         className={`absolute inset-0 transition-opacity duration-300 ${
           isScrolled ? 'opacity-100' : 'opacity-0'
         } bg-background/80 backdrop-blur-sm border-b border-border/50`}
       />
       
-      {/* Navigation content */}
       <div className="relative z-10 px-6 py-4">
         <div className="flex justify-end items-center max-w-7xl mx-auto">
           <button 
@@ -73,7 +64,6 @@ const Navigation = () => {
         </div>
       </div>
       
-      {/* Menu dropdown */}
       {isMenuOpen && (
         <div className="absolute right-6 top-16 w-48 bg-background/95 backdrop-blur-sm rounded-lg shadow-lg p-4 z-20">
           <div className="flex flex-col space-y-4">
@@ -88,12 +78,6 @@ const Navigation = () => {
               className="text-foreground hover:text-primary transition-colors text-left"
             >
               About
-            </button>
-            <button 
-              onClick={() => scrollToSection('about-video')}
-              className="text-foreground hover:text-primary transition-colors text-left"
-            >
-              About Video
             </button>
             <button 
               onClick={() => scrollToSection('services-title')}
