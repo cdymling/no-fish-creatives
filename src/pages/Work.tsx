@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -35,17 +34,22 @@ const Work = () => {
   
   return (
     <div className="min-h-screen bg-black">
-      {/* First section with heading and description */}
+      {/* First section with just the heading */}
       <section className="h-screen w-full flex flex-col justify-start pt-12 px-6 snap-start">
-        <div className="w-full max-w-3xl">
+        <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
             <span className="block">Hold tight</span>
             <span className="block">while we get</span>
             <span className="block">this show <span className="text-[#5CE1E6]">on</span></span>
             <span className="block text-[#5CE1E6]">the road.</span>
           </h1>
-          
-          <p className="font-space text-white text-xl md:text-2xl leading-tight mt-8 mb-4">
+        </div>
+      </section>
+
+      {/* Second section with the text and password form */}
+      <section className="h-screen w-full flex flex-col justify-center px-6 snap-start">
+        <div className="max-w-3xl">
+          <p className="font-space text-white text-xl md:text-2xl leading-tight mb-8">
             We and our current clients are soon ready to show what we've been working on. In the meantime, know that the work we'll be doing is backed by years of experience as award-winning creatives, developing ideas and campaigns for some of Sweden's biggest brands across all kinds of channels, formats and industries.
           </p>
           
@@ -80,4 +84,3 @@ const Work = () => {
 };
 
 export default Work;
-
