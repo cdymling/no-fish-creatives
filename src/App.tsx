@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -78,6 +79,41 @@ const MainPage = () => {
     };
   }, [isMobile]);
 
+  // Handle navigation between About reasons and other sections
+  useEffect(() => {
+    if (!isMobile) return;
+    
+    const handleWheelInAboutContent = (e: WheelEvent) => {
+      if (currentSectionRef.current !== 'about-content') return;
+      
+      const container = aboutReasonContainerRef.current;
+      if (!container) return;
+      
+      const isAtTop = container.scrollTop === 0;
+      const isAtBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - 10;
+      
+      // If at the top of the container and scrolling up, navigate to previous section
+      if (isAtTop && e.deltaY < 0) {
+        e.preventDefault();
+        const aboutTitleSection = document.getElementById('about-title');
+        aboutTitleSection?.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      // If at the bottom of the container and scrolling down, navigate to next section
+      if (isAtBottom && e.deltaY > 0) {
+        e.preventDefault();
+        const servicesSection = document.getElementById('services-title');
+        servicesSection?.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    
+    document.addEventListener('wheel', handleWheelInAboutContent, { passive: false });
+    
+    return () => {
+      document.removeEventListener('wheel', handleWheelInAboutContent);
+    };
+  }, [isMobile, currentSectionRef.current]);
+
   const aboutReasons = [
     {
       number: "#1",
@@ -92,6 +128,54 @@ const MainPage = () => {
       text: "We collaborate with a network of specialists in strategy, design and production when your task demands it. That way, we minimize overlapping roles and processes and make sure you only pay for what you need, when you need it."
     }
   ];
+
+  // Touch handling for mobile
+  useEffect(() => {
+    if (!isMobile) return;
+    
+    let touchStartY = 0;
+    let touchEndY = 0;
+    
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartY = e.touches[0].clientY;
+    };
+    
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (currentSectionRef.current !== 'about-content') return;
+      
+      const container = aboutReasonContainerRef.current;
+      if (!container) return;
+      
+      touchEndY = e.changedTouches[0].clientY;
+      const touchDiff = touchStartY - touchEndY;
+      
+      const isAtTop = container.scrollTop === 0;
+      const isAtBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - 10;
+      
+      // Threshold to determine if it was a significant swipe
+      const threshold = 50;
+      
+      // If at the top of reasons container and swiping up, go to previous section
+      if (isAtTop && touchDiff < -threshold) {
+        const aboutTitleSection = document.getElementById('about-title');
+        aboutTitleSection?.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      // If at the bottom of reasons container and swiping down, go to next section
+      if (isAtBottom && touchDiff > threshold) {
+        const servicesSection = document.getElementById('services-title');
+        servicesSection?.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+    
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [isMobile, currentSectionRef.current]);
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
