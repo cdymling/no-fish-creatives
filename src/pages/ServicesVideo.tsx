@@ -5,25 +5,38 @@ const ServicesVideo = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    console.log("ServicesVideo component mounted");
     const videoElement = document.getElementById('services-background-video') as HTMLVideoElement;
     
     const handleVideoLoad = () => {
+      console.log("ServicesVideo - Video loaded successfully");
       setTimeout(() => {
         setIsLoading(false);
+        console.log("ServicesVideo - Loading state set to false");
       }, 100);
     };
     
     if (videoElement) {
+      console.log("ServicesVideo - Video element found, current readyState:", videoElement.readyState);
       videoElement.addEventListener('loadeddata', handleVideoLoad);
       
       if (videoElement.readyState >= 3) {
+        console.log("ServicesVideo - Video already loaded (readyState >= 3)");
         handleVideoLoad();
       }
+      
+      // Add error handling
+      videoElement.addEventListener('error', (e) => {
+        console.error("ServicesVideo - Error loading video:", e);
+      });
+    } else {
+      console.error("ServicesVideo - Video element not found");
     }
     
     return () => {
       if (videoElement) {
         videoElement.removeEventListener('loadeddata', handleVideoLoad);
+        videoElement.removeEventListener('error', () => {});
       }
     };
   }, []);

@@ -5,25 +5,38 @@ const AboutVideo = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    console.log("AboutVideo component mounted");
     const videoElement = document.getElementById('about-background-video') as HTMLVideoElement;
     
     const handleVideoLoad = () => {
+      console.log("AboutVideo - Video loaded successfully");
       setTimeout(() => {
         setIsLoading(false);
+        console.log("AboutVideo - Loading state set to false");
       }, 100);
     };
     
     if (videoElement) {
+      console.log("AboutVideo - Video element found, current readyState:", videoElement.readyState);
       videoElement.addEventListener('loadeddata', handleVideoLoad);
       
       if (videoElement.readyState >= 3) {
+        console.log("AboutVideo - Video already loaded (readyState >= 3)");
         handleVideoLoad();
       }
+      
+      // Add error handling
+      videoElement.addEventListener('error', (e) => {
+        console.error("AboutVideo - Error loading video:", e);
+      });
+    } else {
+      console.error("AboutVideo - Video element not found");
     }
     
     return () => {
       if (videoElement) {
         videoElement.removeEventListener('loadeddata', handleVideoLoad);
+        videoElement.removeEventListener('error', () => {});
       }
     };
   }, []);

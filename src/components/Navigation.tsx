@@ -11,6 +11,8 @@ const Navigation = () => {
   
   // Check if we're on the protected videos page
   const isProtectedVideosPage = location.pathname === '/protected-videos';
+  
+  console.log("Current location pathname:", location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +27,7 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    console.log("Attempting to scroll to section:", id);
     // Navigate to homepage first if not already there
     if (location.pathname !== '/') {
       navigate('/');
@@ -33,6 +36,9 @@ const Navigation = () => {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
+          console.log("Scrolled to element:", id);
+        } else {
+          console.error("Element not found:", id);
         }
       }, 100);
     } else {
@@ -40,6 +46,9 @@ const Navigation = () => {
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+        console.log("Scrolled to element:", id);
+      } else {
+        console.error("Element not found:", id);
       }
     }
     setIsMenuOpen(false);
@@ -62,7 +71,15 @@ const Navigation = () => {
       
       {/* Navigation content */}
       <div className="relative z-10 px-6 py-4">
-        <div className="flex justify-end items-center max-w-7xl mx-auto">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
+          <button 
+            onClick={() => scrollToSection('home')}
+            className="text-foreground p-2 hover:text-primary transition-colors"
+            aria-label="Go to home"
+          >
+            <ArrowLeft className="w-6 h-6" />
+          </button>
+          
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-foreground p-2 hover:text-primary transition-colors"
