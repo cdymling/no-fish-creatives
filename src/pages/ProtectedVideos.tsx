@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -43,29 +42,23 @@ const ProtectedVideos = () => {
 
   const [videos, setVideos] = useState<Video[]>(defaultVideos);
 
-  // Check authentication as soon as component mounts
+  // Check authentication once when component mounts
   useEffect(() => {
-    // Access token directly from localStorage
+    // Simple authentication check - just check the localStorage directly
     const auth = localStorage.getItem('nofish_auth');
     
-    console.log("Authentication status:", auth);
-    
     if (auth !== 'true') {
-      console.log("Not authenticated, redirecting to /work");
       navigate('/work', { replace: true });
       return;
     }
     
-    console.log("Authentication confirmed, loading videos");
     setIsAuthenticated(true);
     
     // Load saved videos from localStorage if available
     const savedVideos = localStorage.getItem('nofish_videos');
     if (savedVideos) {
       try {
-        const parsedVideos = JSON.parse(savedVideos);
-        console.log("Loaded saved videos:", parsedVideos);
-        setVideos(parsedVideos);
+        setVideos(JSON.parse(savedVideos));
       } catch (e) {
         console.error('Error loading saved videos', e);
       }

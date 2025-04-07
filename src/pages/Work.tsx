@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -25,7 +24,6 @@ const Work = () => {
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === CORRECT_PASSWORD) {
-      // Set auth in localStorage first
       localStorage.setItem('nofish_auth', 'true');
       setError('');
       
@@ -34,11 +32,7 @@ const Work = () => {
         description: "Redirecting to protected videos...",
       });
       
-      // Add a small delay to ensure localStorage is properly set
-      setTimeout(() => {
-        // Use window.location.href for a hard navigation to avoid React Router issues
-        window.location.href = '/protected-videos';
-      }, 500);
+      navigate('/protected-videos', { replace: true });
     } else {
       setError('Incorrect password. Please try again.');
       toast({
