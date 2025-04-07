@@ -7,14 +7,13 @@ const Services = () => {
   
   return (
     <div className="h-screen overflow-y-scroll snap-y snap-mandatory bg-black">
-      {/* First Section - Updated with new text and styling */}
+      {/* First Section */}
       <section className="h-screen w-full flex items-start justify-start px-6 py-6 snap-start">
         <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
-            <span className="block">Hold tight</span>
-            <span className="block">while we get</span>
-            <span className="block">this show<span className="text-[#5CE1E6]"> on</span></span>
-            <span className="block text-[#5CE1E6]">the road.</span>
+            <span className="block">How we</span>
+            <span className="block">might be <span className="text-[#5CE1E6]">of</span></span>
+            <span className="block text-[#5CE1E6]">service:</span>
           </h1>
         </div>
       </section>
