@@ -5,6 +5,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Services from "./pages/Services";
+import AboutVideo from "./pages/AboutVideo";
+import ServicesVideo from "./pages/ServicesVideo";
+import WorkVideo from "./pages/WorkVideo";
 import ProtectedVideos from "./pages/ProtectedVideos";
 
 // Huvudsidan med alla sektioner i scrollsequens
@@ -55,6 +58,9 @@ const MainPage = () => (
         </div>
       </div>
     </section>
+    <section id="about-video" className="snap-start h-screen w-full">
+      <AboutVideo />
+    </section>
     
     {/* Services sections */}
     <section id="services-title" className="snap-start h-screen w-full bg-black">
@@ -97,6 +103,9 @@ const MainPage = () => (
         </div>
       </div>
     </section>
+    <section id="services-video" className="snap-start h-screen w-full">
+      <ServicesVideo />
+    </section>
     
     {/* Work sections */}
     <section id="work-title" className="snap-start h-screen w-full bg-black">
@@ -125,6 +134,9 @@ const MainPage = () => (
           <Work />
         </div>
       </div>
+    </section>
+    <section id="work-video" className="snap-start h-screen w-full">
+      <WorkVideo />
     </section>
   </div>
 );
