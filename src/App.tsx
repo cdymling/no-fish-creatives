@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import ProtectedVideos from "./pages/ProtectedVideos";
 import NotFound from "./pages/NotFound";
 
+// Main page component with all sections
 const MainPage = () => (
   <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
     {/* Home section */}
@@ -171,6 +172,7 @@ const MainPage = () => (
   </div>
 );
 
+// Main App component with routes
 const App = () => (
   <Layout>
     <Routes>

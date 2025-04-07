@@ -25,14 +25,15 @@ const Navigation = () => {
 
   const scrollToSection = (id: string) => {
     if (location.pathname !== '/') {
-      navigate('/');
-      // We need to wait for the navigation to complete before scrolling
+      // First navigate to home page
+      navigate('/', { replace: true });
+      // We need a longer timeout to ensure the navigation completes
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 100);
+      }, 300); // Increased timeout to give more time for page load
     } else {
       const element = document.getElementById(id);
       if (element) {
