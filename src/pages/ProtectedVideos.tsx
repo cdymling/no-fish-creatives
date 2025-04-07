@@ -23,9 +23,8 @@ const ProtectedVideos = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  
+  const [isLoading, setIsLoading] = useState(false);
+
   const defaultVideos = [
     {
       id: 1,
@@ -42,33 +41,6 @@ const ProtectedVideos = () => {
   ];
 
   const [videos, setVideos] = useState<Video[]>(defaultVideos);
-
-  // Authentication check - runs once when the component mounts
-  useEffect(() => {
-    // Check authentication from localStorage
-    const auth = localStorage.getItem('nofish_auth');
-    
-    if (auth !== 'true') {
-      // Not authenticated, redirect to work page
-      window.location.href = '/work';
-      return;
-    }
-    
-    setIsAuthenticated(true);
-    
-    // Load saved videos from localStorage if available
-    const savedVideos = localStorage.getItem('nofish_videos');
-    if (savedVideos) {
-      try {
-        setVideos(JSON.parse(savedVideos));
-      } catch (e) {
-        console.error('Error loading saved videos', e);
-      }
-    }
-    
-    // Fetch videos from GitHub
-    fetchVideosFromGitHub();
-  }, []);
 
   const fetchVideosFromGitHub = async () => {
     setIsLoading(true);
@@ -145,16 +117,45 @@ const ProtectedVideos = () => {
     }
   };
 
-  const handleGoBack = () => {
-    // Clear auth and redirect to home
-    localStorage.removeItem('nofish_auth');
-    window.location.href = '/';
-  };
+  useEffect(() => {
+    const auth = localStorage.getItem('nofish_auth');
+    if (auth !== 'true') {
+      navigate('/work');
+      return;
+    }
+    
+    const savedVideos = localStorage.getItem('nofish_videos');
+    if (savedVideos) {
+      try {
+        setVideos(JSON.parse(savedVideos));
+      } catch (e) {
+        console.error('Error loading saved videos', e);
+      }
+    }
+    
+    fetchVideosFromGitHub();
+    
+    return () => {
+      localStorage.removeItem('nofish_auth');
+    };
+  }, [navigate]);
 
-  // Show nothing until authentication check is complete
-  if (!isAuthenticated) {
-    return null;
-  }
+  useEffect(() => {
+    if (videos !== defaultVideos) {
+      localStorage.setItem('nofish_videos', JSON.stringify(videos));
+    }
+  }, [videos]);
+
+  const handleGoBack = () => {
+    localStorage.removeItem('nofish_auth');
+    navigate('/', { replace: true });
+    setTimeout(() => {
+      const workSection = document.getElementById('work');
+      if (workSection) {
+        workSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 300);
+  };
 
   return (
     <div className="min-h-screen bg-black overflow-hidden relative isolate">

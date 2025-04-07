@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
@@ -15,40 +14,21 @@ const Work = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   
-  // Check if already authenticated
   useEffect(() => {
     const auth = localStorage.getItem('nofish_auth');
     if (auth === 'true') {
-      // Already authenticated, redirect to protected videos
-      window.location.href = '/protected-videos';
+      navigate('/protected-videos');
     }
-  }, []);
+  }, [navigate]);
   
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (password === CORRECT_PASSWORD) {
-      // Set auth in localStorage
       localStorage.setItem('nofish_auth', 'true');
       setError('');
-      
-      toast({
-        title: "Access granted",
-        description: "Redirecting to protected videos...",
-      });
-      
-      // Delay to allow toast to be seen
-      setTimeout(() => {
-        // Force a full page navigation
-        window.location.href = '/protected-videos';
-      }, 800);
+      navigate('/protected-videos');
     } else {
       setError('Incorrect password. Please try again.');
-      toast({
-        title: "Access denied",
-        description: "Incorrect password",
-        variant: "destructive"
-      });
     }
   };
   
