@@ -158,82 +158,87 @@ const ProtectedVideos = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FEC6A1] overflow-hidden relative isolate">
-      <div className="absolute inset-0 -z-10 bg-[#FEC6A1]"></div>
+    <div className="min-h-screen bg-black overflow-hidden relative isolate">
+      <div className="absolute inset-0 -z-10 bg-black"></div>
       
       <div className="absolute top-4 left-4">
         <Button 
           variant="ghost" 
           size="sm" 
           onClick={handleGoBack}
-          className="text-foreground hover:bg-foreground/10 p-2"
+          className="text-white hover:bg-white/10 p-2"
         >
           <ArrowLeft className="w-5 h-5 mr-2" /> 
           <span className="text-sm font-space">Back</span>
         </Button>
       </div>
 
-      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-start pt-[5vh]' : 'items-start pt-[5vh]'}`}>
+      <section className="px-6 py-16 min-h-screen">
         <div className="py-4 w-full max-w-5xl mx-auto">
-          <div className="flex flex-col space-y-8">
-            <div>
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg md:text-xl font-bold text-foreground font-clash">AI-powered Demos</h2>
-              </div>
-              
-              {isLoading ? (
-                <div className="flex justify-center my-8">
-                  <div className="text-foreground font-space">Loading videos from GitHub...</div>
+          {/* Large heading that matches the design */}
+          <h1 className="font-clash text-white text-[3rem] md:text-[5rem] lg:text-[7rem] font-bold leading-[1.1] mb-8">
+            We and our current clients are soon ready to show what we've been working on.
+          </h1>
+          
+          <p className="font-space text-white text-xl md:text-2xl max-w-3xl mb-8">
+            In the meantime, know that the work we'll be doing is backed by years of experience as award-winning creatives, developing ideas and campaigns for some of Sweden's biggest brands across all kinds of channels, formats and industries.
+          </p>
+          
+          <p className="font-space text-white text-xl md:text-2xl mb-12">
+            Curious about us or what's possible with AI? Email us at hello@nofish.se.
+          </p>
+          
+          {isLoading ? (
+            <div className="flex justify-center my-8">
+              <div className="text-white font-space">Loading videos from GitHub...</div>
+            </div>
+          ) : videos.length === 0 ? (
+            <div className="backdrop-blur-sm p-6 rounded-xl">
+              <p className="text-white font-space">No videos found in the repository.</p>
+            </div>
+          ) : (
+            <div className="flex flex-col space-y-12">
+              {videos.length > 0 && (
+                <div className="max-w-[290px] ml-0">
+                  <h3 className="text-lg font-medium mb-2 text-white font-clash">{videos[0].title}</h3>
+                  <div className="overflow-hidden">
+                    <AspectRatio ratio={9/16}>
+                      <video 
+                        controls 
+                        className="w-full h-full object-cover"
+                      >
+                        <source src={videos[0].url} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </AspectRatio>
+                  </div>
+                  <p className="mt-2 text-sm text-white/80 font-space">
+                    {videos[0].description}
+                  </p>
                 </div>
-              ) : videos.length === 0 ? (
-                <div className="backdrop-blur-sm p-6 rounded-xl">
-                  <p className="text-foreground font-space">No videos found in the repository.</p>
-                </div>
-              ) : (
-                <div className="flex flex-col space-y-12">
-                  {videos.length > 0 && (
-                    <div className="max-w-[290px] ml-0">
-                      <h3 className="text-base font-medium mb-2 text-foreground font-clash">{videos[0].title}</h3>
-                      <div className="overflow-hidden">
-                        <AspectRatio ratio={9/16}>
-                          <video 
-                            controls 
-                            className="w-full h-full object-cover"
-                          >
-                            <source src={videos[0].url} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </AspectRatio>
-                      </div>
-                      <p className="mt-2 text-sm text-foreground/80 font-space">
-                        {videos[0].description}
-                      </p>
-                    </div>
-                  )}
+              )}
 
-                  {videos.length > 1 && (
-                    <div className="max-w-[290px] ml-0">
-                      <h3 className="text-base font-medium mb-2 text-foreground font-clash">{videos[1].title}</h3>
-                      <div className="overflow-hidden">
-                        <AspectRatio ratio={9/16}>
-                          <video 
-                            controls 
-                            className="w-full h-full object-cover"
-                          >
-                            <source src={videos[1].url} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </AspectRatio>
-                      </div>
-                      <p className="mt-2 text-sm text-foreground/80 font-space">
-                        {videos[1].description}
-                      </p>
-                    </div>
-                  )}
+              {videos.length > 1 && (
+                <div className="max-w-[290px] ml-0">
+                  <h3 className="text-lg font-medium mb-2 text-white font-clash">{videos[1].title}</h3>
+                  <div className="overflow-hidden">
+                    <AspectRatio ratio={9/16}>
+                      <video 
+                        controls 
+                        className="w-full h-full object-cover"
+                      >
+                        <source src={videos[1].url} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </AspectRatio>
+                  </div>
+                  <p className="mt-2 text-sm text-white/80 font-space">
+                    {videos[1].description}
+                  </p>
                 </div>
               )}
             </div>
-          </div>
+          )}
         </div>
       </section>
     </div>
