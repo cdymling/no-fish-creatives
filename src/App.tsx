@@ -55,7 +55,7 @@ const MainPage = () => (
         </div>
       </div>
     </section>
-    <section id="about-video" className="snap-start h-screen w-full bg-black">
+    <section id="about-video" className="snap-start h-screen w-full">
       <div className="h-screen w-full relative overflow-hidden">
         <video
           autoPlay
