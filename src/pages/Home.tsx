@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const videoElement = document.getElementById('home-background-video') as HTMLVideoElement;
@@ -43,7 +45,11 @@ const Home = () => {
           loop
           muted
           playsInline
-          className={`absolute min-w-full min-h-full object-cover md:object-center object-[70%_center] transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute min-w-full min-h-full object-cover transition-opacity duration-2000 ${
+            isLoading ? 'opacity-0' : 'opacity-100'
+          } ${
+            isMobile ? 'object-[90%_center]' : 'md:object-center'
+          }`}
         >
           <source src="/home-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -62,4 +68,3 @@ const Home = () => {
 };
 
 export default Home;
-
