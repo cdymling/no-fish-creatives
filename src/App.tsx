@@ -18,7 +18,7 @@ const App = () => (
           </section>
           
           {/* About sections - now split into two consecutive snap sections */}
-          <section id="about-title" className="snap-start h-screen w-full overflow-hidden">
+          <section id="about-title" className="snap-start h-screen w-full overflow-hidden bg-black">
             <div className="h-screen w-full flex items-start justify-start px-6 py-6">
               <div className="w-full">
                 <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
@@ -30,7 +30,7 @@ const App = () => (
               </div>
             </div>
           </section>
-          <section id="about-content" className="snap-start h-screen w-full overflow-hidden">
+          <section id="about-content" className="snap-start h-screen w-full overflow-hidden bg-black">
             <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
               <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
                 Here's why:
@@ -59,7 +59,7 @@ const App = () => (
           </section>
           
           {/* Services sections - now split into two consecutive snap sections */}
-          <section id="services-title" className="snap-start h-screen w-full overflow-hidden">
+          <section id="services-title" className="snap-start h-screen w-full overflow-hidden bg-black">
             <div className="h-screen w-full flex items-start justify-start px-6 py-6">
               <div className="w-full">
                 <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
@@ -70,7 +70,7 @@ const App = () => (
               </div>
             </div>
           </section>
-          <section id="services-content" className="snap-start h-screen w-full overflow-hidden">
+          <section id="services-content" className="snap-start h-screen w-full overflow-hidden bg-black">
             <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
               <div className="space-y-8 max-w-5xl">
                 <div>
@@ -101,7 +101,7 @@ const App = () => (
           </section>
           
           {/* Work sections - now split into two consecutive snap sections */}
-          <section id="work-title" className="snap-start h-screen w-full">
+          <section id="work-title" className="snap-start h-screen w-full bg-black">
             <div className="h-screen w-full flex flex-col justify-start pt-12 px-6">
               <div className="w-full">
                 <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
@@ -113,7 +113,7 @@ const App = () => (
               </div>
             </div>
           </section>
-          <section id="work-content" className="snap-start h-screen w-full">
+          <section id="work-content" className="snap-start h-screen w-full bg-black">
             <div className="h-screen w-full flex flex-col justify-start pt-12 px-6">
               <div className="max-w-3xl">
                 <p className="font-space text-white text-xl md:text-2xl leading-tight mb-8 text-left">
