@@ -1,12 +1,13 @@
 
 import { useState, useEffect } from 'react';
-import { Menu } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { Menu, ArrowLeft } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   
   // Check if we're on the protected videos page
   const isProtectedVideosPage = location.pathname === '/protected-videos';
@@ -24,16 +25,43 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Navigate to homepage first if not already there
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Use setTimeout to allow navigation to complete before trying to scroll
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If already on homepage, just scroll
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
 
-  // Don't render navigation on the protected videos page
   if (isProtectedVideosPage) {
-    return null;
+    return (
+      <header className="fixed top-0 left-0 right-0 z-[999]">
+        <div className="relative z-10 px-6 py-4">
+          <div className="flex justify-between items-center max-w-7xl mx-auto">
+            <button 
+              onClick={() => navigate('/work')}
+              className="text-black p-2 hover:text-gray-700 transition-colors flex items-center"
+              aria-label="Back"
+            >
+              <ArrowLeft className="w-6 h-6 mr-2" />
+              Back
+            </button>
+          </div>
+        </div>
+      </header>
+    );
   }
 
   return (
@@ -69,19 +97,19 @@ const Navigation = () => {
               Home
             </button>
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection('about-title')}
               className="text-foreground hover:text-primary transition-colors text-left"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToSection('services-title')}
               className="text-foreground hover:text-primary transition-colors text-left"
             >
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('work')}
+              onClick={() => scrollToSection('work-title')}
               className="text-foreground hover:text-primary transition-colors text-left"
             >
               Work
