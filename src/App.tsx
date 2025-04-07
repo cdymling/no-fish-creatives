@@ -86,25 +86,25 @@ const MainPage = () => (
         <div className="space-y-8 max-w-5xl">
           <div>
             <p className="font-space text-white text-2xl md:text-3xl leading-tight">
-              → Acting as a flexible creative partner to marketing departments and in-house agencies.
+              <span className="text-[#5CE1E6]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
             </p>
           </div>
           
           <div>
             <p className="font-space text-white text-2xl md:text-3xl leading-tight">
-              → Developing concepts, campaigns or just a single ad, and producing them when possible.
+              <span className="text-[#5CE1E6]">→</span> Developing concepts, campaigns or just a single ad, and producing them when possible.
             </p>
           </div>
           
           <div>
             <p className="font-space text-white text-2xl md:text-3xl leading-tight">
-              → Leading creatively from initial idea to final delivery.
+              <span className="text-[#5CE1E6]">→</span> Leading creatively from initial idea to final delivery.
             </p>
           </div>
           
           <div>
             <p className="font-space text-white text-2xl md:text-3xl leading-tight">
-              → In a way you might have thought of that we haven't?
+              <span className="text-[#5CE1E6]">→</span> In a way you might have thought of that we haven't?
             </p>
           </div>
         </div>
