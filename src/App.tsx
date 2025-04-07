@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -111,6 +110,20 @@ const MainPage = () => (
         </div>
       </div>
     </section>
+    <section id="services-video" className="snap-start h-screen w-full">
+      <div className="h-screen w-full relative overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/services-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
     
     {/* Work sections */}
     <section id="work-title" className="snap-start h-screen w-full bg-black">
@@ -138,6 +151,20 @@ const MainPage = () => (
           
           <Work />
         </div>
+      </div>
+    </section>
+    <section id="work-video" className="snap-start h-screen w-full">
+      <div className="h-screen w-full relative overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/work-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
   </div>
