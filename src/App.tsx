@@ -64,7 +64,7 @@ const MainPage = () => (
           playsInline
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
-          <source src="/about-background.mp4" type="video/mp4" />
+          <source src="/about-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
