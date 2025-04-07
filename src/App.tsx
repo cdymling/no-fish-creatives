@@ -16,7 +16,7 @@ const MainPage = () => (
     </section>
     
     {/* About sections */}
-    <section id="about-title" className="snap-start h-screen w-full">
+    <section id="about-title" className="snap-start h-screen w-full bg-black relative z-10">
       <div className="h-screen w-full flex items-start justify-start px-6 py-6">
         <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
