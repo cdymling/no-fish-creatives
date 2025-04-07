@@ -8,7 +8,6 @@ import ProtectedVideos from "./pages/ProtectedVideos";
 import { useRef, useState, useEffect } from "react";
 import { useIsMobile } from "./hooks/use-mobile";
 
-// Huvudsidan med alla sektioner i scrollsequens
 const MainPage = () => {
   const isMobile = useIsMobile();
   const [activeReason, setActiveReason] = useState(0);
@@ -16,7 +15,6 @@ const MainPage = () => {
   const previousSectionRef = useRef<string | null>(null);
   const currentSectionRef = useRef<string | null>(null);
 
-  // Track section changes for proper scrolling behavior
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -24,7 +22,6 @@ const MainPage = () => {
         previousSectionRef.current = currentSectionRef.current;
         currentSectionRef.current = sectionId;
         
-        // Reset to first reason when entering about-content from the title section
         if (sectionId === "about-content" && previousSectionRef.current === "about-title" && isMobile) {
           if (aboutReasonContainerRef.current) {
             aboutReasonContainerRef.current.scrollTop = 0;
@@ -60,7 +57,6 @@ const MainPage = () => {
       const scrollPosition = container.scrollTop;
       const containerHeight = container.clientHeight;
       
-      // Determine which reason is currently visible based on scroll position
       if (scrollPosition < containerHeight * 0.5) {
         setActiveReason(0);
       } else if (scrollPosition < containerHeight * 1.5) {
@@ -95,16 +91,14 @@ const MainPage = () => {
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
-      {/* Home section */}
       <section id="home" className="snap-start h-screen w-full">
         <Home />
       </section>
       
-      {/* About sections */}
       <section id="about-title" className="snap-start h-screen w-full bg-black relative z-10">
-        <div className="h-screen w-full flex items-start justify-start px-6 py-6">
-          <div className="w-full">
-            <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
+        <div className="h-screen w-full flex items-center justify-center px-6 py-6">
+          <div className="w-full text-left md:text-left">
+            <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1]">
               <span className="block">You don't</span>
               <span className="block">need a big</span>
               <span className="block">agency <span className="text-[#5CE1E6]">to do</span></span>
@@ -113,17 +107,16 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+      
       <section id="about-content" className="snap-start h-screen w-full bg-black">
         {isMobile ? (
           <div className="h-screen w-full flex flex-col bg-black">
-            {/* Fixed header */}
             <div className="px-6 py-8 bg-black z-10 border-b border-gray-800">
               <h2 className="font-clash text-white text-4xl font-bold">
                 Here's why:
               </h2>
             </div>
             
-            {/* Scrollable reasons */}
             <div 
               ref={aboutReasonContainerRef}
               className="flex-1 overflow-y-auto snap-y snap-mandatory"
@@ -169,6 +162,7 @@ const MainPage = () => {
           </div>
         )}
       </section>
+      
       <section id="about-video" className="snap-start h-screen w-full">
         <div className="h-screen w-full relative overflow-hidden">
           <video
@@ -184,7 +178,6 @@ const MainPage = () => {
         </div>
       </section>
       
-      {/* Services sections */}
       <section id="services-title" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full flex items-start justify-start px-6 py-6">
           <div className="w-full">
@@ -240,7 +233,6 @@ const MainPage = () => {
         </div>
       </section>
       
-      {/* Work sections */}
       <section id="work-title" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full flex flex-col justify-start pt-12 px-6">
           <div className="w-full">
