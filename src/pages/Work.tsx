@@ -35,7 +35,8 @@ const Work = () => {
   
   return (
     <div className="min-h-screen bg-black">
-      <section className="h-screen w-full flex flex-col justify-start px-6 py-6 snap-start">
+      {/* First section with just the heading */}
+      <section className="h-screen w-full flex flex-col justify-center px-6 snap-start">
         <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
             <span className="block">Hold tight</span>
@@ -44,8 +45,11 @@ const Work = () => {
             <span className="block text-[#5CE1E6]">the road.</span>
           </h1>
         </div>
+      </section>
 
-        <div className="max-w-3xl mt-12 md:mt-24">
+      {/* Second section with the text and password form */}
+      <section className="h-screen w-full flex flex-col justify-center px-6 snap-start">
+        <div className="max-w-3xl">
           <p className="font-space text-white text-xl md:text-2xl leading-tight mb-8">
             We and our current clients are soon ready to show what we've been working on. In the meantime, know that the work we'll be doing is backed by years of experience as award-winning creatives, developing ideas and campaigns for some of Sweden's biggest brands across all kinds of channels, formats and industries.
           </p>
