@@ -24,15 +24,8 @@ const ProtectedVideos = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   
-  // Check authentication immediately
-  const auth = localStorage.getItem('nofish_auth');
-  if (auth !== 'true') {
-    // If not authenticated, don't render anything and redirect
-    window.location.href = '/work';
-    return null;
-  }
-
   const defaultVideos = [
     {
       id: 1,
@@ -50,8 +43,19 @@ const ProtectedVideos = () => {
 
   const [videos, setVideos] = useState<Video[]>(defaultVideos);
 
-  // Load videos from localStorage or fetch them
+  // Authentication check - runs once when the component mounts
   useEffect(() => {
+    // Check authentication from localStorage
+    const auth = localStorage.getItem('nofish_auth');
+    
+    if (auth !== 'true') {
+      // Not authenticated, redirect to work page
+      window.location.href = '/work';
+      return;
+    }
+    
+    setIsAuthenticated(true);
+    
     // Load saved videos from localStorage if available
     const savedVideos = localStorage.getItem('nofish_videos');
     if (savedVideos) {
@@ -142,9 +146,15 @@ const ProtectedVideos = () => {
   };
 
   const handleGoBack = () => {
+    // Clear auth and redirect to home
     localStorage.removeItem('nofish_auth');
     window.location.href = '/';
   };
+
+  // Show nothing until authentication check is complete
+  if (!isAuthenticated) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-black overflow-hidden relative isolate">
