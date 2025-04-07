@@ -1,13 +1,27 @@
 
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+import { ScrollArea } from '../components/ui/scroll-area';
 
 const About = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="min-h-screen relative bg-[#FEC6A1]">
-      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-center justify-center' : 'items-center'}`}>
+    <div className="min-h-screen relative bg-black">
+      {/* First Section */}
+      <section className="min-h-screen flex items-center px-6 py-12">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="font-clash text-white text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            <span className="block">You don't</span>
+            <span className="block">need a big</span>
+            <span className="block">agency <span className="text-[#5CE1E6]">to do</span></span>
+            <span className="text-[#5CE1E6]">big things.</span>
+          </h1>
+        </div>
+      </section>
+
+      {/* Second Section - Original About content */}
+      <section className={`px-6 min-h-screen flex ${isMobile ? 'items-center justify-center' : 'items-center'} bg-[#FEC6A1]`}>
         <div className="py-8 max-w-3xl">
           <h2 className="font-clash text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy creative advertising. Here's how:</h2>
           
@@ -33,4 +47,3 @@ const About = () => {
 };
 
 export default About;
-
