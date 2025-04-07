@@ -16,10 +16,10 @@ const App = () => (
           <section id="home" className="snap-start h-screen w-full">
             <Home />
           </section>
-          <section id="about" className="snap-start h-screen w-full">
+          <section id="about" className="snap-start h-screen w-full overflow-hidden">
             <About />
           </section>
-          <section id="services" className="snap-start h-screen w-full">
+          <section id="services" className="snap-start h-screen w-full overflow-hidden">
             <Services />
           </section>
           <section id="work" className="snap-start h-screen w-full">
