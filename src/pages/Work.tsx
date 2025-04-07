@@ -25,30 +25,26 @@ const Work = () => {
   };
   
   return (
-    <div className="w-full">
-      <form onSubmit={handlePasswordSubmit} className="flex flex-col space-y-2 w-full max-w-md">
-        <div className="flex flex-col sm:flex-row gap-2 w-full">
-          <div className="flex-1">
-            <Input 
-              type="password" 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter password"
-              className="bg-white/20 text-white placeholder:text-white/50 border-none focus-visible:ring-white/30 w-full"
-            />
-          </div>
-          
-          <Button 
-            type="submit" 
-            className="bg-[#5CE1E6] text-black hover:bg-[#5CE1E6]/80 transition-colors"
-          >
-            Submit
-          </Button>
-        </div>
-        
-        {error && <p className="font-space text-red-400 text-sm mt-1">{error}</p>}
-      </form>
-    </div>
+    <form onSubmit={handlePasswordSubmit} className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 max-w-md">
+      <div className="flex-1">
+        <Input 
+          type="password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter password"
+          className="bg-white/20 text-white placeholder:text-white/50 border-none focus-visible:ring-white/30"
+        />
+      </div>
+      
+      <Button 
+        type="submit" 
+        className="bg-[#5CE1E6] text-black hover:bg-[#5CE1E6]/80 transition-colors"
+      >
+        Submit
+      </Button>
+      
+      {error && <p className="font-space text-red-400 mt-2 w-full">{error}</p>}
+    </form>
   );
 };
 

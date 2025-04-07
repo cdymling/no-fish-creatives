@@ -1,11 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/hooks/use-toast";
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-
-// Remove ArrowLeft import as we're keeping only one back button
+import { ArrowLeft } from 'lucide-react';
 
 const GITHUB_OWNER = 'cdymling';
 const GITHUB_REPO = 'no-fish-creatives';
@@ -159,7 +159,6 @@ const ProtectedVideos = () => {
 
   return (
     <div className="min-h-screen bg-black overflow-hidden relative isolate">
-      {/* Keep only the white back button at the top */}
       <div className="absolute top-4 left-4">
         <Button 
           variant="ghost" 
@@ -167,7 +166,8 @@ const ProtectedVideos = () => {
           onClick={handleGoBack}
           className="text-white hover:bg-white/10 p-2"
         >
-          <span className="text-sm font-space mr-2">Back</span>
+          <ArrowLeft className="w-5 h-5 mr-2" /> 
+          <span className="text-sm font-space">Back</span>
         </Button>
       </div>
 
