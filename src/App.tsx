@@ -16,7 +16,7 @@ const App = () => (
           <section id="home" className="snap-start h-screen w-full">
             <Home />
           </section>
-          <section id="about" className="snap-start h-auto w-full overflow-hidden">
+          <section id="about" className="snap-start h-screen w-full">
             <About />
           </section>
           <section id="services" className="snap-start h-screen w-full">

@@ -6,9 +6,9 @@ const About = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="min-h-screen relative bg-black">
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory bg-black">
       {/* First Section */}
-      <section className="h-screen flex items-start justify-start px-6 py-6 snap-start">
+      <section className="h-screen w-full flex items-start justify-start px-6 py-6 snap-start">
         <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[1.1] text-left">
             <span className="block">You don't</span>
@@ -20,7 +20,7 @@ const About = () => {
       </section>
 
       {/* Second Section - Updated to match the image */}
-      <section className="h-screen bg-black px-6 py-12 flex flex-col justify-start snap-start">
+      <section className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start snap-start">
         <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-12">
           Here's why:
         </h2>
@@ -47,7 +47,7 @@ const About = () => {
       </section>
       
       {/* Third Section - Original About content (kept as a third section) */}
-      <section className={`px-6 h-screen flex ${isMobile ? 'items-center justify-center' : 'items-center'} bg-[#FEC6A1] snap-start`}>
+      <section className={`h-screen w-full px-6 flex ${isMobile ? 'items-center justify-center' : 'items-center'} bg-[#FEC6A1] snap-start`}>
         <div className="py-8 max-w-3xl">
           <h2 className="font-clash text-lg md:text-xl font-bold mb-2 text-foreground">We make it easier to buy creative advertising. Here's how:</h2>
           
