@@ -7,6 +7,7 @@ import Work from "./pages/Work";
 import Services from "./pages/Services";
 import ProtectedVideos from "./pages/ProtectedVideos";
 import NotFound from "./pages/NotFound";
+import Index from "./pages/Index";
 
 // Main page component with all sections
 const MainPage = () => (
@@ -177,6 +178,7 @@ const App = () => (
   <Layout>
     <Routes>
       <Route path="/" element={<MainPage />} />
+      <Route path="/index" element={<Index />} />
       <Route path="/protected-videos" element={<ProtectedVideos />} />
       <Route path="/work" element={<Work />} />
       <Route path="*" element={<NotFound />} />
