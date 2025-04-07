@@ -21,11 +21,11 @@ const About = () => {
 
       {/* Second Section - Updated to match the image */}
       <section className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start snap-start">
-        <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-12">
+        <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
           Here's why:
         </h2>
         
-        <div className="space-y-16 max-w-5xl">
+        <div className="space-y-12 max-w-5xl">
           <div>
             <p className="font-clash text-white text-3xl md:text-4xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#1</span> We let you work directly with senior creatives. The kind you'd normally find at a big, highly awarded creative agency. Just without all the layers of people, processes and up-selling that usually come with it.
@@ -50,3 +50,4 @@ const About = () => {
 };
 
 export default About;
+
