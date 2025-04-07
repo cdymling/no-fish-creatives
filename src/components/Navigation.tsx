@@ -1,5 +1,6 @@
+
 import { useState, useEffect } from 'react';
-import { Menu, ArrowLeft } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
@@ -25,6 +26,7 @@ const Navigation = () => {
   const scrollToSection = (id: string) => {
     if (location.pathname !== '/') {
       navigate('/');
+      // We need to wait for the navigation to complete before scrolling
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
@@ -41,7 +43,7 @@ const Navigation = () => {
   };
 
   if (isProtectedVideosPage) {
-    return <></>;
+    return null;
   }
 
   return (

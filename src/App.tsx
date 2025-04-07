@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -5,6 +6,7 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Services from "./pages/Services";
 import ProtectedVideos from "./pages/ProtectedVideos";
+import NotFound from "./pages/NotFound";
 
 const MainPage = () => (
   <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
@@ -175,6 +177,7 @@ const App = () => (
       <Route path="/" element={<MainPage />} />
       <Route path="/protected-videos" element={<ProtectedVideos />} />
       <Route path="/work" element={<Work />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </Layout>
 );
