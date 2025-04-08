@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -26,8 +27,7 @@ const MainPage = () => {
                 <span className="block">Creative</span>
                 <span className="block">advertising.</span>
                 <span className="block">Freed from</span>
-                <span className="block">the</span>
-                <span className="block">fishy</span>
+                <span className="block">the fishy</span>
                 <span className="block text-[#5CE1E6]">layers of</span>
                 <span className="block text-[#5CE1E6]">an agency.</span>
               </h1>
@@ -93,7 +93,7 @@ const MainPage = () => {
                 <span className="block">You don't</span>
                 <span className="block">need a</span>
                 <span className="block">big agency</span>
-                <span className="block">to do</span>
+                <span className="block text-[#5CE1E6]">to do</span>
                 <span className="block text-[#5CE1E6]">big things.</span>
               </h1>
             ) : (
@@ -164,9 +164,9 @@ const MainPage = () => {
               <h1 className="font-clash text-white text-[3.5rem] font-bold leading-[1.1] text-left">
                 <span className="block">Hold tight</span>
                 <span className="block">while we</span>
-                <span className="block">get</span>
-                <span className="block">this show</span>
-                <span className="block text-[#5CE1E6]">on the road.</span>
+                <span className="block">get this</span>
+                <span className="block">show on</span>
+                <span className="block text-[#5CE1E6]">the road.</span>
               </h1>
             ) : (
               <h1 className="font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
