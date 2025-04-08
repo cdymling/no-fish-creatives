@@ -58,9 +58,7 @@ const Home = () => {
       {/* Logo and Tagline centered */}
       <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <span className="font-clash text-white text-[7.5rem] font-bold leading-none">no fish</span>
-        <p className="font-space text-white text-xl max-w-md text-balance -mt-4">
-          Creative advertising. Freed from the fishy layers of an agency.
-        </p>
+        {/* Tagline removed as per user request */}
       </div>
     </div>
   );
