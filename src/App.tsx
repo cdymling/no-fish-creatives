@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -33,21 +34,21 @@ const MainPage = () => (
           Here's how:
         </h2>
         
-        <div className="space-y-6 md:space-y-12 max-w-5xl">
+        <div className="space-y-4 md:space-y-12 max-w-5xl">
           <div>
-            <p className="font-clash text-white text-base md:text-3xl leading-tight">
+            <p className="font-clash text-white text-lg md:text-3xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
             </p>
           </div>
           
           <div>
-            <p className="font-clash text-white text-base md:text-3xl leading-tight">
+            <p className="font-clash text-white text-lg md:text-3xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#2</span> We're smart about production. When it makes sense, we do it ourselves, using AI or taking on tasks like directing and editing.
             </p>
           </div>
           
           <div>
-            <p className="font-clash text-white text-base md:text-3xl leading-tight">
+            <p className="font-clash text-white text-lg md:text-3xl leading-tight">
               <span className="text-[#5CE1E6] font-bold">#3</span> We team up with specialists in strategy, design, and production only when needed, avoiding overlapping roles and making sure you only pay for what you need, when you need it.
             </p>
           </div>
@@ -83,7 +84,7 @@ const MainPage = () => (
     </section>
     <section id="services-content" className="snap-start h-screen w-full bg-black">
       <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
-        <div className="space-y-8 max-w-5xl">
+        <div className="space-y-4 md:space-y-8 max-w-5xl">
           <div>
             <p className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
               A small, AI-positive senior team can get big things done for less. Things like:
@@ -91,25 +92,25 @@ const MainPage = () => (
           </div>
           
           <div>
-            <p className="font-space text-white text-base md:text-3xl leading-tight">
+            <p className="font-space text-white text-lg md:text-3xl leading-tight">
               <span className="text-[#5CE1E6]">→</span> Developing concepts, campaigns, or just a single ad, and producing them when possible.
             </p>
           </div>
           
           <div>
-            <p className="font-space text-white text-base md:text-3xl leading-tight">
+            <p className="font-space text-white text-lg md:text-3xl leading-tight">
               <span className="text-[#5CE1E6]">→</span> Leading creatively from initial idea to final delivery.
             </p>
           </div>
           
           <div>
-            <p className="font-space text-white text-base md:text-3xl leading-tight">
+            <p className="font-space text-white text-lg md:text-3xl leading-tight">
               <span className="text-[#5CE1E6]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
             </p>
           </div>
           
           <div>
-            <p className="font-space text-white text-base md:text-3xl leading-tight">
+            <p className="font-space text-white text-lg md:text-3xl leading-tight">
               <span className="text-[#5CE1E6]">→</span> In a way you might have thought of that we haven't?
             </p>
           </div>
@@ -150,15 +151,15 @@ const MainPage = () => (
             Well, this is embarrassing.
           </h2>
           
-          <p className="font-space text-white text-base md:text-2xl leading-tight mb-8 text-left">
+          <p className="font-space text-white text-lg md:text-2xl leading-tight mb-4 md:mb-8 text-left">
             There's nothing to see here just yet. But fear not, we'll soon be sharing our first work created with this setup.
           </p>
           
-          <p className="font-space text-white text-base md:text-2xl leading-tight mb-8 text-left">
+          <p className="font-space text-white text-lg md:text-2xl leading-tight mb-4 md:mb-8 text-left">
             Until then, it might be good to know that the work we've previously done is award-winning stuff for some of Sweden's biggest brands, across all kinds of channels, formats and industries.
           </p>
           
-          <p className="font-space text-white text-base md:text-2xl leading-tight mb-10 text-left">
+          <p className="font-space text-white text-lg md:text-2xl leading-tight mb-6 md:mb-10 text-left">
             Curious about us or what's possible with AI?
             Email us at hello@nofish.se.
           </p>
