@@ -30,9 +30,9 @@ const Home = () => {
     };
   }, []);
 
-  // Olika videor för desktop och mobil
+  // Different videos for desktop and mobile
   const desktopVideoSrc = "/home-background.mp4";
-  const mobileVideoSrc = "/home-background-mobile.mp4";  // Ny mobil-specifik video
+  const mobileVideoSrc = "/home-background-mobile.mp4";
 
   // Calculate video positioning - for mobile, move 5% to the left (from 70% to 65%)
   const videoPosition = isMobile ? 'object-[65%_center]' : 'object-[70%_center]';
