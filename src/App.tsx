@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -27,8 +28,8 @@ const MainPage = () => {
                 <span className="block">work.</span>
                 <span className="block">Freed from</span>
                 <span className="block">the</span>
-                <span className="block">fishy</span>
-                <span className="block">layers of</span>
+                <span className="block text-[#5CE1E6]">fishy</span>
+                <span className="block text-[#5CE1E6]">layers of</span>
                 <span className="block text-[#5CE1E6]">an agency.</span>
               </h1>
             ) : (
