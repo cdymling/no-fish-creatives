@@ -146,9 +146,15 @@ const MainPage = () => (
     <section id="work-content" className="snap-start h-screen w-full bg-black">
       <div className="h-screen w-full flex flex-col justify-start pt-12 px-6">
         <div className="max-w-3xl">
+          <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
+            Well, this is embarrassing.
+          </h2>
+          
           <p className="font-space text-white text-xl md:text-2xl leading-tight mb-8 text-left">
-            Well, this is embarrassing. There's nothing to see here just yet. But fear not, we'll soon be sharing our first work created with this setup.
-
+            There's nothing to see here just yet. But fear not, we'll soon be sharing our first work created with this setup.
+          </p>
+          
+          <p className="font-space text-white text-xl md:text-2xl leading-tight mb-8 text-left">
             Until then, it might be good to know that the work we've previously done is award-winning stuff for some of Sweden's biggest brands, across all kinds of channels, formats and industries.
           </p>
           
