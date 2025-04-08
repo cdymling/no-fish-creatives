@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 
@@ -34,8 +33,8 @@ const Home = () => {
   const desktopVideoSrc = "/home-background.mp4";
   const mobileVideoSrc = "/home-background-mobile.mp4";
 
-  // Calculate video positioning - for mobile, move 5% to the left (from 70% to 65%)
-  const videoPosition = isMobile ? 'object-[65%_center]' : 'object-[70%_center]';
+  // Remove custom mobile positioning, use default center
+  const videoPosition = 'object-center';
 
   return (
     <div className="min-h-screen relative">
