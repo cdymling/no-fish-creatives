@@ -75,7 +75,7 @@ const MainPage = () => (
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
             <span className="block">You don't need</span>
             <span className="block">a big agency</span>
-            <span className="block">to do</span>
+            <span className="block text-[#5CE1E6]">to do</span>
             <span className="block text-[#5CE1E6]">big things.</span>
           </h1>
         </div>
