@@ -5,12 +5,9 @@ import { useIsMobile } from '../hooks/use-mobile';
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isMobile = useIsMobile();
-  const [videoSrc, setVideoSrc] = useState('');
-
-  useEffect(() => {
-    // Set the appropriate video source based on device type
-    setVideoSrc(isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4");
-  }, [isMobile]);
+  
+  // Direct video sources without state management
+  const videoSrc = isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4";
 
   useEffect(() => {
     const videoElement = document.getElementById('home-background-video') as HTMLVideoElement;
@@ -55,7 +52,7 @@ const Home = () => {
           muted
           playsInline
           className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-          key={videoSrc} // Add key to force re-render when source changes
+          key={isMobile ? "mobile" : "desktop"} // Simple key based on device type
         >
           <source 
             src={videoSrc}
