@@ -85,8 +85,8 @@ const MainPage = () => (
       <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
         <div className="space-y-8 max-w-5xl">
           <div>
-            <p className="font-space text-white text-2xl md:text-3xl leading-tight">
-              <span className="text-[#5CE1E6]">→</span> A small, AI-positive senior team can get big things done for less. Things like:
+            <p className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
+              A small, AI-positive senior team can get big things done for less. Things like:
             </p>
           </div>
           
