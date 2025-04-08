@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -19,7 +20,7 @@ const MainPage = () => {
       </section>
       
       <section id="about-title" className="snap-start h-screen w-full bg-black relative z-10">
-        <div className="h-screen w-full flex items-center justify-start px-6 py-6">
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className="w-full">
             {isMobile ? (
               <h1 className="font-clash text-white text-[3rem] font-bold leading-[1.1] text-left">
@@ -85,7 +86,7 @@ const MainPage = () => {
       </section>
       
       <section id="services-title" className="snap-start h-screen w-full bg-black">
-        <div className="h-screen w-full flex items-center justify-start px-6 py-6">
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className="w-full">
             {isMobile ? (
               <h1 className="font-clash text-white text-[3.5rem] font-bold leading-[1.1] text-left">
@@ -157,7 +158,7 @@ const MainPage = () => {
       </section>
       
       <section id="work-title" className="snap-start h-screen w-full bg-black">
-        <div className="h-screen w-full flex items-center justify-start px-6 py-6">
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className="w-full">
             {isMobile ? (
               <h1 className="font-clash text-white text-[3.5rem] font-bold leading-[1.1] text-left">
