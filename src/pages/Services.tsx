@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <div className="h-screen bg-black flex items-center justify-center">
       <div className="text-center text-white">
-        <p className="text-2xl">Services page content is now part of the main page flow</p>
+        <p className={`${isMobile ? 'text-xl' : 'text-2xl'}`}>Services page content is now part of the main page flow</p>
       </div>
     </div>
   );

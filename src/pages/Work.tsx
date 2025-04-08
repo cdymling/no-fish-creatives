@@ -46,7 +46,9 @@ const Work = () => {
           </Button>
         </div>
         
-        {error && <p className="font-space text-red-400 text-sm w-full">{error}</p>}
+        {error && <p className={`font-space text-red-400 text-sm w-full`}>
+          {error}
+        </p>}
       </form>
     </div>
   );
