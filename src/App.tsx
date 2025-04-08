@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -31,7 +30,7 @@ const MainPage = () => (
     <section id="about-content" className="snap-start h-screen w-full bg-black">
       <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
         <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
-          Here's why:
+          Here's how:
         </h2>
         
         <div className="space-y-6 md:space-y-12 max-w-5xl">
