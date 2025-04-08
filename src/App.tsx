@@ -23,17 +23,14 @@ const MainPage = () => {
           <div className="w-full">
             {isMobile ? (
               <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
-                <span className="block">Creative</span>
-                <span className="block">advertising.</span>
-                <span className="block">Freed from</span>
-                <span className="block">the <span className="text-[#5CE1E6]">fishy</span></span>
-                <span className="block text-[#5CE1E6]">layers of</span>
-                <span className="block text-[#5CE1E6]">an agency.</span>
+                <span className="block">Creative work.</span>
+                <span className="block">Freed from the</span>
+                <span className="block text-[#5CE1E6]">fishy layers</span>
+                <span className="block text-[#5CE1E6]">of an agency.</span>
               </h1>
             ) : (
               <h1 className="font-clash text-white text-[6rem] lg:text-[7.5rem] xl:text-[9rem] font-bold leading-[0.95] text-left">
-                <span className="block">Creative</span>
-                <span className="block">advertising.</span>
+                <span className="block">Creative work.</span>
                 <span className="block">Freed from the</span>
                 <span className="block text-[#5CE1E6]">fishy layers</span>
                 <span className="block text-[#5CE1E6]">of an agency.</span>
