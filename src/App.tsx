@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -22,10 +21,11 @@ const MainPage = () => (
       <div className="h-screen w-full flex items-start justify-start px-6 py-6">
         <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
-            <span className="block">You don't</span>
-            <span className="block">need a big</span>
-            <span className="block">agency <span className="text-[#5CE1E6]">to do</span></span>
-            <span className="text-[#5CE1E6]">big things.</span>
+            <span className="block">Creative</span>
+            <span className="block">advertising.</span>
+            <span className="block">Freed from the</span>
+            <span className="block text-[#5CE1E6]">fishy layers</span>
+            <span className="block text-[#5CE1E6]">of an agency.</span>
           </h1>
         </div>
       </div>
