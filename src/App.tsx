@@ -22,7 +22,7 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className="w-full">
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3rem] font-bold leading-[1.1] text-left">
+              <h1 className="font-clash text-white text-[3.21rem] font-bold leading-[1.1] text-left">
                 <span className="block">Creative</span>
                 <span className="block">advertising.</span>
                 <span className="block">Freed from</span>
@@ -88,7 +88,7 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className="w-full">
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.5rem] font-bold leading-[1.1] text-left">
+              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
                 <span className="block">You don't</span>
                 <span className="block">need a</span>
                 <span className="block">big agency</span>
@@ -160,7 +160,7 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className="w-full">
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.5rem] font-bold leading-[1.1] text-left">
+              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
                 <span className="block">Hold tight</span>
                 <span className="block">while we</span>
                 <span className="block">get this</span>
