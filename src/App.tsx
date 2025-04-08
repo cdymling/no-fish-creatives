@@ -22,11 +22,11 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className="w-full">
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.21rem] font-bold leading-[1.1] text-left">
+              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
                 <span className="block">Creative</span>
                 <span className="block">advertising.</span>
                 <span className="block">Freed from</span>
-                <span className="block">the fishy</span>
+                <span className="block">the <span className="text-[#5CE1E6]">fishy</span></span>
                 <span className="block text-[#5CE1E6]">layers of</span>
                 <span className="block text-[#5CE1E6]">an agency.</span>
               </h1>
