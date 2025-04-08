@@ -29,7 +29,7 @@ const MainPage = () => {
                 <span className="block text-[#5CE1E6]">of an agency.</span>
               </h1>
             ) : (
-              <h1 className="font-clash text-white text-[7.5rem] font-bold leading-[0.95] text-left">
+              <h1 className="font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
                 <span className="block">Creative work.</span>
                 <span className="block">Freed from the</span>
                 <span className="block text-[#5CE1E6]">fishy layers</span>
@@ -39,6 +39,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+      
       <section id="about-content" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
           <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
