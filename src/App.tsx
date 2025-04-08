@@ -73,9 +73,10 @@ const MainPage = () => (
       <div className="h-screen w-full flex items-start justify-start px-6 py-6">
         <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
-            <span className="block">How we</span>
-            <span className="block">might be <span className="text-[#5CE1E6]">of</span></span>
-            <span className="block text-[#5CE1E6]">service:</span>
+            <span className="block">You don't need</span>
+            <span className="block">a big agency</span>
+            <span className="block">to do</span>
+            <span className="block text-[#5CE1E6]">big things.</span>
           </h1>
         </div>
       </div>
