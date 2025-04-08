@@ -8,15 +8,12 @@ import ProtectedVideos from "./pages/ProtectedVideos";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 
-// Main page component with all sections
 const MainPage = () => (
   <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
-    {/* Home section */}
     <section id="home" className="snap-start h-screen w-full">
       <Home />
     </section>
     
-    {/* About sections */}
     <section id="about-title" className="snap-start h-screen w-full bg-black relative z-10">
       <div className="h-screen w-full flex items-start justify-start px-6 py-6">
         <div className="w-full">
@@ -72,7 +69,6 @@ const MainPage = () => (
       </div>
     </section>
     
-    {/* Services sections */}
     <section id="services-title" className="snap-start h-screen w-full bg-black">
       <div className="h-screen w-full flex items-start justify-start px-6 py-6">
         <div className="w-full">
@@ -128,7 +124,6 @@ const MainPage = () => (
       </div>
     </section>
     
-    {/* Work sections */}
     <section id="work-title" className="snap-start h-screen w-full bg-black">
       <div className="h-screen w-full flex flex-col justify-start pt-12 px-6">
         <div className="w-full">
@@ -173,7 +168,6 @@ const MainPage = () => (
   </div>
 );
 
-// Main App component with routes
 const App = () => (
   <Layout>
     <Routes>
