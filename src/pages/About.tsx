@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="h-screen bg-black flex items-center justify-center">
       <div className="text-center text-white px-4">
-        <p className="font-space text-xl md:text-2xl leading-tight">About page content is now part of the main page flow</p>
+        <p className="font-space text-base md:text-2xl leading-tight">About page content is now part of the main page flow</p>
       </div>
     </div>
   );
