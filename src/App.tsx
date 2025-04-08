@@ -93,7 +93,7 @@ const MainPage = () => {
                 <span className="block">You don't</span>
                 <span className="block">need a</span>
                 <span className="block">big agency</span>
-                <span className="block">to do</span>
+                <span className="block text-[#5CE1E6]">to do</span>
                 <span className="block text-[#5CE1E6]">big things.</span>
               </h1>
             ) : (
@@ -165,7 +165,7 @@ const MainPage = () => {
                 <span className="block">Hold tight</span>
                 <span className="block">while we</span>
                 <span className="block">get this show</span>
-                <span className="block">on</span>
+                <span className="block text-[#5CE1E6]">on</span>
                 <span className="block text-[#5CE1E6]">the road.</span>
               </h1>
             ) : (
