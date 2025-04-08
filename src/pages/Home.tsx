@@ -30,6 +30,10 @@ const Home = () => {
     };
   }, []);
 
+  // Olika videor för desktop och mobil
+  const desktopVideoSrc = "/home-background.mp4";
+  const mobileVideoSrc = "/home-background-mobile.mp4";  // Ny mobil-specifik video
+
   // Calculate video positioning - for mobile, move 5% to the left (from 70% to 65%)
   const videoPosition = isMobile ? 'object-[65%_center]' : 'object-[70%_center]';
 
@@ -50,7 +54,10 @@ const Home = () => {
           playsInline
           className={`absolute min-w-full min-h-full object-cover md:object-center ${videoPosition} transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         >
-          <source src="/home-background.mp4" type="video/mp4" />
+          <source 
+            src={isMobile ? mobileVideoSrc : desktopVideoSrc} 
+            type="video/mp4" 
+          />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -58,7 +65,6 @@ const Home = () => {
       {/* Logo and Tagline centered */}
       <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <span className="font-clash text-white text-[7.5rem] font-bold leading-none">no fish</span>
-        {/* Tagline removed as per user request */}
       </div>
     </div>
   );
