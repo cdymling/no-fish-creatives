@@ -1,9 +1,16 @@
+
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isMobile = useIsMobile();
+  const [videoSrc, setVideoSrc] = useState('');
+
+  useEffect(() => {
+    // Set the appropriate video source based on device type
+    setVideoSrc(isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4");
+  }, [isMobile]);
 
   useEffect(() => {
     const videoElement = document.getElementById('home-background-video') as HTMLVideoElement;
@@ -29,16 +36,12 @@ const Home = () => {
     };
   }, []);
 
-  // Different videos for desktop and mobile
-  const desktopVideoSrc = "/home-background.mp4";
-  const mobileVideoSrc = "/home-background-mobile.mp4";
-
-  // Remove custom mobile positioning, use default center
+  // Use default centered position for both mobile and desktop
   const videoPosition = 'object-center';
 
   return (
     <div className="min-h-screen relative">
-      {/* Svart bakgrund som visas under laddning */}
+      {/* Black background shown during loading */}
       <div 
         className={`fixed inset-0 bg-black z-50 transition-opacity duration-2000 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} 
       />
@@ -51,10 +54,11 @@ const Home = () => {
           loop
           muted
           playsInline
-          className={`absolute min-w-full min-h-full object-cover md:object-center ${videoPosition} transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-opacity duration-2000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          key={videoSrc} // Add key to force re-render when source changes
         >
           <source 
-            src={isMobile ? mobileVideoSrc : desktopVideoSrc} 
+            src={videoSrc}
             type="video/mp4" 
           />
           Your browser does not support the video tag.
