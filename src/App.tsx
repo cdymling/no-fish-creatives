@@ -147,11 +147,14 @@ const MainPage = () => (
       <div className="h-screen w-full flex flex-col justify-start pt-12 px-6">
         <div className="max-w-3xl">
           <p className="font-space text-white text-xl md:text-2xl leading-tight mb-8 text-left">
-            Well this is embarrassing. There's nothing here to see just yet. But fear not. Soon we'll be able to share our first work using this set up. Until then it might be good to know the work we've previously been doing is award-winning stuff, for some of Sweden's biggest brands across all kinds of channels, formats and industries.
+            Well, this is embarrassing. There's nothing to see here just yet. But fear not, we'll soon be sharing our first work created with this setup.
+
+            Until then, it might be good to know that the work we've previously done is award-winning stuff for some of Sweden's biggest brands, across all kinds of channels, formats and industries.
           </p>
           
           <p className="font-space text-white text-xl md:text-2xl leading-tight mb-10 text-left">
-            Curious about us or what's possible with AI? Email us at hello@nofish.se.
+            Curious about us or what's possible with AI?
+            Email us at hello@nofish.se.
           </p>
           
           <Work />
