@@ -74,7 +74,7 @@ const MainPage = () => (
         <div className="w-full">
           <h1 className="font-clash text-white text-[3.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
             <span className="block">How we</span>
-            <span className="block">might be</span>
+            <span className="block">might be <span className="text-[#5CE1E6]">of</span></span>
             <span className="block text-[#5CE1E6]">service:</span>
           </h1>
         </div>
