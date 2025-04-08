@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -23,10 +24,11 @@ const MainPage = () => {
           <div className="w-full">
             {isMobile ? (
               <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
-                <span className="block">Creative work.</span>
-                <span className="block">Freed from the</span>
-                <span className="block text-[#5CE1E6]">fishy layers</span>
-                <span className="block text-[#5CE1E6]">of an agency.</span>
+                <span className="block">"Creative" "work."</span>
+                <span className="block">"Freed from"</span>
+                <span className="block">"the fishy"</span>
+                <span className="block">"layers of"</span>
+                <span className="block text-[#5CE1E6]">"an agency."</span>
               </h1>
             ) : (
               <h1 className="font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
