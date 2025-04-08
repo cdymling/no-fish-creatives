@@ -34,13 +34,13 @@ const Work = () => {
               value={password} 
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password"
-              className="bg-white/20 text-white placeholder:text-white/50 border-none focus-visible:ring-white/30 w-full"
+              className="bg-white/20 text-white placeholder:text-white/50 border-none focus-visible:ring-white/30 w-full text-base"
             />
           </div>
           
           <Button 
             type="submit" 
-            className="bg-[#5CE1E6] text-black hover:bg-[#5CE1E6]/80 transition-colors"
+            className="bg-[#5CE1E6] text-black hover:bg-[#5CE1E6]/80 transition-colors text-base"
           >
             Submit
           </Button>
