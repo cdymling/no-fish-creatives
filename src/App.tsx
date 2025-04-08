@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -27,8 +26,8 @@ const MainPage = () => {
                 <span className="block">Creative</span>
                 <span className="block">advertising.</span>
                 <span className="block">Freed from</span>
-                <span className="block">the fishy</span>
-                <span className="block">layers of</span>
+                <span className="block">the</span>
+                <span className="block text-[#5CE1E6]">fishy layers of</span>
                 <span className="block text-[#5CE1E6]">an agency.</span>
               </h1>
             ) : (
@@ -164,16 +163,16 @@ const MainPage = () => {
               <h1 className="font-clash text-white text-[3.5rem] font-bold leading-[1.1] text-left">
                 <span className="block">Hold tight</span>
                 <span className="block">while we</span>
-                <span className="block">get this show</span>
-                <span className="block text-[#5CE1E6]">on</span>
-                <span className="block text-[#5CE1E6]">the road.</span>
+                <span className="block">get</span>
+                <span className="block text-[#5CE1E6]">this show</span>
+                <span className="block text-[#5CE1E6]">on the road.</span>
               </h1>
             ) : (
               <h1 className="font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
                 <span className="block">Hold tight</span>
                 <span className="block">while we get</span>
-                <span className="block">this show <span className="text-[#5CE1E6]">on</span></span>
-                <span className="block text-[#5CE1E6]">the road.</span>
+                <span className="block text-[#5CE1E6]">this show</span>
+                <span className="block text-[#5CE1E6]">on the road.</span>
               </h1>
             )}
           </div>
