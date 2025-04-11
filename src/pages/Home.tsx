@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     // Preload video before displaying it
     const preloadVideo = () => {
-      const videoPreload = new Video();
+      const videoPreload = document.createElement('video');
       videoPreload.src = videoSrc;
       videoPreload.preload = "auto";
       
