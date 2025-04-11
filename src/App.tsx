@@ -132,12 +132,6 @@ const MainPage = () => {
                 <span className="text-[#5CE1E6]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
               </p>
             </div>
-            
-            <div>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
-                <span className="text-[#5CE1E6]">→</span> In a way you might have thought of that we haven't?
-              </p>
-            </div>
           </div>
         </div>
       </section>
