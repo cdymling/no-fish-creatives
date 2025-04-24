@@ -26,16 +26,19 @@ const Navigation = () => {
   const scrollToSection = (id: string) => {
     setIsMenuOpen(false); // Close menu first to prevent UI issues
     
+    // Use a different approach for navigation and scrolling
     if (location.pathname !== '/') {
-      // First navigate to home page
+      // Navigate to home page without replacing history
       navigate('/', { replace: false });
-      // We need a timeout to ensure the navigation completes
+      
+      // Wait for navigation to complete before scrolling
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          // Use regular scrollIntoView instead of smooth scroll for better reliability
+          element.scrollIntoView();
         }
-      }, 300); // Timeout to give more time for page load
+      }, 500); // Increased timeout to ensure navigation completes
     } else {
       // Already on home page, just scroll
       const element = document.getElementById(id);
