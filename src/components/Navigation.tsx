@@ -31,7 +31,7 @@ const Navigation = () => {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          // Safari-compatible smooth scroll
+          // Force scroll without smooth behavior for Safari
           const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
           if (isSafari) {
             window.scrollTo(0, element.offsetTop);
@@ -39,11 +39,11 @@ const Navigation = () => {
             element.scrollIntoView({ behavior: 'smooth' });
           }
         }
-      }, 300); // Increased timeout to give more time for page load
+      }, 500); // Increased timeout for Safari
     } else {
       const element = document.getElementById(id);
       if (element) {
-        // Safari-compatible smooth scroll
+        // Force scroll without smooth behavior for Safari  
         const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
         if (isSafari) {
           window.scrollTo(0, element.offsetTop);

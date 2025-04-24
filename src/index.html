@@ -22,16 +22,27 @@
         .safari-text-fix {
           transform: translateZ(0);
           -webkit-transform: translateZ(0);
-          max-width: 100vw;
-          overflow-x: hidden;
+          width: 100%;
+          max-width: 100%;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
+        
+        /* Text size adjustments for Safari */
+        @media screen and (min-width: 768px) {
+          .safari-text-size-fix {
+            font-size: calc(7rem * 0.8) !important;
+            line-height: 0.95 !important;
+            letter-spacing: -1px !important;
+          }
         }
         
         /* Fix for Safari scroll overflow issues */
-        body, html {
-          position: fixed;
+        html, body {
           width: 100%;
           height: 100%;
           overflow: hidden;
+          position: fixed;
         }
         
         #root {
