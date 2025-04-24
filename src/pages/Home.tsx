@@ -91,7 +91,7 @@ const Home = () => {
 
       {/* Logo and Tagline centered - Safari fix */}
       <div className={`fixed inset-0 flex flex-col items-center justify-center text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <span className="font-clash text-white text-[7.5rem] font-bold leading-none">no fish</span>
+        <span className="font-clash text-white text-[7.5rem] font-bold leading-none safari-heading">no fish</span>
       </div>
     </div>
   );
