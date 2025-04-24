@@ -11,6 +11,17 @@
     <!-- Preload video files for faster loading -->
     <link rel="preload" href="/home-background.mp4" as="video" type="video/mp4">
     <link rel="preload" href="/home-background-mobile.mp4" as="video" type="video/mp4">
+    <!-- Safari-specific CSS fix -->
+    <style>
+      @supports (-webkit-touch-callout: none) {
+        /* CSS specific to Safari */
+        .safari-fix {
+          position: fixed !important;
+          height: 100% !important;
+          width: 100% !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

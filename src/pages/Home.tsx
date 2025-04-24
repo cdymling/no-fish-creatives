@@ -78,7 +78,7 @@ const Home = () => {
           muted
           playsInline
           preload="auto"
-          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute min-w-full min-h-full w-full h-full object-cover ${videoPosition} transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
           key={videoSrc} // Key based on source to force reload when source changes
         >
           <source 
@@ -89,8 +89,8 @@ const Home = () => {
         </video>
       </div>
 
-      {/* Logo and Tagline centered */}
-      <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      {/* Logo and Tagline centered - Safari fix */}
+      <div className={`fixed inset-0 flex flex-col items-center justify-center text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <span className="font-clash text-white text-[7.5rem] font-bold leading-none">no fish</span>
       </div>
     </div>
