@@ -1,60 +1,64 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const isMobile = useIsMobile();
+  const videoRef = useRef<HTMLVideoElement>(null);
   
   // Direct video sources without state management
   const videoSrc = isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4";
 
   useEffect(() => {
-    // Preload video before displaying it
-    const preloadVideo = () => {
-      const videoPreload = document.createElement('video');
-      videoPreload.src = videoSrc;
-      videoPreload.preload = "auto";
-      
-      // Start loading actual player once preload starts
-      const videoElement = document.getElementById('home-background-video') as HTMLVideoElement;
-      if (videoElement) {
-        videoElement.load();
-      }
+    // Function to handle video loading events
+    const handleVideoEvent = (event: string) => {
+      console.log(`Video ${event} event fired`);
+      setVideoLoaded(true);
+      setIsLoading(false);
     };
-    
-    // Try to preload
-    try {
-      preloadVideo();
-    } catch (e) {
-      console.log("Video preloading failed, falling back to standard loading");
-    }
-    
-    const videoElement = document.getElementById('home-background-video') as HTMLVideoElement;
-    
-    const handleVideoLoad = () => {
-      // Reduce the delay before displaying video
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 50); // Reduced from 100 to 50ms for faster display
-    };
+
+    const videoElement = videoRef.current;
     
     if (videoElement) {
-      videoElement.addEventListener('loadeddata', handleVideoLoad);
+      // Safari specific fix: force reload the video
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
       
-      // Show the video as soon as enough data is available for playback
-      videoElement.addEventListener('canplay', handleVideoLoad);
+      if (isSafari) {
+        console.log("Safari detected, applying special video handling");
+        
+        // Force load the video element
+        videoElement.load();
+        
+        // Set a timeout to check if video is ready
+        setTimeout(() => {
+          if (videoElement.readyState >= 2) {
+            handleVideoEvent('canplay (timeout)');
+          } else {
+            // If still not ready, try to reload
+            videoElement.src = videoSrc;
+            videoElement.load();
+          }
+        }, 1000);
+      }
       
-      // In case video is already cached or loaded quickly
+      // Add multiple event listeners to catch as soon as possible when video is ready
+      videoElement.addEventListener('loadeddata', () => handleVideoEvent('loadeddata'));
+      videoElement.addEventListener('canplay', () => handleVideoEvent('canplay'));
+      videoElement.addEventListener('playing', () => handleVideoEvent('playing'));
+      
+      // In case video is already cached and ready
       if (videoElement.readyState >= 3) {
-        handleVideoLoad();
+        handleVideoEvent('already loaded');
       }
     }
     
     return () => {
       if (videoElement) {
-        videoElement.removeEventListener('loadeddata', handleVideoLoad);
-        videoElement.removeEventListener('canplay', handleVideoLoad);
+        videoElement.removeEventListener('loadeddata', () => handleVideoEvent('loadeddata'));
+        videoElement.removeEventListener('canplay', () => handleVideoEvent('canplay'));
+        videoElement.removeEventListener('playing', () => handleVideoEvent('playing'));
       }
     };
   }, [videoSrc]);
@@ -72,13 +76,14 @@ const Home = () => {
       {/* Background Video */}
       <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
         <video
+          ref={videoRef}
           id="home-background-video"
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-opacity duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
           key={videoSrc} // Key based on source to force reload when source changes
         >
           <source 
