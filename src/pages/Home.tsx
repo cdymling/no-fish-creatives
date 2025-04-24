@@ -1,20 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
-import { useLocation } from 'react-router-dom';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isMobile = useIsMobile();
-  const location = useLocation();
-  
-  // Only show on the home page (root path)
-  const isHomePage = location.pathname === '/';
-  
-  // If not on home page, don't render the component
-  if (!isHomePage) {
-    return null;
-  }
   
   // Direct video sources without state management
   const videoSrc = isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4";
@@ -88,7 +78,7 @@ const Home = () => {
           muted
           playsInline
           preload="auto"
-          className={`absolute min-w-full min-h-full w-full h-full object-cover ${videoPosition} transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
           key={videoSrc} // Key based on source to force reload when source changes
         >
           <source 
@@ -99,9 +89,9 @@ const Home = () => {
         </video>
       </div>
 
-      {/* Logo and Tagline centered - Safari fix */}
-      <div className={`fixed inset-0 flex flex-col items-center justify-center text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <span className="font-clash text-white text-[7.5rem] font-bold leading-none safari-heading">no fish</span>
+      {/* Logo and Tagline centered */}
+      <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+        <span className="font-clash text-white text-[7.5rem] font-bold leading-none">no fish</span>
       </div>
     </div>
   );

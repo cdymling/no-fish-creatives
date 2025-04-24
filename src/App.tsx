@@ -13,16 +13,16 @@ const MainPage = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-y-auto scroll-smooth">
+    <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
       <section id="home" className="snap-start h-screen w-full">
         <Home />
       </section>
       
       <section id="about-title" className="snap-start h-screen w-full bg-black relative z-10">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
-          <div className="w-full heading-container">
+          <div className="w-full">
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left safari-heading">
+              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
                 <span className="block">Creative</span>
                 <span className="block">work.</span>
                 <span className="block">Freed from</span>
@@ -31,7 +31,7 @@ const MainPage = () => {
                 <span className="block text-[#5CE1E6]">an agency.</span>
               </h1>
             ) : (
-              <h1 className="font-clash text-white text-[7rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.95] text-left safari-heading">
+              <h1 className="font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
                 <span className="block">Creative work.</span>
                 <span className="block">Freed from the</span>
                 <span className="block text-[#5CE1E6]">fishy layers</span>
@@ -86,9 +86,9 @@ const MainPage = () => {
       
       <section id="services-title" className="snap-start h-screen w-full bg-black">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
-          <div className="w-full heading-container">
+          <div className="w-full">
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left safari-heading">
+              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
                 <span className="block">You don't</span>
                 <span className="block">need a</span>
                 <span className="block">big agency</span>
@@ -96,7 +96,7 @@ const MainPage = () => {
                 <span className="block text-[#5CE1E6]">big things.</span>
               </h1>
             ) : (
-              <h1 className="font-clash text-white text-[7rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.95] text-left safari-heading">
+              <h1 className="font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
                 <span className="block">You don't need</span>
                 <span className="block">a big agency</span>
                 <span className="block text-[#5CE1E6]">to do</span>
@@ -152,9 +152,9 @@ const MainPage = () => {
       
       <section id="work-title" className="snap-start h-screen w-full bg-black">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
-          <div className="w-full heading-container">
+          <div className="w-full">
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left safari-heading">
+              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
                 <span className="block">Hold tight</span>
                 <span className="block">while we</span>
                 <span className="block">get this</span>
@@ -162,7 +162,7 @@ const MainPage = () => {
                 <span className="block text-[#5CE1E6]">the road.</span>
               </h1>
             ) : (
-              <h1 className="font-clash text-white text-[7rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.95] text-left safari-heading">
+              <h1 className="font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[12rem] font-bold leading-[0.95] text-left">
                 <span className="block">Hold tight</span>
                 <span className="block">while we get</span>
                 <span className="block text-[#5CE1E6]">this show</span>

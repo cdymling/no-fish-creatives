@@ -24,28 +24,23 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    setIsMenuOpen(false); // Close menu first to prevent UI issues
-    
-    // Use a different approach for navigation and scrolling
     if (location.pathname !== '/') {
-      // Navigate to home page without replacing history
-      navigate('/', { replace: false });
-      
-      // Wait for navigation to complete before scrolling
+      // First navigate to home page
+      navigate('/', { replace: true });
+      // We need a longer timeout to ensure the navigation completes
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          // Use regular scrollIntoView instead of smooth scroll for better reliability
-          element.scrollIntoView();
+          element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 500); // Increased timeout to ensure navigation completes
+      }, 300); // Increased timeout to give more time for page load
     } else {
-      // Already on home page, just scroll
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    setIsMenuOpen(false);
   };
 
   if (isProtectedVideosPage) {

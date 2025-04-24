@@ -11,39 +11,6 @@
     <!-- Preload video files for faster loading -->
     <link rel="preload" href="/home-background.mp4" as="video" type="video/mp4">
     <link rel="preload" href="/home-background-mobile.mp4" as="video" type="video/mp4">
-    <!-- Safari-specific CSS fix -->
-    <style>
-      @supports (-webkit-touch-callout: none) {
-        /* CSS specific to Safari */
-        .safari-fix {
-          position: fixed !important;
-          height: 100% !important;
-          width: 100% !important;
-        }
-        
-        /* Fix for large headings in Safari */
-        .heading-container {
-          width: 100% !important;
-          max-height: 100vh !important;
-          overflow: hidden !important;
-        }
-        
-        .safari-heading {
-          display: inline-block !important;
-          max-width: 100% !important;
-          word-break: break-word !important;
-          word-wrap: break-word !important;
-          overflow-wrap: break-word !important;
-          font-size: 90% !important; /* Further reduce font size in Safari */
-        }
-        
-        /* Specific fix for large text sizing in Safari */
-        .font-clash {
-          text-rendering: optimizeLegibility !important;
-          -webkit-font-smoothing: antialiased !important;
-        }
-      }
-    </style>
   </head>
   <body>
     <div id="root"></div>
