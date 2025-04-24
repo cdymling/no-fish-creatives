@@ -31,13 +31,25 @@ const Navigation = () => {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          // Safari-compatible smooth scroll
+          const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+          if (isSafari) {
+            window.scrollTo(0, element.offsetTop);
+          } else {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
         }
       }, 300); // Increased timeout to give more time for page load
     } else {
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        // Safari-compatible smooth scroll
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        if (isSafari) {
+          window.scrollTo(0, element.offsetTop);
+        } else {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
     setIsMenuOpen(false);
