@@ -24,23 +24,25 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    setIsMenuOpen(false); // Close menu first to prevent UI issues
+    
     if (location.pathname !== '/') {
       // First navigate to home page
-      navigate('/', { replace: true });
-      // We need a longer timeout to ensure the navigation completes
+      navigate('/', { replace: false });
+      // We need a timeout to ensure the navigation completes
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 300); // Increased timeout to give more time for page load
+      }, 300); // Timeout to give more time for page load
     } else {
+      // Already on home page, just scroll
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    setIsMenuOpen(false);
   };
 
   if (isProtectedVideosPage) {

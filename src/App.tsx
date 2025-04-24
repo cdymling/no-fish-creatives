@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -14,7 +13,7 @@ const MainPage = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
+    <div className="snap-y snap-mandatory h-screen overflow-y-auto scroll-smooth">
       <section id="home" className="snap-start h-screen w-full">
         <Home />
       </section>

@@ -1,10 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isMobile = useIsMobile();
+  const location = useLocation();
+  
+  // Only show on the home page (root path)
+  const isHomePage = location.pathname === '/';
+  
+  // If not on home page, don't render the component
+  if (!isHomePage) {
+    return null;
+  }
   
   // Direct video sources without state management
   const videoSrc = isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4";
