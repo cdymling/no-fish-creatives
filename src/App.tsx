@@ -8,10 +8,10 @@ import ProtectedVideos from "./pages/ProtectedVideos";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
-const momondoLogo = "/momondo-logo.png";
-const rekindLogo = "/rekind-logo.png";
-const compricerLogo = "/compricer-logo.png";
-const eqtLogo = "/eqt-logo.png";
+const momondoLogo = "/momondo-logo.svg";
+const rekindLogo = "/rekind-logo.svg";
+const compricerLogo = "/compricer-logo.svg";
+const eqtLogo = "/eqt-logo.svg";
 
 const MainPage = () => {
   const isMobile = useIsMobile();
