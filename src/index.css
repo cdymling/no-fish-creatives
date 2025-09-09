@@ -108,6 +108,17 @@
     opacity: 1;
   }
   
+  /* Contact text sizing with CSS custom property for gradual adjustments */
+  .contact-text {
+    font-size: var(--contact-text-size, 2.25rem); /* Default to text-4xl equivalent */
+  }
+  
+  @media (min-width: 1024px) {
+    .contact-text {
+      font-size: var(--contact-text-size-lg, 3rem); /* Default to text-5xl equivalent */
+    }
+  }
+  
   /* Responsive sizes for larger screens */
   @media (min-width: 640px) {
     .momondo-logo {
