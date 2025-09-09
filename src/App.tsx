@@ -8,6 +8,10 @@ import ProtectedVideos from "./pages/ProtectedVideos";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
+import momondoLogo from "./assets/momondo-logo.png";
+import rekindLogo from "./assets/rekind-logo.png";
+import compricerLogo from "./assets/compricer-logo.png";
+import eqtLogo from "./assets/eqt-logo.png";
 
 const MainPage = () => {
   const isMobile = useIsMobile();
@@ -149,49 +153,80 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="work-title" className="snap-start h-screen w-full bg-black">
+      <section id="clients" className="snap-start h-screen w-full bg-black">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
-                <span className="block">Hold tight</span>
-                <span className="block">while we</span>
-                <span className="block">get this</span>
-                <span className="block text-[#5CE1E6]">show on</span>
-                <span className="block text-[#5CE1E6]">the road.</span>
+              <h1 className="font-clash text-white text-[2.5rem] font-bold leading-[1.1] text-left mb-12">
+                <span className="block">These very wise</span>
+                <span className="block">clients have so far</span>
+                <span className="block">chosen to work</span>
+                <span className="block">with us:</span>
               </h1>
             ) : (
-              <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
-                <span className="block">Hold tight</span>
-                <span className="block">while we get</span>
-                <span className="block text-[#5CE1E6]">this show</span>
-                <span className="block text-[#5CE1E6]">on the road.</span>
+              <h1 className={`font-clash text-white text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold leading-[0.95] text-left mb-16 ${isSafari ? 'max-w-[95%]' : ''}`}>
+                <span className="block">These very wise clients</span>
+                <span className="block">have so far chosen</span>
+                <span className="block">to work with us:</span>
               </h1>
             )}
+            
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 items-center justify-items-center max-w-4xl">
+              <img src={momondoLogo} alt="Momondo" className="h-8 sm:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={rekindLogo} alt="RE/KIND" className="h-8 sm:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={compricerLogo} alt="Compricer" className="h-8 sm:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={eqtLogo} alt="EQT" className="h-8 sm:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
           </div>
         </div>
       </section>
-      <section id="work-content" className="snap-start h-screen w-full bg-black">
-        <div className="h-screen w-full flex flex-col justify-start pt-12 px-6">
-          <div className="max-w-3xl">
-            <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
-              Well, this is embarrassing.
-            </h2>
-            
-            <p className="font-space text-lg md:text-2xl leading-tight mb-4 md:mb-8 text-left text-white">
-              There's nothing to see here just yet. But fear not, we'll soon be sharing our first work created with this setup.
-            </p>
-            
-            <p className="font-space text-lg md:text-2xl leading-tight mb-4 md:mb-8 text-left text-white">
-              Until then, it might be good to know that the work we've previously done is award-winning stuff for some of Sweden's biggest brands, across all kinds of channels, formats and industries.
-            </p>
-            
-            <p className="font-space text-lg md:text-2xl leading-tight mb-6 md:mb-10 text-left text-white">
-              Curious about us or what's possible with AI?
-              Email us at hello@nofish.se.
-            </p>
-            
-            <Work />
+      <section id="contact" className="snap-start h-screen w-full bg-black">
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+          <div className={`w-full ${safariClass}`}>
+            {isMobile ? (
+              <div>
+                <h1 className="font-clash text-white text-[2.5rem] font-bold leading-[1.1] text-left mb-8">
+                  <span className="block">Do you also want</span>
+                  <span className="block">to work with highly</span>
+                  <span className="block">awarded* senior**</span>
+                  <span className="block">creatives?</span>
+                </h1>
+                
+                <div className="font-space text-white text-xl mb-8">
+                  +46 70 492 00 08 · info@nofish.se
+                </div>
+                
+                <div className="font-space text-white/60 text-sm leading-relaxed max-w-lg">
+                  <p className="mb-4">
+                    *Have been recognized over 80 times at award shows such as Cannes Lions, Eurobest, Epica, The One Show, Clio, New York Festivals, Webbys, and Guldägget.
+                  </p>
+                  <p>
+                    **Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div>
+                <h1 className={`font-clash text-white text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold leading-[0.95] text-left mb-12 ${isSafari ? 'max-w-[95%]' : ''}`}>
+                  <span className="block">Do you also want to work</span>
+                  <span className="block">with highly awarded*</span>
+                  <span className="block">senior** creatives?</span>
+                </h1>
+                
+                <div className="font-space text-white text-2xl lg:text-3xl mb-12">
+                  +46 70 492 00 08 · info@nofish.se
+                </div>
+                
+                <div className="font-space text-white/60 text-base lg:text-lg leading-relaxed max-w-4xl">
+                  <p className="mb-4">
+                    *Have been recognized over 80 times at award shows such as Cannes Lions, Eurobest, Epica, The One Show, Clio, New York Festivals, Webbys, and Guldägget.
+                  </p>
+                  <p>
+                    **Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
