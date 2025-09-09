@@ -84,7 +84,7 @@
     opacity: 0.9;
     transition: opacity 0.3s ease;
     vertical-align: baseline;
-    transform: translateY(-0.25rem);
+    transform: translateY(-0.5rem);
   }
   
   .eqt-logo {
@@ -117,7 +117,7 @@
     
     .compricer-logo {
       height: 1.97rem;
-      transform: translateY(-0.375rem);
+      transform: translateY(-0.625rem);
     }
     
     .eqt-logo {
