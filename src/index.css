@@ -59,4 +59,70 @@
   .duration-2000 {
     transition-duration: 2000ms;
   }
+  
+  /* Individual logo classes for precise control */
+  .momondo-logo {
+    height: 3.5rem;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    vertical-align: baseline;
+  }
+  
+  .bekind-logo {
+    height: 4rem;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    vertical-align: baseline;
+    transform: translateY(-0.25rem);
+  }
+  
+  .compricer-logo {
+    height: 3.25rem;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    vertical-align: baseline;
+    transform: translateY(0.125rem);
+  }
+  
+  .eqt-logo {
+    height: 3rem;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    vertical-align: baseline;
+    transform: translateY(0.25rem);
+  }
+  
+  /* Hover effects */
+  .momondo-logo:hover,
+  .bekind-logo:hover,
+  .compricer-logo:hover,
+  .eqt-logo:hover {
+    opacity: 1;
+  }
+  
+  /* Responsive sizes for larger screens */
+  @media (min-width: 640px) {
+    .momondo-logo {
+      height: 4.5rem;
+    }
+    
+    .bekind-logo {
+      height: 5rem;
+      transform: translateY(-0.375rem);
+    }
+    
+    .compricer-logo {
+      height: 4.25rem;
+      transform: translateY(0.125rem);
+    }
+    
+    .eqt-logo {
+      height: 4rem;
+      transform: translateY(0.375rem);
+    }
+  }
 }

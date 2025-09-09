@@ -173,10 +173,10 @@ const MainPage = () => {
             )}
             
             <div className="flex items-end justify-center sm:justify-start gap-6 sm:gap-8 lg:gap-10 max-w-5xl">
-              <img src={momondoLogo} alt="Momondo" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={bekindLogo} alt="BE/KIND" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={compricerLogo} alt="Compricer" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={eqtLogo} alt="EQT" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={momondoLogo} alt="Momondo" className="momondo-logo" />
+              <img src={bekindLogo} alt="BE/KIND" className="bekind-logo" />
+              <img src={compricerLogo} alt="Compricer" className="compricer-logo" />
+              <img src={eqtLogo} alt="EQT" className="eqt-logo" />
             </div>
           </div>
         </div>
