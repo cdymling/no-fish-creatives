@@ -29,7 +29,7 @@ const MainPage = () => {
               <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
                 <span className="block">work without</span>
-                <span className="block">the fishy layers</span>
+                <span className="block text-[#5CE1E6]">the fishy layers</span>
                 <span className="block text-[#5CE1E6]">of an agency.</span>
               </h1>
             ) : (
