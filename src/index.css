@@ -75,7 +75,7 @@
     opacity: 0.9;
     transition: opacity 0.3s ease;
     vertical-align: baseline;
-    transform: translateY(-0.25rem);
+    transform: translateY(0.125rem);
   }
   
   .compricer-logo {
@@ -112,7 +112,7 @@
     
     .bekind-logo {
       height: 5.5rem;
-      transform: translateY(-0.375rem);
+      transform: translateY(0.125rem);
     }
     
     .compricer-logo {
