@@ -88,7 +88,7 @@
   }
   
   .eqt-logo {
-    height: 1.35rem;
+    height: 1.215rem;
     object-fit: contain;
     opacity: 0.9;
     transition: opacity 0.3s ease;
@@ -121,7 +121,7 @@
     }
     
     .eqt-logo {
-      height: 1.8rem;
+      height: 1.62rem;
       transform: translateY(-1.375rem);
     }
   }
