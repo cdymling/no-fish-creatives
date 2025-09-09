@@ -70,7 +70,7 @@
   }
   
   .bekind-logo {
-    height: 4rem;
+    height: 4.4rem;
     object-fit: contain;
     opacity: 0.9;
     transition: opacity 0.3s ease;
@@ -111,7 +111,7 @@
     }
     
     .bekind-logo {
-      height: 5rem;
+      height: 5.5rem;
       transform: translateY(-0.375rem);
     }
     
