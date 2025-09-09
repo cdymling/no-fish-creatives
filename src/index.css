@@ -55,6 +55,10 @@
   .wave-bg {
     background: linear-gradient(175deg, #FF8243 0%, #FFBB5C 100%);
   }
+
+  .turquoise-asterisk {
+    color: #5CE1E6;
+  }
   
   .duration-2000 {
     transition-duration: 2000ms;

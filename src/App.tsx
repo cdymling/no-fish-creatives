@@ -189,7 +189,7 @@ const MainPage = () => {
                 <h1 className="font-clash text-white text-[2.5rem] font-bold leading-[1.1] text-left mb-8">
                   <span className="block">Do you also want</span>
                   <span className="block">to work with highly</span>
-                  <span className="block">awarded* senior**</span>
+                  <span className="block">awarded<span className="turquoise-asterisk">*</span> senior<span className="turquoise-asterisk">**</span></span>
                   <span className="block">creatives?</span>
                 </h1>
                 
@@ -210,8 +210,8 @@ const MainPage = () => {
               <div>
                 <h1 className={`font-clash text-white text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold leading-[0.95] text-left mb-12 ${isSafari ? 'max-w-[95%]' : ''}`}>
                   <span className="block">Do you also want to work</span>
-                  <span className="block">with highly awarded*</span>
-                  <span className="block">senior** creatives?</span>
+                  <span className="block">with highly awarded<span className="turquoise-asterisk">*</span></span>
+                  <span className="block">senior<span className="turquoise-asterisk">**</span> creatives?</span>
                 </h1>
                 
                 <div className="font-space text-white text-2xl lg:text-3xl mb-12">
