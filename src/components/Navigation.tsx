@@ -33,12 +33,19 @@ const Navigation = () => {
         const element = document.getElementById(id);
         console.log('Element found after navigation:', element);
         if (element) {
-          // Force scroll without smooth behavior for Safari
-          const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-          if (isSafari) {
-            window.scrollTo(0, element.offsetTop);
+          // Get the parent container with snap-scroll
+          const snapContainer = document.querySelector('.snap-y');
+          if (snapContainer) {
+            snapContainer.scrollTo({
+              top: element.offsetTop,
+              behavior: 'smooth'
+            });
           } else {
-            element.scrollIntoView({ behavior: 'smooth' });
+            // Fallback to regular scroll
+            window.scrollTo({
+              top: element.offsetTop,
+              behavior: 'smooth'
+            });
           }
         }
       }, 500); // Increased timeout for Safari
@@ -46,12 +53,19 @@ const Navigation = () => {
       const element = document.getElementById(id);
       console.log('Element found:', element);
       if (element) {
-        // Force scroll without smooth behavior for Safari  
-        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        if (isSafari) {
-          window.scrollTo(0, element.offsetTop);
+        // Get the parent container with snap-scroll
+        const snapContainer = document.querySelector('.snap-y');
+        if (snapContainer) {
+          snapContainer.scrollTo({
+            top: element.offsetTop,
+            behavior: 'smooth'
+          });
         } else {
-          element.scrollIntoView({ behavior: 'smooth' });
+          // Fallback to regular scroll
+          window.scrollTo({
+            top: element.offsetTop,
+            behavior: 'smooth'
+          });
         }
       }
     }
