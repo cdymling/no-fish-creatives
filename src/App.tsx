@@ -26,13 +26,9 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
-                <span className="block">Creative</span>
-                <span className="block">work.</span>
-                <span className="block">Freed from</span>
-                <span className="block">the <span className="text-[#5CE1E6]">fishy</span></span>
-                <span className="block text-[#5CE1E6]">layers of</span>
-                <span className="block text-[#5CE1E6]">an agency.</span>
+              <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+                <span className="block">Creative work. Freed from</span>
+                <span className="block">the <span className="text-[#5CE1E6]">fishy layers of an agency.</span></span>
               </h1>
             ) : (
               <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
@@ -92,12 +88,9 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.75rem] font-bold leading-[1.1] text-left">
-                <span className="block">You don't</span>
-                <span className="block">need a</span>
-                <span className="block">big agency</span>
-                <span className="block text-[#5CE1E6]">to do</span>
-                <span className="block text-[#5CE1E6]">big things.</span>
+              <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+                <span className="block">You don't need a big agency</span>
+                <span className="block text-[#5CE1E6]">to do big things.</span>
               </h1>
             ) : (
               <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
