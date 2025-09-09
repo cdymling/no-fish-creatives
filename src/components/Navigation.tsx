@@ -24,12 +24,14 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    console.log('Attempting to scroll to section:', id);
     if (location.pathname !== '/') {
       // First navigate to home page
       navigate('/', { replace: true });
       // We need a longer timeout to ensure the navigation completes
       setTimeout(() => {
         const element = document.getElementById(id);
+        console.log('Element found after navigation:', element);
         if (element) {
           // Force scroll without smooth behavior for Safari
           const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -42,6 +44,7 @@ const Navigation = () => {
       }, 500); // Increased timeout for Safari
     } else {
       const element = document.getElementById(id);
+      console.log('Element found:', element);
       if (element) {
         // Force scroll without smooth behavior for Safari  
         const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
