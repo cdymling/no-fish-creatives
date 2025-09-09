@@ -28,15 +28,14 @@ const MainPage = () => {
             {isMobile ? (
               <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
-                <span className="block">work free</span>
-                <span className="block">from the</span>
-                <span className="block text-[#5CE1E6]">fishy layers</span>
+                <span className="block">work without</span>
+                <span className="block">the fishy layers</span>
                 <span className="block text-[#5CE1E6]">of an agency.</span>
               </h1>
             ) : (
               <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Creative work</span>
-                <span className="block">free from the</span>
+                <span className="block">without the</span>
                 <span className="block text-[#5CE1E6]">fishy layers</span>
                 <span className="block text-[#5CE1E6]">of an agency.</span>
               </h1>
