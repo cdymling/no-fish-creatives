@@ -13,16 +13,13 @@ const momondoLogo = "/clients/momondo-logo.png";
 const bekindLogo = "/clients/bekind-logo.png";
 const compricerLogo = "/clients/compricer-logo.png";
 const eqtLogo = "/clients/eqt-logo.png";
-
 const MainPage = () => {
   const isMobile = useIsMobile();
-  
+
   // Safari detection
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   const safariClass = isSafari ? 'safari-text-fix safari-text-size-fix' : '';
-
-  return (
-    <div className="snap-y snap-mandatory h-screen overflow-y-auto overscroll-none scroll-smooth">
+  return <div className="snap-y snap-mandatory h-screen overflow-y-auto overscroll-none scroll-smooth">
       <section id="home" className="snap-start h-screen w-full">
         <Home />
       </section>
@@ -30,21 +27,17 @@ const MainPage = () => {
       <section id="about-title" className="snap-start h-screen w-full bg-black relative z-10">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? (
-              <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
                 <span className="block">work without</span>
                 <span className="block text-[#5CE1E6]">the fishy layers</span>
                 <span className="block text-[#5CE1E6]">of an agency.</span>
-              </h1>
-            ) : (
-              <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Creative work</span>
                 <span className="block">without the</span>
                 <span className="block text-[#5CE1E6]">fishy layers</span>
                 <span className="block text-[#5CE1E6]">of an agency.</span>
-              </h1>
-            )}
+              </h1>}
           </div>
         </div>
       </section>
@@ -78,13 +71,7 @@ const MainPage = () => {
       </section>
       <section id="about-video" className="snap-start h-screen w-full">
         <div className="h-screen w-full relative overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover z-0"
-          >
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/about-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -94,19 +81,15 @@ const MainPage = () => {
       <section id="services-title" className="snap-start h-screen w-full bg-black">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? (
-              <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">You don't need a big agency</span>
                 <span className="block text-[#5CE1E6]">to do big things.</span>
-              </h1>
-            ) : (
-              <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">You don't need</span>
                 <span className="block">a big agency</span>
                 <span className="block text-[#5CE1E6]">to do</span>
                 <span className="block text-[#5CE1E6]">big things.</span>
-              </h1>
-            )}
+              </h1>}
           </div>
         </div>
       </section>
@@ -141,13 +124,7 @@ const MainPage = () => {
       </section>
       <section id="services-video" className="snap-start h-screen w-full">
         <div className="h-screen w-full relative overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover z-0"
-          >
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/services-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -157,26 +134,22 @@ const MainPage = () => {
       <section id="clients" className="snap-start h-screen w-full bg-black">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? (
-              <h1 className="font-clash text-white text-[2.5rem] font-bold leading-[1.1] text-left mb-12">
+            {isMobile ? <h1 className="font-clash text-white text-[2.5rem] font-bold leading-[1.1] text-left mb-12">
                 <span className="block">These very wise</span>
                 <span className="block">clients have so far</span>
                 <span className="block">chosen to work</span>
                 <span className="block">with us:</span>
-              </h1>
-            ) : (
-              <h1 className={`font-clash text-white text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold leading-[0.95] text-left mb-16 ${isSafari ? 'max-w-[95%]' : ''}`}>
+              </h1> : <h1 className={`font-clash text-white text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold leading-[0.95] text-left mb-16 ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">These very wise clients</span>
                 <span className="block">have so far chosen</span>
                 <span className="block">to work with us:</span>
-              </h1>
-            )}
+              </h1>}
             
             <div className="flex items-end justify-center sm:justify-start gap-6 sm:gap-8 lg:gap-10 max-w-5xl">
-              <img src={momondoLogo} alt="Momondo" className="momondo-logo" />
-              <img src={bekindLogo} alt="BE/KIND" className="bekind-logo" />
-              <img src={compricerLogo} alt="Compricer" className="compricer-logo" />
-              <img src={eqtLogo} alt="EQT" className="eqt-logo" />
+              <img src={momondoLogo} alt="Momondo" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={bekindLogo} alt="BE/KIND" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={compricerLogo} alt="Compricer" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={eqtLogo} alt="EQT" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>
@@ -184,12 +157,11 @@ const MainPage = () => {
       <section id="contact" className="snap-start h-screen w-full bg-black">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? (
-              <div>
+            {isMobile ? <div>
                 <h1 className="font-clash text-white text-[2.5rem] font-bold leading-[1.1] text-left mb-8">
                   <span className="block">Do you also want</span>
                   <span className="block">to work with highly</span>
-                  <span className="block">awarded<span className="turquoise-asterisk">*</span> senior<span className="turquoise-asterisk">**</span></span>
+                  <span className="block">awarded* senior**</span>
                   <span className="block">creatives?</span>
                 </h1>
                 
@@ -205,52 +177,38 @@ const MainPage = () => {
                     **Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.
                   </p>
                 </div>
-              </div>
-            ) : (
-              <div>
+              </div> : <div>
                 <h1 className={`font-clash text-white text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold leading-[0.95] text-left mb-12 ${isSafari ? 'max-w-[95%]' : ''}`}>
                   <span className="block">Do you also want to work</span>
-                  <span className="block">with highly awarded<span className="turquoise-asterisk">*</span></span>
-                  <span className="block">senior<span className="turquoise-asterisk">**</span> creatives?</span>
+                  <span className="block">with highly awarded*</span>
+                  <span className="block">senior** creatives?</span>
                 </h1>
                 
-                <div className="font-space text-white text-4xl lg:text-5xl mb-12">
+                <div className="font-space text-white text-2xl lg:text-3xl mb-12">
                   +46 70 492 00 08 · info@nofish.se
                 </div>
                 
                 <div className="font-space text-white/60 text-base lg:text-lg leading-relaxed max-w-4xl">
-                  <p className="mb-4">
-                    *Have been recognized over 80 times at award shows such as Cannes Lions, Eurobest, Epica, The One Show, Clio, New York Festivals, Webbys, and Guldägget.
-                  </p>
+                  <p className="mb-4">*Have been recognized over 80 times at award shows such as Cannes Lions, Eurobest, Epica, The One Show, Clio, New York Festivals, Webbys, and Guldägget.**Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&amp;C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.</p>
                   <p>
                     **Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.
                   </p>
                 </div>
-              </div>
-            )}
+              </div>}
           </div>
         </div>
       </section>
       <section id="work-video" className="snap-start h-screen w-full">
         <div className="h-screen w-full relative overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover z-0"
-          >
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/work-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
-const App = () => (
-  <Layout>
+const App = () => <Layout>
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/index" element={<Index />} />
@@ -258,7 +216,5 @@ const App = () => (
       <Route path="/work" element={<Work />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-  </Layout>
-);
-
+  </Layout>;
 export default App;
