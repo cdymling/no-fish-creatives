@@ -8,6 +8,7 @@ import ProtectedVideos from "./pages/ProtectedVideos";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
+// Client logos - fixed bekind reference
 const momondoLogo = "/clients/momondo-logo.png";
 const bekindLogo = "/clients/bekind-logo.png";
 const compricerLogo = "/clients/compricer-logo.png";
