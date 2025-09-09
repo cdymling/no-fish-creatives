@@ -173,7 +173,7 @@ const MainPage = () => {
             
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 items-center justify-items-center max-w-4xl">
               <img src={momondoLogo} alt="Momondo" className="h-12 sm:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={rekindLogo} alt="RE/KIND" className="h-12 sm:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={bekindLogo} alt="BE/KIND" className="h-12 sm:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity" />
               <img src={compricerLogo} alt="Compricer" className="h-12 sm:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity" />
               <img src={eqtLogo} alt="EQT" className="h-12 sm:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity" />
             </div>
