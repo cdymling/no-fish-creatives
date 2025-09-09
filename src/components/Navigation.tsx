@@ -101,10 +101,16 @@ const Navigation = () => {
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('work-title')}
+              onClick={() => scrollToSection('clients')}
               className="text-foreground hover:text-primary transition-colors text-left"
             >
-              Work
+              Clients
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="text-foreground hover:text-primary transition-colors text-left"
+            >
+              Contact
             </button>
           </div>
         </div>
