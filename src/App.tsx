@@ -172,11 +172,11 @@ const MainPage = () => {
               </h1>
             )}
             
-            <div className="flex flex-wrap justify-center sm:justify-start items-center gap-8 sm:gap-16 max-w-6xl">
-              <img src={momondoLogo} alt="Momondo" className="h-16 sm:h-20 lg:h-24 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={bekindLogo} alt="BE/KIND" className="h-16 sm:h-20 lg:h-24 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={compricerLogo} alt="Compricer" className="h-16 sm:h-20 lg:h-24 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={eqtLogo} alt="EQT" className="h-16 sm:h-20 lg:h-24 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+            <div className="flex items-center justify-center sm:justify-start gap-12 sm:gap-16 lg:gap-20 max-w-5xl">
+              <img src={momondoLogo} alt="Momondo" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={bekindLogo} alt="BE/KIND" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={compricerLogo} alt="Compricer" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={eqtLogo} alt="EQT" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>
