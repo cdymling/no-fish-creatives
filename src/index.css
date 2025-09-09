@@ -79,7 +79,7 @@
   }
   
   .compricer-logo {
-    height: 1.875rem;
+    height: 1.69rem;
     object-fit: contain;
     opacity: 0.9;
     transition: opacity 0.3s ease;
@@ -116,7 +116,7 @@
     }
     
     .compricer-logo {
-      height: 2.36rem;
+      height: 2.12rem;
       transform: translateY(-0.375rem);
     }
     
