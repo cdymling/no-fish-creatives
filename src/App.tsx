@@ -26,7 +26,7 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? (
-              <h1 className="font-clash text-white text-[2.5rem] sm:text-[2.8rem] md:text-[2.9rem] lg:text-[3.2rem] font-bold leading-[1.05] text-left">
+              <h1 className="font-clash text-white text-[2.5rem] sm:text-[2.8rem] md:text-[3.2rem] font-bold leading-[1.05] text-left">
                 <span className="block whitespace-nowrap">Creative work.</span>
                 <span className="block whitespace-nowrap">Freed from the</span>
                 <span className="block text-[#5CE1E6] whitespace-nowrap">fishy layers</span>
