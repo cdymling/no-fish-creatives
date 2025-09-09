@@ -93,7 +93,7 @@
     opacity: 0.9;
     transition: opacity 0.3s ease;
     vertical-align: baseline;
-    transform: translateY(-0.8125rem);
+    transform: translateY(-1.4375rem);
   }
   
   /* Hover effects */
@@ -122,7 +122,7 @@
     
     .eqt-logo {
       height: 2rem;
-      transform: translateY(-0.6875rem);
+      transform: translateY(-1.3125rem);
     }
   }
 }
