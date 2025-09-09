@@ -214,7 +214,7 @@ const MainPage = () => {
                   <span className="block">senior<span className="turquoise-asterisk">**</span> creatives?</span>
                 </h1>
                 
-                <div className="font-space text-white text-4xl lg:text-5xl mb-12">
+                <div className="font-space text-white text-3xl lg:text-4xl mb-12">
                   +46 70 492 00 08 · info@nofish.se
                 </div>
                 
