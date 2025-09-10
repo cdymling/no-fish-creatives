@@ -9,7 +9,7 @@ import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
 // Combined client logos
-const combinedClientsLogo = "/clients/combined-clients.png";
+const combinedClientsLogo = "/lovable-uploads/fa3c692a-a5b5-44d8-9a39-ef552aea6b46.png";
 const MainPage = () => {
   const isMobile = useIsMobile();
 
