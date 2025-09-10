@@ -168,7 +168,7 @@ const MainPage = () => {
                 <span className="block">Also want</span>
                 <span className="block">to work with</span>
                 <span className="block text-[#5CE1E6]">awarded senior*</span>
-                <span className="block text-[#5CE1E6]">senior** creatives?</span>
+                <span className="block text-[#5CE1E6]">creatives?</span>
               </h1>}
           </div>
         </div>
