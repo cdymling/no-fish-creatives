@@ -9,7 +9,7 @@ import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
 // Combined client logos
-const combinedClientsLogo = "/lovable-uploads/fa3c692a-a5b5-44d8-9a39-ef552aea6b46.png";
+const combinedClientsLogo = "/clients/combined-clients.png";
 const MainPage = () => {
   const isMobile = useIsMobile();
 
@@ -152,7 +152,11 @@ const MainPage = () => {
             <img 
               src={combinedClientsLogo} 
               alt="Our clients: Compricer, BE/KIND, EQT, and Momondo" 
-              className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-96 animate-float-1" 
+              className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-96 animate-float-1"
+              onError={(e) => {
+                console.log('Image failed to load:', combinedClientsLogo);
+                e.currentTarget.style.display = 'none';
+              }}
             />
           </div>
         </div>
