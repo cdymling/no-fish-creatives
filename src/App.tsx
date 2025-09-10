@@ -152,7 +152,7 @@ const MainPage = () => {
             <img 
               src={combinedClientsLogo} 
               alt="Our clients: Compricer, BE/KIND, EQT, and Momondo" 
-              className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-96" 
+              className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-96 animate-float-1" 
             />
           </div>
         </div>
