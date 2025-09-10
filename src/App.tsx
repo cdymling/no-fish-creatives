@@ -131,11 +131,27 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients" className="snap-start h-screen w-full bg-black">
-        <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
-          <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">These very wise clients have so far gone for a swim with us:</h2>
-          
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-end sm:justify-start sm:gap-8 lg:gap-10 max-w-5xl">
+      <section id="clients-title" className="snap-start h-screen w-full bg-black">
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+          <div className={`w-full ${safariClass}`}>
+            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+                <span className="block">These wise</span>
+                <span className="block">clients have</span>
+                <span className="block text-[#5CE1E6]">gone for a</span>
+                <span className="block text-[#5CE1E6]">dip with us:</span>
+              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+                <span className="block">These wise</span>
+                <span className="block">clients have</span>
+                <span className="block text-[#5CE1E6]">gone for a</span>
+                <span className="block text-[#5CE1E6]">dip with us:</span>
+              </h1>}
+          </div>
+        </div>
+      </section>
+      
+      <section id="clients-content" className="snap-start h-screen w-full bg-black">
+        <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-center items-center">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-end sm:justify-center sm:gap-8 lg:gap-10 max-w-5xl">
             <img src={momondoLogo} alt="Momondo" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-1" />
             <img src={bekindLogo} alt="BE/KIND" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-2" />
             <img src={compricerLogo} alt="Compricer" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-3" />
