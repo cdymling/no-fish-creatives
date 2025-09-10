@@ -152,17 +152,17 @@ const MainPage = () => {
       <section id="clients-content" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-center items-center">
           <div className="relative w-full max-w-4xl h-96">
-            {/* Compricer - top right, large */}
-            <img src={compricerLogo} alt="Compricer" className="absolute top-0 right-0 h-16 sm:h-20 lg:h-24 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-3" />
+            {/* Compricer - top right, more centered */}
+            <img src={compricerLogo} alt="Compricer" className="absolute top-8 right-1/4 h-14 sm:h-18 lg:h-20 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-3" />
             
-            {/* BE/KIND - left middle, medium */}
-            <img src={bekindLogo} alt="BE/KIND" className="absolute top-1/4 left-8 h-12 sm:h-16 lg:h-20 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-2" />
+            {/* BE/KIND - left side, closer to center */}
+            <img src={bekindLogo} alt="BE/KIND" className="absolute top-1/3 left-1/4 h-12 sm:h-14 lg:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-2" />
             
-            {/* EQT - right middle, large */}
-            <img src={eqtLogo} alt="EQT" className="absolute top-1/2 right-12 h-16 sm:h-20 lg:h-24 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-4" />
+            {/* EQT - right side, balanced with BE/KIND */}
+            <img src={eqtLogo} alt="EQT" className="absolute top-1/2 right-1/4 h-14 sm:h-16 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-4" />
             
-            {/* Momondo - bottom center, large */}
-            <img src={momondoLogo} alt="Momondo" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-14 sm:h-18 lg:h-22 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-1" />
+            {/* Momondo - bottom center, with margin from bottom */}
+            <img src={momondoLogo} alt="Momondo" className="absolute bottom-12 left-1/2 transform -translate-x-1/2 h-16 sm:h-20 lg:h-24 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-1" />
           </div>
         </div>
       </section>
