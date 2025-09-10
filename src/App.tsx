@@ -8,11 +8,8 @@ import ProtectedVideos from "./pages/ProtectedVideos";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
-// Client logos - fixed bekind reference
-const momondoLogo = "/clients/momondo-logo.png";
-const bekindLogo = "/clients/bekind-logo.png";
-const compricerLogo = "/clients/compricer-logo.png";
-const eqtLogo = "/clients/eqt-logo.png";
+// Combined client logos
+const combinedClientsLogo = "/clients/combined-clients.png";
 const MainPage = () => {
   const isMobile = useIsMobile();
 
@@ -151,18 +148,12 @@ const MainPage = () => {
       
       <section id="clients-content" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-center items-center">
-          <div className="relative w-full max-w-4xl h-96">
-            {/* Compricer - top right, more centered */}
-            <img src={compricerLogo} alt="Compricer" className="absolute top-8 right-1/4 h-14 sm:h-18 lg:h-20 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-3" />
-            
-            {/* BE/KIND - left side, closer to center */}
-            <img src={bekindLogo} alt="BE/KIND" className="absolute top-1/3 left-1/4 h-12 sm:h-14 lg:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-2" />
-            
-            {/* EQT - right side, balanced with BE/KIND */}
-            <img src={eqtLogo} alt="EQT" className="absolute top-1/2 right-1/4 h-14 sm:h-16 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-4" />
-            
-            {/* Momondo - bottom center, with margin from bottom */}
-            <img src={momondoLogo} alt="Momondo" className="absolute bottom-12 left-1/2 transform -translate-x-1/2 h-16 sm:h-20 lg:h-24 object-contain opacity-90 hover:opacity-100 transition-opacity animate-float-1" />
+          <div className="flex justify-center items-center w-full max-w-4xl">
+            <img 
+              src={combinedClientsLogo} 
+              alt="Our clients: Compricer, BE/KIND, EQT, and Momondo" 
+              className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-96" 
+            />
           </div>
         </div>
       </section>
