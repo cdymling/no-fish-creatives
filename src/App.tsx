@@ -145,11 +145,11 @@ const MainPage = () => {
                 <span className="block">to work with us:</span>
               </h1>}
             
-            <div className="flex items-end justify-center sm:justify-start gap-6 sm:gap-8 lg:gap-10 max-w-5xl">
-              <img src={momondoLogo} alt="Momondo" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={bekindLogo} alt="BE/KIND" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={compricerLogo} alt="Compricer" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={eqtLogo} alt="EQT" className="h-14 sm:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-end sm:justify-start sm:gap-8 lg:gap-10 max-w-5xl">
+              <img src={momondoLogo} alt="Momondo" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={bekindLogo} alt="BE/KIND" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={compricerLogo} alt="Compricer" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img src={eqtLogo} alt="EQT" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>
