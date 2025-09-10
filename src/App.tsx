@@ -134,12 +134,12 @@ const MainPage = () => {
       <section id="clients" className="snap-start h-screen w-full bg-black">
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[2.5rem] font-bold leading-[1.1] text-left mb-12">
+            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">These very wise</span>
                 <span className="block">clients have so far</span>
                 <span className="block">chosen to work</span>
                 <span className="block">with us:</span>
-              </h1> : <h1 className={`font-clash text-white text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold leading-[0.95] text-left mb-16 ${isSafari ? 'max-w-[95%]' : ''}`}>
+              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">These very wise clients</span>
                 <span className="block">have so far chosen</span>
                 <span className="block">to work with us:</span>
