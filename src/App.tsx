@@ -132,25 +132,16 @@ const MainPage = () => {
       </section>
       
       <section id="clients" className="snap-start h-screen w-full bg-black">
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
-          <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[2.5rem] font-bold leading-[1.1] text-left mb-12">
-                <span className="block">These very wise</span>
-                <span className="block">clients have so far</span>
-                <span className="block">chosen to work</span>
-                <span className="block">with us:</span>
-              </h1> : <h1 className={`font-clash text-white text-[4rem] lg:text-[5rem] xl:text-[6rem] font-bold leading-[0.95] text-left mb-16 ${isSafari ? 'max-w-[95%]' : ''}`}>
-                <span className="block">These very wise clients</span>
-                <span className="block">have so far chosen</span>
-                <span className="block">to work with us:</span>
-              </h1>}
-            
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-end sm:justify-start sm:gap-8 lg:gap-10 max-w-5xl">
-              <img src={momondoLogo} alt="Momondo" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={bekindLogo} alt="BE/KIND" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={compricerLogo} alt="Compricer" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-              <img src={eqtLogo} alt="EQT" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
-            </div>
+        <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
+          <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
+            These very wise clients have so far chosen to work with us:
+          </h2>
+          
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-end sm:justify-start sm:gap-8 lg:gap-10 max-w-5xl">
+            <img src={momondoLogo} alt="Momondo" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+            <img src={bekindLogo} alt="BE/KIND" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+            <img src={compricerLogo} alt="Compricer" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+            <img src={eqtLogo} alt="EQT" className="h-8 sm:h-14 lg:h-18 object-contain opacity-90 hover:opacity-100 transition-opacity" />
           </div>
         </div>
       </section>
