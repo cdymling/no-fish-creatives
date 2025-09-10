@@ -161,21 +161,27 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact" className="snap-start h-screen w-full bg-black">
-        <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
-          <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
-            Do you also want to work with highly awarded* senior** creatives?
+      <section id="contact-title" className="snap-start h-screen w-full bg-black">
+        <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-center items-center text-center">
+          <h2 className="font-clash text-white text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight max-w-6xl">
+            Also want<br />
+            to work with<br />
+            <span className="text-primary">highly awarded*<br />
+            senior** creatives?</span>
           </h2>
-          
-          <div className="space-y-3 md:space-y-8 max-w-5xl">
+        </div>
+      </section>
+      <section id="contact" className="snap-start h-screen w-full bg-black">
+        <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-center items-center">
+          <div className="space-y-8 max-w-5xl text-center">
             <div>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
+              <p className="font-space text-2xl md:text-4xl leading-tight text-white">
                 +46 70 492 00 08 · info@nofish.se
               </p>
             </div>
             
-            <div className="font-space text-white/60 text-base lg:text-lg leading-relaxed max-w-4xl">
-              <p className="mb-4">*Have been recognized over 80 times at award shows such as Cannes Lions, Eurobest, Epica, The One Show, Clio, New York Festivals, Webbys, and Guldägget.**Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.</p>
+            <div className="font-space text-white/60 text-sm md:text-base leading-relaxed max-w-4xl">
+              <p>*Have been recognized over 80 times at award shows such as Cannes Lions, Eurobest, Epica, The One Show, Clio, New York Festivals, Webbys, and Guldägget. **Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.</p>
             </div>
           </div>
         </div>

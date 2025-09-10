@@ -124,7 +124,7 @@ const Navigation = () => {
               Clients
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('contact-title')}
               className="text-foreground hover:text-primary transition-colors text-left"
             >
               Contact
