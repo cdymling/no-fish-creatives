@@ -12,7 +12,7 @@ export function FloatingText({ children, className, delay = 0 }: FloatingTextPro
     <span 
       className={cn(
         "block relative z-10 will-change-transform",
-        "animate-float-gentle motion-reduce:animate-none",
+        "animate-underwater-float motion-reduce:animate-none",
         "transform-gpu perspective-1000",
         "[transform-style:preserve-3d]",
         "hover:scale-105 transition-transform duration-300",
@@ -21,9 +21,9 @@ export function FloatingText({ children, className, delay = 0 }: FloatingTextPro
       style={{
         animationDelay: `${delay}ms`,
         animationFillMode: 'both',
-        transform: 'perspective(1000px) rotateX(10deg) translateZ(20px)',
-        textShadow: '0 10px 20px rgba(92, 225, 230, 0.3), 0 0 40px rgba(92, 225, 230, 0.1)',
-        filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.5))',
+        transform: 'perspective(1200px) rotateX(5deg)',
+        textShadow: '0 8px 16px rgba(92, 225, 230, 0.4), 0 0 30px rgba(92, 225, 230, 0.2), 0 4px 8px rgba(0, 120, 150, 0.3)',
+        filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4))',
         backfaceVisibility: 'hidden',
         willChange: 'transform',
       }}
