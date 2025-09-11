@@ -15,7 +15,7 @@ export function BubbleDot({ className }: BubbleDotProps) {
       )}
       style={{
         // Position exactly where the i dot should be
-        top: '0.12em',
+        top: '0.05em',
         left: '50%',
         transform: 'translateX(-50%)',
         transformOrigin: 'center center',
