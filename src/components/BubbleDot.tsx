@@ -9,13 +9,13 @@ export function BubbleDot({ className }: BubbleDotProps) {
   return (
     <span 
       className={cn(
-        "absolute w-[0.15em] h-[0.15em] rounded-full bg-white",
+        "absolute w-[0.2em] h-[0.2em] rounded-full bg-white",
         "z-10",
         className
       )}
       style={{
         // Position exactly where the i dot should be
-        top: '0.17em',
+        top: '0.12em',
         left: '50%',
         transform: 'translateX(-50%)',
         transformOrigin: 'center center',
