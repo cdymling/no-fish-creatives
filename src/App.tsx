@@ -148,7 +148,7 @@ const MainPage = () => {
       </section>
       
       <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full bg-black">
-        <div className="h-[100svh] md:h-screen w-full bg-black px-6 flex flex-col justify-start md:justify-center items-center pt-16 md:pt-0">
+        <div className="h-[100svh] md:h-screen w-full bg-black px-6 flex flex-col justify-center items-center pt-0 md:pt-0">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-4xl items-center justify-items-center">
             <Reveal direction="left" delay={0} duration={600} repeat>
               <img src="/clients/compricer-logo.png" alt="Compricer" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24 animate-float-depth-1 transform-gpu will-change-transform motion-reduce:animate-none" />
