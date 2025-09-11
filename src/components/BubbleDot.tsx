@@ -10,13 +10,12 @@ export function BubbleDot({ className }: BubbleDotProps) {
     <span 
       className={cn(
         "absolute w-[0.15em] h-[0.15em] rounded-full bg-white",
-        "animate-bubble-float transform-gpu will-change-transform",
         "z-10",
         className
       )}
       style={{
         // Position exactly where the i dot should be
-        top: '0.4em',
+        top: '0.2em',
         left: '50%',
         transform: 'translateX(-50%)',
         transformOrigin: 'center center',
