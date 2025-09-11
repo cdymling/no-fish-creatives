@@ -99,7 +99,16 @@ const Home = () => {
       {/* Logo and Tagline centered */}
       <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <FloatingText className="font-clash text-white text-[7.5rem] font-bold leading-none safari-text-fix">
-          no f<span className="relative">i<BubbleDot /></span>sh
+          no f<span className="relative inline-block">
+            <span className="relative" style={{ 
+              textShadow: '0 0 0 white',
+              background: 'linear-gradient(to top, white 0%, white 65%, transparent 65%)',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              color: 'transparent'
+            }}>i</span>
+            <BubbleDot />
+          </span>sh
         </FloatingText>
       </div>
     </div>
