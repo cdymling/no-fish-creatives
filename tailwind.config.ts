@@ -91,18 +91,19 @@ export default {
 					'75%': { transform: 'translateY(-8px) scale(0.98)' }
 				}
 			},
-			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float-1': 'float-gentle 4s ease-in-out infinite',
-				'float-2': 'float-gentle 4s ease-in-out infinite 0.5s',
-				'float-3': 'float-gentle 4s ease-in-out infinite 1s',
-				'float-4': 'float-gentle 4s ease-in-out infinite 1.5s',
-				'float-depth-1': 'float-depth 5s ease-in-out infinite',
-				'float-depth-2': 'float-depth 5s ease-in-out infinite 0.8s',
-				'float-depth-3': 'float-depth 5s ease-in-out infinite 1.6s',
-				'float-depth-4': 'float-depth 5s ease-in-out infinite 2.4s'
-			}
+				animation: {
+					'accordion-down': 'accordion-down 0.2s ease-out',
+					'accordion-up': 'accordion-up 0.2s ease-out',
+					'float-gentle': 'float-gentle 4s ease-in-out infinite',
+					'float-1': 'float-gentle 4s ease-in-out infinite',
+					'float-2': 'float-gentle 4s ease-in-out infinite 0.5s',
+					'float-3': 'float-gentle 4s ease-in-out infinite 1s',
+					'float-4': 'float-gentle 4s ease-in-out infinite 1.5s',
+					'float-depth-1': 'float-depth 5s ease-in-out infinite',
+					'float-depth-2': 'float-depth 5s ease-in-out infinite 0.8s',
+					'float-depth-3': 'float-depth 5s ease-in-out infinite 1.6s',
+					'float-depth-4': 'float-depth 5s ease-in-out infinite 2.4s'
+				}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
