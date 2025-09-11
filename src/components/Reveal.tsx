@@ -4,13 +4,14 @@ import { cn } from '../lib/utils';
 
 interface RevealProps {
   children: React.ReactNode;
-  direction?: 'left' | 'right' | 'up' | 'down';
+  direction?: 'left' | 'right' | 'up' | 'down' | 'fadeScale';
   delay?: number;
   as?: 'div' | 'span' | 'section' | 'article' | 'header' | 'main';
   className?: string;
   repeat?: boolean;
   threshold?: number;
   rootMargin?: string;
+  duration?: number;
 }
 
 export function Reveal({
@@ -22,6 +23,7 @@ export function Reveal({
   repeat = false,
   threshold = 0.2,
   rootMargin = '0px 0px -10% 0px',
+  duration = 700,
 }: RevealProps) {
   const { ref, isVisible } = useInView({
     once: !repeat,
@@ -39,6 +41,8 @@ export function Reveal({
         return '-translate-y-6';
       case 'down':
         return 'translate-y-6';
+      case 'fadeScale':
+        return 'scale-50';
       default:
         return 'translate-x-6';
     }
@@ -48,15 +52,16 @@ export function Reveal({
     <Component
       ref={ref as any}
       className={cn(
-        'transition-all duration-700 ease-out will-change-transform',
+        `transition-all duration-${duration} ease-out will-change-transform`,
         'motion-reduce:opacity-100 motion-reduce:transform-none motion-reduce:transition-none',
         isVisible
-          ? 'opacity-100 translate-x-0 translate-y-0'
+          ? 'opacity-100 translate-x-0 translate-y-0 scale-100'
           : `opacity-0 ${getInitialTransform()}`,
         className
       )}
       style={{
         transitionDelay: isVisible ? `${delay}ms` : '0ms',
+        transitionDuration: `${duration}ms`,
       }}
     >
       {children}

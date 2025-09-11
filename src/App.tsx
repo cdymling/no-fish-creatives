@@ -149,11 +149,19 @@ const MainPage = () => {
       
       <section id="clients-content" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-center items-center">
-          <div className="flex justify-center items-center w-full max-w-4xl">
-            <img src={combinedClientsLogo} alt="Our clients: Compricer, BE/KIND, EQT, and Momondo" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-96 animate-float-1" onError={e => {
-            console.log('Image failed to load:', combinedClientsLogo);
-            e.currentTarget.style.display = 'none';
-          }} />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-4xl items-center justify-items-center">
+            <Reveal direction="left" delay={0} duration={600} repeat>
+              <img src="/clients/compricer-logo.png" alt="Compricer" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24" />
+            </Reveal>
+            <Reveal direction="fadeScale" delay={200} duration={500} repeat>
+              <img src="/clients/bekind-logo.png" alt="BE/KIND" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24" />
+            </Reveal>
+            <Reveal direction="fadeScale" delay={400} duration={500} repeat>
+              <img src="/clients/eqt-logo.png" alt="EQT" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24" />
+            </Reveal>
+            <Reveal direction="right" delay={600} duration={600} repeat>
+              <img src="/clients/momondo-logo.png" alt="Momondo" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24" />
+            </Reveal>
           </div>
         </div>
       </section>
