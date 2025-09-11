@@ -47,17 +47,17 @@ const MainPage = () => {
           </h2>
           
           <div className="space-y-3 md:space-y-12 max-w-5xl">
-            <div>
+            <Reveal direction="right" delay={0} repeat>
               <p className="font-clash text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#5CE1E6] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
               </p>
-            </div>
+            </Reveal>
             
-            <div>
+            <Reveal direction="right" delay={0} repeat>
               <p className="font-clash text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#5CE1E6] font-bold">#2</span> We're smart about production. When it makes sense, we do it ourselves, using AI or taking on tasks like directing and editing.
               </p>
-            </div>
+            </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
               <p className="font-clash text-lg md:text-3xl leading-tight text-white">
