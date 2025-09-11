@@ -103,13 +103,7 @@ const Home = () => {
           <span className="inline-block animate-letter-wave-2">o</span>
           <span className="inline-block animate-letter-wave-3 mr-8"> </span>
           <span className="inline-block animate-letter-wave-4">f</span>
-          <span className="relative inline-block animate-letter-wave-5">
-            <span className="relative overflow-hidden" style={{ 
-              height: '1em',
-              clipPath: 'polygon(0 35%, 100% 35%, 100% 100%, 0% 100%)'
-            }}>i</span>
-            <BubbleDot />
-          </span>
+           <span className="inline-block animate-letter-wave-5">i</span>
           <span className="inline-block animate-letter-wave-6">s</span>
           <span className="inline-block animate-letter-wave-1">h</span>
         </FloatingText>
