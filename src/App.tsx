@@ -8,6 +8,7 @@ import ProtectedVideos from "./pages/ProtectedVideos";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
+import { Reveal } from "./components/Reveal";
 // Combined client logos
 const combinedClientsLogo = "/clients/combined-clients.png";
 const MainPage = () => {
@@ -27,13 +28,13 @@ const MainPage = () => {
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
                 <span className="block">work without</span>
-                <span className="block text-[#5CE1E6]">the fishy layers</span>
-                <span className="block text-[#5CE1E6]">of an agency.</span>
+                <Reveal direction="right" delay={0} as="span" className="block text-[#5CE1E6]">the fishy layers</Reveal>
+                <Reveal direction="right" delay={100} as="span" className="block text-[#5CE1E6]">of an agency.</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Creative work</span>
                 <span className="block">without the</span>
-                <span className="block text-[#5CE1E6]">fishy layers</span>
-                <span className="block text-[#5CE1E6]">of an agency.</span>
+                <Reveal direction="right" delay={0} as="span" className="block text-[#5CE1E6]">fishy layers</Reveal>
+                <Reveal direction="right" delay={100} as="span" className="block text-[#5CE1E6]">of an agency.</Reveal>
               </h1>}
           </div>
         </div>
@@ -80,12 +81,12 @@ const MainPage = () => {
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">You don't need a big agency</span>
-                <span className="block text-[#5CE1E6]">to do big things.</span>
+                <Reveal direction="right" delay={0} as="span" className="block text-[#5CE1E6]">to do big things.</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">You don't need</span>
                 <span className="block">a big agency</span>
-                <span className="block text-[#5CE1E6]">to do</span>
-                <span className="block text-[#5CE1E6]">big things.</span>
+                <Reveal direction="right" delay={0} as="span" className="block text-[#5CE1E6]">to do</Reveal>
+                <Reveal direction="right" delay={100} as="span" className="block text-[#5CE1E6]">big things.</Reveal>
               </h1>}
           </div>
         </div>
@@ -134,13 +135,13 @@ const MainPage = () => {
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">These wise</span>
                 <span className="block">clients have</span>
-                <span className="block text-[#5CE1E6]">gone for a</span>
-                <span className="block text-[#5CE1E6]">dip with us:</span>
+                <Reveal direction="right" delay={0} as="span" className="block text-[#5CE1E6]">gone for a</Reveal>
+                <Reveal direction="right" delay={100} as="span" className="block text-[#5CE1E6]">dip with us:</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">These wise</span>
                 <span className="block">clients have</span>
-                <span className="block text-[#5CE1E6]">gone for a</span>
-                <span className="block text-[#5CE1E6]">dip with us:</span>
+                <Reveal direction="right" delay={0} as="span" className="block text-[#5CE1E6]">gone for a</Reveal>
+                <Reveal direction="right" delay={100} as="span" className="block text-[#5CE1E6]">dip with us:</Reveal>
               </h1>}
           </div>
         </div>
@@ -162,13 +163,13 @@ const MainPage = () => {
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Also want</span>
                 <span className="block">to work with</span>
-                <span className="block text-[#5CE1E6]">highly awarded*</span>
-                <span className="block text-[#5CE1E6]">senior** creatives?</span>
+                <Reveal direction="right" delay={0} as="span" className="block text-[#5CE1E6]">highly awarded*</Reveal>
+                <Reveal direction="right" delay={100} as="span" className="block text-[#5CE1E6]">senior** creatives?</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Also want</span>
                 <span className="block">to work with</span>
-                <span className="block text-[#5CE1E6]">awarded senior*</span>
-                <span className="block text-[#5CE1E6]">creatives?</span>
+                <Reveal direction="right" delay={0} as="span" className="block text-[#5CE1E6]">awarded senior*</Reveal>
+                <Reveal direction="right" delay={100} as="span" className="block text-[#5CE1E6]">creatives?</Reveal>
               </h1>}
           </div>
         </div>
