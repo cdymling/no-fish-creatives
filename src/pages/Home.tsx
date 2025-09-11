@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+import { useScrollBlur } from '../hooks/use-scroll-blur';
 import { FloatingText } from '../components/FloatingText';
 import { BubbleDot } from '../components/BubbleDot';
 
@@ -8,6 +9,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const isMobile = useIsMobile();
+  const blurAmount = useScrollBlur();
   const videoRef = useRef<HTMLVideoElement>(null);
   
   // Direct video sources without state management
@@ -85,7 +87,8 @@ const Home = () => {
           muted
           playsInline
           preload="auto"
-          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-opacity duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-all duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+          style={{ filter: `blur(${blurAmount}px)` }}
           key={videoSrc} // Key based on source to force reload when source changes
         >
           <source 
