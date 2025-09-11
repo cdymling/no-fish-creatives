@@ -25,8 +25,9 @@ const MainPage = () => {
       </section>
       
       <section id="about-title" className="snap-start h-screen w-full relative z-10">
+        <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6 relative z-10`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
@@ -44,8 +45,9 @@ const MainPage = () => {
       </section>
       
       <section id="about-content" className="snap-start h-screen w-full relative">
+        <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
-        <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
+        <div className="h-screen w-full px-6 py-12 flex flex-col justify-start relative z-10">
           <Reveal direction="right" delay={0} repeat>
             <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
               Here's how:
@@ -83,8 +85,9 @@ const MainPage = () => {
       </section>
       
       <section id="services-title" className="snap-start h-screen w-full relative">
+        <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6 relative z-10`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">You don't need a big agency</span>
@@ -99,8 +102,9 @@ const MainPage = () => {
         </div>
       </section>
       <section id="services-content" className="snap-start h-screen w-full relative">
+        <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
-        <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
+        <div className="h-screen w-full px-6 py-12 flex flex-col justify-start relative z-10">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
           <Reveal direction="left" delay={0} repeat>
             <div>
@@ -140,8 +144,9 @@ const MainPage = () => {
       </section>
       
       <section id="clients-title" className="snap-start h-screen w-full relative">
+        <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6 relative z-10`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">These wise</span>
@@ -159,8 +164,9 @@ const MainPage = () => {
       </section>
       
       <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full relative">
+        <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
-        <div className="h-[100svh] md:h-screen w-full px-6 flex flex-col justify-center items-center pt-0 md:pt-0">
+        <div className="h-[100svh] md:h-screen w-full px-6 flex flex-col justify-center items-center pt-0 md:pt-0 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-4xl items-center justify-items-center">
             <Reveal direction="left" delay={0} duration={600} repeat>
               <img src="/clients/compricer-logo.png" alt="Compricer" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-24 md:max-h-28 animate-float-depth-1 transform-gpu will-change-transform motion-reduce:animate-none" />
@@ -178,8 +184,9 @@ const MainPage = () => {
         </div>
       </section>
       <section id="contact-title" className="snap-start h-screen w-full relative">
+        <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6 relative z-10`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Also want</span>
@@ -196,8 +203,9 @@ const MainPage = () => {
         </div>
       </section>
       <section id="contact" className="snap-start h-screen w-full relative">
+        <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
-        <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
+        <div className="h-screen w-full px-6 py-12 flex flex-col justify-start relative z-10">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
             <div>
               <p className="font-space text-lg md:text-3xl leading-tight text-white">
