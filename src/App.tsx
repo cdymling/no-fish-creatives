@@ -59,11 +59,11 @@ const MainPage = () => {
               </p>
             </div>
             
-            <div>
+            <Reveal direction="right" delay={200} repeat>
               <p className="font-clash text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#5CE1E6] font-bold">#3</span> We team up with specialists in strategy, design, and production only when needed, avoiding overlapping roles and making sure you only pay for what you need, when you need it.
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -94,29 +94,31 @@ const MainPage = () => {
       <section id="services-content" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
+          <Reveal direction="right" delay={0} repeat>
             <div>
               <p className="font-clash text-white text-4xl md:text-5xl font-bold mb-6 md:mb-8">
                 A small, AI-positive senior team can get big things done for less. Things like:
               </p>
             </div>
+          </Reveal>
             
-            <div>
+            <Reveal direction="right" delay={200} repeat>
               <p className="font-space text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#5CE1E6]">→</span> Developing concepts, campaigns, or just a single ad, and producing them when possible.
               </p>
-            </div>
+            </Reveal>
             
-            <div>
+            <Reveal direction="right" delay={400} repeat>
               <p className="font-space text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#5CE1E6]">→</span> Leading creatively from initial idea to final delivery.
               </p>
-            </div>
+            </Reveal>
             
-            <div>
+            <Reveal direction="right" delay={600} repeat>
               <p className="font-space text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#5CE1E6]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
