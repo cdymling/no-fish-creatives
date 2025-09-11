@@ -129,16 +129,16 @@ export default {
 						filter: 'blur(0px)'
 					},
 					'25%': { 
-						transform: 'translateY(-0.08em) skewY(1.2deg)', 
-						filter: 'blur(0.5px)'
+						transform: 'translateY(-0.04em) skewY(0.5deg)', 
+						filter: 'blur(0.2px)'
 					},
 					'50%': { 
-						transform: 'translateY(-0.18em) skewY(-1.5deg)', 
-						filter: 'blur(1px)'
+						transform: 'translateY(-0.08em) skewY(-0.6deg)', 
+						filter: 'blur(0.4px)'
 					},
 					'75%': { 
-						transform: 'translateY(-0.1em) skewY(0.75deg)', 
-						filter: 'blur(0.5px)'
+						transform: 'translateY(-0.04em) skewY(0.3deg)', 
+						filter: 'blur(0.2px)'
 					},
 					'100%': { 
 						transform: 'translateY(0) skewY(0deg)', 
@@ -150,13 +150,13 @@ export default {
 						transform: 'translateY(0) rotate(0deg) scaleY(1)', 
 					},
 					'25%': { 
-						transform: 'translateY(-0.08em) rotate(1.2deg) scaleY(1.03)', 
+						transform: 'translateY(-0.04em) rotate(0.4deg) scaleY(1.01)', 
 					},
 					'50%': { 
-						transform: 'translateY(-0.18em) rotate(-1.2deg) scaleY(0.97)', 
+						transform: 'translateY(-0.08em) rotate(-0.4deg) scaleY(0.99)', 
 					},
 					'75%': { 
-						transform: 'translateY(-0.1em) rotate(0.6deg) scaleY(1.01)', 
+						transform: 'translateY(-0.04em) rotate(0.2deg) scaleY(1.005)', 
 					}
 				}
 			},
@@ -174,13 +174,13 @@ export default {
 				'float-depth-3': 'float-depth 5s ease-in-out infinite 1.6s',
 				'float-depth-4': 'float-depth 5s ease-in-out infinite 2.4s',
 				'bubble-rise': 'bubble-rise 5s ease-out infinite',
-				'underwater-wave': 'underwater-wave 4s ease-in-out infinite',
-				'letter-wave-1': 'letter-wave 3s ease-in-out infinite 0s',
-				'letter-wave-2': 'letter-wave 3s ease-in-out infinite 0.1s',
-				'letter-wave-3': 'letter-wave 3s ease-in-out infinite 0.2s',
-				'letter-wave-4': 'letter-wave 3s ease-in-out infinite 0.3s',
-				'letter-wave-5': 'letter-wave 3s ease-in-out infinite 0.4s',
-				'letter-wave-6': 'letter-wave 3s ease-in-out infinite 0.5s',
+				'underwater-wave': 'underwater-wave 8s ease-in-out infinite',
+				'letter-wave-1': 'letter-wave 6s ease-in-out infinite 0s',
+				'letter-wave-2': 'letter-wave 6s ease-in-out infinite 0.2s',
+				'letter-wave-3': 'letter-wave 6s ease-in-out infinite 0.4s',
+				'letter-wave-4': 'letter-wave 6s ease-in-out infinite 0.6s',
+				'letter-wave-5': 'letter-wave 6s ease-in-out infinite 0.8s',
+				'letter-wave-6': 'letter-wave 6s ease-in-out infinite 1s',
 			}
 		}
 	},
