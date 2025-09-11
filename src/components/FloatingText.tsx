@@ -22,8 +22,6 @@ export function FloatingText({ children, className, delay = 0 }: FloatingTextPro
         animationDelay: `${delay}ms`,
         animationFillMode: 'both',
         transform: 'perspective(1200px) rotateX(5deg)',
-        textShadow: '0 8px 16px rgba(92, 225, 230, 0.4), 0 0 30px rgba(92, 225, 230, 0.2), 0 4px 8px rgba(0, 120, 150, 0.3)',
-        filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4))',
         backfaceVisibility: 'hidden',
         willChange: 'transform',
       }}
