@@ -96,7 +96,7 @@ const MainPage = () => {
       <section id="services-content" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
-          <Reveal direction="right" delay={0} repeat>
+          <Reveal direction="left" delay={0} repeat>
             <div>
               <p className="font-clash text-white text-4xl md:text-5xl font-bold mb-6 md:mb-8">
                 A small, AI-positive senior team can get big things done for less. Things like:
