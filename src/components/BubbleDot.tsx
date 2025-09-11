@@ -1,0 +1,25 @@
+import React from 'react';
+import { cn } from '../lib/utils';
+
+interface BubbleDotProps {
+  className?: string;
+}
+
+export function BubbleDot({ className }: BubbleDotProps) {
+  return (
+    <span className="relative inline-block">
+      <span 
+        className={cn(
+          "inline-block w-[0.15em] h-[0.15em] rounded-full bg-white",
+          "animate-bubble-float transform-gpu will-change-transform",
+          "relative z-10",
+          className
+        )}
+        style={{
+          // Position the dot properly relative to the i stem
+          transform: 'translateY(-0.8em)',
+        }}
+      />
+    </span>
+  );
+}
