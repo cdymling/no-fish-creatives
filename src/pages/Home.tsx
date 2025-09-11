@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+import { FloatingText } from '../components/FloatingText';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -96,7 +97,9 @@ const Home = () => {
 
       {/* Logo and Tagline centered */}
       <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <span className="font-clash text-white text-[7.5rem] font-bold leading-none safari-text-fix">no fish</span>
+        <FloatingText className="font-clash text-white text-[7.5rem] font-bold leading-none safari-text-fix">
+          no fish
+        </FloatingText>
       </div>
     </div>
   );
