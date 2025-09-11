@@ -17,6 +17,17 @@ export function BubbleDot({ className }: BubbleDotProps) {
 
   return (
     <span className="absolute top-[0.17em] left-1/2 transform -translate-x-1/2">
+      {/* Static dot for the i */}
+      <span 
+        className="absolute w-[0.1em] h-[0.1em] rounded-full bg-white z-20"
+        style={{
+          top: '0',
+          left: '50%',
+          transform: 'translateX(-50%)',
+        }}
+      />
+      
+      {/* Animated bubbles */}
       {bubbles.map((bubble, index) => (
         <span
           key={index}
