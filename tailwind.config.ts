@@ -89,14 +89,26 @@ export default {
 					'0%': { 
 						transform: 'translateY(0px) translateZ(0px) rotateY(0deg) scale(1)',
 					},
+					'12.5%': { 
+						transform: 'translateY(-0.5px) translateZ(2px) rotateY(0.1deg) scale(1.001)',
+					},
 					'25%': { 
-						transform: 'translateY(-3px) translateZ(15px) rotateY(1deg) scale(1.01)',
+						transform: 'translateY(-1px) translateZ(4px) rotateY(0.2deg) scale(1.002)',
+					},
+					'37.5%': { 
+						transform: 'translateY(-1.5px) translateZ(2px) rotateY(0.1deg) scale(1.001)',
 					},
 					'50%': { 
-						transform: 'translateY(-4px) translateZ(-8px) rotateY(-0.5deg) scale(0.99)',
+						transform: 'translateY(-2px) translateZ(-2px) rotateY(-0.1deg) scale(0.999)',
+					},
+					'62.5%': { 
+						transform: 'translateY(-1.5px) translateZ(3px) rotateY(0.15deg) scale(1.001)',
 					},
 					'75%': { 
-						transform: 'translateY(-2px) translateZ(12px) rotateY(0.8deg) scale(1.005)',
+						transform: 'translateY(-1px) translateZ(4px) rotateY(0.2deg) scale(1.002)',
+					},
+					'87.5%': { 
+						transform: 'translateY(-0.5px) translateZ(1px) rotateY(0.05deg) scale(1.0005)',
 					},
 					'100%': { 
 						transform: 'translateY(0px) translateZ(0px) rotateY(0deg) scale(1)',
@@ -112,7 +124,7 @@ export default {
 					'accordion-down': 'accordion-down 0.2s ease-out',
 					'accordion-up': 'accordion-up 0.2s ease-out',
 					'float-gentle': 'float-gentle 4s ease-in-out infinite',
-					'underwater-float': 'underwater-float 40s ease-in-out infinite',
+					'underwater-float': 'underwater-float 70s linear infinite',
 					'float-1': 'float-gentle 4s ease-in-out infinite',
 					'float-2': 'float-gentle 4s ease-in-out infinite 0.5s',
 					'float-3': 'float-gentle 4s ease-in-out infinite 1s',
