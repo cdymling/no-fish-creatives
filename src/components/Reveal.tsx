@@ -8,6 +8,9 @@ interface RevealProps {
   delay?: number;
   as?: 'div' | 'span' | 'section' | 'article' | 'header' | 'main';
   className?: string;
+  repeat?: boolean;
+  threshold?: number;
+  rootMargin?: string;
 }
 
 export function Reveal({
@@ -16,8 +19,15 @@ export function Reveal({
   delay = 0,
   as: Component = 'div',
   className,
+  repeat = false,
+  threshold = 0.2,
+  rootMargin = '0px 0px -10% 0px',
 }: RevealProps) {
-  const { ref, isVisible } = useInView();
+  const { ref, isVisible } = useInView({
+    once: !repeat,
+    threshold,
+    rootMargin,
+  });
 
   const getInitialTransform = () => {
     switch (direction) {
