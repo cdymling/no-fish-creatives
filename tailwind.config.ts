@@ -121,7 +121,43 @@ export default {
 					'100%': { 
 						transform: 'translateY(-3.5em) scale(2)', 
 						opacity: '0'
+				},
+				'underwater-wave': {
+					'0%': { 
+						transform: 'translateY(0px) skewY(0deg)', 
+						filter: 'blur(0px)'
+					},
+					'25%': { 
+						transform: 'translateY(-3px) skewY(1deg)', 
+						filter: 'blur(0.5px)'
+					},
+					'50%': { 
+						transform: 'translateY(-6px) skewY(-1deg)', 
+						filter: 'blur(1px)'
+					},
+					'75%': { 
+						transform: 'translateY(-3px) skewY(0.5deg)', 
+						filter: 'blur(0.5px)'
+					},
+					'100%': { 
+						transform: 'translateY(0px) skewY(0deg)', 
+						filter: 'blur(0px)'
 					}
+				},
+				'letter-wave': {
+					'0%, 100%': { 
+						transform: 'translateY(0px) rotate(0deg) scaleY(1)', 
+					},
+					'25%': { 
+						transform: 'translateY(-4px) rotate(1deg) scaleY(1.02)', 
+					},
+					'50%': { 
+						transform: 'translateY(-8px) rotate(-1deg) scaleY(0.98)', 
+					},
+					'75%': { 
+						transform: 'translateY(-4px) rotate(0.5deg) scaleY(1.01)', 
+					}
+				}
 				}
 			},
 				animation: {
@@ -138,6 +174,13 @@ export default {
 					'float-depth-3': 'float-depth 5s ease-in-out infinite 1.6s',
 					'float-depth-4': 'float-depth 5s ease-in-out infinite 2.4s',
 					'bubble-rise': 'bubble-rise 5s ease-out infinite',
+					'underwater-wave': 'underwater-wave 4s ease-in-out infinite',
+					'letter-wave-1': 'letter-wave 3s ease-in-out infinite 0s',
+					'letter-wave-2': 'letter-wave 3s ease-in-out infinite 0.1s',
+					'letter-wave-3': 'letter-wave 3s ease-in-out infinite 0.2s',
+					'letter-wave-4': 'letter-wave 3s ease-in-out infinite 0.3s',
+					'letter-wave-5': 'letter-wave 3s ease-in-out infinite 0.4s',
+					'letter-wave-6': 'letter-wave 3s ease-in-out infinite 0.5s',
 				}
 		}
 	},

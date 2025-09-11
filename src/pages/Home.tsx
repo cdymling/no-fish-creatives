@@ -99,13 +99,19 @@ const Home = () => {
       {/* Logo and Tagline centered */}
       <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <FloatingText className="font-clash text-white text-[7.5rem] font-bold leading-none safari-text-fix">
-          no f<span className="relative inline-block">
+          <span className="inline-block animate-letter-wave-1">n</span>
+          <span className="inline-block animate-letter-wave-2">o</span>
+          <span className="inline-block animate-letter-wave-3 mr-8"> </span>
+          <span className="inline-block animate-letter-wave-4">f</span>
+          <span className="relative inline-block animate-letter-wave-5">
             <span className="relative overflow-hidden" style={{ 
               height: '1em',
               clipPath: 'polygon(0 35%, 100% 35%, 100% 100%, 0% 100%)'
             }}>i</span>
             <BubbleDot />
-          </span>sh
+          </span>
+          <span className="inline-block animate-letter-wave-6">s</span>
+          <span className="inline-block animate-letter-wave-1">h</span>
         </FloatingText>
       </div>
     </div>
