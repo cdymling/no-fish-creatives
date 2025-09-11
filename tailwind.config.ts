@@ -121,67 +121,67 @@ export default {
 					'100%': { 
 						transform: 'translateY(-3.5em) scale(2)', 
 						opacity: '0'
+					}
 				},
 				'underwater-wave': {
 					'0%': { 
-						transform: 'translateY(0px) skewY(0deg)', 
+						transform: 'translateY(0) skewY(0deg)', 
 						filter: 'blur(0px)'
 					},
 					'25%': { 
-						transform: 'translateY(-3px) skewY(1deg)', 
+						transform: 'translateY(-0.08em) skewY(1.2deg)', 
 						filter: 'blur(0.5px)'
 					},
 					'50%': { 
-						transform: 'translateY(-6px) skewY(-1deg)', 
+						transform: 'translateY(-0.18em) skewY(-1.5deg)', 
 						filter: 'blur(1px)'
 					},
 					'75%': { 
-						transform: 'translateY(-3px) skewY(0.5deg)', 
+						transform: 'translateY(-0.1em) skewY(0.75deg)', 
 						filter: 'blur(0.5px)'
 					},
 					'100%': { 
-						transform: 'translateY(0px) skewY(0deg)', 
+						transform: 'translateY(0) skewY(0deg)', 
 						filter: 'blur(0px)'
 					}
 				},
 				'letter-wave': {
 					'0%, 100%': { 
-						transform: 'translateY(0px) rotate(0deg) scaleY(1)', 
+						transform: 'translateY(0) rotate(0deg) scaleY(1)', 
 					},
 					'25%': { 
-						transform: 'translateY(-4px) rotate(1deg) scaleY(1.02)', 
+						transform: 'translateY(-0.08em) rotate(1.2deg) scaleY(1.03)', 
 					},
 					'50%': { 
-						transform: 'translateY(-8px) rotate(-1deg) scaleY(0.98)', 
+						transform: 'translateY(-0.18em) rotate(-1.2deg) scaleY(0.97)', 
 					},
 					'75%': { 
-						transform: 'translateY(-4px) rotate(0.5deg) scaleY(1.01)', 
+						transform: 'translateY(-0.1em) rotate(0.6deg) scaleY(1.01)', 
 					}
 				}
-				}
 			},
-				animation: {
-					'accordion-down': 'accordion-down 0.2s ease-out',
-					'accordion-up': 'accordion-up 0.2s ease-out',
-					'float-gentle': 'float-gentle 4s ease-in-out infinite',
-					'underwater-float': 'underwater-float 120s linear infinite',
-					'float-1': 'float-gentle 4s ease-in-out infinite',
-					'float-2': 'float-gentle 4s ease-in-out infinite 0.5s',
-					'float-3': 'float-gentle 4s ease-in-out infinite 1s',
-					'float-4': 'float-gentle 4s ease-in-out infinite 1.5s',
-					'float-depth-1': 'float-depth 5s ease-in-out infinite',
-					'float-depth-2': 'float-depth 5s ease-in-out infinite 0.8s',
-					'float-depth-3': 'float-depth 5s ease-in-out infinite 1.6s',
-					'float-depth-4': 'float-depth 5s ease-in-out infinite 2.4s',
-					'bubble-rise': 'bubble-rise 5s ease-out infinite',
-					'underwater-wave': 'underwater-wave 4s ease-in-out infinite',
-					'letter-wave-1': 'letter-wave 3s ease-in-out infinite 0s',
-					'letter-wave-2': 'letter-wave 3s ease-in-out infinite 0.1s',
-					'letter-wave-3': 'letter-wave 3s ease-in-out infinite 0.2s',
-					'letter-wave-4': 'letter-wave 3s ease-in-out infinite 0.3s',
-					'letter-wave-5': 'letter-wave 3s ease-in-out infinite 0.4s',
-					'letter-wave-6': 'letter-wave 3s ease-in-out infinite 0.5s',
-				}
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float-gentle': 'float-gentle 4s ease-in-out infinite',
+				'underwater-float': 'underwater-float 120s linear infinite',
+				'float-1': 'float-gentle 4s ease-in-out infinite',
+				'float-2': 'float-gentle 4s ease-in-out infinite 0.5s',
+				'float-3': 'float-gentle 4s ease-in-out infinite 1s',
+				'float-4': 'float-gentle 4s ease-in-out infinite 1.5s',
+				'float-depth-1': 'float-depth 5s ease-in-out infinite',
+				'float-depth-2': 'float-depth 5s ease-in-out infinite 0.8s',
+				'float-depth-3': 'float-depth 5s ease-in-out infinite 1.6s',
+				'float-depth-4': 'float-depth 5s ease-in-out infinite 2.4s',
+				'bubble-rise': 'bubble-rise 5s ease-out infinite',
+				'underwater-wave': 'underwater-wave 4s ease-in-out infinite',
+				'letter-wave-1': 'letter-wave 3s ease-in-out infinite 0s',
+				'letter-wave-2': 'letter-wave 3s ease-in-out infinite 0.1s',
+				'letter-wave-3': 'letter-wave 3s ease-in-out infinite 0.2s',
+				'letter-wave-4': 'letter-wave 3s ease-in-out infinite 0.3s',
+				'letter-wave-5': 'letter-wave 3s ease-in-out infinite 0.4s',
+				'letter-wave-6': 'letter-wave 3s ease-in-out infinite 0.5s',
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

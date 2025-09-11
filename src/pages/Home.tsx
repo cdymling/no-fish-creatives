@@ -98,7 +98,7 @@ const Home = () => {
 
       {/* Logo and Tagline centered */}
       <div className={`flex flex-col items-center justify-center h-screen text-center transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <FloatingText className="font-clash text-white text-[7.5rem] font-bold leading-none safari-text-fix">
+        <FloatingText className="font-clash text-white text-[7.5rem] font-bold leading-none safari-text-fix animate-underwater-wave">
           <span className="inline-block animate-letter-wave-1">n</span>
           <span className="inline-block animate-letter-wave-2">o</span>
           <span className="inline-block animate-letter-wave-3 mr-8"> </span>
