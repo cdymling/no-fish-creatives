@@ -13,16 +13,13 @@ export function FloatingText({ children, className, delay = 0 }: FloatingTextPro
       className={cn(
         "block relative z-10 will-change-transform",
         "animate-underwater-float motion-reduce:animate-none",
-        "transform-gpu perspective-1000",
-        "[transform-style:preserve-3d]",
-        "hover:scale-105 transition-transform duration-300",
+        "transform-gpu",
         className
       )}
       style={{
         animationDelay: `${delay}ms`,
         animationFillMode: 'both',
-        transform: 'perspective(1200px) rotateX(5deg)',
-        backfaceVisibility: 'hidden',
+        transform: 'none',
         willChange: 'transform',
       }}
     >

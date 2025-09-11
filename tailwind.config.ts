@@ -86,33 +86,15 @@ export default {
 					'50%': { transform: 'translateY(-8px)' }
 				},
 				'underwater-float': {
-					'0%': { 
-						transform: 'translateY(0px) translateZ(0px) rotateY(0deg) scale(1)',
-					},
-					'12.5%': { 
-						transform: 'translateY(-0.5px) translateZ(2px) rotateY(0.1deg) scale(1.001)',
-					},
-					'25%': { 
-						transform: 'translateY(-1px) translateZ(4px) rotateY(0.2deg) scale(1.002)',
-					},
-					'37.5%': { 
-						transform: 'translateY(-1.5px) translateZ(2px) rotateY(0.1deg) scale(1.001)',
-					},
-					'50%': { 
-						transform: 'translateY(-2px) translateZ(-2px) rotateY(-0.1deg) scale(0.999)',
-					},
-					'62.5%': { 
-						transform: 'translateY(-1.5px) translateZ(3px) rotateY(0.15deg) scale(1.001)',
-					},
-					'75%': { 
-						transform: 'translateY(-1px) translateZ(4px) rotateY(0.2deg) scale(1.002)',
-					},
-					'87.5%': { 
-						transform: 'translateY(-0.5px) translateZ(1px) rotateY(0.05deg) scale(1.0005)',
-					},
-					'100%': { 
-						transform: 'translateY(0px) translateZ(0px) rotateY(0deg) scale(1)',
-					}
+					'0%': { transform: 'translateY(0px)' },
+					'12.5%': { transform: 'translateY(-0.1px)' },
+					'25%': { transform: 'translateY(-0.2px)' },
+					'37.5%': { transform: 'translateY(-0.4px)' },
+					'50%': { transform: 'translateY(-0.8px)' },
+					'62.5%': { transform: 'translateY(-0.4px)' },
+					'75%': { transform: 'translateY(-0.2px)' },
+					'87.5%': { transform: 'translateY(-0.1px)' },
+					'100%': { transform: 'translateY(0px)' },
 				},
 				'float-depth': {
 					'0%, 100%': { transform: 'translateY(0px) scale(1)' },
@@ -124,7 +106,7 @@ export default {
 					'accordion-down': 'accordion-down 0.2s ease-out',
 					'accordion-up': 'accordion-up 0.2s ease-out',
 					'float-gentle': 'float-gentle 4s ease-in-out infinite',
-					'underwater-float': 'underwater-float 70s linear infinite',
+					'underwater-float': 'underwater-float 120s linear infinite',
 					'float-1': 'float-gentle 4s ease-in-out infinite',
 					'float-2': 'float-gentle 4s ease-in-out infinite 0.5s',
 					'float-3': 'float-gentle 4s ease-in-out infinite 1s',
