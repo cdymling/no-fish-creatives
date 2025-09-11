@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
 import { Reveal } from "./components/Reveal";
+import { FloatingText } from "./components/FloatingText";
 // Combined client logos
 const combinedClientsLogo = "/clients/combined-clients.png";
 const MainPage = () => {
@@ -28,13 +29,13 @@ const MainPage = () => {
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
                 <span className="block">work without</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">the fishy layers</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">of an agency.</Reveal>
+                <FloatingText delay={0} className="text-[#5CE1E6]">the fishy layers</FloatingText>
+                <FloatingText delay={200} className="text-[#5CE1E6]">of an agency.</FloatingText>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Creative work</span>
                 <span className="block">without the</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">fishy layers</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">of an agency.</Reveal>
+                <FloatingText delay={0} className="text-[#5CE1E6]">fishy layers</FloatingText>
+                <FloatingText delay={200} className="text-[#5CE1E6]">of an agency.</FloatingText>
               </h1>}
           </div>
         </div>
