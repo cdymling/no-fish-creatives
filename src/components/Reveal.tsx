@@ -34,17 +34,17 @@ export function Reveal({
   const getInitialTransform = () => {
     switch (direction) {
       case 'left':
-        return '-translate-x-6';
+        return '-translate-x-16';
       case 'right':
-        return 'translate-x-6';
+        return 'translate-x-16';
       case 'up':
-        return '-translate-y-6';
+        return '-translate-y-16';
       case 'down':
-        return 'translate-y-6';
+        return 'translate-y-16';
       case 'fadeScale':
         return 'scale-50';
       default:
-        return 'translate-x-6';
+        return 'translate-x-16';
     }
   };
 
