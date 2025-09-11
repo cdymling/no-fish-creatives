@@ -156,13 +156,13 @@ const MainPage = () => {
         <div className="h-[100svh] md:h-screen w-full bg-black px-6 flex flex-col justify-center items-center pt-0 md:pt-0">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-4xl items-center justify-items-center">
             <Reveal direction="left" delay={0} duration={600} repeat>
-              <img src="/clients/compricer-logo.png" alt="Compricer" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24 animate-float-depth-1 transform-gpu will-change-transform motion-reduce:animate-none" />
+              <img src="/clients/compricer-logo.png" alt="Compricer" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-24 md:max-h-28 animate-float-depth-1 transform-gpu will-change-transform motion-reduce:animate-none" />
             </Reveal>
             <Reveal direction="fadeScale" delay={200} duration={500} repeat>
-              <img src="/clients/bekind-logo.png" alt="BE/KIND" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24 animate-float-depth-2 transform-gpu will-change-transform motion-reduce:animate-none" />
+              <img src="/clients/bekind-logo.png" alt="BE/KIND" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-24 md:max-h-28 animate-float-depth-2 transform-gpu will-change-transform motion-reduce:animate-none" />
             </Reveal>
             <Reveal direction="fadeScale" delay={400} duration={500} repeat>
-              <img src="/clients/eqt-logo.png" alt="EQT" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24 animate-float-depth-3 transform-gpu will-change-transform motion-reduce:animate-none" />
+              <img src="/clients/eqt-logo.png" alt="EQT" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-16 md:max-h-20 animate-float-depth-3 transform-gpu will-change-transform motion-reduce:animate-none" />
             </Reveal>
             <Reveal direction="right" delay={600} duration={600} repeat>
               <img src="/clients/momondo-logo.png" alt="Momondo" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24 animate-float-depth-4 transform-gpu will-change-transform motion-reduce:animate-none" />
