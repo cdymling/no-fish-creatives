@@ -106,24 +106,28 @@ export default {
 						transform: 'translateY(0) scale(1)', 
 						opacity: '0'
 					},
-					'10%': { 
-						transform: 'translateY(-10vh) scale(1)', 
+					'15%': { 
+						transform: 'translateY(-15vh) scale(1.05)', 
+						opacity: '0.4'
+					},
+					'35%': { 
+						transform: 'translateY(-35vh) scale(1.1)', 
+						opacity: '0.7'
+					},
+					'55%': { 
+						transform: 'translateY(-55vh) scale(1.15)', 
 						opacity: '0.6'
 					},
-					'30%': { 
-						transform: 'translateY(-30vh) scale(1.1)', 
-						opacity: '0.8'
-					},
-					'60%': { 
-						transform: 'translateY(-60vh) scale(1.3)', 
-						opacity: '0.5'
+					'75%': { 
+						transform: 'translateY(-75vh) scale(1.2)', 
+						opacity: '0.4'
 					},
 					'90%': { 
-						transform: 'translateY(-90vh) scale(1.5)', 
+						transform: 'translateY(-90vh) scale(1.25)', 
 						opacity: '0.2'
 					},
 					'100%': { 
-						transform: 'translateY(-100vh) scale(1.8)', 
+						transform: 'translateY(-100vh) scale(1.3)', 
 						opacity: '0'
 					}
 				},
@@ -177,7 +181,7 @@ export default {
 				'float-depth-2': 'float-depth 5s ease-in-out infinite 0.8s',
 				'float-depth-3': 'float-depth 5s ease-in-out infinite 1.6s',
 				'float-depth-4': 'float-depth 5s ease-in-out infinite 2.4s',
-				'bubble-rise': 'bubble-rise 5s ease-out infinite',
+				'bubble-rise': 'bubble-rise 7s ease-in-out infinite',
 				'underwater-wave': 'underwater-wave 8s ease-in-out infinite',
 				'letter-wave-1': 'letter-wave 6s ease-in-out infinite 0s',
 				'letter-wave-2': 'letter-wave 6s ease-in-out infinite 0.2s',
