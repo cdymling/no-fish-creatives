@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import { useIsMobile } from "./hooks/use-mobile";
 import { Reveal } from "./components/Reveal";
 import { FloatingText } from "./components/FloatingText";
+import { BubbleAnimation } from "./components/BubbleAnimation";
 // Combined client logos
 const combinedClientsLogo = "/clients/combined-clients.png";
 const MainPage = () => {
@@ -24,6 +25,7 @@ const MainPage = () => {
       </section>
       
       <section id="about-title" className="snap-start h-screen w-full bg-black relative z-10">
+        <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
@@ -41,7 +43,8 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="about-content" className="snap-start h-screen w-full bg-black">
+      <section id="about-content" className="snap-start h-screen w-full bg-black relative">
+        <BubbleAnimation />
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
           <Reveal direction="right" delay={0} repeat>
             <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
@@ -79,7 +82,8 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="services-title" className="snap-start h-screen w-full bg-black">
+      <section id="services-title" className="snap-start h-screen w-full bg-black relative">
+        <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
@@ -94,7 +98,8 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="services-content" className="snap-start h-screen w-full bg-black">
+      <section id="services-content" className="snap-start h-screen w-full bg-black relative">
+        <BubbleAnimation />
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
           <Reveal direction="left" delay={0} repeat>
@@ -134,7 +139,8 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-title" className="snap-start h-screen w-full bg-black">
+      <section id="clients-title" className="snap-start h-screen w-full bg-black relative">
+        <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
@@ -152,7 +158,8 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full bg-black">
+      <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full bg-black relative">
+        <BubbleAnimation />
         <div className="h-[100svh] md:h-screen w-full bg-black px-6 flex flex-col justify-center items-center pt-0 md:pt-0">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-4xl items-center justify-items-center">
             <Reveal direction="left" delay={0} duration={600} repeat>
@@ -170,7 +177,8 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact-title" className="snap-start h-screen w-full bg-black">
+      <section id="contact-title" className="snap-start h-screen w-full bg-black relative">
+        <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
@@ -187,7 +195,8 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact" className="snap-start h-screen w-full bg-black">
+      <section id="contact" className="snap-start h-screen w-full bg-black relative">
+        <BubbleAnimation />
         <div className="h-screen w-full bg-black px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
             <div>

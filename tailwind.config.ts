@@ -101,25 +101,29 @@ export default {
 					'25%': { transform: 'translateY(-4px) scale(1.02)' },
 					'75%': { transform: 'translateY(-8px) scale(0.98)' }
 				},
-				'bubble-rise': {
+'bubble-rise': {
 					'0%': { 
 						transform: 'translateY(0) scale(1)', 
 						opacity: '0'
 					},
 					'10%': { 
-						transform: 'translateY(-0.2em) scale(1)', 
-						opacity: '0.8'
-					},
-					'50%': { 
-						transform: 'translateY(-1.5em) scale(1.2)', 
+						transform: 'translateY(-10vh) scale(1)', 
 						opacity: '0.6'
 					},
-					'80%': { 
-						transform: 'translateY(-2.5em) scale(1.5)', 
-						opacity: '0.3'
+					'30%': { 
+						transform: 'translateY(-30vh) scale(1.1)', 
+						opacity: '0.8'
+					},
+					'60%': { 
+						transform: 'translateY(-60vh) scale(1.3)', 
+						opacity: '0.5'
+					},
+					'90%': { 
+						transform: 'translateY(-90vh) scale(1.5)', 
+						opacity: '0.2'
 					},
 					'100%': { 
-						transform: 'translateY(-3.5em) scale(2)', 
+						transform: 'translateY(-100vh) scale(1.8)', 
 						opacity: '0'
 					}
 				},
