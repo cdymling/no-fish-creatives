@@ -123,40 +123,40 @@ export default {
 						opacity: '0'
 					}
 				},
-				'underwater-wave': {
+'underwater-wave': {
 					'0%': { 
 						transform: 'translateY(0) skewY(0deg)', 
 						filter: 'blur(0px)'
 					},
 					'25%': { 
-						transform: 'translateY(-0.04em) skewY(0.5deg)', 
-						filter: 'blur(0.2px)'
+						transform: 'translateY(-0.08em) skewY(0.8deg)', 
+						filter: 'blur(0.3px)'
 					},
 					'50%': { 
-						transform: 'translateY(-0.08em) skewY(-0.6deg)', 
-						filter: 'blur(0.4px)'
+						transform: 'translateY(-0.15em) skewY(-1deg)', 
+						filter: 'blur(0.6px)'
 					},
 					'75%': { 
-						transform: 'translateY(-0.04em) skewY(0.3deg)', 
-						filter: 'blur(0.2px)'
+						transform: 'translateY(-0.08em) skewY(0.5deg)', 
+						filter: 'blur(0.3px)'
 					},
 					'100%': { 
 						transform: 'translateY(0) skewY(0deg)', 
 						filter: 'blur(0px)'
 					}
 				},
-				'letter-wave': {
+'letter-wave': {
 					'0%, 100%': { 
 						transform: 'translateY(0) rotate(0deg) scaleY(1)', 
 					},
 					'25%': { 
-						transform: 'translateY(-0.04em) rotate(0.4deg) scaleY(1.01)', 
+						transform: 'translateY(-0.08em) rotate(0.6deg) scaleY(1.02)', 
 					},
 					'50%': { 
-						transform: 'translateY(-0.08em) rotate(-0.4deg) scaleY(0.99)', 
+						transform: 'translateY(-0.15em) rotate(-0.6deg) scaleY(0.98)', 
 					},
 					'75%': { 
-						transform: 'translateY(-0.04em) rotate(0.2deg) scaleY(1.005)', 
+						transform: 'translateY(-0.08em) rotate(0.3deg) scaleY(1.01)', 
 					}
 				}
 			},
