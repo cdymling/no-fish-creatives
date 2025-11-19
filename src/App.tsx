@@ -197,19 +197,19 @@ const MainPage = () => {
         <BubbleAnimation />
             <div className="h-screen w-full relative">
           {/* Left side - Title */}
-              <div className={`absolute z-10 transition-transform duration-700 ease-out ${
-                isMobile 
-                  ? 'top-8 left-6' 
-                  : 'top-20 left-6'
-              } ${hasSlid ? '-translate-x-full' : 'translate-x-0'}`}>
-                <FloatingText className={`font-clash text-white font-bold leading-none ${isMobile ? 'text-[3.5rem]' : 'text-[7.5rem]'}`}>
-                  Lorem ipsum
-                </FloatingText>
-              </div>
+            <div className={`absolute z-10 transition-transform duration-700 ease-out ${
+              isMobile 
+                ? 'top-1/2 -translate-y-1/2 left-8' 
+                : 'top-1/2 -translate-y-1/2 left-12'
+            } ${hasSlid ? '-translate-x-full' : 'translate-x-0'}`}>
+              <FloatingText className={`font-clash text-white font-bold leading-none ${isMobile ? 'text-[3.5rem]' : 'text-[8rem]'}`}>
+                Lorem ipsum
+              </FloatingText>
+            </div>
 
           {/* Right side - Carousel */}
             <div className={`relative h-full w-full flex items-center overflow-hidden transition-all duration-700 ${
-              currentSlide === 0 ? 'justify-end pr-0' : 'justify-center'
+              currentSlide === 0 ? 'justify-end' : 'justify-center'
             }`}>
             <Carousel 
               setApi={setCarouselApi}
@@ -219,18 +219,18 @@ const MainPage = () => {
                 dragFree: false,
                 duration: 30,
               }}
-              className="w-full"
+              className={currentSlide === 0 ? 'w-[70%]' : 'w-full'}
             >
               <CarouselContent>
                 <CarouselItem>
-                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
+                  <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className={`h-full object-cover scale-110 transition-all duration-700 ${
+                      className={`h-full transition-all duration-700 ${
                         currentSlide === 0 
-                          ? 'w-[120vw] object-left' 
-                          : 'w-full object-center'
+                          ? 'w-[140vw] object-cover object-left scale-110' 
+                          : 'w-full object-cover object-center scale-110'
                       }`}
                     />
                   </div>
