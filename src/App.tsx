@@ -91,14 +91,23 @@ const MainPage = () => {
   // Carousel state
   const [carouselApi, setCarouselApi] = useState<any>();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [hasSlid, setHasSlid] = useState(false);
 
   useEffect(() => {
     if (!carouselApi) return;
 
     carouselApi.on("select", () => {
-      setCurrentSlide(carouselApi.selectedScrollSnap());
+      const index = carouselApi.selectedScrollSnap();
+      setCurrentSlide(index);
+      if (index > 0 && !hasSlid) {
+        setHasSlid(true);
+      }
+      // Reset when back to first slide
+      if (index === 0) {
+        setHasSlid(false);
+      }
     });
-  }, [carouselApi]);
+  }, [carouselApi, hasSlid]);
 
   const videoPosition = 'object-center';
 
@@ -186,10 +195,18 @@ const MainPage = () => {
       {/* Carousel Section */}
       <section id="campaign-carousel" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
-        <div className={`h-screen w-full ${isMobile ? 'flex flex-col px-6 py-12' : 'grid grid-cols-[40%_60%] items-center'}`}>
+        <div className={`h-screen w-full transition-all duration-700 ease-out ${
+          isMobile 
+            ? 'flex flex-col px-6 py-12' 
+            : hasSlid 
+              ? 'grid grid-cols-[15%_85%] items-center' 
+              : 'grid grid-cols-[40%_60%] items-center'
+        }`}>
           {/* Left side - Title */}
-          <div className={`${isMobile ? 'mb-8' : 'pl-6'} flex items-start ${isMobile ? 'pt-8' : 'pt-20'}`}>
-            <FloatingText className={`font-clash text-white font-bold leading-none ${isMobile ? 'text-[3.5rem]' : 'text-[7.5rem]'}`}>
+          <div className={`${isMobile ? 'mb-8' : 'pl-6'} flex items-start ${isMobile ? 'pt-8' : 'pt-20'} transition-all duration-700 ease-out ${
+            hasSlid ? 'opacity-0 -translate-x-8 scale-90' : 'opacity-100 translate-x-0 scale-100'
+          }`}>
+            <FloatingText className={`font-clash text-white font-bold leading-[0.85] ${isMobile ? 'text-[3.5rem]' : 'text-[7.5rem]'}`}>
               Lorem ipsum
             </FloatingText>
           </div>
@@ -202,43 +219,52 @@ const MainPage = () => {
                 align: "center",
                 loop: false,
                 dragFree: false,
+                duration: 30,
               }}
               className="w-full"
             >
               <CarouselContent>
                 <CarouselItem>
-                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden transition-all duration-700`}>
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="w-full h-full object-cover scale-110"
+                      className={`w-full h-full transition-all duration-700 ${
+                        hasSlid ? 'object-contain scale-100' : 'object-cover scale-110'
+                      }`}
                     />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden transition-all duration-700`}>
                     <img 
                       src="/campaigns/takeover_aftonbladet-2.png" 
                       alt="Aftonbladet Takeover Campaign" 
-                      className="w-full h-full object-cover scale-110"
+                      className={`w-full h-full transition-all duration-700 ${
+                        hasSlid ? 'object-contain scale-100' : 'object-cover scale-110'
+                      }`}
                     />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden transition-all duration-700`}>
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
-                      className="w-full h-full object-cover scale-110"
+                      className={`w-full h-full transition-all duration-700 ${
+                        hasSlid ? 'object-contain scale-100' : 'object-cover scale-110'
+                      }`}
                     />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden transition-all duration-700`}>
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className="w-full h-full object-cover scale-110"
+                      className={`w-full h-full transition-all duration-700 ${
+                        hasSlid ? 'object-contain scale-100' : 'object-cover scale-110'
+                      }`}
                     />
                   </div>
                 </CarouselItem>
