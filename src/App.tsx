@@ -188,56 +188,57 @@ const MainPage = () => {
         <BubbleAnimation />
         <div className={`h-screen w-full ${isMobile ? 'flex flex-col px-6 py-12' : 'grid grid-cols-[40%_60%] items-center'}`}>
           {/* Left side - Title */}
-          <div className={`${isMobile ? 'mb-8' : 'pl-6'} flex items-center`}>
+          <div className={`${isMobile ? 'mb-8' : 'pl-6'} flex items-start ${isMobile ? 'pt-8' : 'pt-20'}`}>
             <FloatingText className={`font-clash text-white font-bold leading-none ${isMobile ? 'text-[3.5rem]' : 'text-[7.5rem]'}`}>
-              COMPRICER
+              Lorem ipsum
             </FloatingText>
           </div>
 
           {/* Right side - Carousel */}
-          <div className="relative h-full flex items-center justify-center px-6">
+          <div className="relative h-full flex items-center justify-end pr-0 overflow-hidden">
             <Carousel 
               setApi={setCarouselApi}
               opts={{
                 align: "center",
                 loop: false,
+                dragFree: false,
               }}
-              className="w-full max-w-3xl"
+              className="w-full"
             >
               <CarouselContent>
                 <CarouselItem>
-                  <div className="flex items-center justify-center">
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="w-full h-auto rounded-lg"
+                      className="w-full h-full object-cover scale-110"
                     />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="flex items-center justify-center">
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
                     <img 
                       src="/campaigns/takeover_aftonbladet-2.png" 
                       alt="Aftonbladet Takeover Campaign" 
-                      className="w-full h-auto rounded-lg"
+                      className="w-full h-full object-cover scale-110"
                     />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="flex items-center justify-center">
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
-                      className="w-full h-auto rounded-lg"
+                      className="w-full h-full object-cover scale-110"
                     />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="flex items-center justify-center">
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className="w-full h-auto rounded-lg"
+                      className="w-full h-full object-cover scale-110"
                     />
                   </div>
                 </CarouselItem>
