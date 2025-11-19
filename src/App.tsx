@@ -11,6 +11,20 @@ import { useIsMobile } from "./hooks/use-mobile";
 import { Reveal } from "./components/Reveal";
 import { FloatingText } from "./components/FloatingText";
 import { BubbleAnimation } from "./components/BubbleAnimation";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./components/ui/carousel";
+
+// Case images
+import caseTunnelbana from "./assets/case-tunnelbana.png";
+import caseTakeover from "./assets/case-takeover.png";
+import caseMobil from "./assets/case-mobil.png";
+import caseTunnelbanaCopy from "./assets/case-tunnelbana-copy.png";
+
 // Combined client logos
 const combinedClientsLogo = "/clients/combined-clients.png";
 const MainPage = () => {
@@ -183,6 +197,64 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+
+      <section id="case-study" className="snap-start h-screen w-full relative">
+        <div className="absolute inset-0 bg-black/60"></div>
+        <BubbleAnimation />
+        <div className="h-screen w-full flex flex-col items-center justify-center px-6 py-12 relative z-10">
+          <Reveal direction="right" delay={0} repeat>
+            <h2 className="font-clash text-white text-4xl md:text-6xl font-bold mb-8 md:mb-12 text-center">
+              <span className="text-[#5CE1E6]">Case Study:</span> Compricer
+            </h2>
+          </Reveal>
+          
+          <div className="w-full max-w-6xl px-4 md:px-12">
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="p-1">
+                    <img 
+                      src={caseTunnelbana} 
+                      alt="Compricer campaign - subway posters" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="p-1">
+                    <img 
+                      src={caseTakeover} 
+                      alt="Compricer campaign - website takeover" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="p-1">
+                    <img 
+                      src={caseMobil} 
+                      alt="Compricer campaign - mobile view" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="p-1">
+                    <img 
+                      src={caseTunnelbanaCopy} 
+                      alt="Compricer campaign - subway station" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="left-0 md:-left-12" />
+              <CarouselNext className="right-0 md:-right-12" />
+            </Carousel>
+          </div>
+        </div>
+      </section>
+      
       <section id="contact-title" className="snap-start h-screen w-full relative">
         <div className="absolute inset-0 bg-black/60"></div>
         <BubbleAnimation />
