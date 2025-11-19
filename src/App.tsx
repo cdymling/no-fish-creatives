@@ -208,7 +208,9 @@ const MainPage = () => {
               </div>
 
           {/* Right side - Carousel */}
-          <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
+            <div className={`relative h-full w-full flex items-center overflow-hidden transition-all duration-700 ${
+              currentSlide === 0 ? 'justify-end pr-0' : 'justify-center'
+            }`}>
             <Carousel 
               setApi={setCarouselApi}
               opts={{
@@ -221,13 +223,17 @@ const MainPage = () => {
             >
               <CarouselContent>
                 <CarouselItem>
-                    <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
-                      <img 
-                        src="/campaigns/tunnelbana_bilder-2.png" 
-                        alt="Tunnelbana Bilder Campaign" 
-                        className="w-full h-full object-cover scale-110"
-                      />
-                    </div>
+                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
+                    <img 
+                      src="/campaigns/tunnelbana_bilder-2.png" 
+                      alt="Tunnelbana Bilder Campaign" 
+                      className={`h-full object-cover scale-110 transition-all duration-700 ${
+                        currentSlide === 0 
+                          ? 'w-[120vw] object-left' 
+                          : 'w-full object-center'
+                      }`}
+                    />
+                  </div>
                 </CarouselItem>
                 <CarouselItem>
                     <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
