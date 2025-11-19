@@ -11,15 +11,124 @@ import { useIsMobile } from "./hooks/use-mobile";
 import { Reveal } from "./components/Reveal";
 import { FloatingText } from "./components/FloatingText";
 import { BubbleAnimation } from "./components/BubbleAnimation";
+import { useScrollBlur } from "./hooks/use-scroll-blur";
+import { useState, useEffect, useRef } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "./components/ui/carousel";
+
 // Combined client logos
 const combinedClientsLogo = "/clients/combined-clients.png";
+
 const MainPage = () => {
   const isMobile = useIsMobile();
+  const blurAmount = useScrollBlur();
+  const [isLoading, setIsLoading] = useState(true);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  
+  // Direct video sources without state management
+  const videoSrc = isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4";
+
+  useEffect(() => {
+    // Function to handle video loading events
+    const handleVideoEvent = (event: string) => {
+      console.log(`Video ${event} event fired`);
+      setVideoLoaded(true);
+      setIsLoading(false);
+    };
+
+    const videoElement = videoRef.current;
+    
+    if (videoElement) {
+      // Safari specific fix: force reload the video
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      
+      if (isSafari) {
+        console.log("Safari detected, applying special video handling");
+        
+        // Force load the video element
+        videoElement.load();
+        
+        // Set a timeout to check if video is ready
+        setTimeout(() => {
+          if (videoElement.readyState >= 2) {
+            handleVideoEvent('canplay (timeout)');
+          } else {
+            // If still not ready, try to reload
+            videoElement.src = videoSrc;
+            videoElement.load();
+          }
+        }, 1000);
+      }
+      
+      // Add multiple event listeners to catch as soon as possible when video is ready
+      videoElement.addEventListener('loadeddata', () => handleVideoEvent('loadeddata'));
+      videoElement.addEventListener('canplay', () => handleVideoEvent('canplay'));
+      videoElement.addEventListener('playing', () => handleVideoEvent('playing'));
+      
+      // In case video is already cached and ready
+      if (videoElement.readyState >= 3) {
+        handleVideoEvent('already loaded');
+      }
+    }
+    
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('loadeddata', () => handleVideoEvent('loadeddata'));
+        videoElement.removeEventListener('canplay', () => handleVideoEvent('canplay'));
+        videoElement.removeEventListener('playing', () => handleVideoEvent('playing'));
+      }
+    };
+  }, [videoSrc]);
 
   // Safari detection
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   const safariClass = isSafari ? 'safari-text-fix safari-text-size-fix' : '';
+  
+  // Carousel state
+  const [carouselApi, setCarouselApi] = useState<any>();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    carouselApi.on("select", () => {
+      setCurrentSlide(carouselApi.selectedScrollSnap());
+    });
+  }, [carouselApi]);
+
+  const videoPosition = 'object-center';
+
   return <div className="snap-y snap-mandatory h-screen overflow-y-auto overscroll-none scroll-smooth">
+      {/* Black background shown during loading */}
+      <div 
+        className={`fixed inset-0 bg-black z-50 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} 
+      />
+
+      {/* Background Video - Fixed and blurred */}
+      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+        <video
+          ref={videoRef}
+          id="home-background-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-all duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+          style={{ filter: `blur(${blurAmount}px)` }}
+          key={videoSrc}
+        >
+          <source 
+            src={videoSrc}
+            type="video/mp4" 
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <section id="home" className="snap-start h-screen w-full">
         <Home />
       </section>
@@ -73,6 +182,85 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Carousel Section */}
+      <section id="campaign-carousel" className="snap-start h-screen w-full relative">
+        <BubbleAnimation />
+        <div className={`h-screen w-full ${isMobile ? 'flex flex-col px-6 py-12' : 'grid grid-cols-[40%_60%] items-center'}`}>
+          {/* Left side - Title */}
+          <div className={`${isMobile ? 'mb-8' : 'pl-6'} flex items-center`}>
+            <FloatingText className={`font-clash text-white font-bold leading-none ${isMobile ? 'text-[3.5rem]' : 'text-[7.5rem]'}`}>
+              COMPRICER
+            </FloatingText>
+          </div>
+
+          {/* Right side - Carousel */}
+          <div className="relative h-full flex items-center justify-center px-6">
+            <Carousel 
+              setApi={setCarouselApi}
+              opts={{
+                align: "center",
+                loop: false,
+              }}
+              className="w-full max-w-3xl"
+            >
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="flex items-center justify-center">
+                    <img 
+                      src="/campaigns/tunnelbana_bilder-2.png" 
+                      alt="Tunnelbana Bilder Campaign" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="flex items-center justify-center">
+                    <img 
+                      src="/campaigns/takeover_aftonbladet-2.png" 
+                      alt="Aftonbladet Takeover Campaign" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="flex items-center justify-center">
+                    <img 
+                      src="/campaigns/tunnelbana_copy-2.png" 
+                      alt="Tunnelbana Copy Campaign" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="flex items-center justify-center">
+                    <img 
+                      src="/campaigns/mobil-2.png" 
+                      alt="Mobile Campaign" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+
+              {/* Custom Navigation Dots */}
+              <div className="absolute bottom-8 right-8 flex gap-3 z-20">
+                {[0, 1, 2, 3].map((index) => (
+                  <button
+                    key={index}
+                    onClick={() => carouselApi?.scrollTo(index)}
+                    className={`w-3 h-3 rounded-full bg-white transition-opacity duration-300 ${
+                      currentSlide === index ? 'opacity-100' : 'opacity-30'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </Carousel>
+          </div>
+        </div>
+      </section>
+
       <section id="about-video" className="snap-start h-screen w-full">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
