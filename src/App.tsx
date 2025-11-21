@@ -117,7 +117,7 @@ const MainPage = () => {
         className={`fixed inset-0 bg-black z-50 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} 
       />
 
-      {/* Background Video - Fixed and blurred */}
+      {/* Background Video - Fixed */}
       <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden bg-[hsl(var(--dark-blue))]">
         <video
           ref={videoRef}
@@ -127,12 +127,7 @@ const MainPage = () => {
           muted
           playsInline
           preload="auto"
-          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-all duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
-          style={{ 
-            filter: `blur(${blur}px) brightness(${darken ? 0.8 : 1})`,
-            transform: blur > 0 ? 'scale(1.05)' : 'scale(1)',
-            transition: 'filter 0.6s ease-out, transform 0.6s ease-out'
-          }}
+          className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-opacity duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
           key={videoSrc}
         >
           <source 
@@ -141,14 +136,6 @@ const MainPage = () => {
           />
           Your browser does not support the video tag.
         </video>
-        {/* Dark overlay for sections with text */}
-        <div 
-          className="absolute inset-0 bg-black transition-opacity duration-600"
-          style={{ 
-            opacity: darken ? 0.3 : 0,
-            transition: 'opacity 0.6s ease-out'
-          }}
-        />
       </div>
       <section id="home" className="snap-start h-screen w-full">
         <Home />
