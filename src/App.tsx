@@ -122,7 +122,7 @@ const MainPage = () => {
         <Home />
       </section>
       
-      <section id="about-title" className="snap-start h-screen w-full relative z-10">
+      <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-black">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -172,8 +172,26 @@ const MainPage = () => {
         </div>
       </section>
 
+      {/* Campaign Title Section */}
+      <section id="campaign-title" className="snap-start h-screen w-full relative bg-black">
+        <BubbleAnimation />
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+          <div className={`w-full ${safariClass}`}>
+            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+                <span className="block">Here's a</span>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">campaign</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">made by us:</Reveal>
+              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+                <span className="block">Here's a</span>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">campaign</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">made by us:</Reveal>
+              </h1>}
+          </div>
+        </div>
+      </section>
+
       {/* Carousel Section */}
-      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-black">
+      <section id="campaign-carousel" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
         <div className="h-screen w-full relative">
           <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
@@ -229,7 +247,7 @@ const MainPage = () => {
             </Carousel>
 
             {/* Scroll indicator */}
-            <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-2 animate-pulse">
+            <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 animate-pulse">
               <svg 
                 className="w-8 h-8 text-white/60" 
                 fill="none" 
@@ -238,7 +256,6 @@ const MainPage = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-              <span className="text-white/60 text-sm font-space">Swipe</span>
             </div>
           </div>
         </div>
@@ -253,7 +270,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="services-title" className="snap-start h-screen w-full relative">
+      <section id="services-title" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -310,7 +327,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-title" className="snap-start h-screen w-full relative">
+      <section id="clients-title" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -348,7 +365,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact-title" className="snap-start h-screen w-full relative">
+      <section id="contact-title" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
