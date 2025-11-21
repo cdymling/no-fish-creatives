@@ -111,7 +111,7 @@ const MainPage = () => {
 
   const videoPosition = 'object-center';
 
-  return <div className="snap-y snap-mandatory h-screen overflow-y-auto overscroll-none scroll-smooth">
+  return <div id="main-scroll-container" className="snap-y snap-mandatory h-screen overflow-y-auto overscroll-none scroll-smooth">
       {/* Black background shown during loading */}
       <div 
         className={`fixed inset-0 bg-black z-50 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} 
