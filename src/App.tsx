@@ -222,7 +222,7 @@ const MainPage = () => {
               }}
               className={currentSlide === 0 ? 'w-[70%]' : 'w-full'}
             >
-              <CarouselContent>
+              <CarouselContent className="gap-6">
                 <CarouselItem>
                   <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
                     <img 
@@ -237,31 +237,29 @@ const MainPage = () => {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                    <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
+                    <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Aftonbladet Takeover Campaign" 
-                        className="w-full h-full object-cover scale-110"
+                        className="w-full h-full object-cover object-center scale-110"
                       />
                     </div>
                 </CarouselItem>
                 <CarouselItem>
-                    <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden`}>
+                    <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
                       <img 
                         src="/campaigns/tunnelbana_copy-2.png" 
                         alt="Tunnelbana Copy Campaign" 
-                        className="w-full h-full object-cover scale-110"
+                        className="w-full h-full object-cover object-center scale-110"
                       />
                     </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className={`${isMobile ? 'h-[400px]' : 'h-[700px]'} overflow-hidden transition-all duration-700`}>
+                  <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className={`w-full h-full transition-all duration-700 ${
-                        hasSlid ? 'object-contain scale-100' : 'object-cover scale-110'
-                      }`}
+                      className="w-full h-full object-cover object-center scale-110"
                     />
                   </div>
                 </CarouselItem>
