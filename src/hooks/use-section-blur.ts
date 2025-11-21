@@ -24,13 +24,12 @@ export function useSectionBlur() {
         // Determine which section we're on, based on snap-height
         const currentSection = Math.round(scrollY / windowHeight);
 
-        // Sections with text that should have blur:
-        // 1: about-title, 2: about-content, 3: campaign-carousel
-        // 5: services-title, 6: services-content
-        // 8: clients-title, 9: clients-content
-        // 10: contact-title, 11: contact
-        // Sections WITHOUT text (no blur): 0: home, 4: about-video, 7: services-video, 12: work-video
-        const sectionsWithText = [1, 2, 3, 5, 6, 8, 9, 10, 11];
+        // Sections with content that should have blur:
+        // 2: about-content, 3: campaign-carousel
+        // 6: services-content, 9: clients-content, 11: contact
+        // Sections WITHOUT blur: 0: home, 1: about-title, 4: about-video, 
+        // 5: services-title, 7: services-video, 8: clients-title, 10: contact-title, 12: work-video
+        const sectionsWithText = [2, 3, 6, 9, 11];
         
         const shouldBlur = sectionsWithText.includes(currentSection);
         setIsBlurred(shouldBlur);
