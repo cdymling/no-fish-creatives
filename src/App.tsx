@@ -141,7 +141,7 @@ const MainPage = () => {
         <Home />
       </section>
       
-      <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-black">
+      <section id="about-title" className="snap-start h-screen w-full relative z-10">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -302,7 +302,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="services-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="services-title" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -359,7 +359,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="clients-title" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -397,7 +397,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="contact-title" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
