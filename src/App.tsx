@@ -173,7 +173,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="about-content" className="snap-start h-screen w-full relative">
+      <section id="about-content" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <Reveal direction="right" delay={0} repeat>
@@ -205,7 +205,7 @@ const MainPage = () => {
       </section>
 
       {/* Carousel Section */}
-      <section id="campaign-carousel" className="snap-start h-screen w-full relative">
+      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
             <div className="h-screen w-full relative">
           {/* Left side - Title */}
@@ -331,7 +331,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="services-content" className="snap-start h-screen w-full relative">
+      <section id="services-content" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
@@ -391,7 +391,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full relative">
+      <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-[100svh] md:h-screen w-full px-6 flex flex-col justify-center items-center pt-0 md:pt-0">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-4xl items-center justify-items-center">
@@ -428,7 +428,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact" className="snap-start h-screen w-full relative">
+      <section id="contact" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
