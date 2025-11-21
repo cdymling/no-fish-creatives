@@ -131,7 +131,7 @@ const MainPage = () => {
           style={{ 
             filter: `blur(${blur}px) brightness(${darken ? 0.8 : 1})`,
             transform: blur > 0 ? 'scale(1.05)' : 'scale(1)',
-            transition: 'filter 0.3s ease-out, transform 0.3s ease-out'
+            transition: 'filter 0.6s ease-out, transform 0.6s ease-out'
           }}
           key={videoSrc}
         >

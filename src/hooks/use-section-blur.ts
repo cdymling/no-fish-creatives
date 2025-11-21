@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 export function useSectionBlur() {
   const [isBlurred, setIsBlurred] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     let scrollTimeout: number;
@@ -17,23 +16,18 @@ export function useSectionBlur() {
         ? container.clientHeight
         : window.innerHeight;
 
-      // User is scrolling
-      setIsScrolling(true);
-
       // Clear previous timeout
       window.clearTimeout(scrollTimeout);
 
-      // Set a timeout to detect when scrolling has stopped
+      // Set a very short timeout to activate blur quickly
       scrollTimeout = window.setTimeout(() => {
-        setIsScrolling(false);
-
         // Determine which section we're on, based on snap-height
         const currentSection = Math.round(scrollY / windowHeight);
 
         // Apply blur only if we're NOT on the first section (section 0)
         const shouldBlur = currentSection > 0;
         setIsBlurred(shouldBlur);
-      }, 60);
+      }, 20); // Much faster response
     };
 
     const container = getScrollContainer();
@@ -57,9 +51,5 @@ export function useSectionBlur() {
     };
   }, []);
 
-  // Return blur state only when not scrolling
-  const blurValue = isScrolling ? 0 : isBlurred ? 25 : 0;
-  const darkenValue = !isScrolling && isBlurred;
-
-  return { blur: blurValue, darken: darkenValue };
+  return { blur: isBlurred ? 25 : 0, darken: isBlurred };
 }
