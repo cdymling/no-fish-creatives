@@ -265,23 +265,6 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      
-      <section id="services-title" className="snap-start h-screen w-full relative bg-black">
-        <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
-          <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
-                <span className="block">You don't need a big agency</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">to do big things.</Reveal>
-              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
-                <span className="block">You don't need</span>
-                <span className="block">a big agency</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">to do</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">big things.</Reveal>
-              </h1>}
-          </div>
-        </div>
-      </section>
 
       {/* Half section showing background video */}
       <section id="services-spacer" className="snap-start h-[50vh] w-full relative">
