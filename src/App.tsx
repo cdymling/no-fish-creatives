@@ -141,6 +141,11 @@ const MainPage = () => {
         </div>
       </section>
       
+      {/* Half section showing background video */}
+      <section id="about-spacer" className="snap-start h-[50vh] w-full relative">
+        <BubbleAnimation />
+      </section>
+      
       <section id="about-content" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
@@ -260,15 +265,6 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-
-      <section id="about-video" className="snap-start h-screen w-full bg-black">
-        <div className="h-screen w-full relative overflow-hidden">
-          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="/about-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </section>
       
       <section id="services-title" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
@@ -286,6 +282,12 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Half section showing background video */}
+      <section id="services-spacer" className="snap-start h-[50vh] w-full relative">
+        <BubbleAnimation />
+      </section>
+
       <section id="services-content" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
