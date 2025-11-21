@@ -223,6 +223,7 @@ const MainPage = () => {
               className={currentSlide === 0 ? 'w-[70%]' : 'w-full'}
             >
               <CarouselContent className="gap-6">
+                {/* First image - shown cropped in initial state */}
                 <CarouselItem>
                   <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
                     <img 
@@ -236,42 +237,40 @@ const MainPage = () => {
                     />
                   </div>
                 </CarouselItem>
+                {/* First image again - shown full screen when swiping */}
                 <CarouselItem>
-                    <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
+                  <div className="h-screen overflow-visible">
+                    <img 
+                      src="/campaigns/tunnelbana_bilder-2.png" 
+                      alt="Tunnelbana Bilder Campaign" 
+                      className="h-full w-full object-contain transition-all duration-700"
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div className="h-screen overflow-visible">
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Aftonbladet Takeover Campaign" 
-                        className={`h-full transition-all duration-700 ${
-                          currentSlide === 0 
-                            ? 'w-full object-cover object-center scale-110' 
-                            : 'w-full object-contain'
-                        }`}
+                        className="h-full w-full object-contain transition-all duration-700"
                       />
                     </div>
                 </CarouselItem>
                 <CarouselItem>
-                    <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
+                    <div className="h-screen overflow-visible">
                       <img 
                         src="/campaigns/tunnelbana_copy-2.png" 
                         alt="Tunnelbana Copy Campaign" 
-                        className={`h-full transition-all duration-700 ${
-                          currentSlide === 0 
-                            ? 'w-full object-cover object-center scale-110' 
-                            : 'w-full object-contain'
-                        }`}
+                        className="h-full w-full object-contain transition-all duration-700"
                       />
                     </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
+                  <div className="h-screen overflow-visible">
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className={`h-full transition-all duration-700 ${
-                        currentSlide === 0 
-                          ? 'w-full object-cover object-center scale-110' 
-                          : 'w-full object-contain'
-                      }`}
+                      className="h-full w-full object-contain transition-all duration-700"
                     />
                   </div>
                 </CarouselItem>
@@ -279,7 +278,7 @@ const MainPage = () => {
 
               {/* Custom Navigation Dots */}
               <div className="absolute bottom-8 right-8 flex gap-3 z-20">
-                {[0, 1, 2, 3].map((index) => (
+                {[0, 1, 2, 3, 4].map((index) => (
                   <button
                     key={index}
                     onClick={() => carouselApi?.scrollTo(index)}
