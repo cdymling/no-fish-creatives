@@ -137,8 +137,11 @@ const MainPage = () => {
           Your browser does not support the video tag.
         </video>
       </div>
+      <section id="home" className="snap-start h-screen w-full">
+        <Home />
+      </section>
       
-      <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-black">
+      <section id="about-title" className="snap-start h-screen w-full relative z-10">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -287,10 +290,19 @@ const MainPage = () => {
               </div>
             </Carousel>
           </div>
-         </div>
+        </div>
+      </section>
+
+      <section id="about-video" className="snap-start h-screen w-full">
+        <div className="h-screen w-full relative overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="/about-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </section>
       
-      <section id="services-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="services-title" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -338,8 +350,16 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+      <section id="services-video" className="snap-start h-screen w-full">
+        <div className="h-screen w-full relative overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="/services-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
       
-      <section id="clients-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="clients-title" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -377,7 +397,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="contact-title" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -409,6 +429,14 @@ const MainPage = () => {
               <p>*Have been recognized over 80 times at award shows such as Cannes Lions, Eurobest, Epica, The One Show, Clio, New York Festivals, Webbys, and Guldägget. Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&amp;C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="work-video" className="snap-start h-screen w-full">
+        <div className="h-screen w-full relative overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="/work-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
     </div>;
