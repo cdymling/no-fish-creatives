@@ -141,6 +141,14 @@ const MainPage = () => {
           />
           Your browser does not support the video tag.
         </video>
+        {/* Dark overlay for sections with text */}
+        <div 
+          className="absolute inset-0 bg-black transition-opacity duration-600"
+          style={{ 
+            opacity: darken ? 0.3 : 0,
+            transition: 'opacity 0.6s ease-out'
+          }}
+        />
       </div>
       <section id="home" className="snap-start h-screen w-full">
         <Home />
