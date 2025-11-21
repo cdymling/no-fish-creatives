@@ -137,11 +137,11 @@ const MainPage = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <section id="home" className="snap-start h-screen w-full">
+      <section id="home" className="snap-start h-screen w-full bg-black">
         <Home />
       </section>
       
-      <section id="about-title" className="snap-start h-screen w-full relative z-10">
+      <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-black">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -293,7 +293,7 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section id="about-video" className="snap-start h-screen w-full">
+      <section id="about-video" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/about-video.mp4" type="video/mp4" />
@@ -302,7 +302,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="services-title" className="snap-start h-screen w-full relative">
+      <section id="services-title" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -350,7 +350,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="services-video" className="snap-start h-screen w-full">
+      <section id="services-video" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/services-video.mp4" type="video/mp4" />
@@ -359,7 +359,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-title" className="snap-start h-screen w-full relative">
+      <section id="clients-title" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -397,7 +397,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact-title" className="snap-start h-screen w-full relative">
+      <section id="contact-title" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -431,7 +431,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="work-video" className="snap-start h-screen w-full">
+      <section id="work-video" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/work-video.mp4" type="video/mp4" />
