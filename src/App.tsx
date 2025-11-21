@@ -129,7 +129,7 @@ const MainPage = () => {
           preload="auto"
           className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-all duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
           style={{ 
-            filter: `blur(${blur}px) brightness(${darken ? 0.9 : 1})`,
+            filter: `blur(${blur}px) brightness(${darken ? 0.8 : 1})`,
             transition: 'filter 0.5s ease-out'
           }}
           key={videoSrc}

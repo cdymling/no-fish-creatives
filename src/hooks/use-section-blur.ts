@@ -44,7 +44,7 @@ export function useSectionBlur() {
   }, []);
 
   // Return blur state only when not scrolling
-  const blurValue = isScrolling ? 0 : (isBlurred ? 15 : 0); // Increased from 8 to 15
+  const blurValue = isScrolling ? 0 : (isBlurred ? 25 : 0); // Increased to 25px for stronger blur
   const darkenValue = isScrolling ? false : isBlurred;
   
   console.log('Returning blur:', blurValue, 'darken:', darkenValue, 'isScrolling:', isScrolling);
