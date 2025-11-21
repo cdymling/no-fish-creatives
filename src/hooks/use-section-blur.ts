@@ -33,7 +33,7 @@ export function useSectionBlur() {
         // Apply blur only if we're NOT on the first section (section 0)
         const shouldBlur = currentSection > 0;
         setIsBlurred(shouldBlur);
-      }, 120);
+      }, 60);
     };
 
     const container = getScrollContainer();

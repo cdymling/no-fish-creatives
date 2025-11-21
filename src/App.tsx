@@ -118,7 +118,7 @@ const MainPage = () => {
       />
 
       {/* Background Video - Fixed and blurred */}
-      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden">
+      <div className="fixed inset-0 -z-10 w-full h-full overflow-hidden bg-[hsl(var(--dark-blue))]">
         <video
           ref={videoRef}
           id="home-background-video"
@@ -130,7 +130,8 @@ const MainPage = () => {
           className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-all duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
           style={{ 
             filter: `blur(${blur}px) brightness(${darken ? 0.8 : 1})`,
-            transition: 'filter 0.5s ease-out'
+            transform: blur > 0 ? 'scale(1.05)' : 'scale(1)',
+            transition: 'filter 0.3s ease-out, transform 0.3s ease-out'
           }}
           key={videoSrc}
         >
