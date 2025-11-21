@@ -216,8 +216,9 @@ const MainPage = () => {
               opts={{
                 align: "center",
                 loop: false,
-                dragFree: false,
-                duration: 30,
+                dragFree: true,
+                duration: 20,
+                skipSnaps: false,
               }}
               className={currentSlide === 0 ? 'w-[70%]' : 'w-full'}
             >
