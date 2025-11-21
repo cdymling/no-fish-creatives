@@ -197,11 +197,11 @@ const MainPage = () => {
         <BubbleAnimation />
             <div className="h-screen w-full relative">
           {/* Left side - Title */}
-            <div className={`absolute z-10 transition-transform duration-700 ease-out ${
+            <div className={`absolute z-10 transition-all duration-700 ease-out ${
               isMobile 
                 ? 'top-1/2 -translate-y-1/2 left-8' 
                 : 'top-1/2 -translate-y-1/2 left-12'
-            } ${hasSlid ? '-translate-x-full' : 'translate-x-0'}`}>
+            } ${hasSlid ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'}`}>
               <FloatingText className={`font-clash text-white font-bold leading-none ${isMobile ? 'text-[3.5rem]' : 'text-[8rem]'}`}>
                 Lorem ipsum
               </FloatingText>
