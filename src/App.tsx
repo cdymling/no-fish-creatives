@@ -11,7 +11,7 @@ import { useIsMobile } from "./hooks/use-mobile";
 import { Reveal } from "./components/Reveal";
 import { FloatingText } from "./components/FloatingText";
 import { BubbleAnimation } from "./components/BubbleAnimation";
-import { useScrollBlur } from "./hooks/use-scroll-blur";
+import { useSectionBlur } from "./hooks/use-section-blur";
 import { useState, useEffect, useRef } from "react";
 import {
   Carousel,
@@ -24,7 +24,7 @@ const combinedClientsLogo = "/clients/combined-clients.png";
 
 const MainPage = () => {
   const isMobile = useIsMobile();
-  const blurAmount = useScrollBlur();
+  const { blur, darken } = useSectionBlur();
   const [isLoading, setIsLoading] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -128,7 +128,10 @@ const MainPage = () => {
           playsInline
           preload="auto"
           className={`absolute min-w-full min-h-full object-cover ${videoPosition} transition-all duration-500 ${!videoLoaded ? 'opacity-0' : 'opacity-100'}`}
-          style={{ filter: `blur(${blurAmount}px)` }}
+          style={{ 
+            filter: `blur(${blur}px) brightness(${darken ? 0.9 : 1})`,
+            transition: 'filter 0.5s ease-out'
+          }}
           key={videoSrc}
         >
           <source 
