@@ -224,42 +224,54 @@ const MainPage = () => {
             >
               <CarouselContent className="gap-6">
                 <CarouselItem>
-                  <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
+                  <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
                       className={`h-full transition-all duration-700 ${
                         currentSlide === 0 
                           ? 'w-[140vw] object-cover object-left scale-110' 
-                          : 'w-full object-cover object-center scale-110'
+                          : 'w-full object-contain'
                       }`}
                     />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                    <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
+                    <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Aftonbladet Takeover Campaign" 
-                        className="w-full h-full object-cover object-center scale-110"
+                        className={`h-full transition-all duration-700 ${
+                          currentSlide === 0 
+                            ? 'w-full object-cover object-center scale-110' 
+                            : 'w-full object-contain'
+                        }`}
                       />
                     </div>
                 </CarouselItem>
                 <CarouselItem>
-                    <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
+                    <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
                       <img 
                         src="/campaigns/tunnelbana_copy-2.png" 
                         alt="Tunnelbana Copy Campaign" 
-                        className="w-full h-full object-cover object-center scale-110"
+                        className={`h-full transition-all duration-700 ${
+                          currentSlide === 0 
+                            ? 'w-full object-cover object-center scale-110' 
+                            : 'w-full object-contain'
+                        }`}
                       />
                     </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className={`${isMobile ? 'h-[500px]' : 'h-[800px]'} overflow-visible`}>
+                  <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className="w-full h-full object-cover object-center scale-110"
+                      className={`h-full transition-all duration-700 ${
+                        currentSlide === 0 
+                          ? 'w-full object-cover object-center scale-110' 
+                          : 'w-full object-contain'
+                      }`}
                     />
                   </div>
                 </CarouselItem>
