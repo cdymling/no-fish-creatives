@@ -88,26 +88,7 @@ const MainPage = () => {
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   const safariClass = isSafari ? 'safari-text-fix safari-text-size-fix' : '';
   
-  // Carousel state
   const [carouselApi, setCarouselApi] = useState<any>();
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [hasSlid, setHasSlid] = useState(false);
-
-  useEffect(() => {
-    if (!carouselApi) return;
-
-    carouselApi.on("select", () => {
-      const index = carouselApi.selectedScrollSnap();
-      setCurrentSlide(index);
-      if (index > 0 && !hasSlid) {
-        setHasSlid(true);
-      }
-      // Reset when back to first slide
-      if (index === 0) {
-        setHasSlid(false);
-      }
-    });
-  }, [carouselApi, hasSlid]);
 
   const videoPosition = 'object-center';
 
@@ -194,22 +175,8 @@ const MainPage = () => {
       {/* Carousel Section */}
       <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
-            <div className="h-screen w-full relative">
-          {/* Left side - Title */}
-            <div className={`absolute z-10 transition-all duration-700 ease-out ${
-              isMobile 
-                ? 'top-1/2 -translate-y-1/2 left-8' 
-                : 'top-1/2 -translate-y-1/2 left-12'
-            } ${hasSlid ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'}`}>
-              <FloatingText className={`font-clash text-white font-bold leading-none ${isMobile ? 'text-[3.5rem]' : 'text-[8rem]'}`}>
-                Lorem ipsum
-              </FloatingText>
-            </div>
-
-          {/* Right side - Carousel */}
-            <div className={`relative h-full w-full flex items-center overflow-hidden transition-all duration-700 ${
-              currentSlide === 0 ? 'justify-end' : 'justify-center'
-            }`}>
+        <div className="h-screen w-full relative">
+          <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
             <Carousel 
               setApi={setCarouselApi}
               opts={{
@@ -219,76 +186,60 @@ const MainPage = () => {
                 duration: 20,
                 skipSnaps: false,
               }}
-              className={currentSlide === 0 ? 'w-[70%]' : 'w-full'}
+              className="w-full"
             >
               <CarouselContent className="gap-6">
-                {/* First image - shown cropped in initial state */}
-                <CarouselItem>
-                  <div className={`${currentSlide === 0 ? (isMobile ? 'h-[500px]' : 'h-[800px]') : 'h-screen'} overflow-visible`}>
-                    <img 
-                      src="/campaigns/tunnelbana_bilder-2.png" 
-                      alt="Tunnelbana Bilder Campaign" 
-                      className={`h-full transition-all duration-700 ${
-                        currentSlide === 0 
-                          ? 'w-[140vw] object-cover object-left scale-110' 
-                          : 'w-full object-contain'
-                      }`}
-                    />
-                  </div>
-                </CarouselItem>
-                {/* First image again - shown full screen when swiping */}
                 <CarouselItem>
                   <div className="h-screen overflow-visible">
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="h-full w-full object-contain transition-all duration-700"
+                      className="h-full w-full object-contain"
                     />
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                    <div className="h-screen overflow-visible">
-                      <img 
-                        src="/campaigns/takeover_aftonbladet-2.png" 
-                        alt="Aftonbladet Takeover Campaign" 
-                        className="h-full w-full object-contain transition-all duration-700"
-                      />
-                    </div>
+                  <div className="h-screen overflow-visible">
+                    <img 
+                      src="/campaigns/takeover_aftonbladet-2.png" 
+                      alt="Aftonbladet Takeover Campaign" 
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
                 </CarouselItem>
                 <CarouselItem>
-                    <div className="h-screen overflow-visible">
-                      <img 
-                        src="/campaigns/tunnelbana_copy-2.png" 
-                        alt="Tunnelbana Copy Campaign" 
-                        className="h-full w-full object-contain transition-all duration-700"
-                      />
-                    </div>
+                  <div className="h-screen overflow-visible">
+                    <img 
+                      src="/campaigns/tunnelbana_copy-2.png" 
+                      alt="Tunnelbana Copy Campaign" 
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
                 </CarouselItem>
                 <CarouselItem>
                   <div className="h-screen overflow-visible">
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className="h-full w-full object-contain transition-all duration-700"
+                      className="h-full w-full object-contain"
                     />
                   </div>
                 </CarouselItem>
               </CarouselContent>
-
-              {/* Custom Navigation Dots */}
-              <div className="absolute bottom-8 right-8 flex gap-3 z-20">
-                {[0, 1, 2, 3, 4].map((index) => (
-                  <button
-                    key={index}
-                    onClick={() => carouselApi?.scrollTo(index)}
-                    className={`w-3 h-3 rounded-full bg-white transition-opacity duration-300 ${
-                      currentSlide === index ? 'opacity-100' : 'opacity-30'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
             </Carousel>
+
+            {/* Scroll indicator */}
+            <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-2 animate-pulse">
+              <svg 
+                className="w-8 h-8 text-white/60" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+              <span className="text-white/60 text-sm font-space">Swipe</span>
+            </div>
           </div>
         </div>
       </section>
