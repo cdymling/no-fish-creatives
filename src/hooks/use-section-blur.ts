@@ -24,9 +24,14 @@ export function useSectionBlur() {
         // Determine which section we're on
         const currentSection = Math.round(scrollY / windowHeight);
         
+        console.log('Current section:', currentSection, 'ScrollY:', scrollY, 'WindowHeight:', windowHeight);
+        
         // Apply blur only if we're NOT on the first section (section 0)
-        setIsBlurred(currentSection > 0);
-      }, 150); // Wait 150ms after scroll stops
+        const shouldBlur = currentSection > 0;
+        setIsBlurred(shouldBlur);
+        
+        console.log('Should blur:', shouldBlur);
+      }, 100); // Reduced from 150ms to 100ms for faster response
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -39,5 +44,10 @@ export function useSectionBlur() {
   }, []);
 
   // Return blur state only when not scrolling
-  return isScrolling ? { blur: 0, darken: false } : { blur: isBlurred ? 8 : 0, darken: isBlurred };
+  const blurValue = isScrolling ? 0 : (isBlurred ? 15 : 0); // Increased from 8 to 15
+  const darkenValue = isScrolling ? false : isBlurred;
+  
+  console.log('Returning blur:', blurValue, 'darken:', darkenValue, 'isScrolling:', isScrolling);
+  
+  return { blur: blurValue, darken: darkenValue };
 }
