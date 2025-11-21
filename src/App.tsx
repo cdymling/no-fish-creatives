@@ -190,6 +190,11 @@ const MainPage = () => {
         </div>
       </section>
 
+      {/* Empty section showing background video */}
+      <section id="campaign-spacer" className="snap-start h-screen w-full relative">
+        <BubbleAnimation />
+      </section>
+
       {/* Carousel Section */}
       <section id="campaign-carousel" className="snap-start h-screen w-full relative">
         <BubbleAnimation />
