@@ -172,6 +172,10 @@ const MainPage = () => {
         </div>
       </section>
 
+      {/* Empty section showing background video */}
+      <section id="about-video-spacer" className="snap-start h-screen w-full relative">
+      </section>
+
       {/* Campaign Title Section */}
       <section id="campaign-title" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
