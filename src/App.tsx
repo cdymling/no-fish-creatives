@@ -141,11 +141,6 @@ const MainPage = () => {
         </div>
       </section>
       
-      {/* Half section showing background video */}
-      <section id="about-spacer" className="snap-start h-[50vh] w-full relative">
-        <BubbleAnimation />
-      </section>
-      
       <section id="about-content" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
@@ -264,11 +259,6 @@ const MainPage = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Half section showing background video */}
-      <section id="services-spacer" className="snap-start h-[50vh] w-full relative">
-        <BubbleAnimation />
       </section>
 
       <section id="services-content" className="snap-start h-screen w-full relative bg-black">
