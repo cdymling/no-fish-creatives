@@ -265,6 +265,10 @@ const MainPage = () => {
         </div>
       </section>
 
+      {/* Empty section showing background video */}
+      <section id="carousel-video-spacer" className="snap-start h-screen w-full relative">
+      </section>
+
       <section id="services-content" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
