@@ -301,6 +301,11 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Empty section showing background video */}
+      <section id="services-video-spacer" className="snap-start h-screen w-full relative">
+      </section>
+
       <section id="services-video" className="snap-start h-screen w-full bg-black">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
