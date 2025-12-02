@@ -182,13 +182,13 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
-                <span className="block">Here's a</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">campaign</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">made by us:</Reveal>
+                <span className="block">Our latest case</span>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">fresh of the</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">Hook:</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
-                <span className="block">Here's a</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">campaign</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">made by us:</Reveal>
+                <span className="block">Our latest case</span>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#5CE1E6]">fresh of the</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#5CE1E6]">Hook:</Reveal>
               </h1>}
           </div>
         </div>
