@@ -28,6 +28,8 @@ const MainPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isFirstSlideHovered, setIsFirstSlideHovered] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   
   // Direct video sources without state management
   const videoSrc = isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4";
@@ -200,7 +202,15 @@ const MainPage = () => {
         <div className="h-screen w-full relative">
           <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
             <Carousel 
-              setApi={setCarouselApi}
+              setApi={(api) => {
+                setCarouselApi(api);
+                if (api) {
+                  api.on('scroll', () => {
+                    const progress = api.scrollProgress();
+                    setScrollProgress(progress);
+                  });
+                }
+              }}
               opts={{
                 align: "center",
                 loop: false,
@@ -211,28 +221,43 @@ const MainPage = () => {
               className="w-full"
             >
               <CarouselContent className="gap-6">
-                {/* First slide - Split layout */}
+                {/* First slide - Overlay layout */}
                 <CarouselItem>
-                  <div className="h-screen flex bg-black">
-                    {/* Left side - text */}
-                    <div className="w-2/5 flex items-center px-8 lg:px-12">
-                      <h2 className="font-clash text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-left">
+                  <div className="h-screen relative overflow-hidden">
+                    {/* Title overlay - slides out on swipe */}
+                    <div 
+                      className="absolute left-8 lg:left-12 top-1/2 -translate-y-1/2 z-10 transition-all duration-500 ease-out"
+                      style={{ 
+                        transform: `translateY(-50%) translateX(${isFirstSlideHovered ? -150 : 0}px) translateX(${-scrollProgress * 400}px)`,
+                        opacity: Math.max(0, 1 - scrollProgress * 3 - (isFirstSlideHovered ? 0.3 : 0))
+                      }}
+                    >
+                      <h2 className="font-clash text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-left drop-shadow-lg">
                         Compricer<br />Creative<br />Concept
                       </h2>
                     </div>
-                    {/* Right side - image (not fullscreen) */}
-                    <div className="w-3/5 flex items-center justify-center">
+                    {/* Image - scales up on hover */}
+                    <div 
+                      className="absolute right-0 top-1/2 -translate-y-1/2 w-[65%] h-[70%] flex items-center justify-end pr-8 transition-all duration-500 ease-out cursor-pointer"
+                      style={{
+                        transform: `translateY(-50%) scale(${isFirstSlideHovered ? 1.15 : 1})`,
+                        transformOrigin: 'right center'
+                      }}
+                      onMouseEnter={() => setIsFirstSlideHovered(true)}
+                      onMouseLeave={() => setIsFirstSlideHovered(false)}
+                      onClick={() => setIsFirstSlideHovered(!isFirstSlideHovered)}
+                    >
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Compricer Campaign" 
-                        className="max-h-[75%] w-auto object-contain"
+                        className="max-h-full w-auto object-contain"
                       />
                     </div>
                   </div>
                 </CarouselItem>
-                {/* Fullscreen slides */}
+                {/* Fullscreen slides with black background */}
                 <CarouselItem>
-                  <div className="h-screen overflow-visible">
+                  <div className="h-screen bg-black flex items-center justify-center">
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
@@ -241,7 +266,7 @@ const MainPage = () => {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="h-screen overflow-visible">
+                  <div className="h-screen bg-black flex items-center justify-center">
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
@@ -250,7 +275,7 @@ const MainPage = () => {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="h-screen overflow-visible">
+                  <div className="h-screen bg-black flex items-center justify-center">
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
