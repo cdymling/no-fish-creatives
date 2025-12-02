@@ -30,6 +30,7 @@ const MainPage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isFirstSlideHovered, setIsFirstSlideHovered] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   
   // Direct video sources without state management
   const videoSrc = isMobile ? "/home-background-mobile.mp4" : "/home-background.mp4";
@@ -197,7 +198,27 @@ const MainPage = () => {
       </section>
 
       {/* Carousel Section */}
-      <section id="campaign-carousel" className="snap-start h-screen w-full relative">
+      {/* Fullscreen modal */}
+      {isFullscreen && (
+        <div 
+          className="fixed inset-0 bg-black z-50 flex items-center justify-center cursor-pointer"
+          onClick={() => setIsFullscreen(false)}
+        >
+          <img 
+            src="/campaigns/takeover_aftonbladet-2.png" 
+            alt="Compricer Campaign" 
+            className="max-h-full max-w-full object-contain"
+          />
+          <button 
+            className="absolute top-8 right-8 text-white text-4xl font-light hover:opacity-70 transition-opacity"
+            onClick={() => setIsFullscreen(false)}
+          >
+            ×
+          </button>
+        </div>
+      )}
+
+      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-black">
         <BubbleAnimation />
         <div className="h-screen w-full relative">
           <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
@@ -236,7 +257,7 @@ const MainPage = () => {
                         Compricer<br />Creative<br />Concept
                       </h2>
                     </div>
-                    {/* Image - scales up on hover */}
+                    {/* Image - scales up on hover, fullscreen on click */}
                     <div 
                       className="absolute right-0 top-1/2 -translate-y-1/2 w-[65%] h-[70%] flex items-center justify-end pr-8 transition-all duration-500 ease-out cursor-pointer"
                       style={{
@@ -245,7 +266,7 @@ const MainPage = () => {
                       }}
                       onMouseEnter={() => setIsFirstSlideHovered(true)}
                       onMouseLeave={() => setIsFirstSlideHovered(false)}
-                      onClick={() => setIsFirstSlideHovered(!isFirstSlideHovered)}
+                      onClick={() => setIsFullscreen(true)}
                     >
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
