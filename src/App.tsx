@@ -211,20 +211,31 @@ const MainPage = () => {
               className="w-full"
             >
               <CarouselContent className="gap-6">
+                {/* First slide - Split layout */}
+                <CarouselItem>
+                  <div className="h-screen flex bg-black">
+                    {/* Left side - text */}
+                    <div className="w-2/5 flex items-center px-8 lg:px-12">
+                      <h2 className="font-clash text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-left">
+                        Compricer<br />Creative<br />Concept
+                      </h2>
+                    </div>
+                    {/* Right side - image (not fullscreen) */}
+                    <div className="w-3/5 flex items-center justify-center">
+                      <img 
+                        src="/campaigns/takeover_aftonbladet-2.png" 
+                        alt="Compricer Campaign" 
+                        className="max-h-[75%] w-auto object-contain"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+                {/* Fullscreen slides */}
                 <CarouselItem>
                   <div className="h-screen overflow-visible">
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="h-full w-full object-contain"
-                    />
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="h-screen overflow-visible">
-                    <img 
-                      src="/campaigns/takeover_aftonbladet-2.png" 
-                      alt="Aftonbladet Takeover Campaign" 
                       className="h-full w-full object-contain"
                     />
                   </div>
