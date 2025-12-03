@@ -311,7 +311,7 @@ const MainPage = () => {
                     
                     {/* Overlay content - slides out on click */}
                     <div 
-                      className="absolute left-0 top-0 h-full z-10 transition-all duration-500 ease-out pointer-events-none"
+                      className="absolute left-0 top-0 w-full h-full z-10 transition-all duration-500 ease-out pointer-events-none"
                       style={{
                         transform: isFirstSlideClicked ? 'translateX(-100%)' : 'translateX(0)',
                         opacity: isFirstSlideClicked ? 0 : 1
