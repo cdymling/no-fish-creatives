@@ -289,7 +289,7 @@ const MainPage = () => {
                     </div>
                     {/* Image - scales up on hover, fullscreen on click */}
                     <div 
-                      className="absolute left-[38%] top-1/2 -translate-y-1/2 w-[70%] h-[65%] overflow-hidden transition-all duration-500 ease-out cursor-pointer"
+                      className="absolute left-[38%] top-1/2 -translate-y-1/2 w-[70%] h-[85%] overflow-hidden transition-all duration-500 ease-out cursor-pointer"
                       style={{
                         transform: `translateY(-50%) scale(${isFirstSlideHovered ? 1.15 : 1})`,
                         transformOrigin: 'center center'
