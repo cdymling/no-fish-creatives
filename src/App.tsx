@@ -271,7 +271,7 @@ const MainPage = () => {
               }}
               className="w-full"
             >
-              <CarouselContent className="gap-6">
+              <CarouselContent className="">
                 {/* First slide - Overlay layout */}
                 <CarouselItem>
                   <div className="h-screen relative overflow-hidden">
@@ -289,10 +289,11 @@ const MainPage = () => {
                     </div>
                     {/* Image - scales up on hover, fullscreen on click */}
                     <div 
-                      className="absolute top-1/2 -translate-y-1/2 h-[85%] overflow-hidden transition-all duration-500 ease-out cursor-pointer"
+                      className="absolute top-1/2 overflow-hidden transition-all duration-500 ease-out cursor-pointer"
                       style={{
                         left: isFirstSlideHovered ? '0%' : '38%',
                         width: isFirstSlideHovered ? '100%' : '70%',
+                        height: isFirstSlideHovered ? '100%' : '85%',
                         transform: 'translateY(-50%)'
                       }}
                       onMouseEnter={() => setIsFirstSlideHovered(true)}
