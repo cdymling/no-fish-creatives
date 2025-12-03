@@ -40,7 +40,7 @@ const Work = () => {
           
           <Button 
             type="submit" 
-            className="bg-[#5CE1E6] text-black hover:bg-[#5CE1E6]/80 transition-colors text-base"
+            className="bg-[#df3d26] text-white hover:bg-[#df3d26]/80 transition-colors text-base"
           >
             Submit
           </Button>
