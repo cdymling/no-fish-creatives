@@ -249,8 +249,7 @@ const MainPage = () => {
         </div>
       )}
 
-      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-section-blue">
-        <BubbleAnimation />
+      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-section-blue overflow-hidden">
         <div className="h-screen w-full relative">
           <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
             <Carousel 
@@ -278,19 +277,19 @@ const MainPage = () => {
                   <div className="h-screen relative overflow-hidden">
                     {/* Title overlay - slides out on swipe */}
                     <div 
-                      className="absolute left-8 lg:left-12 top-1/2 -translate-y-1/2 z-10 transition-all duration-500 ease-out"
+                      className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 z-10 transition-all duration-500 ease-out"
                       style={{ 
                         transform: `translateY(-50%) translateX(${isFirstSlideHovered ? -150 : 0}px) translateX(${-scrollProgress * 400}px)`,
                         opacity: Math.max(0, 1 - scrollProgress * 3 - (isFirstSlideHovered ? 0.3 : 0))
                       }}
                     >
-                      <h2 className="font-clash text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-left drop-shadow-lg">
+                      <h2 className="font-clash text-white text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.9] text-left">
                         Compricer<br />Creative<br />Concept
                       </h2>
                     </div>
                     {/* Image - scales up on hover, fullscreen on click */}
                     <div 
-                      className="absolute right-0 top-1/2 -translate-y-1/2 w-[65%] h-[70%] flex items-center justify-end pr-8 transition-all duration-500 ease-out cursor-pointer"
+                      className="absolute right-0 top-1/2 -translate-y-1/2 w-[55%] h-[85%] flex items-center justify-end overflow-hidden transition-all duration-500 ease-out cursor-pointer"
                       style={{
                         transform: `translateY(-50%) scale(${isFirstSlideHovered ? 1.15 : 1})`,
                         transformOrigin: 'right center'
@@ -302,7 +301,7 @@ const MainPage = () => {
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Compricer Campaign" 
-                        className="max-h-full w-auto object-contain"
+                        className="h-full w-auto object-cover translate-x-[20%]"
                       />
                     </div>
                   </div>
