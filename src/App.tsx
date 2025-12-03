@@ -271,9 +271,9 @@ const MainPage = () => {
               }}
               className="w-full"
             >
-              <CarouselContent className="">
+              <CarouselContent className="ml-0">
                 {/* First slide - Overlay layout */}
-                <CarouselItem>
+                <CarouselItem className="pl-0">
                   <div className="h-screen relative overflow-hidden">
                     {/* Title overlay - slides out on swipe */}
                     <div 
@@ -305,7 +305,7 @@ const MainPage = () => {
                         alt="Compricer Campaign" 
                         className="w-full h-full transition-all duration-500"
                         style={{
-                          objectFit: isFirstSlideHovered ? 'contain' : 'cover',
+                          objectFit: 'cover',
                           objectPosition: isFirstSlideHovered ? 'center' : 'left top'
                         }}
                       />
@@ -313,30 +313,30 @@ const MainPage = () => {
                   </div>
                 </CarouselItem>
                 {/* Fullscreen slides with black background */}
-                <CarouselItem>
+                <CarouselItem className="pl-0">
                   <div className="h-screen bg-section-blue flex items-center justify-center">
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="h-full w-full object-contain"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
-                <CarouselItem>
+                <CarouselItem className="pl-0">
                   <div className="h-screen bg-section-blue flex items-center justify-center">
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
-                      className="h-full w-full object-contain"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
-                <CarouselItem>
+                <CarouselItem className="pl-0">
                   <div className="h-screen bg-section-blue flex items-center justify-center">
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className="h-full w-full object-contain"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
