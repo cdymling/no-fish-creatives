@@ -18,6 +18,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "./components/ui/carousel";
+import { ChevronRight } from "lucide-react";
 
 // Combined client logos
 const combinedClientsLogo = "/clients/combined-clients.png";
@@ -272,43 +273,43 @@ const MainPage = () => {
               className="w-full"
             >
               <CarouselContent className="ml-0">
-                {/* First slide - Overlay layout */}
+                {/* First slide - Split layout with circle badge */}
                 <CarouselItem className="pl-0">
-                  <div className="h-screen relative overflow-hidden">
-                    {/* Title overlay - slides out on swipe */}
-                    <div 
-                      className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 z-10 transition-all duration-500 ease-out"
-                      style={{ 
-                        transform: `translateY(-50%) translateX(${isFirstSlideHovered ? -600 : 0}px) translateX(${-scrollProgress * 400}px)`,
-                        opacity: Math.max(0, 1 - scrollProgress * 3 - (isFirstSlideHovered ? 1 : 0))
-                      }}
-                    >
-                      <h2 className="font-clash text-white text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.9] text-left">
-                        Compricer<br />Creative<br />Concept
-                      </h2>
+                  <div className="h-screen relative overflow-hidden bg-black">
+                    {/* Left side - Text and circle */}
+                    <div className="absolute left-0 top-0 h-full w-[35%] bg-black z-10 flex flex-col">
+                      {/* Circular badge */}
+                      <div className="absolute left-[12%] top-[12%] w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] 
+                                      rounded-full border-[3px] border-white flex items-center justify-center">
+                        <span className="font-clash italic text-white text-xl md:text-2xl lg:text-4xl font-bold text-center leading-tight">
+                          Creative<br />concept
+                        </span>
+                      </div>
+                      
+                      {/* Body text */}
+                      <p className="absolute left-[12%] right-[10%] top-[48%] text-white text-sm md:text-base lg:text-lg leading-relaxed">
+                        Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, 
+                        Lorem ipsum, Lorem ipsum, Lorem ipsum Lorem ipsum, Lorem ipsum, 
+                        Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, 
+                        Lorem ipsum, Lorem ipsum, Lorem ipsum,
+                      </p>
                     </div>
-                    {/* Image - scales up on hover, fullscreen on click */}
+                    
+                    {/* Right side - Full-bleed image */}
                     <div 
-                      className="absolute top-1/2 overflow-hidden transition-all duration-500 ease-out cursor-pointer"
-                      style={{
-                        left: isFirstSlideHovered ? '0%' : '38%',
-                        width: isFirstSlideHovered ? '100%' : '70%',
-                        height: isFirstSlideHovered ? '100%' : '85%',
-                        transform: 'translateY(-50%)'
-                      }}
-                      onMouseEnter={() => setIsFirstSlideHovered(true)}
-                      onMouseLeave={() => setIsFirstSlideHovered(false)}
+                      className="absolute right-0 top-0 h-full w-[65%] cursor-pointer"
                       onClick={() => carouselApi?.scrollNext()}
                     >
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Compricer Campaign" 
-                        className="w-full h-full transition-all duration-500"
-                        style={{
-                          objectFit: 'cover',
-                          objectPosition: isFirstSlideHovered ? 'center' : 'left top'
-                        }}
+                        className="w-full h-full object-cover"
                       />
+                    </div>
+                    
+                    {/* Navigation arrow */}
+                    <div className="absolute right-6 top-1/2 -translate-y-1/2 z-20">
+                      <ChevronRight className="w-10 h-10 text-white opacity-80" />
                     </div>
                   </div>
                 </CarouselItem>
