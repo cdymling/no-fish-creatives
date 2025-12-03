@@ -279,8 +279,8 @@ const MainPage = () => {
                     <div 
                       className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 z-10 transition-all duration-500 ease-out"
                       style={{ 
-                        transform: `translateY(-50%) translateX(${isFirstSlideHovered ? -150 : 0}px) translateX(${-scrollProgress * 400}px)`,
-                        opacity: Math.max(0, 1 - scrollProgress * 3 - (isFirstSlideHovered ? 0.3 : 0))
+                        transform: `translateY(-50%) translateX(${isFirstSlideHovered ? -600 : 0}px) translateX(${-scrollProgress * 400}px)`,
+                        opacity: Math.max(0, 1 - scrollProgress * 3 - (isFirstSlideHovered ? 1 : 0))
                       }}
                     >
                       <h2 className="font-clash text-white text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.9] text-left">
@@ -289,10 +289,11 @@ const MainPage = () => {
                     </div>
                     {/* Image - scales up on hover, fullscreen on click */}
                     <div 
-                      className="absolute left-[38%] top-1/2 -translate-y-1/2 w-[70%] h-[85%] overflow-hidden transition-all duration-500 ease-out cursor-pointer"
+                      className="absolute top-1/2 -translate-y-1/2 h-[85%] overflow-hidden transition-all duration-500 ease-out cursor-pointer"
                       style={{
-                        transform: `translateY(-50%) scale(${isFirstSlideHovered ? 1.15 : 1})`,
-                        transformOrigin: 'center center'
+                        left: isFirstSlideHovered ? '0%' : '38%',
+                        width: isFirstSlideHovered ? '100%' : '70%',
+                        transform: 'translateY(-50%)'
                       }}
                       onMouseEnter={() => setIsFirstSlideHovered(true)}
                       onMouseLeave={() => setIsFirstSlideHovered(false)}
@@ -301,7 +302,11 @@ const MainPage = () => {
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Compricer Campaign" 
-                        className="w-full h-full object-cover object-left-top"
+                        className="w-full h-full transition-all duration-500"
+                        style={{
+                          objectFit: isFirstSlideHovered ? 'contain' : 'cover',
+                          objectPosition: isFirstSlideHovered ? 'center' : 'left top'
+                        }}
                       />
                     </div>
                   </div>
