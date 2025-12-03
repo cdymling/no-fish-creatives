@@ -289,10 +289,29 @@ const MainPage = () => {
               <CarouselContent className="ml-0">
                 {/* First slide - Full-bleed image with overlay */}
                 <CarouselItem className="pl-0">
-                  <div className="h-screen relative overflow-hidden bg-section-blue">
-                    {/* Full-width background image */}
+                  <div className="h-screen relative overflow-hidden flex">
+                    {/* Left side - 40% with blue background, badge and logo */}
                     <div 
-                      className="absolute inset-0 cursor-pointer"
+                      className="w-[40%] bg-[#5DA2BF] flex flex-col items-center justify-center transition-opacity duration-500"
+                      style={{ opacity: isFirstSlideClicked ? 0 : 1 }}
+                    >
+                      {/* Creative Concept badge */}
+                      <img 
+                        src="/campaigns/creative-concept-badge.png"
+                        alt="Creative Concept"
+                        className="w-[200px] md:w-[280px] lg:w-[350px] h-auto mb-8"
+                      />
+                      {/* Compricer logotyp */}
+                      <img 
+                        src="/clients/compricer-logo.png"
+                        alt="Compricer"
+                        className="w-[150px] md:w-[200px] lg:w-[250px] h-auto"
+                      />
+                    </div>
+                    
+                    {/* Right side - 60% with campaign image */}
+                    <div 
+                      className="w-[60%] relative cursor-pointer"
                       onClick={() => {
                         setIsFirstSlideClicked(true);
                         setTimeout(() => carouselApi?.scrollNext(), 500);
@@ -301,27 +320,7 @@ const MainPage = () => {
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Compricer Campaign" 
-                        className="w-full h-full transition-all duration-500"
-                        style={{
-                          objectFit: 'cover',
-                          objectPosition: 'left center'
-                        }}
-                      />
-                    </div>
-                    
-                    {/* Overlay content - slides out on click */}
-                    <div 
-                      className="absolute left-0 top-0 w-full h-full z-10 transition-all duration-500 ease-out pointer-events-none"
-                      style={{
-                        transform: isFirstSlideClicked ? 'translateX(-100%)' : 'translateX(0)',
-                        opacity: isFirstSlideClicked ? 0 : 1
-                      }}
-                    >
-                      {/* Badge image */}
-                      <img 
-                        src="/campaigns/creative-concept-badge.png"
-                        alt="Creative Concept - Compricer"
-                        className="absolute left-[8%] top-[10%] w-[120px] md:w-[160px] lg:w-[200px] h-auto"
+                        className="w-full h-full object-cover object-left"
                       />
                     </div>
                     
