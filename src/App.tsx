@@ -287,7 +287,7 @@ const MainPage = () => {
               className="w-full"
             >
               <CarouselContent className="ml-0">
-                {/* First slide - Full-bleed image with overlay */}
+                {/* First slide - mobil-2 with badge overlay */}
                 <CarouselItem className="pl-0">
                   <div 
                     className="h-screen relative overflow-hidden cursor-pointer bg-[#5DA2BF]"
@@ -296,10 +296,9 @@ const MainPage = () => {
                       setTimeout(() => carouselApi?.scrollNext(), 500);
                     }}
                   >
-                    {/* Full campaign image - changes from cropped to full on swipe */}
                     <img 
-                      src="/campaigns/takeover_aftonbladet-2.png" 
-                      alt="Compricer Campaign" 
+                      src="/campaigns/mobil-2.png" 
+                      alt="Mobile Campaign" 
                       className="w-full h-full transition-all duration-500"
                       style={{
                         objectFit: isFirstSlideClicked ? 'contain' : 'cover',
@@ -315,7 +314,6 @@ const MainPage = () => {
                       style={{ opacity: isFirstSlideClicked ? 0 : 1 }}
                     />
                     
-                    {/* Navigation arrow - right */}
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -328,7 +326,6 @@ const MainPage = () => {
                       <ChevronRight className="w-10 h-10 md:w-12 md:h-12" strokeWidth={3} />
                     </button>
                     
-                    {/* Left arrow - shows after first slide is clicked */}
                     {currentSlide > 0 && (
                       <button 
                         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/80 hover:text-white transition-colors"
@@ -343,7 +340,6 @@ const MainPage = () => {
                     )}
                   </div>
                 </CarouselItem>
-                {/* Fullscreen slides with black background */}
                 <CarouselItem className="pl-0">
                   <div 
                     className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
@@ -374,8 +370,8 @@ const MainPage = () => {
                     onClick={() => carouselApi?.scrollNext()}
                   >
                     <img 
-                      src="/campaigns/mobil-2.png" 
-                      alt="Mobile Campaign" 
+                      src="/campaigns/takeover_aftonbladet-2.png" 
+                      alt="Compricer Campaign" 
                       className="h-full w-full object-cover"
                     />
                   </div>
