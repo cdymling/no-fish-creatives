@@ -301,7 +301,7 @@ const MainPage = () => {
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Compricer Campaign" 
-                        className="w-full h-full object-cover object-left"
+                        className="w-full h-full object-cover object-left-top"
                       />
                     </div>
                   </div>
