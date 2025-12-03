@@ -18,7 +18,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "./components/ui/carousel";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 // Combined client logos
 const combinedClientsLogo = "/clients/combined-clients.png";
@@ -101,6 +101,20 @@ const MainPage = () => {
   const safariClass = isSafari ? 'safari-text-fix safari-text-size-fix' : '';
   
   const [carouselApi, setCarouselApi] = useState<any>();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+    
+    const onSelect = () => {
+      setCurrentSlide(carouselApi.selectedScrollSnap());
+    };
+    
+    carouselApi.on('select', onSelect);
+    return () => {
+      carouselApi.off('select', onSelect);
+    };
+  }, [carouselApi]);
 
   const videoPosition = 'object-center';
 
@@ -303,27 +317,31 @@ const MainPage = () => {
                         opacity: isFirstSlideClicked ? 0 : 1
                       }}
                     >
-                      {/* Circular badge */}
-                      <div className="absolute left-[8%] top-[12%] w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] 
-                                      rounded-full border-[3px] border-white flex items-center justify-center">
-                        <span className="font-clash italic text-white text-xl md:text-2xl lg:text-4xl font-bold text-center leading-tight">
-                          Creative<br />concept
-                        </span>
-                      </div>
-                      
-                      {/* Body text - wider column */}
-                      <p className="absolute left-[8%] w-[50%] md:w-[45%] lg:w-[40%] top-[48%] text-white text-sm md:text-base lg:text-lg leading-relaxed">
-                        Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, 
-                        Lorem ipsum, Lorem ipsum, Lorem ipsum Lorem ipsum, Lorem ipsum, 
-                        Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, 
-                        Lorem ipsum, Lorem ipsum, Lorem ipsum,
-                      </p>
+                      {/* Badge image */}
+                      <img 
+                        src="/campaigns/creative-concept-badge.png"
+                        alt="Creative Concept - Compricer"
+                        className="absolute left-[5%] top-[6%] w-[180px] md:w-[240px] lg:w-[300px] h-auto"
+                      />
                     </div>
                     
-                    {/* Navigation arrow */}
+                    {/* Navigation arrows */}
                     <div className="absolute right-6 top-1/2 -translate-y-1/2 z-20">
                       <ChevronRight className="w-10 h-10 text-white opacity-80" />
                     </div>
+                    
+                    {/* Left arrow - shows after first slide is clicked */}
+                    {currentSlide > 0 && (
+                      <div 
+                        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 cursor-pointer hover:opacity-100 transition-opacity"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          carouselApi?.scrollPrev();
+                        }}
+                      >
+                        <ChevronLeft className="w-10 h-10 text-white opacity-80" />
+                      </div>
+                    )}
                   </div>
                 </CarouselItem>
                 {/* Fullscreen slides with black background */}
