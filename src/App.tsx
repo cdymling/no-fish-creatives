@@ -289,7 +289,7 @@ const MainPage = () => {
                         alt="Compricer Campaign" 
                         className="w-full h-full transition-all duration-500"
                         style={{
-                          objectFit: isFirstSlideClicked ? 'contain' : 'cover',
+                          objectFit: 'cover',
                           objectPosition: 'left center'
                         }}
                       />
