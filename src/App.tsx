@@ -289,57 +289,57 @@ const MainPage = () => {
               <CarouselContent className="ml-0">
                 {/* First slide - Full-bleed image with overlay */}
                 <CarouselItem className="pl-0">
-                  <div className="h-screen relative overflow-hidden flex">
-                    {/* Left side - 40% with blue background, badge and logo */}
-                    <div 
-                      className="w-[40%] bg-[#5DA2BF] flex flex-col items-center justify-center transition-opacity duration-500"
-                      style={{ opacity: isFirstSlideClicked ? 0 : 1 }}
-                    >
-                      {/* Creative Concept badge */}
-                      <img 
-                        src="/campaigns/creative-concept-badge.png"
-                        alt="Creative Concept"
-                        className="w-[200px] md:w-[280px] lg:w-[350px] h-auto mb-8"
-                      />
-                      {/* Compricer logotyp */}
-                      <img 
-                        src="/clients/compricer-logo.png"
-                        alt="Compricer"
-                        className="w-[150px] md:w-[200px] lg:w-[250px] h-auto"
-                      />
-                    </div>
+                  <div 
+                    className="h-screen relative overflow-hidden cursor-pointer bg-[#5DA2BF]"
+                    onClick={() => {
+                      setIsFirstSlideClicked(true);
+                      setTimeout(() => carouselApi?.scrollNext(), 500);
+                    }}
+                  >
+                    {/* Full campaign image - changes from cropped to full on swipe */}
+                    <img 
+                      src="/campaigns/takeover_aftonbladet-2.png" 
+                      alt="Compricer Campaign" 
+                      className="w-full h-full transition-all duration-500"
+                      style={{
+                        objectFit: isFirstSlideClicked ? 'contain' : 'cover',
+                        objectPosition: 'left center'
+                      }}
+                    />
                     
-                    {/* Right side - 60% with campaign image */}
-                    <div 
-                      className="w-[60%] relative cursor-pointer"
-                      onClick={() => {
+                    {/* Creative Concept badge - overlay that fades out */}
+                    <img 
+                      src="/campaigns/creative-concept-badge.png"
+                      alt="Creative Concept"
+                      className="absolute left-[5%] top-[10%] w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-opacity duration-500 pointer-events-none"
+                      style={{ opacity: isFirstSlideClicked ? 0 : 1 }}
+                    />
+                    
+                    {/* Navigation arrow - right */}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
                         setIsFirstSlideClicked(true);
                         setTimeout(() => carouselApi?.scrollNext(), 500);
                       }}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/80 hover:text-white transition-colors"
+                      aria-label="Next slide"
                     >
-                      <img 
-                        src="/campaigns/takeover_aftonbladet-2.png" 
-                        alt="Compricer Campaign" 
-                        className="w-full h-full object-cover object-left"
-                      />
-                    </div>
-                    
-                    {/* Navigation arrows */}
-                    <div className="absolute right-6 top-1/2 -translate-y-1/2 z-20">
-                      <ChevronRight className="w-10 h-10 text-white opacity-80" strokeWidth={3} />
-                    </div>
+                      <ChevronRight className="w-10 h-10 md:w-12 md:h-12" strokeWidth={3} />
+                    </button>
                     
                     {/* Left arrow - shows after first slide is clicked */}
                     {currentSlide > 0 && (
-                      <div 
-                        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 cursor-pointer hover:opacity-100 transition-opacity"
+                      <button 
+                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/80 hover:text-white transition-colors"
                         onClick={(e) => {
                           e.stopPropagation();
                           carouselApi?.scrollPrev();
                         }}
+                        aria-label="Previous slide"
                       >
-                        <ChevronLeft className="w-10 h-10 text-white opacity-80" strokeWidth={3} />
-                      </div>
+                        <ChevronLeft className="w-10 h-10 md:w-12 md:h-12" strokeWidth={3} />
+                      </button>
                     )}
                   </div>
                 </CarouselItem>
