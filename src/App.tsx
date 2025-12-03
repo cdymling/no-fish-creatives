@@ -133,7 +133,7 @@ const MainPage = () => {
         <Home />
       </section>
       
-      <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-black">
+      <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-section-blue">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -152,7 +152,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="about-content" className="snap-start h-screen w-full relative bg-black">
+      <section id="about-content" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <Reveal direction="right" delay={0} repeat>
@@ -188,7 +188,7 @@ const MainPage = () => {
       </section>
 
       {/* Campaign Title Section */}
-      <section id="campaign-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="campaign-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -249,7 +249,7 @@ const MainPage = () => {
         </div>
       )}
 
-      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-black">
+      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className="h-screen w-full relative">
           <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
@@ -309,7 +309,7 @@ const MainPage = () => {
                 </CarouselItem>
                 {/* Fullscreen slides with black background */}
                 <CarouselItem>
-                  <div className="h-screen bg-black flex items-center justify-center">
+                  <div className="h-screen bg-section-blue flex items-center justify-center">
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
@@ -318,7 +318,7 @@ const MainPage = () => {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="h-screen bg-black flex items-center justify-center">
+                  <div className="h-screen bg-section-blue flex items-center justify-center">
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
@@ -327,7 +327,7 @@ const MainPage = () => {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <div className="h-screen bg-black flex items-center justify-center">
+                  <div className="h-screen bg-section-blue flex items-center justify-center">
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
@@ -358,7 +358,7 @@ const MainPage = () => {
       </section>
 
       {/* Services Title Section */}
-      <section id="services-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="services-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -381,7 +381,7 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section id="services-content" className="snap-start h-screen w-full relative bg-black">
+      <section id="services-content" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
@@ -418,7 +418,7 @@ const MainPage = () => {
       <section id="services-video-spacer" className="snap-start h-screen w-full relative">
       </section>
 
-      <section id="services-video" className="snap-start h-screen w-full bg-black">
+      <section id="services-video" className="snap-start h-screen w-full bg-section-blue">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/services-video.mp4" type="video/mp4" />
@@ -427,7 +427,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="clients-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -446,7 +446,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full relative bg-black">
+      <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className="h-[100svh] md:h-screen w-full px-6 flex flex-col justify-center items-center pt-0 md:pt-0">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-4xl items-center justify-items-center">
@@ -465,7 +465,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact-title" className="snap-start h-screen w-full relative bg-black">
+      <section id="contact-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -483,7 +483,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact" className="snap-start h-screen w-full relative bg-black">
+      <section id="contact" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
@@ -499,7 +499,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="work-video" className="snap-start h-screen w-full bg-black">
+      <section id="work-video" className="snap-start h-screen w-full bg-section-blue">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/work-video.mp4" type="video/mp4" />
