@@ -289,10 +289,10 @@ const MainPage = () => {
                     </div>
                     {/* Image - scales up on hover, fullscreen on click */}
                     <div 
-                      className="absolute right-0 top-1/2 -translate-y-1/2 w-[55%] h-[85%] flex items-center justify-end overflow-hidden transition-all duration-500 ease-out cursor-pointer"
+                      className="absolute left-[38%] top-1/2 -translate-y-1/2 w-[70%] h-[65%] overflow-hidden transition-all duration-500 ease-out cursor-pointer"
                       style={{
                         transform: `translateY(-50%) scale(${isFirstSlideHovered ? 1.15 : 1})`,
-                        transformOrigin: 'right center'
+                        transformOrigin: 'center center'
                       }}
                       onMouseEnter={() => setIsFirstSlideHovered(true)}
                       onMouseLeave={() => setIsFirstSlideHovered(false)}
@@ -301,7 +301,7 @@ const MainPage = () => {
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
                         alt="Compricer Campaign" 
-                        className="h-full w-auto object-cover translate-x-[20%]"
+                        className="w-full h-full object-cover object-left"
                       />
                     </div>
                   </div>
