@@ -298,7 +298,7 @@ const MainPage = () => {
                       }}
                       onMouseEnter={() => setIsFirstSlideHovered(true)}
                       onMouseLeave={() => setIsFirstSlideHovered(false)}
-                      onClick={() => setIsFullscreen(true)}
+                      onClick={() => carouselApi?.scrollNext()}
                     >
                       <img 
                         src="/campaigns/takeover_aftonbladet-2.png" 
@@ -314,7 +314,10 @@ const MainPage = () => {
                 </CarouselItem>
                 {/* Fullscreen slides with black background */}
                 <CarouselItem className="pl-0">
-                  <div className="h-screen bg-section-blue flex items-center justify-center">
+                  <div 
+                    className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
+                    onClick={() => carouselApi?.scrollNext()}
+                  >
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
@@ -323,7 +326,10 @@ const MainPage = () => {
                   </div>
                 </CarouselItem>
                 <CarouselItem className="pl-0">
-                  <div className="h-screen bg-section-blue flex items-center justify-center">
+                  <div 
+                    className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
+                    onClick={() => carouselApi?.scrollNext()}
+                  >
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
@@ -332,7 +338,10 @@ const MainPage = () => {
                   </div>
                 </CarouselItem>
                 <CarouselItem className="pl-0">
-                  <div className="h-screen bg-section-blue flex items-center justify-center">
+                  <div 
+                    className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
+                    onClick={() => carouselApi?.scrollNext()}
+                  >
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
