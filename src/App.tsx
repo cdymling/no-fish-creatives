@@ -29,7 +29,7 @@ const MainPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isFirstSlideHovered, setIsFirstSlideHovered] = useState(false);
+  const [isFirstSlideClicked, setIsFirstSlideClicked] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [fullscreenIndex, setFullscreenIndex] = useState(0);
@@ -273,38 +273,51 @@ const MainPage = () => {
               className="w-full"
             >
               <CarouselContent className="ml-0">
-                {/* First slide - Split layout with circle badge */}
+                {/* First slide - Full-bleed image with overlay */}
                 <CarouselItem className="pl-0">
-                  <div className="h-screen relative overflow-hidden bg-black">
-                    {/* Left side - Text and circle */}
-                    <div className="absolute left-0 top-0 h-full w-[35%] bg-black z-10 flex flex-col">
+                  <div className="h-screen relative overflow-hidden bg-section-blue">
+                    {/* Full-width background image */}
+                    <div 
+                      className="absolute inset-0 cursor-pointer"
+                      onClick={() => {
+                        setIsFirstSlideClicked(true);
+                        setTimeout(() => carouselApi?.scrollNext(), 500);
+                      }}
+                    >
+                      <img 
+                        src="/campaigns/takeover_aftonbladet-2.png" 
+                        alt="Compricer Campaign" 
+                        className="w-full h-full transition-all duration-500"
+                        style={{
+                          objectFit: isFirstSlideClicked ? 'contain' : 'cover',
+                          objectPosition: 'left center'
+                        }}
+                      />
+                    </div>
+                    
+                    {/* Overlay content - slides out on click */}
+                    <div 
+                      className="absolute left-0 top-0 h-full z-10 transition-all duration-500 ease-out pointer-events-none"
+                      style={{
+                        transform: isFirstSlideClicked ? 'translateX(-100%)' : 'translateX(0)',
+                        opacity: isFirstSlideClicked ? 0 : 1
+                      }}
+                    >
                       {/* Circular badge */}
-                      <div className="absolute left-[12%] top-[12%] w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] 
+                      <div className="absolute left-[8%] top-[12%] w-[180px] h-[180px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] 
                                       rounded-full border-[3px] border-white flex items-center justify-center">
                         <span className="font-clash italic text-white text-xl md:text-2xl lg:text-4xl font-bold text-center leading-tight">
                           Creative<br />concept
                         </span>
                       </div>
                       
-                      {/* Body text */}
-                      <p className="absolute left-[12%] right-[10%] top-[48%] text-white text-sm md:text-base lg:text-lg leading-relaxed">
+                      {/* Body text - wider column */}
+                      <p className="absolute left-[8%] w-[50%] md:w-[45%] lg:w-[40%] top-[48%] text-white text-sm md:text-base lg:text-lg leading-relaxed">
                         Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, 
                         Lorem ipsum, Lorem ipsum, Lorem ipsum Lorem ipsum, Lorem ipsum, 
                         Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, 
                         Lorem ipsum, Lorem ipsum, Lorem ipsum,
                       </p>
-                    </div>
-                    
-                    {/* Right side - Full-bleed image */}
-                    <div 
-                      className="absolute right-0 top-0 h-full w-[65%] cursor-pointer"
-                      onClick={() => carouselApi?.scrollNext()}
-                    >
-                      <img 
-                        src="/campaigns/takeover_aftonbladet-2.png" 
-                        alt="Compricer Campaign" 
-                        className="w-full h-full object-cover"
-                      />
                     </div>
                     
                     {/* Navigation arrow */}
