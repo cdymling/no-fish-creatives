@@ -148,16 +148,16 @@ const MainPage = () => {
         <Home />
       </section>
       
-      <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-section-blue">
+      <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-white">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+            {isMobile ? <h1 className="font-clash text-[#5DA2BF] text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
                 <span className="block">work without</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">the fishy layers</Reveal>
                 <Reveal direction="right" delay={200} repeat as="span" className="block text-[#df3d26]">of an agency.</Reveal>
-              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+              </h1> : <h1 className={`font-clash text-[#5DA2BF] text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Creative work</span>
                 <span className="block">without the</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">fishy layers</Reveal>
@@ -167,30 +167,30 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="about-content" className="snap-start h-screen w-full relative bg-section-blue">
+      <section id="about-content" className="snap-start h-screen w-full relative bg-white">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <Reveal direction="right" delay={0} repeat>
-            <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
+            <h2 className="font-clash text-[#5DA2BF] text-4xl md:text-5xl font-bold mb-8">
               Here's how:
             </h2>
           </Reveal>
           
           <div className="space-y-3 md:space-y-12 max-w-5xl">
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
+              <p className="font-clash text-lg md:text-3xl leading-tight text-[#5DA2BF]">
                 <span className="text-[#df3d26] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
+              <p className="font-clash text-lg md:text-3xl leading-tight text-[#5DA2BF]">
                 <span className="text-[#df3d26] font-bold">#2</span> We're smart about production. When it makes sense, we do it ourselves, using AI or taking on tasks like directing and editing.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
+              <p className="font-clash text-lg md:text-3xl leading-tight text-[#5DA2BF]">
                 <span className="text-[#df3d26] font-bold">#3</span> We team up with specialists in strategy, design, and production only when needed, avoiding overlapping roles and making sure you only pay for what you need, when you need it.
               </p>
             </Reveal>
@@ -203,15 +203,15 @@ const MainPage = () => {
       </section>
 
       {/* Campaign Title Section */}
-      <section id="campaign-title" className="snap-start h-screen w-full relative bg-section-blue">
+      <section id="campaign-title" className="snap-start h-screen w-full relative bg-white">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+            {isMobile ? <h1 className="font-clash text-[#5DA2BF] text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Our latest case</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">fresh of the</Reveal>
                 <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">Hook:</Reveal>
-              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+              </h1> : <h1 className={`font-clash text-[#5DA2BF] text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Our latest case</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">fresh of the</Reveal>
                 <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">Hook:</Reveal>
@@ -264,7 +264,7 @@ const MainPage = () => {
         </div>
       )}
 
-      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-section-blue overflow-hidden">
+      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-white overflow-hidden">
         <div className="h-screen w-full relative">
           <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
             <Carousel 
@@ -289,7 +289,7 @@ const MainPage = () => {
               <CarouselContent className="ml-0">
                 {/* First slide - Full-bleed image with overlay */}
                 <CarouselItem className="pl-0">
-                  <div className="h-screen relative overflow-hidden bg-section-blue">
+                  <div className="h-screen relative overflow-hidden bg-white">
                     {/* Full-width background image */}
                     <div 
                       className="absolute inset-0 cursor-pointer"
@@ -327,7 +327,7 @@ const MainPage = () => {
                     
                     {/* Navigation arrows */}
                     <div className="absolute right-6 top-1/2 -translate-y-1/2 z-20">
-                      <ChevronRight className="w-10 h-10 text-white opacity-80" strokeWidth={3} />
+                      <ChevronRight className="w-10 h-10 text-[#5DA2BF] opacity-80" strokeWidth={3} />
                     </div>
                     
                     {/* Left arrow - shows after first slide is clicked */}
@@ -339,7 +339,7 @@ const MainPage = () => {
                           carouselApi?.scrollPrev();
                         }}
                       >
-                        <ChevronLeft className="w-10 h-10 text-white opacity-80" strokeWidth={3} />
+                        <ChevronLeft className="w-10 h-10 text-[#5DA2BF] opacity-80" strokeWidth={3} />
                       </div>
                     )}
                   </div>
@@ -347,7 +347,7 @@ const MainPage = () => {
                 {/* Fullscreen slides with black background */}
                 <CarouselItem className="pl-0">
                   <div 
-                    className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
+                    className="h-screen bg-white flex items-center justify-center cursor-pointer"
                     onClick={() => carouselApi?.scrollNext()}
                   >
                     <img 
@@ -359,7 +359,7 @@ const MainPage = () => {
                 </CarouselItem>
                 <CarouselItem className="pl-0">
                   <div 
-                    className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
+                    className="h-screen bg-white flex items-center justify-center cursor-pointer"
                     onClick={() => carouselApi?.scrollNext()}
                   >
                     <img 
@@ -371,7 +371,7 @@ const MainPage = () => {
                 </CarouselItem>
                 <CarouselItem className="pl-0">
                   <div 
-                    className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
+                    className="h-screen bg-white flex items-center justify-center cursor-pointer"
                     onClick={() => carouselApi?.scrollNext()}
                   >
                     <img 
@@ -393,19 +393,19 @@ const MainPage = () => {
       </section>
 
       {/* Services Title Section */}
-      <section id="services-title" className="snap-start h-screen w-full relative bg-section-blue">
+      <section id="services-title" className="snap-start h-screen w-full relative bg-white">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? (
-              <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+              <h1 className="font-clash text-[#5DA2BF] text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">You don't</span>
                 <span className="block">need a big</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">agency to do</Reveal>
                 <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">big things.</Reveal>
               </h1>
             ) : (
-              <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+              <h1 className={`font-clash text-[#5DA2BF] text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">You don't</span>
                 <span className="block">need a big</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">agency to do</Reveal>
@@ -416,32 +416,32 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section id="services-content" className="snap-start h-screen w-full relative bg-section-blue">
+      <section id="services-content" className="snap-start h-screen w-full relative bg-white">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
           <Reveal direction="left" delay={0} repeat>
             <div>
-              <p className="font-clash text-white text-4xl md:text-5xl font-bold mb-6 md:mb-8">
+              <p className="font-clash text-[#5DA2BF] text-4xl md:text-5xl font-bold mb-6 md:mb-8">
                 A small, AI-positive senior team can get big things done for less. Things like:
               </p>
             </div>
           </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
+              <p className="font-space text-lg md:text-3xl leading-tight text-[#5DA2BF]">
                 <span className="text-[#df3d26]">→</span> Developing concepts, campaigns, or just a single ad, and producing them when possible.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
+              <p className="font-space text-lg md:text-3xl leading-tight text-[#5DA2BF]">
                 <span className="text-[#df3d26]">→</span> Leading creatively from initial idea to final delivery.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
+              <p className="font-space text-lg md:text-3xl leading-tight text-[#5DA2BF]">
                 <span className="text-[#df3d26]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
               </p>
             </Reveal>
@@ -453,7 +453,7 @@ const MainPage = () => {
       <section id="services-video-spacer" className="snap-start h-screen w-full relative">
       </section>
 
-      <section id="services-video" className="snap-start h-screen w-full bg-section-blue">
+      <section id="services-video" className="snap-start h-screen w-full bg-white">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/services-video.mp4" type="video/mp4" />
@@ -462,16 +462,16 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-title" className="snap-start h-screen w-full relative bg-section-blue">
+      <section id="clients-title" className="snap-start h-screen w-full relative bg-white">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+            {isMobile ? <h1 className="font-clash text-[#5DA2BF] text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">These wise</span>
                 <span className="block">clients have</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">gone for a</Reveal>
                 <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">dip with us:</Reveal>
-              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+              </h1> : <h1 className={`font-clash text-[#5DA2BF] text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">These wise</span>
                 <span className="block">clients have</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">gone for a</Reveal>
@@ -481,7 +481,7 @@ const MainPage = () => {
         </div>
       </section>
       
-      <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full relative bg-section-blue">
+      <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full relative bg-white">
         <BubbleAnimation />
         <div className="h-[100svh] md:h-screen w-full px-6 flex flex-col justify-center items-center pt-0 md:pt-0">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-4xl items-center justify-items-center">
@@ -500,16 +500,16 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact-title" className="snap-start h-screen w-full relative bg-section-blue">
+      <section id="contact-title" className="snap-start h-screen w-full relative bg-white">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+            {isMobile ? <h1 className="font-clash text-[#5DA2BF] text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Also want</span>
                 <span className="block">to work with</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">highly awarded*</Reveal>
                 <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">senior** creatives?</Reveal>
-              </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
+              </h1> : <h1 className={`font-clash text-[#5DA2BF] text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Also want</span>
                 <span className="block">to work with</span>
                 <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">awarded senior*</Reveal>
@@ -518,23 +518,23 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section id="contact" className="snap-start h-screen w-full relative bg-section-blue">
+      <section id="contact" className="snap-start h-screen w-full relative bg-white">
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <div className="space-y-3 md:space-y-8 max-w-5xl">
             <div>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
+              <p className="font-space text-lg md:text-3xl leading-tight text-[#5DA2BF]">
                 +46 70 492 00 08 · info@nofish.se
               </p>
             </div>
             
-            <div className="font-space text-white/60 text-sm md:text-base leading-relaxed max-w-4xl">
+            <div className="font-space text-[#5DA2BF]/60 text-sm md:text-base leading-relaxed max-w-4xl">
               <p>*Have been recognized over 80 times at award shows such as Cannes Lions, Eurobest, Epica, The One Show, Clio, New York Festivals, Webbys, and Guldägget. Over 20 years of experience as a Creative Director/Copywriter and Art Director, working at agencies such as KING, Naked, and M&amp;C Saatchi, for clients including Clas Ohlson, ICA, Com Hem, Nike, Adidas, Cloetta, Taxi Stockholm, the Red Cross Sweden, and Aftonbladet.</p>
             </div>
           </div>
         </div>
       </section>
-      <section id="work-video" className="snap-start h-screen w-full bg-section-blue">
+      <section id="work-video" className="snap-start h-screen w-full bg-white">
         <div className="h-screen w-full relative overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
             <source src="/work-video.mp4" type="video/mp4" />
