@@ -351,17 +351,13 @@ const MainPage = () => {
                 <CarouselItem className="pl-0">
                   <div 
                     className="h-screen relative overflow-hidden cursor-pointer bg-[#5DA2BF]"
-                    onClick={() => {
-                      setIsFirstSlideClicked(true);
-                      setTimeout(() => carouselApi?.scrollNext(), 500);
-                    }}
+                    onClick={() => carouselApi?.scrollNext()}
                   >
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className="w-full h-full transition-all duration-500"
+                      className="w-full h-full object-cover"
                       style={{
-                        objectFit: isFirstSlideClicked ? 'contain' : 'cover',
                         objectPosition: 'left center'
                       }}
                     />
@@ -369,8 +365,7 @@ const MainPage = () => {
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        setIsFirstSlideClicked(true);
-                        setTimeout(() => carouselApi?.scrollNext(), 500);
+                        carouselApi?.scrollNext();
                       }}
                       className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/80 hover:text-white transition-colors"
                       aria-label="Next slide"
