@@ -229,7 +229,7 @@ const MainPage = () => {
       
       <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-section-blue">
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center pb-24'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
@@ -294,7 +294,7 @@ const MainPage = () => {
       {/* Campaign Title Section */}
       <section id="campaign-title" ref={campaignTitleRef} className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center pb-24'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Our latest case</span>
@@ -487,7 +487,7 @@ const MainPage = () => {
       {/* Services Title Section */}
       <section id="services-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center pb-24'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? (
               <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
@@ -558,7 +558,7 @@ const MainPage = () => {
       
       <section id="clients-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center pb-24'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">These wise</span>
@@ -606,7 +606,7 @@ const MainPage = () => {
       </section>
       <section id="contact-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
-        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
+        <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center pb-24'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Also want</span>
