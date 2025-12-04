@@ -200,7 +200,7 @@ export default {
 				'letter-wave-4': 'letter-wave 6s ease-in-out infinite 0.6s',
 				'letter-wave-5': 'letter-wave 6s ease-in-out infinite 0.8s',
 				'letter-wave-6': 'letter-wave 6s ease-in-out infinite 1s',
-				'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
+				'pulse-subtle': 'pulse-subtle 1.5s ease-in-out infinite',
 			}
 		}
 	},
