@@ -35,8 +35,17 @@ const MainPage = () => {
   const [fullscreenIndex, setFullscreenIndex] = useState(0);
   const [isCampaignSectionVisible, setIsCampaignSectionVisible] = useState(false);
   const [isBadgeHidden, setIsBadgeHidden] = useState(false);
+  const [showDownArrows, setShowDownArrows] = useState(false);
   const campaignTitleRef = useRef<HTMLElement>(null);
   const carouselSpacerRef = useRef<HTMLElement>(null);
+  
+  // Delayed down arrows - appear after 1.5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowDownArrows(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
   
   const campaignImages = [
     { src: "/campaigns/takeover_aftonbladet-2.png", alt: "Compricer Campaign" },
@@ -190,8 +199,13 @@ const MainPage = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <section id="home" className="snap-start h-screen w-full">
+      <section id="home" className="snap-start h-screen w-full relative">
         <Home />
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
       
       <section id="about-title" className="snap-start h-screen w-full relative z-10 bg-section-blue">
@@ -211,9 +225,11 @@ const MainPage = () => {
               </h1>}
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-          <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
-        </div>
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
       
       <section id="about-content" className="snap-start h-screen w-full relative bg-section-blue">
@@ -245,6 +261,11 @@ const MainPage = () => {
             </Reveal>
           </div>
         </div>
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
 
       {/* Empty section showing background video */}
@@ -267,9 +288,11 @@ const MainPage = () => {
               </h1>}
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-          <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
-        </div>
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
 
       {/* Creative Concept badge - fixed position, visible across sections */}
@@ -367,30 +390,6 @@ const MainPage = () => {
                         objectPosition: 'left center'
                       }}
                     />
-                    
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        carouselApi?.scrollNext();
-                      }}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/80 hover:text-white transition-colors"
-                      aria-label="Next slide"
-                    >
-                      <ChevronRight className="w-10 h-10 md:w-12 md:h-12" strokeWidth={3} />
-                    </button>
-                    
-                    {currentSlide > 0 && (
-                      <button 
-                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/80 hover:text-white transition-colors"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          carouselApi?.scrollPrev();
-                        }}
-                        aria-label="Previous slide"
-                      >
-                        <ChevronLeft className="w-10 h-10 md:w-12 md:h-12" strokeWidth={3} />
-                      </button>
-                    )}
                   </div>
                 </CarouselItem>
                 <CarouselItem className="pl-0">
@@ -455,7 +454,7 @@ const MainPage = () => {
             )}
 
             {/* Down arrow - show on last slide */}
-            {currentSlide === 3 && (
+            {currentSlide === 3 && showDownArrows && (
               <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
                 <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
               </div>
@@ -491,6 +490,11 @@ const MainPage = () => {
             )}
           </div>
         </div>
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
 
       <section id="services-content" className="snap-start h-screen w-full relative bg-section-blue">
@@ -524,6 +528,11 @@ const MainPage = () => {
             </Reveal>
           </div>
         </div>
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
 
       {/* Empty section showing background video */}
@@ -556,6 +565,11 @@ const MainPage = () => {
               </h1>}
           </div>
         </div>
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
       
       <section id="clients-content" className="snap-start h-[100svh] md:h-screen w-full relative bg-section-blue">
@@ -576,6 +590,11 @@ const MainPage = () => {
             </Reveal>
           </div>
         </div>
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
       <section id="contact-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
@@ -594,6 +613,11 @@ const MainPage = () => {
               </h1>}
           </div>
         </div>
+        {showDownArrows && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+          </div>
+        )}
       </section>
       <section id="contact" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
