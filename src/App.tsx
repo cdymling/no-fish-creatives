@@ -395,15 +395,18 @@ const MainPage = () => {
               className="w-full"
             >
               <CarouselContent className="ml-0">
-                {/* First slide - mobil-2 with badge overlay */}
+                {/* First slide - video with badge overlay */}
                 <CarouselItem className="pl-0">
                   <div 
                     className="h-screen relative overflow-hidden cursor-pointer bg-[#5DA2BF]"
                     onClick={() => carouselApi?.scrollNext()}
                   >
-                    <img 
-                      src="/campaigns/mobil-2.png" 
-                      alt="Mobile Campaign" 
+                    <video 
+                      src="/campaigns/sequence-01.mp4" 
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                       className="w-full h-full object-contain md:object-cover"
                       style={{
                         objectPosition: 'left center'
