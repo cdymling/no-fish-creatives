@@ -270,11 +270,15 @@ const MainPage = () => {
       <img 
         src="/campaigns/creative-concept-badge.png"
         alt="Creative Concept"
-        className="fixed left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-[transform,opacity] ease-out pointer-events-none z-30"
+        className="fixed left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto pointer-events-none z-30"
         style={{ 
           opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
-          transform: 'translateX(0) translateY(-50%) scale(1)',
-          transitionDuration: (isBadgeHidden || !isCampaignSectionVisible) ? '200ms' : '700ms',
+          transform: isCampaignSectionVisible
+            ? 'translateX(0) translateY(-50%) scale(1)' 
+            : 'translateX(-150%) translateY(-50%) scale(0.7)',
+          transition: (isBadgeHidden || !isCampaignSectionVisible || currentSlide > 0)
+            ? 'opacity 200ms ease-out'
+            : 'transform 700ms ease-out, opacity 700ms ease-out',
         }}
       />
 
