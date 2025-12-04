@@ -243,6 +243,19 @@ const MainPage = () => {
         </div>
       </section>
 
+      {/* Creative Concept badge - fixed position, visible across sections */}
+      <img 
+        src="/campaigns/creative-concept-badge.png"
+        alt="Creative Concept"
+        className="fixed left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-all duration-700 ease-out pointer-events-none z-30"
+        style={{ 
+          opacity: (isFirstSlideClicked || currentSlide > 0) ? 0 : (isCampaignSectionVisible ? 1 : 0),
+          transform: isCampaignSectionVisible
+            ? 'translateY(-50%) scale(1)' 
+            : 'translateY(-150%) scale(0.7)',
+        }}
+      />
+
       {/* Carousel Section */}
       {/* Fullscreen modal with navigation */}
       {isFullscreen && (
@@ -326,19 +339,6 @@ const MainPage = () => {
                       style={{
                         objectFit: isFirstSlideClicked ? 'contain' : 'cover',
                         objectPosition: 'left center'
-                      }}
-                    />
-                    
-                    {/* Creative Concept badge - scroll down animation with scale */}
-                    <img 
-                      src="/campaigns/creative-concept-badge.png"
-                      alt="Creative Concept"
-                      className="absolute left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-all duration-700 ease-out pointer-events-none"
-                      style={{ 
-                        opacity: (isFirstSlideClicked || currentSlide > 0) ? 0 : (isCampaignSectionVisible ? 1 : 0),
-                        transform: isCampaignSectionVisible
-                          ? 'translateY(-50%) scale(1)' 
-                          : 'translateY(-150%) scale(0.7)',
                       }}
                     />
                     
