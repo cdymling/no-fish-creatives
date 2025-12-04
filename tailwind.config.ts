@@ -167,6 +167,16 @@ export default {
 					'75%': { 
 						transform: 'translateY(-0.08em) rotate(0.3deg) scaleY(1.01)', 
 					}
+				},
+				'pulse-subtle': {
+					'0%, 100%': { 
+						transform: 'translateY(-50%) scale(1)',
+						opacity: '1'
+					},
+					'50%': { 
+						transform: 'translateY(-50%) scale(1.03)',
+						opacity: '0.9'
+					}
 				}
 			},
 			animation: {
@@ -190,6 +200,7 @@ export default {
 				'letter-wave-4': 'letter-wave 6s ease-in-out infinite 0.6s',
 				'letter-wave-5': 'letter-wave 6s ease-in-out infinite 0.8s',
 				'letter-wave-6': 'letter-wave 6s ease-in-out infinite 1s',
+				'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
 			}
 		}
 	},
