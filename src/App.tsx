@@ -401,13 +401,26 @@ const MainPage = () => {
                     className="h-screen relative overflow-hidden cursor-pointer bg-[#5DA2BF]"
                     onClick={() => carouselApi?.scrollNext()}
                   >
+                    {/* Mobile video */}
+                    <video 
+                      src="/campaigns/sequence-01-mobile.mp4" 
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-contain md:hidden"
+                      style={{
+                        objectPosition: 'center center'
+                      }}
+                    />
+                    {/* Desktop video */}
                     <video 
                       src="/campaigns/sequence-01.mp4" 
                       autoPlay
                       loop
                       muted
                       playsInline
-                      className="w-full h-full object-contain md:object-cover"
+                      className="w-full h-full object-cover hidden md:block"
                       style={{
                         objectPosition: 'left center'
                       }}
