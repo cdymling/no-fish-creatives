@@ -143,7 +143,7 @@ const MainPage = () => {
 
   // IntersectionObserver to hide badge when not on carousel section
   useEffect(() => {
-    const carouselSection = document.getElementById('campaigns-carousel');
+    const carouselSection = document.getElementById('campaign-carousel');
     if (!carouselSection) return;
 
     const observer = new IntersectionObserver(
