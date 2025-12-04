@@ -221,7 +221,7 @@ const MainPage = () => {
       <section id="home" className="snap-start h-screen w-full relative">
         <Home />
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
@@ -245,7 +245,7 @@ const MainPage = () => {
           </div>
         </div>
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
@@ -281,7 +281,7 @@ const MainPage = () => {
           </div>
         </div>
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
@@ -308,7 +308,7 @@ const MainPage = () => {
           </div>
         </div>
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
@@ -474,7 +474,7 @@ const MainPage = () => {
 
             {/* Down arrow - always show on carousel */}
             {showDownArrows && (
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+              <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
                 <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
               </div>
             )}
@@ -507,7 +507,7 @@ const MainPage = () => {
           </div>
         </div>
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
@@ -545,7 +545,7 @@ const MainPage = () => {
           </div>
         </div>
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
@@ -574,7 +574,7 @@ const MainPage = () => {
           </div>
         </div>
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
@@ -599,7 +599,7 @@ const MainPage = () => {
           </div>
         </div>
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
@@ -622,7 +622,7 @@ const MainPage = () => {
           </div>
         </div>
         {showDownArrows && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
             <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
           </div>
         )}
