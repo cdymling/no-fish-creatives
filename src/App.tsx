@@ -340,8 +340,8 @@ const MainPage = () => {
               opts={{
                 align: "center",
                 loop: false,
-                dragFree: true,
-                duration: 20,
+                dragFree: false,
+                duration: 30,
                 skipSnaps: false,
               }}
               className="w-full"
