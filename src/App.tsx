@@ -34,7 +34,7 @@ const MainPage = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [fullscreenIndex, setFullscreenIndex] = useState(0);
   const [isCampaignSectionVisible, setIsCampaignSectionVisible] = useState(false);
-  const campaignSectionRef = useRef<HTMLElement>(null);
+  const campaignTitleRef = useRef<HTMLElement>(null);
   
   const campaignImages = [
     { src: "/campaigns/takeover_aftonbladet-2.png", alt: "Compricer Campaign" },
@@ -118,20 +118,21 @@ const MainPage = () => {
     };
   }, [carouselApi]);
 
-  // IntersectionObserver for campaign section badge animation
+  // IntersectionObserver for campaign section badge animation - triggers when leaving campaign-title
   useEffect(() => {
-    const element = campaignSectionRef.current;
+    const element = campaignTitleRef.current;
     if (!element) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        // Show badge when campaign-title section starts leaving viewport (scrolling down)
+        if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
           setIsCampaignSectionVisible(true);
-        } else {
+        } else if (entry.isIntersecting) {
           setIsCampaignSectionVisible(false);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     observer.observe(element);
@@ -225,7 +226,7 @@ const MainPage = () => {
       </section>
 
       {/* Campaign Title Section */}
-      <section id="campaign-title" className="snap-start h-screen w-full relative bg-section-blue">
+      <section id="campaign-title" ref={campaignTitleRef} className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
@@ -286,7 +287,7 @@ const MainPage = () => {
         </div>
       )}
 
-      <section id="campaign-carousel" ref={campaignSectionRef} className="snap-start h-screen w-full relative bg-section-blue overflow-hidden">
+      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-section-blue overflow-hidden">
         <div className="h-screen w-full relative">
           <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
             <Carousel 
