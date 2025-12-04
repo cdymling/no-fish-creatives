@@ -33,6 +33,8 @@ const MainPage = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [fullscreenIndex, setFullscreenIndex] = useState(0);
+  const [isCampaignSectionVisible, setIsCampaignSectionVisible] = useState(false);
+  const campaignSectionRef = useRef<HTMLElement>(null);
   
   const campaignImages = [
     { src: "/campaigns/takeover_aftonbladet-2.png", alt: "Compricer Campaign" },
@@ -115,6 +117,26 @@ const MainPage = () => {
       carouselApi.off('select', onSelect);
     };
   }, [carouselApi]);
+
+  // IntersectionObserver for campaign section badge animation
+  useEffect(() => {
+    const element = campaignSectionRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsCampaignSectionVisible(true);
+        } else {
+          setIsCampaignSectionVisible(false);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   const videoPosition = 'object-center';
 
@@ -264,7 +286,7 @@ const MainPage = () => {
         </div>
       )}
 
-      <section id="campaign-carousel" className="snap-start h-screen w-full relative bg-section-blue overflow-hidden">
+      <section id="campaign-carousel" ref={campaignSectionRef} className="snap-start h-screen w-full relative bg-section-blue overflow-hidden">
         <div className="h-screen w-full relative">
           <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
             <Carousel 
@@ -306,12 +328,17 @@ const MainPage = () => {
                       }}
                     />
                     
-                    {/* Creative Concept badge - overlay that fades out */}
+                    {/* Creative Concept badge - scroll down animation with scale */}
                     <img 
                       src="/campaigns/creative-concept-badge.png"
                       alt="Creative Concept"
-                      className="absolute left-[5%] top-[10%] w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-opacity duration-500 pointer-events-none"
-                      style={{ opacity: isFirstSlideClicked ? 0 : 1 }}
+                      className="absolute left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-all duration-700 ease-out pointer-events-none"
+                      style={{ 
+                        opacity: isFirstSlideClicked ? 0 : (isCampaignSectionVisible ? 1 : 0),
+                        transform: isCampaignSectionVisible 
+                          ? 'translateY(-50%) scale(1)' 
+                          : 'translateY(-150%) scale(0.7)',
+                      }}
                     />
                     
                     <button
