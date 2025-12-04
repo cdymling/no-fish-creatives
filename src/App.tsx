@@ -120,39 +120,25 @@ const MainPage = () => {
     };
   }, [carouselApi]);
 
-  // State for badge entrance delay
-  const [isBadgeDelayComplete, setIsBadgeDelayComplete] = useState(false);
-
   // IntersectionObserver for campaign section badge animation - triggers when leaving campaign-title
   useEffect(() => {
     const element = campaignTitleRef.current;
     if (!element) return;
-
-    let delayTimer: NodeJS.Timeout;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         // Show badge when campaign-title section starts leaving viewport (scrolling down)
         if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
           setIsCampaignSectionVisible(true);
-          // Start 2.5s delay before badge animates in
-          delayTimer = setTimeout(() => {
-            setIsBadgeDelayComplete(true);
-          }, 2500);
         } else if (entry.isIntersecting) {
           setIsCampaignSectionVisible(false);
-          setIsBadgeDelayComplete(false);
-          clearTimeout(delayTimer);
         }
       },
       { threshold: 0.3 }
     );
 
     observer.observe(element);
-    return () => {
-      observer.disconnect();
-      clearTimeout(delayTimer);
-    };
+    return () => observer.disconnect();
   }, []);
 
   // IntersectionObserver to hide badge when not on carousel section
@@ -165,7 +151,6 @@ const MainPage = () => {
         // Hide badge when carousel section is less than 50% visible
         if (!entry.isIntersecting) {
           setIsBadgeHidden(true);
-          setIsBadgeDelayComplete(false);
         } else {
           setIsBadgeHidden(false);
         }
@@ -287,13 +272,9 @@ const MainPage = () => {
         alt="Creative Concept"
         className="fixed left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto pointer-events-none z-30"
         style={{ 
-          opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible || !isBadgeDelayComplete) ? 0 : 1,
-          transform: (isCampaignSectionVisible && isBadgeDelayComplete)
-            ? 'translateX(0) translateY(-50%) scale(1)' 
-            : 'translateX(-150%) translateY(-50%) scale(0.7)',
-          transition: (isBadgeHidden || !isCampaignSectionVisible || currentSlide > 0)
-            ? 'opacity 200ms ease-out'
-            : 'transform 700ms ease-out, opacity 700ms ease-out',
+          opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
+          transform: 'translateY(-50%)',
+          transition: 'opacity 300ms ease-out',
         }}
       />
 
