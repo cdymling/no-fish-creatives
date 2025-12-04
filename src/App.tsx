@@ -408,7 +408,7 @@ const MainPage = () => {
                       loop
                       muted
                       playsInline
-                      className="w-full h-full object-contain md:hidden"
+                      className="w-full h-full object-cover md:hidden"
                       style={{
                         objectPosition: 'center center'
                       }}
@@ -435,7 +435,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="h-full w-full object-contain md:object-cover"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
@@ -447,7 +447,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
-                      className="h-full w-full object-contain md:object-cover"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
@@ -459,7 +459,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/takeover_aftonbladet-2.png" 
                       alt="Compricer Campaign" 
-                      className="h-full w-full object-contain md:object-cover"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
