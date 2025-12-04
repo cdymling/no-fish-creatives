@@ -249,7 +249,7 @@ const MainPage = () => {
         alt="Creative Concept"
         className="fixed left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-all duration-700 ease-out pointer-events-none z-30"
         style={{ 
-          opacity: (isFirstSlideClicked || currentSlide > 0) ? 0 : (isCampaignSectionVisible ? 1 : 0),
+          opacity: currentSlide > 0 ? 0 : (isCampaignSectionVisible ? 1 : 0),
           transform: isCampaignSectionVisible
             ? 'translateY(-50%) scale(1)' 
             : 'translateY(-150%) scale(0.7)',
