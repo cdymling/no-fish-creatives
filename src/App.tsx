@@ -555,14 +555,6 @@ const MainPage = () => {
       <section id="services-video-spacer" className="snap-start h-screen w-full relative">
       </section>
 
-      <section id="services-video" className="snap-start h-screen w-full bg-section-blue">
-        <div className="h-screen w-full relative overflow-hidden">
-          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="/services-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </section>
       
       <section id="clients-title" className="snap-start h-screen w-full relative bg-section-blue">
         <BubbleAnimation />
