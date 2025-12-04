@@ -141,23 +141,24 @@ const MainPage = () => {
     return () => observer.disconnect();
   }, []);
 
-  // IntersectionObserver to hide badge when scrolling past carousel
+  // IntersectionObserver to hide badge when not on carousel section
   useEffect(() => {
-    const element = carouselSpacerRef.current;
-    if (!element) return;
+    const carouselSection = document.getElementById('campaigns-carousel');
+    if (!carouselSection) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        // Only show badge when carousel section is actually visible
+        if (!entry.isIntersecting) {
           setIsBadgeHidden(true);
         } else {
           setIsBadgeHidden(false);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     );
 
-    observer.observe(element);
+    observer.observe(carouselSection);
     return () => observer.disconnect();
   }, []);
 
@@ -271,8 +272,8 @@ const MainPage = () => {
         alt="Creative Concept"
         className="fixed left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-all duration-700 ease-out pointer-events-none z-30"
         style={{ 
-          opacity: (currentSlide > 0 || isBadgeHidden) ? 0 : (isCampaignSectionVisible ? 1 : 0),
-          transform: isCampaignSectionVisible
+          opacity: (currentSlide > 0 || isBadgeHidden) ? 0 : 1,
+          transform: !isBadgeHidden
             ? 'translateX(0) translateY(-50%) scale(1)' 
             : 'translateX(-150%) translateY(-50%) scale(0.7)',
         }}
