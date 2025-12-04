@@ -255,7 +255,7 @@ const MainPage = () => {
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <Reveal direction="right" delay={0} repeat>
-            <h2 className="font-clash text-white text-6xl md:text-8xl font-bold mb-8">
+            <h2 className="font-clash text-white text-4xl md:text-8xl font-bold mb-8">
               Here's how:
             </h2>
           </Reveal>
@@ -318,12 +318,12 @@ const MainPage = () => {
       <img 
         src="/campaigns/creative-concept-badge.png"
         alt="Creative Concept"
-        className={`fixed left-[5%] top-1/2 w-[180px] md:w-[240px] lg:w-[340px] h-auto pointer-events-none z-30 ${
+        className={`fixed w-[120px] md:w-[240px] lg:w-[340px] h-auto pointer-events-none z-30 left-1/2 -translate-x-1/2 top-6 md:left-[5%] md:translate-x-0 md:top-1/2 ${
           (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
         }`}
         style={{ 
           opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
-          transform: 'translateY(-50%)',
+          transform: isMobile ? 'translateX(-50%)' : 'translateY(-50%)',
           transition: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 'none' : 'opacity 300ms ease-out',
         }}
       />
@@ -404,7 +404,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/mobil-2.png" 
                       alt="Mobile Campaign" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain md:object-cover"
                       style={{
                         objectPosition: 'left center'
                       }}
@@ -419,7 +419,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain md:object-cover"
                     />
                   </div>
                 </CarouselItem>
@@ -431,7 +431,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain md:object-cover"
                     />
                   </div>
                 </CarouselItem>
@@ -443,7 +443,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/takeover_aftonbladet-2.png" 
                       alt="Compricer Campaign" 
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain md:object-cover"
                     />
                   </div>
                 </CarouselItem>
@@ -519,7 +519,7 @@ const MainPage = () => {
           <div className="space-y-3 md:space-y-8 max-w-5xl">
           <Reveal direction="left" delay={0} repeat>
             <div>
-              <p className="font-clash text-white text-6xl md:text-8xl font-bold mb-6 md:mb-8">
+              <p className="font-clash text-white text-3xl md:text-8xl font-bold mb-6 md:mb-8">
                 A small, AI-positive senior team can get big things done for less. Things like:
               </p>
             </div>
