@@ -36,15 +36,35 @@ const MainPage = () => {
   const [isCampaignSectionVisible, setIsCampaignSectionVisible] = useState(false);
   const [isBadgeHidden, setIsBadgeHidden] = useState(false);
   const [showDownArrows, setShowDownArrows] = useState(false);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const campaignTitleRef = useRef<HTMLElement>(null);
   const carouselSpacerRef = useRef<HTMLElement>(null);
   
-  // Delayed down arrows - appear after 1.5 seconds
+  // Down arrows appear with delay after user stops scrolling
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const handleScroll = () => {
+      setShowDownArrows(false);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      scrollTimeoutRef.current = setTimeout(() => {
+        setShowDownArrows(true);
+      }, 1500);
+    };
+
+    // Initial delay on load
+    const initialTimer = setTimeout(() => {
       setShowDownArrows(true);
     }, 1500);
-    return () => clearTimeout(timer);
+
+    window.addEventListener('scroll', handleScroll, true);
+    return () => {
+      clearTimeout(initialTimer);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      window.removeEventListener('scroll', handleScroll, true);
+    };
   }, []);
   
   const campaignImages = [
@@ -243,19 +263,19 @@ const MainPage = () => {
           
           <div className="space-y-3 md:space-y-12 max-w-5xl">
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-base md:text-2xl leading-tight text-white">
+              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#df3d26] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-base md:text-2xl leading-tight text-white">
+              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#df3d26] font-bold">#2</span> We're smart about production. When it makes sense, we do it ourselves, using AI or taking on tasks like directing and editing.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-base md:text-2xl leading-tight text-white">
+              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#df3d26] font-bold">#3</span> We team up with specialists in strategy, design, and production only when needed, avoiding overlapping roles and making sure you only pay for what you need, when you need it.
               </p>
             </Reveal>
@@ -453,8 +473,8 @@ const MainPage = () => {
               </button>
             )}
 
-            {/* Down arrow - show on last slide */}
-            {currentSlide === 3 && showDownArrows && (
+            {/* Down arrow - always show on carousel */}
+            {showDownArrows && (
               <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
                 <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
               </div>
@@ -510,19 +530,19 @@ const MainPage = () => {
           </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-base md:text-2xl leading-tight text-white">
+              <p className="font-space text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#df3d26]">→</span> Developing concepts, campaigns, or just a single ad, and producing them when possible.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-base md:text-2xl leading-tight text-white">
+              <p className="font-space text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#df3d26]">→</span> Leading creatively from initial idea to final delivery.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-base md:text-2xl leading-tight text-white">
+              <p className="font-space text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#df3d26]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
               </p>
             </Reveal>
