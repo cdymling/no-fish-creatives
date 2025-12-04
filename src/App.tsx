@@ -318,7 +318,7 @@ const MainPage = () => {
       <img 
         src="/campaigns/creative-concept-badge.png"
         alt="Creative Concept"
-        className={`fixed w-[150px] md:w-[240px] lg:w-[340px] h-auto pointer-events-none z-30 left-[35%] top-20 md:left-[5%] md:top-1/2 ${
+        className={`fixed w-[180px] md:w-[240px] lg:w-[340px] h-auto pointer-events-none z-30 left-[28%] top-20 md:left-[5%] md:top-1/2 ${
           (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
         }`}
         style={{ 
