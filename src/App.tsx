@@ -318,12 +318,12 @@ const MainPage = () => {
       <img 
         src="/campaigns/creative-concept-badge.png"
         alt="Creative Concept"
-        className={`fixed w-[120px] md:w-[240px] lg:w-[340px] h-auto pointer-events-none z-30 left-1/2 -translate-x-1/2 top-6 md:left-[5%] md:translate-x-0 md:top-1/2 ${
+        className={`fixed w-[120px] md:w-[240px] lg:w-[340px] h-auto pointer-events-none z-30 left-1/2 top-12 md:left-[5%] md:top-1/2 ${
           (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
         }`}
         style={{ 
           opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
-          transform: isMobile ? 'translateX(-50%)' : 'translateY(-50%)',
+          transform: isMobile ? 'translateX(-50%)' : 'translate(-5%, -50%)',
           transition: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 'none' : 'opacity 300ms ease-out',
         }}
       />
