@@ -236,26 +236,26 @@ const MainPage = () => {
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <Reveal direction="right" delay={0} repeat>
-            <h2 className="font-clash text-white text-4xl md:text-5xl font-bold mb-8">
+            <h2 className="font-clash text-white text-6xl md:text-8xl font-bold mb-8">
               Here's how:
             </h2>
           </Reveal>
           
           <div className="space-y-3 md:space-y-12 max-w-5xl">
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
+              <p className="font-clash text-base md:text-2xl leading-tight text-white">
                 <span className="text-[#df3d26] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
+              <p className="font-clash text-base md:text-2xl leading-tight text-white">
                 <span className="text-[#df3d26] font-bold">#2</span> We're smart about production. When it makes sense, we do it ourselves, using AI or taking on tasks like directing and editing.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-clash text-lg md:text-3xl leading-tight text-white">
+              <p className="font-clash text-base md:text-2xl leading-tight text-white">
                 <span className="text-[#df3d26] font-bold">#3</span> We team up with specialists in strategy, design, and production only when needed, avoiding overlapping roles and making sure you only pay for what you need, when you need it.
               </p>
             </Reveal>
@@ -503,26 +503,26 @@ const MainPage = () => {
           <div className="space-y-3 md:space-y-8 max-w-5xl">
           <Reveal direction="left" delay={0} repeat>
             <div>
-              <p className="font-clash text-white text-4xl md:text-5xl font-bold mb-6 md:mb-8">
+              <p className="font-clash text-white text-6xl md:text-8xl font-bold mb-6 md:mb-8">
                 A small, AI-positive senior team can get big things done for less. Things like:
               </p>
             </div>
           </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
+              <p className="font-space text-base md:text-2xl leading-tight text-white">
                 <span className="text-[#df3d26]">→</span> Developing concepts, campaigns, or just a single ad, and producing them when possible.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
+              <p className="font-space text-base md:text-2xl leading-tight text-white">
                 <span className="text-[#df3d26]">→</span> Leading creatively from initial idea to final delivery.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
-              <p className="font-space text-lg md:text-3xl leading-tight text-white">
+              <p className="font-space text-base md:text-2xl leading-tight text-white">
                 <span className="text-[#df3d26]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
               </p>
             </Reveal>
