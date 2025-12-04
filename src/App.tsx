@@ -34,7 +34,9 @@ const MainPage = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [fullscreenIndex, setFullscreenIndex] = useState(0);
   const [isCampaignSectionVisible, setIsCampaignSectionVisible] = useState(false);
+  const [isBadgeHidden, setIsBadgeHidden] = useState(false);
   const campaignTitleRef = useRef<HTMLElement>(null);
+  const carouselSpacerRef = useRef<HTMLElement>(null);
   
   const campaignImages = [
     { src: "/campaigns/takeover_aftonbladet-2.png", alt: "Compricer Campaign" },
@@ -133,6 +135,26 @@ const MainPage = () => {
         }
       },
       { threshold: 0.3 }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  // IntersectionObserver to hide badge when scrolling past carousel
+  useEffect(() => {
+    const element = carouselSpacerRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsBadgeHidden(true);
+        } else {
+          setIsBadgeHidden(false);
+        }
+      },
+      { threshold: 0.1 }
     );
 
     observer.observe(element);
@@ -249,10 +271,10 @@ const MainPage = () => {
         alt="Creative Concept"
         className="fixed left-[5%] top-1/2 w-[150px] md:w-[200px] lg:w-[280px] h-auto transition-all duration-700 ease-out pointer-events-none z-30"
         style={{ 
-          opacity: currentSlide > 0 ? 0 : (isCampaignSectionVisible ? 1 : 0),
+          opacity: (currentSlide > 0 || isBadgeHidden) ? 0 : (isCampaignSectionVisible ? 1 : 0),
           transform: isCampaignSectionVisible
-            ? 'translateY(-50%) scale(1)' 
-            : 'translateY(-150%) scale(0.7)',
+            ? 'translateX(0) translateY(-50%) scale(1)' 
+            : 'translateX(-150%) translateY(-50%) scale(0.7)',
         }}
       />
 
@@ -412,7 +434,7 @@ const MainPage = () => {
       </section>
 
       {/* Empty section showing background video */}
-      <section id="carousel-video-spacer" className="snap-start h-screen w-full relative">
+      <section id="carousel-video-spacer" ref={carouselSpacerRef} className="snap-start h-screen w-full relative">
       </section>
 
       {/* Services Title Section */}
