@@ -551,6 +551,9 @@ const MainPage = () => {
         )}
       </section>
 
+      {/* Empty section showing background video */}
+      <section id="services-video-spacer" className="snap-start h-screen w-full relative">
+      </section>
 
       <section id="services-video" className="snap-start h-screen w-full bg-section-blue">
         <div className="h-screen w-full relative overflow-hidden">
