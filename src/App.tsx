@@ -38,7 +38,6 @@ const MainPage = () => {
   const [showDownArrows, setShowDownArrows] = useState(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const campaignTitleRef = useRef<HTMLElement>(null);
-  const carouselSpacerRef = useRef<HTMLElement>(null);
   
   // Down arrows appear with delay after user stops scrolling
   useEffect(() => {
@@ -484,9 +483,6 @@ const MainPage = () => {
         </div>
       </section>
 
-      {/* Empty section showing background video */}
-      <section id="carousel-video-spacer" ref={carouselSpacerRef} className="snap-start h-screen w-full relative">
-      </section>
 
       {/* Services Title Section */}
       <section id="services-title" className="snap-start h-screen w-full relative bg-section-blue">
@@ -555,9 +551,6 @@ const MainPage = () => {
         )}
       </section>
 
-      {/* Empty section showing background video */}
-      <section id="services-video-spacer" className="snap-start h-screen w-full relative">
-      </section>
 
       <section id="services-video" className="snap-start h-screen w-full bg-section-blue">
         <div className="h-screen w-full relative overflow-hidden">
