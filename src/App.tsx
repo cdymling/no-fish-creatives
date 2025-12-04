@@ -148,14 +148,14 @@ const MainPage = () => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Hide badge when carousel section is less than 50% visible
+        // Hide badge when carousel section is less than 80% visible
         if (!entry.isIntersecting) {
           setIsBadgeHidden(true);
         } else {
           setIsBadgeHidden(false);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.8 }
     );
 
     observer.observe(carouselSection);
