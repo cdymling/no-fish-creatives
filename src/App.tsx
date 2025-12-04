@@ -18,7 +18,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "./components/ui/carousel";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft, ChevronDown } from "lucide-react";
 
 // Combined client logos
 const combinedClientsLogo = "/clients/combined-clients.png";
@@ -211,6 +211,9 @@ const MainPage = () => {
               </h1>}
           </div>
         </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+        </div>
       </section>
       
       <section id="about-content" className="snap-start h-screen w-full relative bg-section-blue">
@@ -263,6 +266,9 @@ const MainPage = () => {
                 <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">Hook:</Reveal>
               </h1>}
           </div>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
         </div>
       </section>
 
@@ -425,6 +431,35 @@ const MainPage = () => {
                 </CarouselItem>
               </CarouselContent>
             </Carousel>
+
+            {/* Left arrow - show when not on first slide */}
+            {currentSlide > 0 && (
+              <button
+                onClick={() => carouselApi?.scrollPrev()}
+                className="absolute left-6 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-12 h-12 md:w-16 md:h-16" strokeWidth={2} />
+              </button>
+            )}
+
+            {/* Right arrow - show when not on last slide */}
+            {currentSlide < 3 && (
+              <button
+                onClick={() => carouselApi?.scrollNext()}
+                className="absolute right-6 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-12 h-12 md:w-16 md:h-16" strokeWidth={2} />
+              </button>
+            )}
+
+            {/* Down arrow - show on last slide */}
+            {currentSlide === 3 && (
+              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+                <ChevronDown className="w-10 h-10 md:w-12 md:h-12 text-white/70" strokeWidth={2} />
+              </div>
+            )}
 
           </div>
         </div>
