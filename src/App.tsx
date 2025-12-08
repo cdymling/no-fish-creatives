@@ -433,8 +433,8 @@ const MainPage = () => {
                     onClick={() => carouselApi?.scrollNext()}
                   >
                     <img 
-                      src="/campaigns/tunnelbana_bilder-2.png" 
-                      alt="Tunnelbana Bilder Campaign" 
+                      src="/campaigns/tunnelbana_perong.png" 
+                      alt="Tunnelbana Perong Campaign" 
                       className="h-full w-full object-cover"
                     />
                   </div>
