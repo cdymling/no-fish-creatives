@@ -435,7 +435,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/tunnelbana_perong.png" 
                       alt="Tunnelbana Perong Campaign" 
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   </div>
                 </CarouselItem>
