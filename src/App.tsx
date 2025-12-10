@@ -328,16 +328,16 @@ const MainPage = () => {
         }}
       />
       
-      {/* Compricer logo - centered below Creative Concept badge */}
+      {/* Compricer logo - below Creative Concept badge */}
       <img 
         src="/clients/compricer-logo.png"
         alt="Compricer"
-        className={`fixed w-[120px] md:w-[160px] lg:w-[200px] h-auto pointer-events-none z-30 left-[28%] top-44 md:left-[calc(5%+120px)] md:top-[calc(50%+140px)] lg:left-[calc(5%+170px)] lg:top-[calc(50%+180px)] ${
+        className={`fixed w-[120px] md:w-[160px] lg:w-[200px] h-auto pointer-events-none z-30 left-[28%] top-40 md:left-[5%] md:top-[60%] ${
           (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
         }`}
         style={{ 
           opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
-          transform: 'translateX(-50%)',
+          transform: isMobile ? 'translateX(-50%)' : 'translate(-5%, -50%)',
           transition: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 'none' : 'opacity 300ms ease-out',
         }}
       />
