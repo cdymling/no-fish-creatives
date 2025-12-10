@@ -448,7 +448,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/tunnelbana_copy_desktop.png" 
                       alt="Tunnelbana Copy Campaign" 
-                      className="hidden lg:block h-full w-full object-cover"
+                      className="hidden lg:block h-full w-full object-cover object-center"
                     />
                     {/* Mobile/Tablet: portrait version */}
                     <img 
