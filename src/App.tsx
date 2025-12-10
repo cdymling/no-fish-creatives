@@ -438,11 +438,17 @@ const MainPage = () => {
                       alt="Tunnelbana Bilder Campaign" 
                       className="hidden lg:block h-full w-full object-cover"
                     />
-                    {/* Mobile/Tablet: original version */}
+                    {/* Mobile: new standing image */}
+                    <img 
+                      src="/campaigns/tunnelbana_perong_mobile.png" 
+                      alt="Tunnelbana Bilder Campaign" 
+                      className="md:hidden h-full w-full object-cover"
+                    />
+                    {/* Tablet: original version */}
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="lg:hidden h-full w-full object-cover"
+                      className="hidden md:block lg:hidden h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
