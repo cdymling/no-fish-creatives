@@ -318,7 +318,7 @@ const MainPage = () => {
       <img 
         src="/campaigns/creative-concept-text.png"
         alt="Creative Concept"
-        className={`fixed w-[180px] md:w-[240px] lg:w-[340px] h-auto pointer-events-none z-30 left-[28%] top-16 md:left-[5%] md:top-1/2 ${
+        className={`fixed w-[180px] md:w-[280px] lg:w-[400px] h-auto pointer-events-none z-30 left-[28%] top-16 md:left-[5%] md:top-1/2 ${
           (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
         }`}
         style={{ 
@@ -332,12 +332,12 @@ const MainPage = () => {
       <img 
         src="/clients/compricer-logo.png"
         alt="Compricer"
-        className={`fixed w-[120px] md:w-[160px] lg:w-[200px] h-auto pointer-events-none z-30 left-[28%] top-40 md:left-[5%] md:top-[60%] ${
+        className={`fixed w-[120px] md:w-[180px] lg:w-[240px] h-auto pointer-events-none z-30 left-[28%] top-40 md:left-[10%] md:top-[62%] ${
           (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
         }`}
         style={{ 
           opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
-          transform: isMobile ? 'translateX(-50%)' : 'translate(-5%, -50%)',
+          transform: isMobile ? 'translateX(-50%)' : 'translateY(-50%)',
           transition: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 'none' : 'opacity 300ms ease-out',
         }}
       />
