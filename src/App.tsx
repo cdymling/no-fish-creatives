@@ -327,6 +327,20 @@ const MainPage = () => {
           transition: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 'none' : 'opacity 300ms ease-out',
         }}
       />
+      
+      {/* Compricer logo - below Creative Concept badge */}
+      <img 
+        src="/clients/compricer-logo.png"
+        alt="Compricer"
+        className={`fixed w-[120px] md:w-[160px] lg:w-[200px] h-auto pointer-events-none z-30 left-[28%] top-40 md:left-[5%] md:top-[60%] ${
+          (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
+        }`}
+        style={{ 
+          opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
+          transform: isMobile ? 'translateX(-50%)' : 'translate(-5%, -50%)',
+          transition: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 'none' : 'opacity 300ms ease-out',
+        }}
+      />
 
       {/* Carousel Section */}
       {/* Fullscreen modal with navigation */}
