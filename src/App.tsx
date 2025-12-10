@@ -335,7 +335,7 @@ const MainPage = () => {
         <img 
           src="/clients/compricer-logo.png"
           alt="Compricer"
-          className={`w-[120px] md:w-[180px] lg:w-[240px] h-auto -mt-6 md:-mt-20 md:ml-[20%] drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] ${
+          className={`w-[120px] md:w-[180px] lg:w-[240px] h-auto -mt-10 md:-mt-20 md:ml-[20%] drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] ${
             (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
           }`}
         />
