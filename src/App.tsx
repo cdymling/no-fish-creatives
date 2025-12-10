@@ -332,7 +332,7 @@ const MainPage = () => {
       <img 
         src="/clients/compricer-logo.png"
         alt="Compricer"
-        className={`fixed w-[120px] md:w-[180px] lg:w-[240px] h-auto pointer-events-none z-30 left-[28%] top-40 md:left-[10%] md:top-[62%] ${
+        className={`fixed w-[120px] md:w-[180px] lg:w-[240px] h-auto pointer-events-none z-30 left-[28%] top-40 md:left-[14%] md:top-[62%] ${
           (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
         }`}
         style={{ 
