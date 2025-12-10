@@ -432,10 +432,17 @@ const MainPage = () => {
                     className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
                     onClick={() => carouselApi?.scrollNext()}
                   >
+                    {/* Desktop: new full-screen image */}
+                    <img 
+                      src="/campaigns/tunnelbana_bilder_desktop.png" 
+                      alt="Tunnelbana Bilder Campaign" 
+                      className="hidden lg:block h-full w-full object-cover"
+                    />
+                    {/* Mobile/Tablet: original version */}
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="h-full w-full object-contain"
+                      className="lg:hidden h-full w-full object-contain"
                     />
                   </div>
                 </CarouselItem>
