@@ -470,10 +470,17 @@ const MainPage = () => {
                     className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
                     onClick={() => carouselApi?.scrollNext()}
                   >
+                    {/* Desktop: original image */}
                     <img 
                       src="/campaigns/takeover_aftonbladet-2.png" 
                       alt="Compricer Campaign" 
-                      className="h-full w-full object-cover"
+                      className="hidden md:block h-full w-full object-cover"
+                    />
+                    {/* Mobile: fullscreen 9:16 image */}
+                    <img 
+                      src="/campaigns/aftonbladet_banner_mobile.png" 
+                      alt="Compricer Campaign" 
+                      className="md:hidden h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
