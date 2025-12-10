@@ -442,7 +442,7 @@ const MainPage = () => {
                     <img 
                       src="/campaigns/tunnelbana_bilder-2.png" 
                       alt="Tunnelbana Bilder Campaign" 
-                      className="lg:hidden h-full w-full object-contain"
+                      className="lg:hidden h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
