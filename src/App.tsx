@@ -255,7 +255,7 @@ const MainPage = () => {
         <BubbleAnimation />
         <div className="h-screen w-full px-6 py-12 flex flex-col justify-start">
           <Reveal direction="right" delay={0} repeat>
-            <h2 className="font-clash text-white text-4xl md:text-8xl font-bold mb-8">
+            <h2 className="font-clash text-white text-5xl md:text-9xl font-bold mb-8">
               Here's how:
             </h2>
           </Reveal>
