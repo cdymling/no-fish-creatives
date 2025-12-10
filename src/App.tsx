@@ -260,7 +260,7 @@ const MainPage = () => {
             </h2>
           </Reveal>
           
-          <div className="space-y-3 md:space-y-12 max-w-5xl">
+          <div className="space-y-3 md:space-y-12 max-w-4xl">
             <Reveal direction="right" delay={0} repeat>
               <p className="font-jakarta text-lg md:text-3xl leading-tight text-white">
                 <span className="text-[#6190cb] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
