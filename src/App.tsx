@@ -297,13 +297,15 @@ const MainPage = () => {
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center pb-24'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
-                <span className="block">Our latest</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">case fresh</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">of the Hook:</Reveal>
+                <span className="block">see our</span>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">latest case</Reveal>
+                <Reveal direction="right" delay={50} repeat as="span" className="block text-[#6190cb]">fresh of</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">the hook:</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
-                <span className="block">Our latest</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">case fresh</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">of the Hook:</Reveal>
+                <span className="block">see our</span>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">latest case</Reveal>
+                <Reveal direction="right" delay={50} repeat as="span" className="block text-[#6190cb]">fresh of</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">the hook:</Reveal>
               </h1>}
           </div>
         </div>
