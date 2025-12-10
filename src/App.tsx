@@ -457,11 +457,17 @@ const MainPage = () => {
                       alt="Tunnelbana Copy Campaign" 
                       className="hidden lg:block h-full w-full object-cover object-center"
                     />
-                    {/* Mobile/Tablet: portrait version */}
+                    {/* Tablet: portrait version */}
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
-                      className="lg:hidden h-full w-full object-cover"
+                      className="hidden md:block lg:hidden h-full w-full object-cover"
+                    />
+                    {/* Mobile: fullscreen 9:16 image */}
+                    <img 
+                      src="/campaigns/rulltrappa_mobile.png" 
+                      alt="Tunnelbana Copy Campaign" 
+                      className="md:hidden h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
