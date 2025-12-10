@@ -516,15 +516,15 @@ const MainPage = () => {
               <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">You don't</span>
                 <span className="block">need a big</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">agency to do</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">big things.</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">agency to</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">do big things.</Reveal>
               </h1>
             ) : (
               <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">You don't</span>
                 <span className="block">need a big</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">agency to do</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">big things.</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">agency to</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">do big things.</Reveal>
               </h1>
             )}
           </div>
