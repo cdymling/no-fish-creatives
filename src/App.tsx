@@ -517,7 +517,7 @@ const MainPage = () => {
                 className="absolute left-6 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors"
                 aria-label="Previous slide"
               >
-                <ChevronLeft className="w-12 h-12 md:w-16 md:h-16" strokeWidth={2} />
+                <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" strokeWidth={2} />
               </button>
             )}
 
@@ -528,7 +528,7 @@ const MainPage = () => {
                 className="absolute right-6 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors"
                 aria-label="Next slide"
               >
-                <ChevronRight className="w-12 h-12 md:w-16 md:h-16" strokeWidth={2} />
+                <ChevronRight className="w-8 h-8 md:w-10 md:h-10" strokeWidth={2} />
               </button>
             )}
 
