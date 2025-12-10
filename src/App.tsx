@@ -650,10 +650,10 @@ const MainPage = () => {
             {/* Rad 1: 2 loggor */}
             <div className="flex gap-16 md:gap-24 justify-center items-center">
               <Reveal direction="left" delay={0} duration={600} repeat>
-                <img src="/clients/compricer-logo.png" alt="Compricer" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-24 md:max-h-28 animate-float-depth-1 transform-gpu will-change-transform motion-reduce:animate-none" />
+                <img src="/clients/compricer-logo.png" alt="Compricer" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-20 md:max-h-24 animate-float-depth-1 transform-gpu will-change-transform motion-reduce:animate-none" />
               </Reveal>
               <Reveal direction="fadeScale" delay={200} duration={500} repeat>
-                <img src="/clients/bekind-logo.png" alt="BE/KIND" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-24 md:max-h-28 animate-float-depth-2 transform-gpu will-change-transform motion-reduce:animate-none" />
+                <img src="/clients/bekind-logo.png" alt="BE/KIND" className="object-contain opacity-90 hover:opacity-100 transition-opacity max-w-full max-h-28 md:max-h-32 animate-float-depth-2 transform-gpu will-change-transform motion-reduce:animate-none" />
               </Reveal>
             </div>
             {/* Rad 2: 3 loggor */}
