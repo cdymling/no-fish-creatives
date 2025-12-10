@@ -444,10 +444,17 @@ const MainPage = () => {
                     className="h-screen bg-section-blue flex items-center justify-center cursor-pointer"
                     onClick={() => carouselApi?.scrollNext()}
                   >
+                    {/* Desktop: landscape version */}
+                    <img 
+                      src="/campaigns/tunnelbana_copy_desktop.png" 
+                      alt="Tunnelbana Copy Campaign" 
+                      className="hidden lg:block h-full w-full object-cover"
+                    />
+                    {/* Mobile/Tablet: portrait version */}
                     <img 
                       src="/campaigns/tunnelbana_copy-2.png" 
                       alt="Tunnelbana Copy Campaign" 
-                      className="h-full w-full object-cover"
+                      className="lg:hidden h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
