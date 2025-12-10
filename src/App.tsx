@@ -314,33 +314,30 @@ const MainPage = () => {
         )}
       </section>
 
-      {/* Creative Concept badge - fixed position, visible across sections */}
-      <img 
-        src="/campaigns/creative-concept-text.png"
-        alt="Creative Concept"
-        className={`fixed w-[180px] md:w-[280px] lg:w-[400px] h-auto pointer-events-none z-30 left-[28%] top-16 md:left-[5%] md:top-[45%] ${
-          (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
-        }`}
-        style={{ 
-          opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
-          transform: isMobile ? 'translateX(-50%)' : 'translate(-5%, -50%)',
-          transition: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 'none' : 'opacity 300ms ease-out',
-        }}
-      />
-      
-      {/* Compricer logo - below Creative Concept badge */}
-      <img 
-        src="/clients/compricer-logo.png"
-        alt="Compricer"
-        className={`fixed w-[120px] md:w-[180px] lg:w-[240px] h-auto pointer-events-none z-30 left-[28%] top-40 md:left-[12%] md:top-[57%] ${
-          (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
-        }`}
+      {/* Creative Concept badge + Compricer logo container */}
+      <div 
+        className={`fixed z-30 pointer-events-none flex flex-col items-center left-[28%] top-16 md:left-[5%] md:top-[45%] md:items-start`}
         style={{ 
           opacity: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 0 : 1,
           transform: isMobile ? 'translateX(-50%)' : 'translateY(-50%)',
           transition: (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? 'none' : 'opacity 300ms ease-out',
         }}
-      />
+      >
+        <img 
+          src="/campaigns/creative-concept-text.png"
+          alt="Creative Concept"
+          className={`w-[180px] md:w-[280px] lg:w-[400px] h-auto ${
+            (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
+          }`}
+        />
+        <img 
+          src="/clients/compricer-logo.png"
+          alt="Compricer"
+          className={`w-[120px] md:w-[180px] lg:w-[240px] h-auto mt-4 md:mt-6 md:ml-[20%] ${
+            (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
+          }`}
+        />
+      </div>
 
       {/* Carousel Section */}
       {/* Fullscreen modal with navigation */}
