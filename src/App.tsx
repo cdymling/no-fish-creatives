@@ -234,13 +234,13 @@ const MainPage = () => {
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Creative</span>
                 <span className="block">work without</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">the fishy layers</Reveal>
-                <Reveal direction="right" delay={200} repeat as="span" className="block text-[#df3d26]">of an agency.</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">the fishy layers</Reveal>
+                <Reveal direction="right" delay={200} repeat as="span" className="block text-[#6190cb]">of an agency.</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Creative work</span>
                 <span className="block">without the</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">fishy layers</Reveal>
-                <Reveal direction="right" delay={200} repeat as="span" className="block text-[#df3d26]">of an agency.</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">fishy layers</Reveal>
+                <Reveal direction="right" delay={200} repeat as="span" className="block text-[#6190cb]">of an agency.</Reveal>
               </h1>}
           </div>
         </div>
@@ -263,19 +263,19 @@ const MainPage = () => {
           <div className="space-y-3 md:space-y-12 max-w-5xl">
             <Reveal direction="right" delay={0} repeat>
               <p className="font-clash text-lg md:text-3xl leading-tight text-white">
-                <span className="text-[#df3d26] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
+                <span className="text-[#6190cb] font-bold">#1</span> We let you work directly with senior creatives, the kind you'd normally find at a big, highly awarded agency. Just without the extra layers of people, processes and up-selling.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
               <p className="font-clash text-lg md:text-3xl leading-tight text-white">
-                <span className="text-[#df3d26] font-bold">#2</span> We're smart about production. When it makes sense, we do it ourselves, using AI or taking on tasks like directing and editing.
+                <span className="text-[#6190cb] font-bold">#2</span> We're smart about production. When it makes sense, we do it ourselves, using AI or taking on tasks like directing and editing.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
               <p className="font-clash text-lg md:text-3xl leading-tight text-white">
-                <span className="text-[#df3d26] font-bold">#3</span> We team up with specialists in strategy, design, and production only when needed, avoiding overlapping roles and making sure you only pay for what you need, when you need it.
+                <span className="text-[#6190cb] font-bold">#3</span> We team up with specialists in strategy, design, and production only when needed, avoiding overlapping roles and making sure you only pay for what you need, when you need it.
               </p>
             </Reveal>
           </div>
@@ -298,12 +298,12 @@ const MainPage = () => {
           <div className={`w-full ${safariClass}`}>
             {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Our latest case</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">fresh of the</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">Hook:</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">fresh of the</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">Hook:</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Our latest case</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">fresh of the</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">Hook:</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">fresh of the</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">Hook:</Reveal>
               </h1>}
           </div>
         </div>
@@ -316,7 +316,7 @@ const MainPage = () => {
 
       {/* Creative Concept badge - fixed position, visible across sections */}
       <img 
-        src="/campaigns/creative-concept-badge.png"
+        src="/campaigns/creative-concept-text.png"
         alt="Creative Concept"
         className={`fixed w-[180px] md:w-[240px] lg:w-[340px] h-auto pointer-events-none z-30 left-[28%] top-28 md:left-[5%] md:top-1/2 ${
           (currentSlide > 0 || isBadgeHidden || !isCampaignSectionVisible) ? '' : 'animate-pulse-subtle'
@@ -398,7 +398,7 @@ const MainPage = () => {
                 {/* First slide - video with badge overlay */}
                 <CarouselItem className="pl-0">
                   <div 
-                    className="h-screen relative overflow-hidden cursor-pointer bg-[#5DA2BF]"
+                    className="h-screen relative overflow-hidden cursor-pointer bg-[#06080b]"
                     onClick={() => carouselApi?.scrollNext()}
                   >
                     {/* Mobile video */}
@@ -509,15 +509,15 @@ const MainPage = () => {
               <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">You don't</span>
                 <span className="block">need a big</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">agency to do</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">big things.</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">agency to do</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">big things.</Reveal>
               </h1>
             ) : (
               <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">You don't</span>
                 <span className="block">need a big</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">agency to do</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">big things.</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">agency to do</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">big things.</Reveal>
               </h1>
             )}
           </div>
@@ -543,19 +543,19 @@ const MainPage = () => {
             
             <Reveal direction="right" delay={0} repeat>
               <p className="font-space text-lg md:text-3xl leading-tight text-white">
-                <span className="text-[#df3d26]">→</span> Developing concepts, campaigns, or just a single ad, and producing them when possible.
+                <span className="text-[#6190cb]">→</span> Developing concepts, campaigns, or just a single ad, and producing them when possible.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
               <p className="font-space text-lg md:text-3xl leading-tight text-white">
-                <span className="text-[#df3d26]">→</span> Leading creatively from initial idea to final delivery.
+                <span className="text-[#6190cb]">→</span> Leading creatively from initial idea to final delivery.
               </p>
             </Reveal>
             
             <Reveal direction="right" delay={0} repeat>
               <p className="font-space text-lg md:text-3xl leading-tight text-white">
-                <span className="text-[#df3d26]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
+                <span className="text-[#6190cb]">→</span> Acting as a flexible creative partner to marketing departments and in-house agencies.
               </p>
             </Reveal>
           </div>
@@ -576,16 +576,16 @@ const MainPage = () => {
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center pb-24'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+              {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">These wise</span>
                 <span className="block">clients have</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">gone for a</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">dip with us:</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">gone for a</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">dip with us:</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">These wise</span>
                 <span className="block">clients have</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">gone for a</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">dip with us:</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">gone for a</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">dip with us:</Reveal>
               </h1>}
           </div>
         </div>
@@ -624,16 +624,16 @@ const MainPage = () => {
         <BubbleAnimation />
         <div className={`h-screen w-full flex ${isMobile ? 'items-start pt-12' : 'items-center pb-24'} justify-start px-6 py-6`}>
           <div className={`w-full ${safariClass}`}>
-            {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
+              {isMobile ? <h1 className="font-clash text-white text-[3.5rem] sm:text-[3.75rem] font-bold leading-[1.05] text-left">
                 <span className="block">Also want</span>
                 <span className="block">to work with</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">highly awarded*</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">senior** creatives?</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">highly awarded*</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">senior** creatives?</Reveal>
               </h1> : <h1 className={`font-clash text-white text-[7rem] lg:text-[9rem] xl:text-[10.5rem] font-bold leading-[0.95] text-left ${isSafari ? 'max-w-[95%]' : ''}`}>
                 <span className="block">Also want</span>
                 <span className="block">to work with</span>
-                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#df3d26]">awarded senior*</Reveal>
-                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#df3d26]">creatives?</Reveal>
+                <Reveal direction="right" delay={0} repeat as="span" className="block text-[#6190cb]">awarded senior*</Reveal>
+                <Reveal direction="right" delay={100} repeat as="span" className="block text-[#6190cb]">creatives?</Reveal>
               </h1>}
           </div>
         </div>
