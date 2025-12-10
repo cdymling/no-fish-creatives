@@ -18,9 +18,10 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
+		fontFamily: {
 				clash: ['Clash Grotesk', 'sans-serif'],
 				space: ['Space Grotesk', 'sans-serif'],
+				jakarta: ['Plus Jakarta Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
