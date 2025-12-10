@@ -35,7 +35,7 @@
 
     --radius: 0.5rem;
     --dark-blue: 220 44% 18%;
-    --section-blue: 198 43% 56%;
+    --section-blue: 220 30% 3%;
   }
 }
 
@@ -59,7 +59,7 @@
   }
 
   .turquoise-asterisk {
-    color: #df3d26;
+    color: #6190cb;
   }
   
   .duration-2000 {
